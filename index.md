@@ -10,7 +10,7 @@ However, this drawing might not be so useful for software engineers who want to 
 
 ### Introduction to statecharts
 
-A statechart is simply a beefed up [state machine](state-machine.html).  The beefing up solves a lot of the problems that state machines have, especially [state explosion](state-machine-state-explosion.html).  One of the goals of this site is to help explain what statecharts are and how they are useful.
+A statechart is simply a beefed up [state machine](what-is-a-state-machine.html).  The beefing up solves a lot of the problems that state machines have, especially [state explosion](state-machine-state-explosion.html).  One of the goals of this site is to help explain what statecharts are and how they are useful.
 
 * [What is a statechart?](what-is-a-statechart.html)
 
