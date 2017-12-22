@@ -10,16 +10,9 @@ However, this drawing might not be so useful for software engineers who want to 
 
 ### Introduction to statecharts
 
-A statechart is a state machine, so if you need a refresher on what they are, read up before continuing.  A statechart is a state machine where each state in the state machine may define its own smaller state machine.
+A statechart is simply a beefed up [state machine](state-machine.html).  The beefing up solves a lot of the problems that state machines have, especially [state explosion](state-machine-state-explosion.html).  One of the goals of this site is to help explain what statecharts are and how they are useful.
 
-- When a state is entered, its state machine (substates) "start" and a substate is entered
-- When a state is exited, its state machine is exited too, i.e. any substates also exit
-
-This happens in addition to normal state machine behavior, namely entry and exit actions.
-
-Like state machines, statecharts also react to events; events are _dealt with_ by the states and the main side effects are specified by what happens upon entering and exiting states.
-
-Statecharts aren't restricted to just two levels; a statechart is a hierarchical structure, much like a file system or Object Oriented inheritance or prototype hierarchies.
+* [What is a statechart?](what-is-a-statechart.html)
 
 ### Usefulness of statecharts
 
