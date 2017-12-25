@@ -14,11 +14,23 @@ A statechart is simply a beefed up [state machine](what-is-a-state-machine.html)
 
 * [What is a statechart?](what-is-a-statechart.html)
 
-### Usefulness of statecharts
+### How to use statecharts
 
 The concepts of statecharts and how they function can be applied to many programming disciplines.  They don't fit all problem spaces, but when the system in question reacts to events, and has a different _behaviour_ depending on previous events, then a statechart might be a good fit.
 
 * how to implement in plain JS page
 * how to implemnet in a react page
 
+### Benefits of statecharts
 
+* [Behaviour decoupled from component](benefit-decoupled-behaviour-component.html)
+  * [Easier to reason about the code](benefit-reason-about-code.html)
+  * [Behaviour can be tested independently of component](benefit-testable-behaviour.html)
+* [All the states are explored](benefit-all-states-explored.html)
+* [Low bug counts](benefit-low-bug-count.html)
+* [Makes it easier to handle exceptional situations](benefit-handle-anomalies.html)
+
+### Drawbacks of statecharts
+
+* [Need to learn something new](drawback-learn-new-technique.html)
+* [It's usually a very foreign way of coding](drawback-foreign-paradigm.html)
