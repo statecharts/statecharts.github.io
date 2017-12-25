@@ -1,0 +1,25 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <rect x="69.115" y="63.175" width="105.292" height="73.974" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 69.114 92.333 L 173.872 92.333"/>
+    <text x="104.192" y="85.533" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">On</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 189.967133, 57.207539)">
+    <rect x="69.115" y="63.175" width="105.292" height="73.974" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 69.114 92.333 L 173.872 92.333"/>
+    <text x="104.192" y="85.533" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Off</text>
+  </g>
+  <g>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 174.949 99.415 C 174.949 99.415 229.086 60.204 255.198 80.721 C 281.31 101.238 279.331 118.371 279.331 118.371 L 283.996 111.258 L 279.31 118.242 L 272.846 111.823"/>
+    <text x="224.003" y="70.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">flick</text>
+  </g>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 196.778 105.647"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 206.199 158.873"/>
+  <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, 1, -89.93562457423587, 130.76677816736515)"/>
+  <g>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 146.121 174.631 C 146.121 174.631 180.051 136.065 216.997 158.466 C 253.943 180.867 266.047 203.008 266.047 203.008 L 267.147 194.472 L 266.026 203.028 L 257.564 200.292" transform="matrix(-0.97679, -0.2142, 0.2142, -0.97679, 370.505146, 394.64597)"/>
+    <text x="161.796" y="201.503" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">flick</text>
+  </g>
+</svg>
