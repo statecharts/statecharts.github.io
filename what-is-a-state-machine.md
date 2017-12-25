@@ -32,3 +32,8 @@ When looking at a state machine from the outside, the "publicly visible" parts o
 - the actions that the machine performs
 
 Importantly, the _state_ that the machine happens to be in is _not_ something that needs to be publicly visible.
+
+### Further reading
+
+* [An example state machine](on-off-state-machine.html) — see some of these concepts in action 
+* [What is a statechart?](what-is-a-statechart.html) — build on the knowledge of state machines
