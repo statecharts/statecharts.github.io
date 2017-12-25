@@ -10,4 +10,12 @@ Additionally, it is easier to model error states: When loading something, what h
 
 Finally, it is relatively easy to introduce new states based on additional behavioural requirements. For example, if grabbing some data takes a certain amount of time, one might the UI to show a _different_ loading indicator, one that indicates to the user that "things are taking a long time".
 
-The point is that the mere act of writing down these states and how they fit together helps to discover a lot of these waiting states; this means that they get to be designed, tested, etc. 
+The point is that the mere act of writing down these states and how they fit together helps to discover a lot of these waiting states; this means that they get to be designed, tested, etc.
+
+### Sources
+
+When NASA used the Statechart Autocoder to build the software for the Mars Science Laboratory (the Curiosity Rover), one of the benefits of using Statecharts was that "it forced developers to consider off nominal scenarios".
+
+### References
+
+
