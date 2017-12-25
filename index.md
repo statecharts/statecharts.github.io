@@ -35,3 +35,20 @@ The concepts of statecharts and how they function can be applied to many program
 
 * [Need to learn something new](drawback-learn-new-technique.html)
 * [It's usually a very foreign way of coding](drawback-foreign-paradigm.html)
+
+## Executable statecharts
+
+In addition to just using statecharts to model the behaviour in documents separte from the actual running code, it's possible to use one of various machine formats, both to design the behaviour, and at run-time to actually _be_ the behaviour.
+
+This carries along some different benefits and drawbacks:
+
+### Benefits of executable statecharts
+
+* No need to translate diagrams into code
+* No bugs introduced by hand translation of diagrams
+* The diagrams are always in sync
+
+### Drawbacks of executable statecharts
+
+* The format and tools for executable statecharts is limited
+* Type safety between statechart and the component is hard to enforce
