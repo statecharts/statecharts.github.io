@@ -30,6 +30,7 @@ The concepts of statecharts and how they function can be applied to many program
 * [All the states are explored](benefit-all-states-explored.html)
 * [Low bug counts](benefit-low-bug-count.html)
 * [Makes it easier to handle exceptional situations](benefit-handle-anomalies.html)
+* [Non-developers can understand the statecharts](benefit-non-developers-understanding.html)
 * [Quality Assurance can use a statechart as an exploratory tool](benefit-qa-exploration-tool.html)
 
 ### Drawbacks of statecharts
@@ -48,6 +49,7 @@ This carries along some different benefits and drawbacks:
 * No need to translate diagrams into code
 * No bugs introduced by hand translation of diagrams
 * The diagrams are always in sync
+* The diagrams are more precise
 
 ### Drawbacks of executable statecharts
 
