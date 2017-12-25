@@ -23,6 +23,7 @@ The concepts of statecharts and how they function can be applied to many program
 
 ### Benefits of statecharts
 
+* [Easy to understand a statechart](benefit-easy-to-understand.html)
 * [Behaviour decoupled from component](benefit-decoupled-behaviour-component.html)
   * [Easy to make changes to the behaviour](benefit-make-changes-to-the-behaviour.html)
   * [Easier to reason about the code](benefit-reason-about-code.html)
