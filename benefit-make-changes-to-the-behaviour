@@ -11,3 +11,7 @@ For example by adding a small delay between actions and the events, but only in 
 Completely changing the behaviour so that actions are performed more or less at random makes little sense other than to battle-test the business logic's ability to expect the unexpected, basically _how defensively was the code written_.
 
 But if a statechart has grown and become too difficult, it is much easier to rewrite the statechart from scratch to try to end up with a simpler overall solution.
+
+### Sources
+
+NASA's JPL found that statecharts were "very useful in accommodating late breaking changes"
