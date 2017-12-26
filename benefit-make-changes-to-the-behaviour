@@ -1,3 +1,7 @@
+---
+category: benefits
+---
+
 ## Easy to change the behaviour
 
 Since the behaviour of a component is extracted into the statechart, it is relatively easy to make rather big changes to the behaviour of the component, compared to a component where the behaviour is embedded alongside the business logic.
