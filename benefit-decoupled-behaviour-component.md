@@ -1,3 +1,7 @@
+---
+category: benefits
+---
+
 ## Using Statecharts decouples behaviour from components
 
 When a statechart drives the behaviour of a component, it makes it possible to _separate_ the code into two separate modules.  The code of the component can be much more focused on how things are _executed_ rather than _the why_ of things are the way they are.  This means that the behaviour (when things happen, encoded in the statechart) can more easily be separated from the how (what happens, encoded in the component).
