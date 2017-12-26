@@ -1,3 +1,7 @@
+---
+category: benefits
+---
+
 ## Low bug count
 
 The use of statecharts can potentiall dramatically lower the bug count of software.
