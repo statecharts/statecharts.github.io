@@ -1,7 +1,3 @@
----
-title: Benefit: All states are explored
-category: benefits
----
 ## All states are explored
 
 When a the behaviour of a component is defined by way of a statechart, it often happens that various "in-between" states are exposed, in a way that often is missed when the behaviour of a component is built in to the component itself.
