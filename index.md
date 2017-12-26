@@ -31,6 +31,7 @@ The concepts of statecharts and how they function can be applied to many program
 * [All the states are explored](benefit-all-states-explored.html)
 * [Low bug counts](benefit-low-bug-count.html)
 * [Makes it easier to handle exceptional situations](benefit-handle-anomalies.html)
+* [Scales well with increased complexity](benefit-scales-with-complexity.html)
 * [Non-developers can understand the statecharts](benefit-non-developers-understanding.html)
 * [Quality Assurance can use a statechart as an exploratory tool](benefit-qa-exploration-tool.html)
 
