@@ -4,7 +4,7 @@ A statechart is a [state machine](what-is-a-state-machine.html) where each state
 
 Here's an example of a state in a state machine, with some extra "substates":
 
-[A state with some substates](on-off-delayed-exit-1-zoomed.svg)
+![A state with some substates](on-off-delayed-exit-1-zoomed.svg)
 
 When the state machine enters this state _D_ it also starts the state machine within it.  The _initial state_ of this machine inside _D_ is in fact _E_ so it _enters_ _E_ too.  And since _E_ has a single substate _G_, it is also _entered_.
 
