@@ -48,16 +48,28 @@ It's interesting to note that the "turn off" action will only be called if the _
 
 ### Refining the _On_ state even further
 
-Let's say the business side says that they don't like the behaviour in that if you happened to turn the light on and then off again at just the right moment, the light might be on for a tiny fraction of a second, and for whatever reason they want the light to never be on for less than 0.5 seconds.  Well that's simple to accommodate in a Statechart; just specialize the _D_ state so that it deals with the _flick_ event.  This new state would handle the _flick_ event for 0.5 seconds and essentially "do nothing" if it happens.
+Let's say the business side says that they don't like the behaviour in that if you happened to turn the light on and then off again at just the right moment (0.6 seconds), the light might be on for a tiny fraction of a second (0.1 seconds), and for whatever reason they want the light to never be turned on for less than 0.5 seconds, i.e. that the "turn lights off action should never be called immediately after a turn lights on action, but be powered on for at least 0.5 seconds"
 
-But already you might be thinking that the question we should be asking the business is if we should "remember" that the flick event was deferred, or if it should be ignored completely; both solutions are presented below.
+Well that's simple to accommodate in a Statechart; just specialize the _D_ state by adding a few new substates.  These new states would be tasked to handle the _flick_ event for the first 0.5 seconds and essentially "do nothing" if it happens.
 
-### On state for 1/2 second, take 1
+### On state for 1/2 second
 
-When in the D state, the ...
+When in the D state, the _flick_ event should be ignored for 0.5 seconds.  This requires a few new state:
 
-### On state for 1/2 second, take 2
+- One for when the Off state should be *ignoring* the event (let's call this E)
+- One for when the Off state should be *handling* the event (let's call this F)
 
+It should stay in E for 0.5 seconds and then transition to F
+
+In order to ignore the event, we introduce a substate of E, called _G_ which simply is there to ignore the event.
+
+Here's the new _D_ state, with substates:
+
+![The _D_ state with substates](on-off-delayed-exit-1-zoomed.svg)
+
+Here's the full statechart:
+
+![The full statechart with full _D_ state](on-off-delayed-exit-1.svg)
 
 ### Conclusion
 
