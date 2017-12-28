@@ -7,6 +7,14 @@ body {
   font-size: 18px;
 }
 
+#main_content_wrap {
+  background: #fcfcfc;
+}
+
+img {
+  box-shadow: none;
+}
+
 /* Keep links underlined for accessiblity */
 a {
   text-decoration: underline;
