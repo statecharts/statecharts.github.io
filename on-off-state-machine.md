@@ -6,7 +6,7 @@ Here is a simple state machine that includes a few of the concepts.
 
 From this drawing, we can see that 
 
-* This machine has two _states_, *On* and *Off*
+* This machine has two [states](glossary/states){:.glossary}, *On* and *Off*
 * it _transitions_ between them whenever it gets the _flick_ event (that's the two arrows between the states)
 * The "on" state has some _actions_ that happens when it *enter*s or *exit*s that state.
 
