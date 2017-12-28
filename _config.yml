@@ -2,3 +2,4 @@ theme: jekyll-theme-slate
 collections:
   glossary:
     output: true
+    layout: default
