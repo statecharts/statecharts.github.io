@@ -3,3 +3,9 @@ collections:
   glossary:
     output: true
     layout: default
+defaults:
+  - scope:
+      path: ""
+      type: glossary
+    values:
+      layout: glossary
