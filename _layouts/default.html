@@ -33,6 +33,11 @@
       <footer class="inner">
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a> from
           <a href="https://github.com/statecharts/">github.com/statecharts/</a> </p>
+        <p>
+          {% for item in site.glossary %}
+            <a href="{{ item.url }}">{{ item.title }}</a>
+          {% endfor %}
+        </p>
       </footer>
     </div>
   </body>
