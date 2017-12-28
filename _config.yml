@@ -1,3 +1,4 @@
 theme: jekyll-theme-slate
 categories:
-  - glossary
+  glossary:
+    output: true
