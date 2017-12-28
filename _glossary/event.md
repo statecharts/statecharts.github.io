@@ -1,3 +1,7 @@
+---
+title: Event
+---
+
 ## Event
 
 An event is something of significance that happens in your domain that you have decided you want to influence behaviour.  What actually constitutes an event depends on you.  If you have a text field, you might have very specific events such as "user typed a key" or "user pasted some text" or simply use the "onchange" event (like in the browser).
