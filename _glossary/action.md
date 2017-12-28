@@ -1,3 +1,7 @@
+---
+title: Action
+---
+
 ## Action
 
 An action is the way a statechart can cause things to happen in the outside world, and indeed they are the main reason why the statecharts exist at all.  The main point of introducing a statechart is for the _actions_ to be invoked at the right times, depending on the sequence of events and the state of the guards.
