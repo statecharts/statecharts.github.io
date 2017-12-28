@@ -3,3 +3,15 @@
 
 @import "{{ site.theme }}";
 
+body {
+  font-size: 18px;
+}
+
+/* Keep links underlined for accessiblity */
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: normal;
+}
