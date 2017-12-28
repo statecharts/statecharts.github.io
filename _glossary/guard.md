@@ -1,3 +1,7 @@
+---
+title: Guard
+---
+
 ## Guard
 
 A guard is a side-effect free, synchronous call from the statechart to the "outside world" which the statechart may do to figure out what it's supposed to do.  A component will typically expose a set of things that the statechart is allowed to check.
