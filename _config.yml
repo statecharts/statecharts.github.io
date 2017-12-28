@@ -1,4 +1,4 @@
 theme: jekyll-theme-slate
-categories:
+collections:
   glossary:
     output: true
