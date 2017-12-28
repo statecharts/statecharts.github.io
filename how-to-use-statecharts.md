@@ -8,7 +8,7 @@ The communication between this business object happen in three distinct ways, an
 - The statechart asks the world about some thing, known as a *guard*
 - The statechart tells your object to perform some *action*
 
-These are the three touchpoints between the statechart and the outside world (your component).
+These are the three touchpoints between the statechart and the outside world (your component).  Statecharts fit into an event driven system.  It accepts events, and turns them into actions.
 
 ### Events
 
@@ -22,7 +22,7 @@ A guard is a side-effect free, synchronous call from the statechart to the "outs
 
 Again, the set of guard functions available to the statechart is up to you, and again you can expose low level information from your component (such as character count), or higher level, more "business related" guards (such as "is valid" or word count).
 
-The point is that the statechart should be able to call these guards any number of times, at _any_ time, in _any_ order, or not call them at all.  These calls, or lack of calls should _not_ have any side effects.  Similarly, a unit test that verifies a statechart's behaviour should _not_ require a guard function to be called; but simply set up guard functions so that they might be called and return the values as defined in the test itself.
+The point is that the statechart should be able to call these guards any number of times, at _any_ time, in _any_ order, or not call them at all.  These calls, or lack of calls should _not_ have any side effects.  Similarly, a unit test that verifies a statechart's behaviour should _not_ require a guard function to be called; but simply set up guard functions so that they might be called and return the values as defined in the test itself.  Guards may be called as part of processing an event, but it must also be possible to check the guards outside the event processing.  If the statechard declares a delayed event, for example, this will trigger a guard check outside an "event" processing cycle.
 
 ### Actions
 
@@ -34,4 +34,4 @@ An example of an action might be to _enable_ a text field; such an action is of 
 
 Another example of an action would be to make an HTTP request.  This would of course be an asynchronous action, and might result in guards functions responding differently, and trigger events that the statechart might be interested in.
 
-
+Actions are often used to start and stop _activitites_.  An activity is the term used for whatever long running process that might be running when a statechart is _in a particular state_.'
