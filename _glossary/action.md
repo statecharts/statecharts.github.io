@@ -4,11 +4,11 @@ title: Action
 
 ## Action
 
-An action is the way a statechart can cause things to happen in the outside world, and indeed they are the main reason why the statecharts exist at all.  The main point of introducing a statechart is for the _actions_ to be invoked at the right times, depending on the sequence of events and the state of the guards.
+An action is the way a statechart can cause things to happen in the outside world, and indeed they are the main reason why the statecharts exist at all.  The main point of introducing a statechart is for the _actions_ to be invoked at the right times, depending on the sequence of [events](event.html){:.glossary} and the state of the [guards](guard.html){:.glossary}.
 
-Actions are most commonly triggered on _entry_ or _exit_ of a [*state*](state.html), although it is possible to place them on a transition itself.
+Actions are most commonly triggered on _entry_ or _exit_ of a [*state*](state.html){:.glossary}, although it is possible to place them on a [transition](transition.html){:.glossary} itself.
 
-Actions should in general try to execute as quickly as possible, returning control to the statechart as quickly as possible, so that other actions may be executed.  This means that anything beyond setting a few variables, they should typically be used to _start_ and _stop_ asynchronous tasks.  Such asynchronous tasks that run _while in a state_ are called [*activities*](activity.html).
+Actions should in general try to execute as quickly as possible, returning control to the statechart as quickly as possible, so that other actions may be executed.  This means that anything beyond setting a few variables, they should typically be used to _start_ and _stop_ asynchronous tasks.  Such asynchronous tasks that run _while in a state_ are called [*activities*](activity.html){:.glossary}.
 
 ### Examples
 
