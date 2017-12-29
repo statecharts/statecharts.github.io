@@ -15,3 +15,5 @@ To link to a glossary term use this syntax:
     [Foo Bars](glossary/foo-bar.html){:.glossary}
 
 This adds the `glossary` class, allowing us to style it as a glossary link.  (Within a glossary, you can link to others without the `glossary/` directory, of course.)
+
+Any static assets, like images you'd like to include in your glossaries, please add them in the same same directory.
