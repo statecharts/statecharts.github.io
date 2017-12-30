@@ -7,11 +7,15 @@ oneliner: a state that has many state machines that all get to be active at the 
 
 A parallel state is a [state](state.html){:.glossary} that is divided into separate regions.  Each region contains more substates.  When a parallel state is entered, _each_ of the regions are also entered; their [initial states](initial-state.html){:.glossary} are entered and so on.
 
+![An example of a parallel state](parallel.svg)
+
+If the state above is entered, both B and D states are entered too.  As you can see the _flick_ event is handled by both B _and_ D.  If the _flick_ event happens, _both_ B and D get to "handle" the event, and the resulting state is C _and_ E.
+
+If another _flick_ event happens E will transition back to D, while C will ignore the event, since C doesn't handle the event.  After 1 second, C will transition back to B, ready to handle the _flick_ event again.
+
 ## Notation
 
 A parallel state is like any other state, but it is subdivided into regions by way of straight, dashed lines.  Each such region can then include states.
-
-![An example of a parallel state](parallel.svg)
 
 ## SCXML
 
