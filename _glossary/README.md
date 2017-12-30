@@ -6,7 +6,7 @@ In order to create a new glossary term, create the file in this directory with .
     title: Foo Bar
     ---
     
-    ## Foo Bar
+    # Foo Bar
     
     A foo bar is ...
 
