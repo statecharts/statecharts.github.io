@@ -16,8 +16,10 @@ The original statechart paper by Harel described only a _diagram_ and ways of de
 
 ## Sources
 
-NASA's JPL said that it was "easier to show a statechart to a systems engineer, than a bunch of C code" and that helped people that "haven't been with the [...] project throughout the cycle"
+> \[It is] easier to show a statechart to a systems engineer, than a bunch of C code \[...]  \[helped people that] haven't been with the \[...] project throughout the cycle
+>
+> <cite><a href="https://www.youtube.com/watch?v=VvssxOP95s0">UML State Chart Autocoding</a>, Eddie Benowitz, JPL</cite> 
 
 > Code reviews for the modules constructed using a bottom-up approach were difficult and time consuming. Design and code reviews of the statechart modules were quick and effective because the software could be understood by reviewers.
 >
-> Constructing the User Interface with Statecharts, Ian Horrocks, page 200
+> <cite>Constructing the User Interface with Statecharts, Ian Horrocks, page 200</cite>
