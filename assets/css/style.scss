@@ -7,6 +7,12 @@ body {
   font-size: 18px;
 }
 
+/* Unset from theme */
+ul, ol, dl {
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
 #main_content_wrap {
   background: #fcfcfc;
 }
