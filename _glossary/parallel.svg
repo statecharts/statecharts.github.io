@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="399.658203125 195.47857666015625 319.771728515625 283.44183349609375" width="305.4481506347656" height="269.48553466796875" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"/>
+    </pattern>
+    <pattern id="pattern-0-0" patternTransform="matrix(1, 0, 0, 1, 233.029572, 203.580597)" xlink:href="#pattern-0"/>
+  </defs>
+  <g transform="matrix(1.0882550477981567, 0, 0, 0.9794310331344604, 295.11417388916016, 144.54101181030273)" style="">
+    <rect x="102.478" y="59.132" width="280.677" height="275.145" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <text x="230.686" y="84.983" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">A</text>
+    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 103.909 98.587 L 382.579 98.587"/>
+    <g transform="matrix(1.121833, 0, 0, 1.186524, 259.848022, 81.391136)" style="">
+      <rect x="-14.856" y="46.198" width="51.949" height="53.041" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+      <text x="5.359" y="79.209" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; stroke-width: 2.51788px; white-space: pre;">C</text>
+    </g>
+    <g transform="matrix(0.918902, 0, 0, 1.021, 134.70192, 102.001297)" style="">
+      <text x="121.45" y="12.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">after 0.5 s</text>
+      <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 71.687 39.154 C 71.687 39.154 78.545 22.921 99.622 16.18 C 120.699 9.439 128.87 23.858 128.87 23.858"/>
+      <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.924241, 0.381809, -0.381813, -0.92424, 186.169627, 24.309659)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
+    </g>
+    <g transform="matrix(1.121833, 0, 0, 1.186524, 171.20546, 129.335999)" style="">
+      <rect x="-14.856" y="9.218" width="49.833" height="52.407" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+      <text x="3.924" y="40.018" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">B</text>
+    </g>
+    <g transform="matrix(0.918902, 0, 0, 1.021001, 88.138672, 60.465569)" style="">
+      <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"/>
+      <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"/>
+      <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
+    </g>
+    <line style="stroke: url(#pattern-0-0); stroke-width: 2.90179;" x1="103.94127655029297" y1="213.58059692382812" x2="382.11785888671875" y2="213.58059692382812"/>
+  </g>
+  <g transform="matrix(1.22084, 0, 0, 1.162119, 592.670105, 341.961823)" style="">
+    <rect x="-14.856" y="46.198" width="51.949" height="53.041" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+    <text x="5.359" y="79.209" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; stroke-width: 2.51788px; white-space: pre;">E</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.999999, 456.479309, 362.148041)" style="">
+    <text x="92.45" y="10.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">flick</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 33.425 30.583 C 33.425 30.583 67.526 12.82 86.766 13.119 C 106.006 13.418 128.87 23.858 128.87 23.858"/>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.678821, 0.734304, -0.734307, -0.678818, 180.019478, 0.858126)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
+    <text x="92.45" y="10.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(1, 0, 0, 0.9999999403953554, -29.417985108801275, 78.83443611333894)">flick</text>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.326072, -0.945345, 0.945346, 0.326068, 7.608763, 132.58945)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
+  </g>
+  <g transform="matrix(1.22084, 0, 0, 1.162119, 496.204468, 388.920502)" style="">
+    <rect x="-47.616" y="2.338" width="49.833" height="52.407" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+    <text x="-28.419" y="31.853" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">D</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 365.80658, 313.466675)" style="">
+    <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"/>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"/>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
+  </g>
+  <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 47.505 29.053 C 47.505 29.053 65.077 36.389 84.317 36.688 C 103.557 36.987 122.442 25.695 122.442 25.695" transform="matrix(1, 0, 0, 0.9999988675117494, 455.33412372656363, 423.40110452340235)"/>
+</svg>
