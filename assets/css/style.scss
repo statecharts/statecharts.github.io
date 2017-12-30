@@ -30,7 +30,7 @@ a.glossary {
   color: inherit;
 }
 
-# Insert the word "Glossary:" in front of the first h1 of glossary pages
+/* Insert the word "Glossary:" in front of the first h2 of glossary pages */
 body.glossary_page #main_content>h2:first-child::before {
   content: "Glossary: "; font-weight: normal;
 }
