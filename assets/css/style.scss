@@ -29,3 +29,8 @@ a.glossary {
   text-decoration-color: #0F79D0;
   color: inherit;
 }
+
+# Insert the word "Glossary:" in front of the first h1 of glossary pages
+body.glossary_page #main_content>h1:first-child::before {
+  content: "Glossary: "; font-weight: normal;
+}
