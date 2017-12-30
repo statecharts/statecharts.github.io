@@ -15,7 +15,7 @@ A parallel state is like any other state, but it is subdivided into regions by w
 
 ## SCXML
 
-In Statechart XML, (the `<parallel>` element)[https://www.w3.org/TR/scxml/#parallel] declares a parallel state.  It has more or less exactly the same set of attributes and elements as the `<state>` element, except it has no _initial_ or _final_ states.  The various _regions_ are defined by way of the direct child `<state>` elements.
+In Statechart XML, [the `<parallel>` element](https://www.w3.org/TR/scxml/#parallel) declares a parallel state.  It has more or less exactly the same set of attributes and elements as the `<state>` element, except it has no _initial_ or _final_ states.  The various _regions_ are defined by way of the direct child `<state>` elements.
 
 This is a parallel state with two _regions_. When `p` becomes active, so does `foo-1` and `bar-1`
 
