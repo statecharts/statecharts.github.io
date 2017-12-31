@@ -17,6 +17,10 @@ If another _flick_ event happens E will transition back to D, while C will ignor
 
 A parallel state is like any other state, but it is subdivided into regions by way of straight, dashed lines.  Each such region can then include states.
 
+![A state with four regions](parallel-notation.svg)
+
+Each of those regions can hold their own sets of states
+
 ## SCXML
 
 In Statechart XML, [the `<parallel>` element](https://www.w3.org/TR/scxml/#parallel) declares a parallel state.  It has more or less exactly the same set of attributes and elements as the `<state>` element, except it has no _initial_ or _final_ states.  The various _regions_ are defined by way of the direct child `<state>` elements.
