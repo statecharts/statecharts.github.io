@@ -20,21 +20,45 @@ The communication between this business object happen in three distinct ways, an
 
 These are the three touchpoints between the statechart and the outside world (your component).  Statecharts fit into an event driven system.  It accepts events, and turns them into actions.
 
-### Decoupled the component from the statechart?
+## Decouple the component from the statechart?
 
-At this point in time I think it's very useful to point out dependency that might come creeping.  There are some notable things that the component _should not_ be worrying about, such as:
+At this point in time I think it's very useful to point out dependency that might come creeping.  The component in question easily becomes dependent on the states in the statechart.  A decision has to be made, or else it will be made for you.
+
+The statechart invariably starts out as a reflection of the _modes_ that the component has, e.g. enabled, disabled, loading and so on.  It is therefore common to take the "current state" of the statechart and copy it into the component somewhere.  For a HTML based component, for example a top level CSS element, like `state-enabled` and `state-loading`.  This is completely natural, but introduces an implied coupling between the statechart and the component.
+
+This coupling may or may not be beneficial, depending on how you end up using the statechart, but you should be aware of the coupling and the problems it introduces.  
+
+| Decoupled | Coupled |
+------------------------
+| The component doesn't know which state it's in | The component knows which state it's in |
+| The component is explicitly _told_ when to change its mode, because the statechart says when _entering_ this state, _enter this mode_ | The component changes its mode automatically: whenever the statechart has handled an event, the component asks the statechart which state it's in and uses that |
+| The component is explicitly _told_ when to do stuff, because the statechart says when _entering_ this state, _do this_ | The component does things based on the "current state": Whenever the statechart has handled an event, the component asks the statechart which state it's in and executes various functions |
+
+* If you decide to keep them **decoupled**, it comes at the increased cost of having to define additional actions—an increased "API surface" if you will.  Additionally the statechart needs to have entry handlers (and possibly exit handlers) to turn on (and off) modes in the component.  The statechart needs to be able to control _explicitly_ what the component should be doing at any time.
+* If you decide to keep them **coupled**, it comes at the cost of being able to make changes to the statechart itself.  Introducing a new state to make a behavioural change can no longer be done _purely_ on the statechart side, because this new state might _affect the component_ when it **should not**, or it might _not affect it_ when it **should**.  Often a change in the statechart has to be done along with a change in the component.
+
+
+### Decoupled statecharts FTW
+
+For long term durability and maintainability of statecharts, it is probably best to go "all in" and go with removing the dependency between the statechart and the component.  If you choose to do this, there are some notable things that the component _should not_ be worrying about, such as:
 
 - _Which state is the statechart in?_ — It really doesn't matter. What matters are the actions that are called
 - _Which transition just fired?_ — This too doesn't matter.
 
-There's nothing that stops you from writing a component that inspects the state of the statechart, and then makes some decision based on this.  However, you should be aware that this creates a **dependency from the component to the statechart**, which in some cases is unwanted.  If you accept this, you also accept that it becomes much more difficult to refactor or **make changes to the statechart**, since the states themselves suddenly have some extrinsic meaning.
-
-Sometimes, a statechart is only used to set a top level class attribute on a HTML element; and has no actions other than that.  A statechart still makes sense, since it ensures valid reactions to events.  In those cases, where you don't see the need to add _additional_ actions to the states, then that dependency can probably be OK.  The alternative would be to add _entry_ actions to _each state_ to _set the top level class attribute_ to the same name as the state.  This does seem like a lot of unneccessary code, but it does buy you the freedom of being able to change the statechart freely.
-
-The reason I point this out so early on is that it is quite natural to design the statechart based on the major "modes" of the UI, like "loading", "waiting", "typing", "idle" or "error".  Those often have UI counterparts, probably with similar names, like a CSS class: `state-loading`, `state-waiting` and so on.  Since the statechart always has the right "current state" it is extremely easy to just take that state and pop it into the UI.
-
-While I advocate against doing so, there is nothing _wrong_ with it.  In fact, if you decide to keep them decoupled, it comes at the increased cost of additional actions, and increased "API surface".  Additionally the statechart needs to have entry handlers (and possibly exit handlers) to turn on (and off) modes in the UI.  The statechart needs to be able to control _explicitly_ what was done _implicitly_ by the component inspecting the "current state".  It is merely making the implicit explicit.
+The things that matter in a decoupled statechart are: events, guards and actions.
 
 ## Designing a statechart
 
-This is the biggest hurdle if you're new to statecharts, mainly because it is often such a foreign concept.  .....to be continued
+This is the biggest hurdle if you're new to statecharts, mainly because it is often such a foreign concept. You need to decide on the notation, if you want the benefit of a graphical representation, and ultimately which tools you'll choose.
+
+Tools aside, the process of designing a component's statechart is to start by discovering the _modes_ of the component in question.  Those are good candidates for top level states of your statechart.  You can start to think about what events that take you between those states.  Remember, at the "top level" things don't need to be 100% precise; this is what the substates are for.  Finally you can add what _happens_ in each state: the entry and exit handlers.  These are basically just hooks in your component to start and stop things.
+
+You should already have some crude state machine which does at least _some_ of the things you want the component to do.  The next step is to refine the states.
+
+This is done by concentrating on each top level state and trying to discover if the component behaves in different ways when _in_ that state; if so then introduce substates, and repeat the process outlined above for that.
+
+## Example
+
+In order to explain this process, I'm going to try to walk you through the process that went into the design of the following component:  A simple search form.  It is modeled after the same UI as [Robust React User Interfaces with Finite State Machines](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/).
+
+TBC :)
