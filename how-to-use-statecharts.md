@@ -31,6 +31,10 @@ There's nothing that stops you from writing a component that inspects the state 
 
 Sometimes, a statechart is only used to set a top level class attribute on a HTML element; and has no actions other than that.  A statechart still makes sense, since it ensures valid reactions to events.  In those cases, where you don't see the need to add _additional_ actions to the states, then that dependency can probably be OK.  The alternative would be to add _entry_ actions to _each state_ to _set the top level class attribute_ to the same name as the state.  This does seem like a lot of unneccessary code, but it does buy you the freedom of being able to change the statechart freely.
 
+The reason I point this out so early on is that it is quite natural to design the statechart based on the major "modes" of the UI, like "loading", "waiting", "typing", "idle" or "error".  Those often have UI counterparts, probably with similar names, like a CSS class: `state-loading`, `state-waiting` and so on.  Since the statechart always has the right "current state" it is extremely easy to just take that state and pop it into the UI.
+
+While I advocate against doing so, there is nothing _wrong_ with it.  In fact, if you decide to keep them decoupled, it comes at the increased cost of additional actions, and increased "API surface".  Additionally the statechart needs to have entry handlers (and possibly exit handlers) to turn on (and off) modes in the UI.  The statechart needs to be able to control _explicitly_ what was done _implicitly_ by the component inspecting the "current state".  It is merely making the implicit explicit.
+
 ## Designing a statechart
 
 This is the biggest hurdle if you're new to statecharts, mainly because it is often such a foreign concept.  .....to be continued
