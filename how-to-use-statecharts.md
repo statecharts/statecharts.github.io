@@ -29,7 +29,7 @@ The statechart invariably starts out as a reflection of the _modes_ that the com
 This coupling may or may not be beneficial, depending on how you end up using the statechart, but you should be aware of the coupling and the problems it introduces.  
 
 | Decoupled | Coupled |
-------------------------
+| --------- | -------- |
 | The component doesn't know which state it's in | The component knows which state it's in |
 | The component is explicitly _told_ when to change its mode, because the statechart says when _entering_ this state, _enter this mode_ | The component changes its mode automatically: whenever the statechart has handled an event, the component asks the statechart which state it's in and uses that |
 | The component is explicitly _told_ when to do stuff, because the statechart says when _entering_ this state, _do this_ | The component does things based on the "current state": Whenever the statechart has handled an event, the component asks the statechart which state it's in and executes various functions |
