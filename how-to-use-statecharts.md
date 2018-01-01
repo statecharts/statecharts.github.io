@@ -199,7 +199,18 @@ If we look at our _API surface_—the set of events, guards and actions that we 
 * Guards: none (it's still quite a crude solution)
 * Actions: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
 
+### Absence of data transfer
+
 Note the absence of any data being passed back and forth: The events themselves are pretty anonymous; this is about high level things that happen in the UI. Likewise, the actions are no-arg function calls; no data is being passed from the statechart to the model.  They don't have to be function calls; it really depends on how you implement it. If you choose to, you can get the statechart to emit _events_ too, meaning that the component _listens_ for certain events from the state machine.
 
+This absence of data transfer also means that the component still needs to keep track of the "business state" — the variables and stuff that the component is busy working on.  The statechart doesn't need or care about those things, it is only concerned with triggering the right actions at the right times.
+
+As an example: the `startHttpRequest` action is called.  It will have to
+
+* grab the text from the text field that the user has typed a search term into
+* construct a URL to search using flickr's API
+* fire off a HTTP request
+
+These three things are hidden from the statechart; it doesn't need to know that all of this is happening.  Only if any of those things need to be treated as _behaviour_ should they be exposed to the statechart.
 
 
