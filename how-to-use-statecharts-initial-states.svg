@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="438.0957336425781 237.5575714111328 439.4329833984375 229.69644165039062" width="319.771728515625" height="283.44183349609375" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="432.603759765625 232.75210571289062 444.9248962402344 244.1128387451172" width="319.771728515625" height="283.44183349609375" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <pattern id="pattern-0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
       <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"/>
@@ -20,7 +20,7 @@
     <rect x="138.542" y="103.334" width="166.8" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
     <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Displaying results</text>
   </g>
-  <g transform="matrix(1.088255, 0, 0, 0.979431, 590.863464, 283.752075)" style="">
+  <g transform="matrix(1.088255, 0, 0, 0.979431, 590.863464, 287.752075)" style="">
     <rect x="138.542" y="103.334" width="111.775" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
     <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Zoomed in</text>
   </g>
