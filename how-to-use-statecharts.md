@@ -1,3 +1,7 @@
+---
+author: Erik Mogensen
+---
+
 # How to use statecharts
 
 This page tries to describe some aspects of employing statecharts in your day-to-day coding routine.
@@ -61,4 +65,46 @@ This is done by concentrating on each top level state and trying to discover if 
 
 In order to explain this process, I'm going to try to walk you through the process that went into the design of the following component:  A simple search form.  It is modeled after the same UI as [Robust React User Interfaces with Finite State Machines](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/).
 
-TBC :)
+To quote the requirements of that article:
+
+> * Show a search input and a search button that allows the user to search for photos
+> * When the search button is clicked, fetch photos with the search term from Flickr
+> * Display the search results in a grid of small sized photos
+> * When a photo is clicked/tapped, show the full size photo
+> * When a full-sized photo is clicked/tapped again, go back to the gallery view
+
+Off the top of my head I can think of the following top level "modes"
+
+* Initial — no search results are available
+* Searching — when the search button was clicked
+* Displaying results — when displaying results
+* Zoomed in — when a photo is zoomed in on
+
+And I can easily think of the transitions between those too.  Here's the "happy path"
+
+Initial → Searching: someone typed something and hit the _Search_ button — I'll call this the **Search** event
+Searching → Displaying results: the HTTP request completed with some data, the UI can be populated with stuff
+Displaying results → Zoomed in: The user clicked a photo and we now _zoom in_ on a particular photo.
+Zoomed in → Displaying results: The user clicked a zoomed in photo and we now _zoom out_ back to the results.
+
+And similarly, I can sum up the _actions_ that should happen in each state:
+
+* Searching:
+  * on entry: fire HTTP request
+  * on exit: cancel HTTP request (if still running)
+* Displaying results:
+  * on entry: parse the HTTP response and show some results
+* Zoomed in:
+  * on entry: zoom in on a particular photo
+  * on exit: remove the zoomed-in photo
+
+So with that, here's my initial stab at the statechart:
+
+![Initial stab at statechart, depicting the above information]how-to-use-statecharts-initial-stab.svg)
+
+At this point we have enough stuff to work on to be able to get an initial implementation running too, just to get the happy path running.  We can then check them off the list of "problems" that typically plague a quick implementation.
+
+First off my preference is to code this statechart up in SCXML.  It'll give us a nice diagram and it's an _executable_ statechart, meaning I don't have to do any manual translation from this representation to code.  The SCION toolset can _run_ an SCXML file.
+
+
+
