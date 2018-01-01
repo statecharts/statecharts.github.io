@@ -189,7 +189,7 @@ And then the entry/exit handlers.  Here's the full SCXML file, with namespace de
 
 I've [extracted this SCXML into its own file](how-to-use-statecharts-initial-actions.scxml.xml), styled for a certain amount of interactivity and ability to explore:
 
-<iframe src="how-to-use-statecharts-initial-actions.scxml.xml" width="100%" height="10em"></iframe>
+<iframe src="how-to-use-statecharts-initial-actions.scxml.xml" width="100%" height="500px"></iframe>
 
 ### API Surface
 
