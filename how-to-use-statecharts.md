@@ -191,7 +191,8 @@ And then the entry/exit handlers.  Here's the full SCXML file, with namespace de
 
 If we look at our _API surface_—the set of events, guards and actions that we have—we can start to compile a list of things that our UI needs to provide:
 
-Events: `search`, `results`, `zoom`, and `zoom_out`
-Guards: none (it's still quite a crude solution)
-Actions: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
+* Events: `search`, `results`, `zoom`, and `zoom_out`
+* Guards: none (it's still quite a crude solution)
+* Actions: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
+
 
