@@ -71,6 +71,8 @@ Here's the full statechart:
 
 ![The full statechart with full _D_ state](on-off-delayed-exit-1.svg)
 
+\[[SCXML version](on-off-delayed-exit-1.scxml.xml)]
+
 ### Conclusion
 
 In all of these examples above, the business logic (the _turn light on_ and _turn light off_) has been left untouched. All of this new behaviour has been designed in a Statechart.  This page has shown a few of the techniques that can be used to solve various problems.
