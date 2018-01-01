@@ -187,6 +187,10 @@ And then the entry/exit handlers.  Here's the full SCXML file, with namespace de
 </scxml>
 ```
 
+I've [extracted this SCXML into its own file](how-to-use-statecharts-initial-actions.scxml.xml), styled for a certain amount of interactivity and ability to explore:
+
+<iframe src="how-to-use-statecharts-initial-actions.scxml.xml" width="100%" height="10em"></iframe>
+
 ### API Surface
 
 If we look at our _API surface_—the set of events, guards and actions that we have—we can start to compile a list of things that our UI needs to provide:
@@ -194,5 +198,8 @@ If we look at our _API surface_—the set of events, guards and actions that we 
 * Events: `search`, `results`, `zoom`, and `zoom_out`
 * Guards: none (it's still quite a crude solution)
 * Actions: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
+
+Note the absence of any data being passed back and forth: The events themselves are pretty anonymous; this is about high level things that happen in the UI. Likewise, the actions are no-arg function calls; no data is being passed from the statechart to the model.  They don't have to be function calls; it really depends on how you implement it. If you choose to, you can get the statechart to emit _events_ too, meaning that the component _listens_ for certain events from the state machine.
+
 
 
