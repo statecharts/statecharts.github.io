@@ -86,14 +86,14 @@ If I put my statechart hat on, these can be thought of as "top level states"
 
 And I can easily think of the transitions between those too.  Here's the "happy path" based on the requirements outlined above.
 
-Initial → Searching: someone typed something and hit the _Search_ button — I'll call this the **Search** event
-Searching → Displaying results: the HTTP request completed with some data, the UI can be populated with stuff
-Displaying results → Zoomed in: The user clicked a photo and we now _zoom in_ on a particular photo.
-Zoomed in → Displaying results: The user clicked a zoomed in photo and we now _zoom out_ back to the results.
+* Initial → Searching: someone typed something and hit the _Search_ button — I'll call this the **search** event
+* Searching → Displaying results: the HTTP request completed with some data, the UI can be populated with stuff—I'll call this the **results** event.
+* Displaying results → Zoomed in: The user clicked a photo and we now _zoom in_ on a particular photo.  I'll call this the **zoom** event
+* Zoomed in → Displaying results: The user clicked a zoomed in photo and we now _zoom out_ back to the results.  I can call this the **zoom_out** event.
 
 Again, these can be drawn into the statechart's "top level":
 
-![Initial set of states](how-to-use-statecharts-initial-transitions.svg)
+![Initial set of states with transitions](how-to-use-statecharts-initial-transitions.svg)
 
 And similarly, I can sum up the _actions_ that should happen in each state:
 
