@@ -108,7 +108,7 @@ And similarly, I can sum up the _actions_ that should happen in each state:
 
 So with that, here's my initial stab at the statechart:
 
-![Initial stab at statechart, depicting the above information]how-to-use-statecharts-initial-top-level.svg)
+![Initial stab at statechart, depicting the above information](how-to-use-statecharts-initial-actions.svg)
 
 Now, if you're an experienced statechart designer, you can probably already see one big shortcoming of this statechart.  Luckily, with a diagram, they are extremely easy to discover:  There is no way to get from the "results" state back into the searching state.  There are no direct arrows pointing, and there is no path to get there.  I'm going to ignore this problem for now, because I want to show (later) how you can fix such problems _purely_ by making changes to the state machine.  So, if you spotted this by yourself, pat yourself on the back now.
 
