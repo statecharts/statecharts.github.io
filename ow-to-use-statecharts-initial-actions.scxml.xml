@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml">
+  <state id="initial">
+    <transition event="search" target="searching"/>
+  </state>
+  <state id="searching">
+    <onentry>
+      <script>startHttpRequest();</script>
+    </onentry>
+    <onexit>
+      <script>cancelHttpRequest();</script>
+    </onexit>
+    <transition event="results" target="displaying_results"/>
+  </state>
+  <state id="displaying_results">
+    <onentry>
+      <script>showResults();</script>
+    </onentry>
+    <transition event="zoom" target="zoomed_in"/>
+  </state>
+  <state id="zoomed_in">
+    <onentry>
+      <script>zoomIn();</script>
+    </onentry>
+    <onexit>
+      <script>zoomOut();</script>
+    </onexit>
+    <transition event="zoom_out" target="displaying_results"/>
+  </state>
+</scxml>
