@@ -35,16 +35,6 @@ http://creativecommons.org/licenses/by-nc/4.0/.
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  margin: 30px 30px 0px 30px;
-}
-
-
-article {
-  margin-top: 2em;
-}
-
-article, div {
-  margin-left: 1em;
 }
 
 h1 {
