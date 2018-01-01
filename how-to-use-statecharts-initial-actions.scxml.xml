@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<?xml-stylesheet href="scxml-to-html.xsl" type="text/xsl"?>
 <scxml xmlns="http://www.w3.org/2005/07/scxml">
   <state id="initial">
     <transition event="search" target="searching"/>
