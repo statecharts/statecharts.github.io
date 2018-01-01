@@ -1,0 +1,52 @@
+
+<?xml version="1.0"?>
+<?xml-stylesheet href="scxml-to-html.xsl" type="text/xsl"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" initial="off">
+  <state id="off" initial="A">
+    <transition event="flick" target="on"/>
+    <state id="A">
+      <onentry>
+        <send event="A_timeout" id="A_timeout_id" delay="2s"/>
+      </onentry>
+      <onexit>
+        <cancel sendid="A_timeout_id"/>
+      </onexit>
+      <transition event="flick" target="A"/>
+      <transition event="A_timeout" target="B"/>
+    </state>
+    <state id="B"/>
+  </state>
+  <state id="on" initial="C">
+    <transition event="flick" target="off"/>
+    <state id="C">
+      <onentry>
+        <send event="C_timeout" id="C_timeout_id" delay="0.5s"/>
+      </onentry>
+      <onexit>
+        <cancel sendid="C_timeout_id"/>
+      </onexit>
+      <transition event="C_timeout" target="D"/>
+    </state>
+    <state id="D">
+      <onentry>
+        <script>turn_light_on()</script>
+      </onentry>
+      <onexit>
+        <script>turn_light_off()</script>
+      </onexit>
+      <state id="E">
+        <onentry>
+          <send event="E_timeout" id="E_timeout_id" delay="0.5s"/>
+        </onentry>
+        <onexit>
+          <cancel sendid="E_timeout_id"/>
+        </onexit>
+        <transition event="E_timeout" target="F"/>
+        <state id="G">
+          <transition event="flick" target="G"/>
+        </state>
+      </state>
+      <state id="F"/>
+    </state>
+  </state>
+</scxml>
