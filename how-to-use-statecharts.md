@@ -110,9 +110,88 @@ So with that, here's my initial stab at the statechart:
 
 ![Initial stab at statechart, depicting the above information]how-to-use-statecharts-initial-top-level.svg)
 
+Now, if you're an experienced statechart designer, you can probably already see one big shortcoming of this statechart.  Luckily, with a diagram, they are extremely easy to discover:  There is no way to get from the "results" state back into the searching state.  There are no direct arrows pointing, and there is no path to get there.  I'm going to ignore this problem for now, because I want to show (later) how you can fix such problems _purely_ by making changes to the state machine.  So, if you spotted this by yourself, pat yourself on the back now.
+
+### Initial implementation
+
 At this point we have enough stuff to work on to be able to get an initial implementation running too, just to get the happy path running.  We can then check them off the list of "problems" that typically plague a quick implementation.
 
 First off my preference is to code this statechart up in SCXML.  It'll give us a nice diagram and it's an _executable_ statechart, meaning I don't have to do any manual translation from this representation to code.  The SCION toolset can _run_ an SCXML file.
 
+First off, the top level states:
 
+```xml
+<scxml>
+  <state id="initial">
+  </state>
+  <state id="searching">
+  </state>
+  <state id="displaying_results">
+  </state>
+  <state id="zoomed_in">
+  </state>
+</scxml>
+```
+
+Let's add the transitions
+
+```xml
+<scxml>
+  <state id="initial">
+    <transition event="search" target="searching"/>
+  </state>
+  <state id="searching">
+    <transition event="results" target="displaying_results"/>
+  </state>
+  <state id="displaying_results">
+    <transition event="zoom" target="zoomed_in"/>
+  </state>
+  <state id="zoomed_in">
+    <transition event="zoom_out" target="displaying_results"/>
+  </state>
+</scxml>
+```
+
+And then the entry/exit handlers.  Here's the full SCXML file, with namespace declaration and all.
+
+```xml
+<?xml version="1.0"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml">
+  <state id="initial">
+    <transition event="search" target="searching"/>
+  </state>
+  <state id="searching">
+    <onentry>
+      <script>startHttpRequest();</script>
+    </onentry>
+    <onexit>
+      <script>cancelHttpRequest();</script>
+    </onexit>
+    <transition event="results" target="displaying_results"/>
+  </state>
+  <state id="displaying_results">
+    <onentry>
+      <script>showResults();</script>
+    </onentry>
+    <transition event="zoom" target="zoomed_in"/>
+  </state>
+  <state id="zoomed_in">
+    <onentry>
+      <script>zoomIn();</script>
+    </onentry>
+    <onexit>
+      <script>zoomOut();</script>
+    </onexit>
+    <transition event="zoom_out" target="displaying_results"/>
+  </state>
+</scxml>
+```
+
+### API Surface
+
+If we look at our _API surface_—the set of events, guards and actions that we have—we can start to compile a list of things that our UI needs to provide:
+
+Events: `search`, `results`, `zoom`, and `zoom_out`
+Guards: none (it's still quite a crude solution)
+Actions: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
 
