@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="432 230 445 244" width="445px" height="244px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"/>
+    </pattern>
+    <pattern id="pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"/>
+    </pattern>
+  </defs>
+  <g transform="matrix(1.088255, 0, 0, 0.979431, 295.114166, 140.541016)" style="">
+    <rect x="138.542" y="103.334" width="74.967" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Initial</text>
+  </g>
+  <g transform="matrix(1.088255, 0, 0, 0.979431, 492.746887, 153.919708)" style="">
+    <rect x="138.542" y="103.334" width="111.775" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Searching</text>
+  </g>
+  <g transform="matrix(1.088255, 0, 0, 0.979431, 324.228333, 277.324432)" style="">
+    <rect x="138.542" y="103.334" width="166.8" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Displaying results</text>
+  </g>
+  <g transform="matrix(1.088255, 0, 0, 0.979431, 590.863464, 283.752075)" style="">
+    <rect x="138.542" y="103.334" width="111.775" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Zoomed in</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.999999, 455.95929, 233.415558)" style="">
+    <text x="100.45" y="17.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">search</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 71.687 39.154 C 71.687 39.154 100.584 26.9 123.804 23.832 C 147.024 20.764 174.651 31.243 174.651 31.243"/>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.410399, 0.911906, -0.911907, -0.410396, 219.614822, -6.726184)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892" bx:origin="0.458 0.392"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.999999, 575.682251, 342.033783)" style="">
+    <text x="100.45" y="17.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">zoom</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 71.687 39.154 C 71.687 39.154 111.796 22.686 135.016 19.618 C 158.236 16.55 165.666 36.333 165.666 36.333"/>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.877207, 0.480114, -0.480117, -0.877204, 223.264176, 31.312915)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892" bx:origin="0.458 0.392"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.999999, 475.198517, 328.251251)" style="">
+    <text x="94.45" y="12.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">results</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 167.19 -18.705 C 167.19 -18.705 101.513 -6.096 86.625 8.031 C 71.737 22.158 73.804 40.77 73.804 40.77"/>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.999965, 0.008358, -0.008362, -0.999965, 126.588772, 61.527734)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892" bx:origin="0.458 0.392"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.999999, 567.852783, 433.985229)" style="">
+    <text x="93.45" y="17.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">zoom_out</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 76.651 18.638 C 76.651 18.638 80.029 35.591 103.249 32.523 C 126.469 29.455 178.571 15.817 178.571 15.817"/>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.942652, -0.333776, 0.33378, 0.942651, 21.272539, 18.07604)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892" bx:origin="0.458 0.392"/>
+  </g>
+</svg>
