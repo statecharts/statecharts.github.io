@@ -80,12 +80,20 @@ Off the top of my head I can think of the following top level "modes"
 * Displaying results — when displaying results
 * Zoomed in — when a photo is zoomed in on
 
-And I can easily think of the transitions between those too.  Here's the "happy path"
+If I put my statechart hat on, these can be thought of as "top level states"
+
+![Initial set of states](how-to-use-statecharts-initial-states.svg)
+
+And I can easily think of the transitions between those too.  Here's the "happy path" based on the requirements outlined above.
 
 Initial → Searching: someone typed something and hit the _Search_ button — I'll call this the **Search** event
 Searching → Displaying results: the HTTP request completed with some data, the UI can be populated with stuff
 Displaying results → Zoomed in: The user clicked a photo and we now _zoom in_ on a particular photo.
 Zoomed in → Displaying results: The user clicked a zoomed in photo and we now _zoom out_ back to the results.
+
+Again, these can be drawn into the statechart's "top level":
+
+![Initial set of states](how-to-use-statecharts-initial-transitions.svg)
 
 And similarly, I can sum up the _actions_ that should happen in each state:
 
@@ -100,7 +108,7 @@ And similarly, I can sum up the _actions_ that should happen in each state:
 
 So with that, here's my initial stab at the statechart:
 
-![Initial stab at statechart, depicting the above information]how-to-use-statecharts-initial-stab.svg)
+![Initial stab at statechart, depicting the above information]how-to-use-statecharts-initial-top-level.svg)
 
 At this point we have enough stuff to work on to be able to get an initial implementation running too, just to get the happy path running.  We can then check them off the list of "problems" that typically plague a quick implementation.
 
