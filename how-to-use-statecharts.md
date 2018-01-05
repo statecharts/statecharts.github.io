@@ -63,7 +63,7 @@ This is done by concentrating on each top level state and trying to discover if 
 
 ## Example
 
-In order to explain this process, I'm going to try to walk you through the process that went into the design of the following component:  A simple search form.  It is modeled after the same UI as [Robust React User Interfaces with Finite State Machines](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/).
+In order to explain this process, I'm going to try to walk you through the process that went into the design of the following component:  A simple search form.  It is modeled after the same UI that is presented in [Robust React User Interfaces with Finite State Machines](https://css-tricks.com/robust-react-user-interfaces-with-finite-state-machines/).
 
 To quote the requirements of that article:
 
@@ -80,11 +80,13 @@ Off the top of my head I can think of the following top level "modes"
 * Displaying results — when displaying results
 * Zoomed in — when a photo is zoomed in on
 
-If I put my statechart hat on, these can be thought of as "top level states"
+If I put my statechart hat on, these can be thought of as "top level states":
 
 ![Initial set of states](how-to-use-statecharts-initial-states.svg)
 
-And I can easily think of the transitions between those too.  Here's the "happy path" based on the requirements outlined above.
+Note that this set of states might change, since we haven't really understood what a "mode" is.  The main thing to look for is a different _behaviour_, i.e. that the component in question _reacts in a differnt way_ to events.  For example, the component should react differently to a click on a photo when displaying results vs when zoomed in on a photo.
+
+From the requirements it's also pretty easy to think up the transitions between those states too.  Here's the "happy path":
 
 * Initial → Searching: someone typed something and hit the _Search_ button — I'll call this the **search** event
 * Searching → Displaying results: the HTTP request completed with some data, the UI can be populated with stuff—I'll call this the **results** event.
@@ -110,7 +112,7 @@ So with that, here's my initial stab at the statechart:
 
 ![Initial stab at statechart, depicting the above information](how-to-use-statecharts-initial-actions.svg)
 
-Now, if you're an experienced statechart designer, you can probably already see one big shortcoming of this statechart.  Luckily, with a diagram, they are extremely easy to discover:  There is no way to get from the "results" state back into the searching state.  There are no direct arrows pointing, and there is no path to get there.  I'm going to ignore this problem for now, because I want to show (later) how you can fix such problems _purely_ by making changes to the state machine.  So, if you spotted this by yourself, pat yourself on the back now.
+Now, if you're an experienced statechart designer, you can probably already see one big shortcoming of this statechart.  Luckily, with a diagram, they are extremely easy to discover:  There is no way to get from the "results" state back into the searching state.  There are no direct arrows pointing, and there is no path to get there.  (It was also not explicitly stated in the requirements document!)  I'm going to ignore this problem for now, because I want to show (later) how you can fix such problems _purely_ by making changes to the state machine.  So, if you spotted this by yourself, pat yourself on the back now.
 
 ### Initial implementation
 
@@ -191,6 +193,30 @@ I've [extracted this SCXML into its own file](how-to-use-statecharts-initial-act
 
 <iframe src="how-to-use-statecharts-initial-actions.scxml.xml" width="100%" height="500px"></iframe>
 
+The same document in xstate (but shown in yaml, since it's nicer to read):
+
+```yaml
+initial: initial
+states:
+  initial:
+    on:
+      search: searching
+  searching:
+    on:
+      results: displaying_results
+    onEntry: startHttpRequest
+    onExit: cancelHttpRequest
+  displaying_results:
+    on:
+      zoom: zoomed_in
+    onEntry: showResults
+  zoomed_in:
+    on:
+      zoom_out: displaying_results
+    onEntry: zoomIn
+    onEntry: zoomOut
+```
+
 ### API Surface
 
 If we look at our _API surface_—the set of events, guards and actions that we have—we can start to compile a list of things that our UI needs to provide:
@@ -201,7 +227,7 @@ If we look at our _API surface_—the set of events, guards and actions that we 
 
 ### Absence of data transfer
 
-Note the absence of any data being passed back and forth: The events themselves are pretty anonymous; this is about high level things that happen in the UI. Likewise, the actions are no-arg function calls; no data is being passed from the statechart to the model.  They don't have to be function calls; it really depends on how you implement it. If you choose to, you can get the statechart to emit _events_ too, meaning that the component _listens_ for certain events from the state machine.
+Note the absence of any data being passed back and forth: The events themselves are pretty anonymous; this is about high level things that happen in the UI. Likewise, the actions are no-arg function calls; no data is being passed from the statechart to the model.  They don't have to be function calls; it really depends on how you implement it. If you choose to, you can get the statechart to emit _events_ instead, meaning that the component _listens_ for certain events from the state machine.  This is the approach I will be using later in this post.
 
 This absence of data transfer also means that the component still needs to keep track of the "business state" — the variables and stuff that the component is busy working on.  The statechart doesn't need or care about those things, it is only concerned with triggering the right actions at the right times.
 
@@ -213,4 +239,46 @@ As an example: the `startHttpRequest` action is called.  It will have to
 
 These three things are hidden from the statechart; it doesn't need to know that all of this is happening.  Only if any of those things need to be treated as _behaviour_ should they be exposed to the statechart.
 
+## Coding up the API
 
+The choice of UI framework should really not be very important, since what we're trying to describe is _what to do_ when certain events happen.  We aim to replace code that that litter the UI code to hide and show components based on the "state" of various variables, and replace them with actions that control the behaviour of the UI component.
+
+First off, let's take a look at the actions; the desired output of the state machine.  We need a component that can listen for these events coming from the state machine:
+
+```js
+function handleEvent(event) {
+  if (event === "startHttpRequest") {
+    // get value of text field
+    // construct URL
+    // send HTTP request
+  }
+
+  if (event === "cancelHttpRequest") {
+    // cancel HTTP request (if it's still active)
+  }
+
+  if (event === "showResults") {
+  }
+
+  if (event === "zoomIn") {
+  }
+
+  if (event === "zoomOut") {
+  }
+}
+```
+
+Forgive the naive if handler, as I opted for something readable.  I'll leave it to the readers to figure out ways of improving this code.
+
+The next part of the API is actually sending events _from_ the world and _to_ the state machine.  This is also somewhat independent of the actual state machine library, as most of them take a string event.
+
+We want something that's similar to this:
+
+```js
+searchButton.onclick = statemachine.send("search");
+httpRequest.then(() => statemachine.send("results"));
+resultspanel.onclick = statemachine.send("zoom_in");
+zoomedphoto.onclick = statemachine.send("zoom_out");
+```
+
+Essentially the buttons, HTTP requests and other things that _generate events_ don't need to know what's going to happen; they shouldn't.  They should just blindly send the information to the state machine, and let the state machine tell us what to do.
