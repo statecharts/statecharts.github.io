@@ -20,6 +20,10 @@ When the statechart receives the event, the active [states](state.html){:.glossa
 
 Since an event is bound to the transition it sets off, the name of the event is written as the caption of the transition arrow itself:
 
+![A depiction of the _my_event_ event](event-arrow.svg)
+
+The transition itself (the arrow) usually sits between two separate states, pointing _from_ the state in which the event is expected, and pointing _to_ the state to which the transition will happen.
+
 ![A depiction of the _my_event_ event transitioning from somestate to othersate](event.svg)
 
 Here we understand that _when_ the statechart is in the _somestate_ state, and the event _my_event_ happens, then it _transitions_ to the _otherstate_ state.
