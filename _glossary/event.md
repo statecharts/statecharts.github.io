@@ -20,8 +20,9 @@ When the statechart receives the event, the active states are checked to see if 
 
 Since an event is bound to the transition it sets off, the name of the event is written as the caption of the transition:
 
-            my_event
-    ----------------------->
+![A depiction of the _my_event_ event transitioning from somestate to othersate](event.svg)
+
+Here we understand that _when_ the statechart is in the _somestate_ state, and the event _my_event_ happens, then it _transitions_ to the _otherstate_ state.
 
 ## xstate
 
