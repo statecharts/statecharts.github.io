@@ -1,0 +1,23 @@
+<svg viewBox="432 230 418.3260498046875 114.53359985351562" width="445px" height="244px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"></path>
+    </pattern>
+    <pattern id="pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"></path>
+    </pattern>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 317.583466, 141.191605)" style="">
+    <rect x="138.542" y="103.334" width="124.586" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="160.315" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">somestate</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 559.806824, 151.317368)" style="">
+    <rect x="138.542" y="103.334" width="111.775" height="68.505" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="156.639" y="141.165" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">otherstate</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 511.95929, 238.415558)" style="">
+    <text x="100.45" y="14.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">my_event</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 69.687 39.154 C 69.687 39.154 98.584 26.9 121.804 23.832 C 145.024 20.764 172.651 31.243 172.651 31.243"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.410399, 0.911906, -0.911907, -0.410396, 219.614822, -6.726184)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892" bx:origin="0.458 0.392"></path>
+  </g>
+</svg>
