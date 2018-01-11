@@ -45,3 +45,31 @@ function handleChange(e) {
   }
 }
 ```
+
+## Statecharts
+
+As mentioned earlier, when implementing statecharts, the events are passed on to the statechart instead of being acted upon directly. The statechart then determines what to do.
+
+The simplest state machine (a simple form of a statechart) is shown below. It has the same behaviour as the example above:
+
+```js
+var currentState = "not_green";
+var stateMachine = {
+  "not_green": () => field.classList.add("green")
+}
+function handleChange(e) {
+  stateMachine[currentState]()
+}
+```
+
+Now this state machine is extremely simple, it only has one state and knows only one way to behave.  But it is now a lot easier to make this component do more.
+
+
+```js
+var stateMachine = {
+  "not_green": () => { field.classList.add("green"); currentState = "green"; },
+  "green": () => { field.classList.remove("green"); currentState = "not_green"; }
+}
+```
+
+By changing the state machine alone, we can now change the behaviour of the component.  It now alternates between having the "green" class every time the field changes.
