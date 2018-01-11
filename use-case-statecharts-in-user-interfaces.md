@@ -73,3 +73,45 @@ var stateMachine = {
 ```
 
 By changing the state machine alone, we can now change the behaviour of the component.  It now alternates between having the "green" class every time the field changes.
+
+We can introduce a _guard_ in order to prevent the event from having an effect.  Let's extend it so that the field is green only when text has been added to it:
+
+
+```js
+var stateMachine = {
+  "not_green": () => {
+    if (field.value == "") return;
+    currentState = "green";
+    field.classList.add("green");
+  },
+  "green": () => {
+    if (field.value != "") return;
+    currentState = "not_green";
+    field.classList.remove("green");
+  }
+}
+```
+
+This is a crude approximation of a state machine, but it _is_ a state machine, and has a lot of the moving parts of a statechart too:
+
+* It accepts events, although it simply treats all events equal. Real statecharts have named events.
+* It has several states, `green` and `not_green`
+* It has an "active" state (`currentState`)
+* It reacts differently depending on which "active state" state it's in
+* It also reacts differently depending on "real world" information (`if (field.value == "") return;`)
+* It changes the "current" state when it deals with an event
+* It has side effects (known as actions, it adds and removes the `green` class)
+
+### UI modeling
+
+... TKTK some words from the "render from state" vs "render from action" discussion:
+* Actions should be used for side effects
+* User interface changes could be deemed a side effect, so _can_ be controlled via actions
+* The "current state" can be thought of as an implicit side effect
+* It's possible to take the "current state" and control user interface changes based on it
+
+Especially in declarative UI frameworks like HTML or React, it makes a lot of sense to model the statechart based on different "modes" of the UI, and use normal statechart mechanisms to control which is the "current state".  It therefore makes a lot of sense to re-use the "current state" and pass this knowledge on to the declarative UI, basically asking the UI to render the "current state" UI.
+
+This has the benefit of keeping the statechart very much in line with the major modes of the UI.  When a component gets a new "mode of operation", it also gets a new "top level state".  This makes it easier when showing e.g. a statechart to non-developers, like QA or designers, since they will quickly recognise the states and be able to relate to them.
+
+TKTK not finished yet.
