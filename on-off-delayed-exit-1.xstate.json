@@ -1,0 +1,79 @@
+{
+  "initial": "Off",
+  "states": {
+    "Off": {
+      "on": {
+        "FLICK": "On"
+      },
+      "initial": "A",
+      "states": {
+        "A": {
+          "on": {
+            "FLICK": "A",
+            "UNBLOCK": "B"
+          },
+          "onEntry": {
+            "type": "startUnblockTimer",
+            "delay": 2000
+          },
+          "onExit": {
+            "type": "cancelUnblockTimer"
+          }
+        },
+        "B": {}
+      }
+    },
+    "On": {
+      "on": {
+        "FLICK": "Off"
+      },
+      "initial": "C",
+      "states": {
+        "C": {
+          "on": {
+            "UNBLOCK": "D"
+          },
+          "onEntry": {
+            "type": "startUnblockTimer",
+            "delay": 500
+          },
+          "onExit": {
+            "type": "cancelUnblockTimer"
+          }
+        },
+        "D": {
+          "onEntry": {
+            "type": "turnOn"
+          },
+          "onExit": {
+            "type": "turnOff"
+          },
+          "initial": "E",
+          "states": {
+            "E": {
+              "on": {
+                "UNBLOCK": "F"
+              },
+              "onEntry": {
+                "type": "startUnblockTimer",
+                "delay": 500
+              },
+              "onExit": {
+                "type": "cancelUnblockTimer"
+              },
+              "initial": "G",
+              "states": {
+                "G": {
+                  "on": {
+                    "FLICK": "G"
+                  }
+                }
+              }
+            },
+            "F": {}
+          }
+        }
+      }
+    }
+  }
+}
