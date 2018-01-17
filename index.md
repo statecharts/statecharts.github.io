@@ -67,3 +67,13 @@ This carries along some different pros and cons:
 ### How do you use executable statecharts?
 
 In essence, if you have any definition of a statechart in your code, all you need to do is to take that representation and automate the generation of the visual statechart.  This is of course simpler when the definition is in a separate file, e.g. in a JSON or XML file.
+
+## Anything else?
+
+If you feel like chatting to someone about statecharts, you should go to <a href="https://spectrum.chat/statecharts">spectrum.chat/statecharts</a>, where you'll find a community of like minded developers that can help you understand and reap the benefits of using Statecharts.
+
+There are some pages that haven't found any place in the web of documents, so they're honourably mentioned here:
+
+* [Use case: Statecharts in User Interfaces](use-case-statecharts-in-user-interfaces.html)
+
+[Acknowledgements](acknowledgements.html)
