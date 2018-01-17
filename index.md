@@ -24,7 +24,7 @@ Statecharts offer a surprising array of benefits
   * This makes it [easier to make changes to the behaviour](benefit-make-changes-to-the-behaviour.html).
   * It also makes it [easier to reason about the code](benefit-reason-about-code.html).
   * And the behaviour can be [tested independently](benefit-testable-behaviour.html) of the component.
-* The process of building a statechart causes [all the states are explored](benefit-all-states-explored.html).
+* The process of building a statechart causes [all the states to be explored](benefit-all-states-explored.html).
 * Studies have shown that statechart based code has [lower bug counts](benefit-low-bug-count.html) than traditional code.
 * Statecharts lends itself to dealing with [exceptional situations](benefit-handle-anomalies.html) that might otherwise be overlooked.
 * As complexity grows, statecharts [scale well](benefit-scales-with-complexity.html).
