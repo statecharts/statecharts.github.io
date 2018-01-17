@@ -64,7 +64,6 @@ function handleChange(e) {
 
 Now this state machine is extremely simple, it only has one state and knows only one way to behave.  But it is now a lot easier to make this component do more.
 
-
 ```js
 var stateMachine = {
   "not_green": () => { field.classList.add("green"); currentState = "green"; },
@@ -102,7 +101,23 @@ This is a crude approximation of a state machine, but it _is_ a state machine, a
 * It changes the "current" state when it deals with an event
 * It has side effects (known as actions, it adds and removes the `green` class)
 
+It has a few limitations too, though
+
+* It is only a glorified enumeration with side effects.
+* It's just _two states_
+* It only handles _one event_
+* It's extremely tightly coupled to the rest of the system (it talks directly to the DOM)
+
+It isn't a viable way forward, so in order to help, we'll be introducing a statechart library to help us out.
+
+## Introducing xstate
+
+TKTK
+
+
 ### UI modeling
+
+When you have a state machine or statechart that "drives" your UI, it is quite common for the states in the statechart to (at least at the highest level) correspond to "modes" of the user interface.
 
 ... TKTK some words from the "render from state" vs "render from action" discussion:
 * Actions should be used for side effects
