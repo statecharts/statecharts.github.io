@@ -91,6 +91,9 @@ var stateMachine = {
 }
 ```
 
+<p data-height="228" data-theme-id="0" data-slug-hash="YYLaGM" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/YYLaGM/">Green input box</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 This is a crude approximation of a state machine, but it _is_ a state machine, and has a lot of the moving parts of a statechart too:
 
 * It accepts events, although it simply treats all events equal. Real statecharts have named events.
@@ -164,33 +167,126 @@ currentState = statemachine.transition(currentState, "change");
 
 `currentState` will describe the `green` state, and if you did it again, it would be the `not_green` state once again.  What we have might seem like a pretty advanced boolean, but don't despair.  It's time to hook this state machine up to our user interface.  To start with, we'll let any change in the text field will trigger the "change" event.
 
-```js
-var field = document.getElementById("my_editor");
+The first thing we need to do when handling the event is to trigger a state change, as shown above.  The next thing is then to check which state we're now in, and respond accordingly.
 
-function handleChange(e) {
-  newState = stateMachine.transition(currentState, "change");
-  if (newState) {
-    currentState = newState;
-    if (currentState.name == "green") {
-      field.classList.add("green");
-    }
-    if (currentState.name == "not_green") {
-      field.classList.remove("green");
+```js
+if (currentState.value == "green") {
+  field.classList.add("green");
+}
+if (currentState.value == "not_green") {
+  field.classList.remove("green");
+}
+```
+
+<p data-height="265" data-theme-id="0" data-slug-hash="Rxvowv" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 1)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/Rxvowv/">Green input box (xstate version 1)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+This initial implementation switches between the `green` and `not_green` states every time an input happens.  We wanted the green outline to only appear when the value of the input text was not empty.  If you're not used to thinking in state machines, it would be fairly common to solve this _outside_ the state machine, by perhaps checking the value _before_ telling the state machine about the event.  However state machines have support for something called _guards_ which allow the state machine to make the decision.
+
+First of all, we need to gather information about the world that we want the state machine to be able to inspect, a form of "extended state".  For our example we want the state machine's behaviour to be dependent on the input value, or more specifically, the length of the value (or something else that constitutes validity).  This is passed as the third parameter to `transition`:
+
+```js
+currentState = stateMachine.transition(currentState, "change", field.value);
+```
+
+For simplicity, we're just passing the value of the field as the extended state, we could pass in the length or, even better, an object literal with room for more variables.
+
+In the state machine definition, we now change the `on: change` handlers so that they _check the guard_ before continuing.  When we're in the `not_green` state we will only go to `green` if the `length` is greater than 0:
+
+```js
+on: {
+  change:  {
+    green: {
+      cond: (text) => text.length > 0
     }
   }
 }
+```
 
-field.onchange = handleChange
+Here `cond` is short for _condition_.  The condition must hold (evaluate to `true`) for the transition to happen.  Conversely, we'll check that when we're in the `green` state we'll only transition to the other state if length is equal to 0.
+
+<p data-height="265" data-theme-id="0" data-slug-hash="JMxEKg" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 2, with guards)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/JMxEKg/">Green input box (xstate version 2, with guards)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+> TKTK update the code samples from the pen:
+
+## Actions, side effects
+
+Before we dive in, there's one last thing that we ought to do, and that's discuss the actual side effects of the state machine.
+
+When you have a state machine or statechart that "drives" your UI, it is quite common for the states in the statechart to (at least at the highest level) correspond to "modes" of the user interface.  In our sample we have "green" and "not_green" as states, and we have an ugly _if_ test which checks _which_ state we're in, and performs some actions based on it.
+
+An easy simplification of this is to set the `class` of the element to the value of the state and be done with it.  This is a common way of using the "current state" to effect changes to the user interface.  That ugly set of if-tests can be reduced to
+
+```js
+field.classList.value = currentState.value;
+```
+
+The field now gets the class based on the current state of the state machine. If we introduce a new state in the state machine, it automatically becomes a class of the field, for better or worse.
+
+However, there are some side effects that cannot be done based on the class alone, such as making a HTTP request.  These long running things are in statechart terminology called "activities", and activities are started and stopped by way of _actions_.  To avoid having to talk to a server, we're just going to use `setTimeout` to simulate a long running request:
+
+```js
+var timeout = undefined;
+
+startHttpRequest() {
+  timeout = setTimeout(function() {
+    timeout = undefined;
+    resultsArrived({fake: "data"});
+  }, 2000);
+}
+
+cancelHttpRequest() {
+  if (timeout != undefined) {
+    cancelTimeout(timeout);
+    timeout = undefined;
+  }
+}
+
+function resultsArrived(data) {
+  // interesting stuff happens here
+}
+```
+
+When `startHttpRequest` is called, it will call `resultsArrived` after 2 seconds, unless `cancelHttpRequest` is called first.  It has an unfortunate, but deliberate behaviour that if you call the startHttpRequest many times, it will actually call resultsArrived many times.
+
+In a non-statechart driven system, the `resultsArrived` would typically immediately update the DOM and go about its business.  However, in a statechart driven system, the function would actually only _tell the state machine_ about the fact that some data arrived.  The state machine would then decide what to do:
+
+```js
+var results;
+function resultsArrived(data) {
+  results = data;
+  currentState = stateMachine.transition(currentState, "results");
+  field.classList.value = currentState.value;
+}
+```
+
+We now already have some code duplication in that we have two places where the field.classList is updated, so it's probably about time to extract this into its own function, a "stateful" wrapper around the xstate state machine:
+
+```js
+var currentState;
+function transition(event, data) {
+  currentState = stateMachine.transition(currentState, event, data)
+  field.classList.value = currentState.value;
+}
+```
+
+Now the resultsArrived function can call that function:
+
+
+```
+function resultsArrived(data) {
+  results = data;
+  transition("results");
+}
 ```
 
 
 
+TKTK
 
-### UI modeling
 
-When you have a state machine or statechart that "drives" your UI, it is quite common for the states in the statechart to (at least at the highest level) correspond to "modes" of the user interface.
 
-... TKTK some words from the "render from state" vs "render from action" discussion:
 * Actions should be used for side effects
 * User interface changes could be deemed a side effect, so _can_ be controlled via actions
 * The "current state" can be thought of as an implicit side effect
