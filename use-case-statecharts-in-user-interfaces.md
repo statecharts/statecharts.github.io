@@ -346,6 +346,9 @@ on: {
 
 This tiny change _handles_ the `results` event by telling the machine to go to the `not_green` state.  With our fake HTTP request, you can see that the machine leaves the "green" state after 2 seconds.
 
+<p data-height="265" data-theme-id="0" data-slug-hash="EorWVP" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 4, actual side effects)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/EorWVP/">Green input box (xstate version 4, actual side effects)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ## Building blocks
 
 We now have a lot of the building blocks in order to make efficient use of statecharts.  We have a machine which:
