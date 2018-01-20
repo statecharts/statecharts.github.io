@@ -107,12 +107,83 @@ It has a few limitations too, though
 * It's just _two states_
 * It only handles _one event_
 * It's extremely tightly coupled to the rest of the system (it talks directly to the DOM)
+* It's difficult to extend with substates
 
-It isn't a viable way forward, so in order to help, we'll be introducing a statechart library to help us out.
+While it is possible to "roll your own" state machine, it is likely not worth the effort.  There are numerous edge cases that you need to consider, and if you're not careful, such a one-off state machine becomes more difficult to maintain than the original spaghetti code it was meant to displace.  It is a bit like rolling your own date handling code; it works for the simplest of cases, but is quickly outgrown.
+
+The code shown above was introduced solely to describe how a state machine fits in, in the context of user interfaces.  In order to show more advanced examples, it's necessary to avoid coding the inner workings of the state machine, and try to focus on the important parts, namely the different states, and which events causes the states to change.
+
+In order to help, we'll be introducing a statechart library
 
 ## Introducing xstate
 
-TKTK
+Xstate is a javascript library that essentially allows us to hide the inner workings of the state machine.  You provide it with an object that _describes_ the state machine you're interested in, and xstate returns a state machine that provides _pure functions_ that you can use to answer the question: "If I'm in _this_ state, and _this_ happens, _what_ should I do?"
+
+To give you a quick primer, I'll rewrite the green / not green state machine above using xstate:
+
+
+First of all, we'll need a state machine, constructed by xstate.
+
+```js
+const Machine = ...;
+
+var stateMachine = new Machine({
+  initial: "not_green",
+  states: {
+    "not_green": {
+      on: {
+        "change": "green"
+      }
+    },
+    "green": {
+      on: {
+        "change": "not_green"
+      }
+    }
+  }
+}
+```
+
+One thing to note is that in state machines, and statecharts, events are given explicit names.  For our simple example I called the event `change`.
+
+Now, this `stateMachine` variable, after it's constructed provides a _pure function_ interface to the state machine.  This means that this state machine cannot and wiil not have side effects.  Every time you use it, you tell it what the "current" state is, and what happens, and _it_ tells you what happened.
+
+We start off by asking the state machine what the "initial" state is:
+
+```js
+var currentState = stateMachine.initialState;
+```
+
+`currentState` is an xstate _State_ instance, which has a _name_ which should be `green`.
+
+You can then simulate what happens if you pass it the `change` event:
+
+```js
+currentState = statemachine.transition(currentState, "change");
+```
+
+`currentState` will describe the `green` state, and if you did it again, it would be the `not_green` state once again.  What we have might seem like a pretty advanced boolean, but don't despair.  It's time to hook this state machine up to our user interface.  To start with, we'll let any change in the text field will trigger the "change" event.
+
+```js
+var field = document.getElementById("my_editor");
+
+function handleChange(e) {
+  newState = stateMachine.transition(currentState, "change");
+  if (newState) {
+    currentState = newState;
+    if (currentState.name == "green") {
+      field.classList.add("green");
+    }
+    if (currentState.name == "not_green") {
+      field.classList.remove("green");
+    }
+  }
+}
+
+field.onchange = handleChange
+```
+
+
 
 
 ### UI modeling
