@@ -42,7 +42,7 @@ There are a few downsides to using statecharts that you should be aware of.
 
 There are a few common arguments against statecharts. 
 
-* It's [simply not needed](faq/an-event-always-has-an-action.html).
+* It's [simply not needed](faq/an-event-always-has-one-action.html).
 * It [goes against the grain](faq/goes-against-grain.html) of _\[inser name of technology]_.
 * It [increases the number of libraries](faq/increases-number-of-libraries.html), for web applications this means increased load time.
 * It [increases the number of hand coded lines](faq/increases-number-of-lines.html).
