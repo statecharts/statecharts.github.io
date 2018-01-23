@@ -3,9 +3,17 @@ collections:
   glossary:
     output: true
     layout: default
+  faq:
+    output: true
+    layout: default
 defaults:
   - scope:
       path: ""
       type: glossary
     values:
       layout: glossary
+  - scope:
+      path: ""
+      type: faq
+    values:
+      layout: default
