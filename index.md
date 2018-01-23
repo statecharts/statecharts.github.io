@@ -38,6 +38,17 @@ There are a few downsides to using statecharts that you should be aware of.
 * [It's usually a very foreign way of coding](drawback-foreign-paradigm.html), so teams might experience pushback based on how very different it is.
 * There is an overhead to extracting the behaviour in that the [number of lines of code might increase](drawback-lines-of-code.html) with smaller statecharts.
 
+### What are the main arguments against statecharts?
+
+There are a few common arguments against statecharts. 
+
+* It's [simply not needed](faq/an-event-always-has-an-action.html).
+* It [goes against the grain](faq/goes-against-grain.html) of _\[inser name of technology]_.
+* It [increases the number of libraries](faq/increases-number-of-libraries.html), for web applications this means increased load time.
+* It [increases the number of hand coded lines](faq/increases-number-of-lines.html).
+
+The benefits outlines above should make it clear that the introduction of statecharts is generally a _net positive_.
+
 ### How do you use statecharts?
 
 First of all, know that a W3C committee spent 10+ years (2005 to 2015) standardizing something called _SCXML_ (yes, Statechart XML), and that it defines a lot of the semantics and specifies how to deal with certain edge cases.  There are tools to read, author and even execute statecharts written in SCXML, in various languages.  There are also some derivatives that support the same _model_ as SCXML, but using a different syntax.
