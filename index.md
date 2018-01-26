@@ -83,6 +83,8 @@ In essence, if you have any definition of a statechart in your code, all you nee
 
 If you feel like chatting to someone about statecharts, you should go to <a href="https://spectrum.chat/statecharts">spectrum.chat/statecharts</a>, where you'll find a community of like minded developers that can help you understand and reap the benefits of using Statecharts.
 
+Quite a few people have written books or held presentations that deal with statecharts in various ways, and they're included in our [resources](resources.html) page.
+
 There are some pages that haven't found any place in the web of documents, so they're honourably mentioned here:
 
 * [Use case: Statecharts in User Interfaces](use-case-statecharts-in-user-interfaces.html)
