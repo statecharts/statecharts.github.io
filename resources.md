@@ -2,7 +2,7 @@
 
 ## Books
 
-Constructing the User Interface with Statecharts(https://books.google.no/books/about/Constructing_the_User_Interface_with_Sta.html?id=-9VQAAAAMAAJ&redir_esc=y&hl=en), Ian Horrocks, 1999
+[Constructing the User Interface with Statecharts](https://books.google.no/books/about/Constructing_the_User_Interface_with_Sta.html?id=-9VQAAAAMAAJ&redir_esc=y&hl=en), Ian Horrocks, 1999
 
 
 
