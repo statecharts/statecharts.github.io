@@ -36,6 +36,8 @@
 
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
+[React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React
+
 [SCION](https://github.com/jbeard4/SCION), [SCION-CORE](https://github.com/jbeard4/SCION-CORE) et al, by Jacob Beard.  An SCXML parser and runner in JavaScript.
 
 [xstate](https://github.com/davidkpiano/xstate/), by David Khourshid, pure functional statecharts, in TypeScript
