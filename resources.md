@@ -6,7 +6,8 @@
 
 [Practical Statecharts in C/C++](https://www.state-machine.com/psicc/) — discusses some of the same things that Ian Horrocks’ book discusses. The book is freely available as a PDF download.
 
-[A Crash Course in UML Statecharts](https://classes.soe.ucsc.edu/cmpe013/Spring11/LectureNotes/A_Crash_Course_in_UML_State_Machines.pdf), Miro Samek, Quantum Leaps LLC, 2009
+[A Crash Course in UML Statecharts](https://www.embedded.com/design/prototyping-and-development/4008247/A-crash-course-in-UML-state-machines-Part-1) ([PDF]
+(https://classes.soe.ucsc.edu/cmpe013/Spring11/LectureNotes/A_Crash_Course_in_UML_State_Machines.pdf)), Miro Samek, 2009
 
 [Statecharts and SCXML as a modeling technique in web engineering](http://www.balisage.net/Proceedings/vol15/print/Sayih01/BalisageVol15-Sayih01.html), Proceedings of Balisage: The Markup Conference 2015
 
