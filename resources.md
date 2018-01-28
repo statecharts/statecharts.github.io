@@ -29,6 +29,8 @@
 
 [Telling stories using statecharts](https://www.youtube.com/watch?v=GiOtyr2xA8c), Erik Mogensen, 2015
 
+[Statecharts in User Interfaces](https://vimeo.com/109808288) ([Slides](https://drive.google.com/open?id=14Uv3z25Z7DwbYD4SZzU5biQUPnBmED_6Tiv89dBXrTo)), Erik Mogensen, 2014
+
 [UML State Chart Autocoding for the Mars Science Laboratory (MSL) Mission](https://www.youtube.com/watch?v=VvssxOP95s0) Eddie Benowitz, JPL, 2012
 
 [Statecharts based GUI Design](http://msdl.cs.mcgill.ca/people/hv/teaching/MSBDesign/COMP762B2003/presentations/GUIdesign.pdf), Chenliang Sun, 2003
