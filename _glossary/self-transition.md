@@ -21,9 +21,9 @@ For [compound states](compound-states.html){:.glossary} this means that all subs
 In xstate, a self transition is defined as any other transition, listing the name of the state as usual:
 
 ```json
-"importantstate": {
+"important_state": {
   "on": {
-    "again" : "importantstate"
+    "again" : "important_state"
   }
 }
 ```
@@ -33,8 +33,8 @@ In xstate, a self transition is defined as any other transition, listing the nam
 In Statechart XML, a self transition uses the standard `<transition>` syntax.
 
 ```xml
-<state id="importantstate">
-  <transition event="again" target="importantstate"/>
+<state id="important_state">
+  <transition event="again" target="important_state"/>
 </state>
 ```
 
