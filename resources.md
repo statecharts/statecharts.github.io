@@ -6,16 +6,18 @@
 
 [Practical Statecharts in C/C++](https://www.state-machine.com/psicc/) — discusses some of the same things that Ian Horrocks’ book discusses. The book is freely available as a PDF download.
 
-[A Crash Course in UML Statecharts](https://www.embedded.com/design/prototyping-and-development/4008247/A-crash-course-in-UML-state-machines-Part-1) ([PDF]
-(https://classes.soe.ucsc.edu/cmpe013/Spring11/LectureNotes/A_Crash_Course_in_UML_State_Machines.pdf)), Miro Samek, 2009
-
 [Statecharts and SCXML as a modeling technique in web engineering](http://www.balisage.net/Proceedings/vol15/print/Sayih01/BalisageVol15-Sayih01.html), Proceedings of Balisage: The Markup Conference 2015
 
 ## Blog posts / Articles
 
 [Pure UI Control](https://medium.com/@asolove/pure-ui-control-ac8d1be97a8d) by Adam Solove, 2017
 
-[Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek,  Dr. Dobb's magazine, 2003
+[A Crash Course in UML Statecharts](https://www.embedded.com/design/prototyping-and-development/4008247/A-crash-course-in-UML-state-machines-Part-1) ([PDF]
+(https://classes.soe.ucsc.edu/cmpe013/Spring11/LectureNotes/A_Crash_Course_in_UML_State_Machines.pdf)), Miro Samek, 2009
+
+[UML Statecharts at $10.99](http://www.drdobbs.com/architecture-and-design/uml-statecharts-at-1099/188101799), Miro Samek, Dr. Dobb's magazine, 2006
+
+[Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek, Dr. Dobb's magazine, 2003
 
 ## Presentations
 
