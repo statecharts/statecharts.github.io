@@ -17,4 +17,28 @@ A compound state is a normal state with its substates depicted _inside_ the bord
 
 ## xstate
 
+An xstate compound state is declared using the `states` property of the state, holding an object containing substates.  Each key value pair declares the name and definition of the state, respectively:
+
+```js
+"off": {
+  "initial": "A",
+  "states": {
+    "A": { ... },
+    "B": { ... }
+  }
+}
+```
+
+The definitions of A and B have been omitted.
+
 ## SCXML
+
+In Statechart XML, a compound state is any state with nested state elements as direct children; this includes `<parallel>`, `<initial>` elements too, as these are also state elements. 
+
+```xml
+<state id="off">
+  <state id="A"/>
+  <state id="B"/>
+</state>
+```
+
