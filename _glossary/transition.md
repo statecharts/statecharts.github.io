@@ -21,8 +21,6 @@ The transition always sits between two distinct states:
 
 ![A transition from _somestate_ to _otherstate_ given the _my_event_ event](event.svg)
 
-A transition that goes from and to the same state i
-
 ## xstate
 
 In xstate, a transition is defined using the `on` property of a state. The key is the event in question, and 
