@@ -14,7 +14,7 @@
 
 [Pure UI Control](https://medium.com/@asolove/pure-ui-control-ac8d1be97a8d) by Adam Solove, 2017
 
-[Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek,  Dr. Dobbs magazine, 2003
+[Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek,  Dr. Dobb's magazine, 2003
 
 ## Presentations
 
