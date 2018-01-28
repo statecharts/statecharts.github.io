@@ -1,0 +1,12 @@
+<svg viewBox="-33.277 26.928 77.653 93.837" width="236.76626586914062" height="104.41693878173828" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs></defs>
+  <g transform="matrix(1, 0, 0, 1, -2.0000000000000284, 10)">
+    <rect x="-14.856" y="46.198" width="56.462" height="59.889" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="8.117" y="83.687" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">A</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -83.73311614990237, -22.00229263305664)">
+    <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"></ellipse>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+</svg>
