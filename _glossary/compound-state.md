@@ -15,6 +15,8 @@ A compound state is a normal state with its substates depicted _inside_ the bord
 
 ![A state "Off" with substates A and B](compound-state.svg)
 
+Here, the state called **Off** is a compound state.  It has two states **A** and **B** as its substates.  Note how the substates constitute their own state machine, even with an [initial state](initial-state.html){:.glossary}.
+
 ## xstate
 
 An xstate compound state is declared using the `states` property of the state, holding an object containing substates.  Each key value pair declares the name and definition of the state, respectively:
