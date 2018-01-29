@@ -4,7 +4,7 @@ title: State
 
 # State
 
-A state in a state machine describes a particular behaviour of the machine.  When the machine is "in" the state, it behaves in the way the state describes.
+A state in a state machine describes a particular behaviour of the machine.  When we say that a machine is "in" a state, it means that the machine behaves in the way the state describes.
 
 The behaviour of a state is defined as how the state reacts to [events](event.html){:.glossary}.  Each state can specify a number of events that it "understands", and specifies, for each event, any number of [transitions](transition.html){:.glossary} that should be taken, if that event happens.  A state also describes a set of [actions](action.html){:.glossary} to execute when the state is entered or exited, and in some implementations, [activities](activity.html){:.glossary} that should be happening for the entire duration of time that the machine is _in_ the state.
 
