@@ -18,7 +18,7 @@
 
 [Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek, Dr. Dobb's magazine, 2003
 
-## Presentations
+## Presentations 
 
 [Are statecharts the next big UI paradigm?](https://www.slideshare.net/lmatteis/are-statecharts-the-next-big-ui-paradigm), Luca Matteis, 2017
 
@@ -34,6 +34,11 @@
 
 [Statecharts based GUI Design](http://msdl.cs.mcgill.ca/people/hv/teaching/MSBDesign/COMP762B2003/presentations/GUIdesign.pdf), Chenliang Sun, 2003
 
+## Training material
+
+Mathworks has a [great series]() on about state machines: [What are they?](https://www.mathworks.com/videos/understanding-state-machines-what-are-they-1-of-4-90488.html) (3:14), [Why use them?](https://www.mathworks.com/videos/understanding-state-machines-why-use-them-2-of-4-90489.html) (3:37), [Mealy and Moore machines](https://www.mathworks.com/videos/understanding-state-machines-mealy-and-moore-machines-3-of-4-90490.html) (3:38), and finally the one that introduces statecharts, [Harel State Machines](https://www.mathworks.com/videos/understanding-state-machines-harel-state-machines-4-of-4-90491.html) (2:36).
+
+
 ## Software
 
 [SCA](https://github.com/JPLOpenSource/SCA) the Statechart Autocoder used by Curiosity, by JPL.  Generates C code from Magicdraw drawings of statecharts
@@ -43,6 +48,8 @@
 ## Libraries
 
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
+
+[Miros](https://aleph2c.github.io/miros/), statecharts in python
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React
 
