@@ -36,7 +36,7 @@
 
 ## Training material
 
-Mathworks has a [great series]() on about state machines: [What are they?](https://www.mathworks.com/videos/understanding-state-machines-what-are-they-1-of-4-90488.html) (3:14), [Why use them?](https://www.mathworks.com/videos/understanding-state-machines-why-use-them-2-of-4-90489.html) (3:37), [Mealy and Moore machines](https://www.mathworks.com/videos/understanding-state-machines-mealy-and-moore-machines-3-of-4-90490.html) (3:38), and finally the one that introduces statecharts, [Harel State Machines](https://www.mathworks.com/videos/understanding-state-machines-harel-state-machines-4-of-4-90491.html) (2:36).
+Mathworks has a short four-part series on state machines from 2014: [What are they?](https://www.mathworks.com/videos/understanding-state-machines-what-are-they-1-of-4-90488.html) (3:14), [Why use them?](https://www.mathworks.com/videos/understanding-state-machines-why-use-them-2-of-4-90489.html) (3:37), [Mealy and Moore machines](https://www.mathworks.com/videos/understanding-state-machines-mealy-and-moore-machines-3-of-4-90490.html) (3:38), and finally the one that introduces statecharts, [Harel State Machines](https://www.mathworks.com/videos/understanding-state-machines-harel-state-machines-4-of-4-90491.html) (2:36).
 
 
 ## Software
