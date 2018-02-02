@@ -23,7 +23,29 @@ TBD:
 
 ## xstate
 
-Xstate does not yet support internal transitions
+Xstate does not yet support internal transitions.  It can be worked around by creating a single state that wraps all of the child states, and place the internal transitions on the substate.
+
+```
+"ALPHABET": {
+  onentry: ...
+  onexit: ...
+  states: {
+    fake_state: {
+      initial: A
+      on: {
+        RESET: A
+      }
+      states: {
+        A: ...
+        B: ...
+        C: ...
+      }
+    }
+  }
+}
+```
+
+When the machine receives the "RESET" signal, the "ALPHABET" state doesn't exit / enter, only the `fake_state` exits / enters with no side effects.
 
 ## SCXML
 
