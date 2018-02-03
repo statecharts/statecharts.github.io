@@ -14,6 +14,12 @@
   g.highlight>.state {
     stroke: red;
   }
+  g.highlight>path {
+    stroke: red;
+  }
+  g.highlight>text {
+    fill: red;
+  }
   g.highlight>.text {
     fill: red;
   }
