@@ -44,7 +44,7 @@
         </p>
         <p>Glossary:
           {% for item in site.glossary %}
-            <a href="{{ item.url }}">{{ item.title }}</a>
+            <a href="{{ item.url }}" title="{{ item.oneliner }}">{{ item.title }}</a>
           {% endfor %}
         </p>
       </footer>
