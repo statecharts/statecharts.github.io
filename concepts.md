@@ -1,11 +1,21 @@
 # Concepts
 
 <style>
+  text {
+    fill: black
+    font-family: sans-serif; 
+  }
+  path {
+    stroke: black;
+  }
   .state {
     fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;
   }
   g.highlight>.state {
     stroke: red;
+  }
+  g.highlight>.text {
+    fill: red;
   }
 </style>
 
@@ -17,7 +27,7 @@
     <g>
       <rect x="-88.152" y="-10.866" width="262.559" height="148.015" class="state" rx="15.659" ry="15.659"/>
       <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M -87.235 21.511 L 173.872 21.511"/>
-      <text x="15.955" y="14.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Off</text>
+      <text x="15.955" y="14.711" style="font-size: 24px; stroke-width: 3px; white-space: pre;">Off</text>
     </g>
     <g transform="matrix(1, 0, 0, 1, -2, 10)">
       <rect x="-14.856" y="46.198" width="56.462" height="59.889" class="state" rx="15.659" ry="15.659"/>
@@ -45,8 +55,8 @@
   </g>
   <g transform="matrix(1, 0, 0, 1, 189.96713256835935, 57.20753860473633)" class="highlight">
     <rect x="70.115" y="63.175" width="470.373" height="368.829" class="state" rx="15.659" ry="15.659"/>
-    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 69.114 92.333 L 538.599 92.333"/>
-    <text x="301.192" y="85.533" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">On</text>
+    <path style="stroke-width: 3;" d="M 69.114 92.333 L 538.599 92.333"/>
+    <text x="301.192" y="85.533" style="font-size: 24px; stroke-width: 3px; white-space: pre;">On</text>
     <g transform="matrix(1, 0, 0, 1, 113.589722, 86.11718)" style="">
       <rect x="-14.856" y="46.198" width="56.462" height="59.889" class="state" rx="15.659" ry="15.659"/>
       <text x="8.117" y="83.687" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">C</text>
