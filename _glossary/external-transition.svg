@@ -1,0 +1,49 @@
+<svg viewBox="-99.324 -18.93 452.798 298.964" width="452px" height="302px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs></defs>
+  <g>
+    <g>
+      <rect x="-88.152" y="-10.866" width="353.702" height="280.282" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M -87.235 21.511 L 264.835 21.511"></path>
+      <text x="0.955" y="14.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">ALPHABET</text>
+      <text x="-63.431" y="50.03" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">entry / something</text>
+      <text x="-63.263" y="78.168" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">exit / something</text>
+    </g>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -55.855366, 143.782242)">
+    <rect x="-13.418" y="-10.866" width="64.455" height="58.453" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="8.955" y="25.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">C</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 166.514465, 138.146057)">
+    <rect x="-13.418" y="-10.866" width="64.455" height="58.453" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="8.955" y="25.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">A</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 38.451385, 209.619034)">
+    <rect x="-13.418" y="-10.866" width="64.455" height="58.453" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="8.955" y="25.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">B</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 79.028908, 48.307545)" style="">
+    <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"></ellipse>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+  <g transform="matrix(0.9999997615814209, 0, 0, 0.9999991655349731, -68.06727388827483, 123.78601117626243)" style="">
+    <text x="121.45" y="12.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">SIGNAL</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 63.57 37.375 C 63.57 37.375 113.265 18.274 141.823 17.596 C 170.381 16.918 216.569 32.446 216.569 32.446"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.207043, 0.978332, -0.978333, -0.20704, 244.766209, -16.247342)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+  <g transform="matrix(0.999999761581421, 0, 0, 0.9999991655349731, 7.687067894731893, 214.516808331608)" style="">
+    <text x="149.45" y="24.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">SIGNAL</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 169.89 -27.875 C 169.89 -27.875 165.597 4.363 141.823 17.596 C 118.049 30.829 84.414 27.478 84.414 27.478"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.052945, -0.998597, 0.998598, 0.052941, 66.351531, 79.149657)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+  <g transform="matrix(0.999999761581421, 0, 0, 0.9999991655349731, -185.7283482413785, 225.10687650031005)" style="">
+    <text x="135.45" y="18.987" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">SIGNAL</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 208.974 19.158 C 208.974 19.158 147.049 36.491 135.53 20.908 C 124.011 5.325 135.803 -23.877 135.803 -23.877"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.959502, 0.281703, -0.2817, 0.959503, 91.229703, -60.318527)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.999999, 112.743385, 90.84198)" style="">
+    <text x="180.09" y="-15.373" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">RESET</text>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 152.773 -24.535 C 152.773 -24.535 198.705 -17.167 198.157 17.301 C 197.609 51.769 116.14 60.893 116.14 60.893"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.08751, -0.996164, 0.996163, -0.087513, 97.841547, 115.752888)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+</svg>
