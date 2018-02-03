@@ -1,6 +1,6 @@
 ---
 title: Event
-oneliner: An signal that something has happened
+oneliner: A trigger for a transition, typically an signal from the outside world that something has happened
 ---
 
 # Event
@@ -39,6 +39,12 @@ In xstate, an event is specified as a key of the `on` property in any state.  Th
     "my_event": "otherstate"
   }
 }
+```
+
+Actually passing an event in xstate is done by way of the `transition` function, which returns the state of the machine _after_ the transition:
+
+```
+nextState = machine.transition(oldState, "my_event")
 ```
 
 ## SCXML
