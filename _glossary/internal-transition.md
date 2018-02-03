@@ -9,7 +9,7 @@ A transition from a [compound state](compound-state.html){:.glossary} to its dir
 
 Consider the following state:
 
-![A state S with entry and exit actions, three substates A, B, C and a transition from the state to a substate](internal-transition.svg)
+![A state S with entry and exit actions, three substates A, B, C and a transition from the state to a substate](external-transition.svg)
 
 The state starts out in state A, but the "SIGNAL" signal moves it between its substates, A, B and C.  The transitions between A, B, C don't cause the top level state S to exit, so the SIGNAL state does not, for example cause the entry or exit actions to happen.
 
@@ -19,7 +19,10 @@ Internal transitions are only possible to define _from_ a composite state and _t
 
 ## Notation
 
-TBD:
+TBD:  Is this correct?
+
+![A state S with entry and exit actions, three substates A, B, C and an "internal" transition from the state to a substate](internal-transition.svg)
+
 
 ## xstate
 
