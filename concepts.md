@@ -1,18 +1,24 @@
 # Concepts
 
+<style>
+  .state {
+    fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;
+  }
+</style>
+
 <svg viewBox="-111.18638610839844 -43.07823944091797 858.5973510742188 549.2330322265625" width="858.5973510742188" height="549.2330322265625" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
-  <g transform="matrix(1, 0, 0, 1, 0, -7.105427357601002e-15)">
+  <g transform="matrix(1, 0, 0, 1, 0, 0)">
     <g>
-      <rect x="-88.152" y="-10.866" width="262.559" height="148.015" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+      <rect x="-88.152" y="-10.866" width="262.559" height="148.015" class="state" rx="15.659" ry="15.659"/>
       <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M -87.235 21.511 L 173.872 21.511"/>
       <text x="15.955" y="14.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Off</text>
     </g>
     <g transform="matrix(1, 0, 0, 1, -2, 10)">
-      <rect x="-14.856" y="46.198" width="56.462" height="59.889" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+      <rect x="-14.856" y="46.198" width="56.462" height="59.889" class="state" rx="15.659" ry="15.659"/>
       <text x="8.117" y="83.687" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">A</text>
     </g>
     <g transform="matrix(1, 0, 0, 1, -2, 10)">
-      <rect x="102.478" y="59.132" width="56.462" height="59.889" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+      <rect x="102.478" y="59.132" width="56.462" height="59.889" class="state" rx="15.659" ry="15.659"/>
       <text x="125.183" y="93.983" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">B</text>
     </g>
     <g transform="matrix(1, 0, 0, 1, -2, 10)">
@@ -32,21 +38,21 @@
     </g>
   </g>
   <g transform="matrix(1, 0, 0, 1, 189.96713256835935, 57.20753860473633)">
-    <rect x="70.115" y="63.175" width="470.373" height="368.829" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <rect x="70.115" y="63.175" width="470.373" height="368.829" class="state" rx="15.659" ry="15.659"/>
     <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 69.114 92.333 L 538.599 92.333"/>
     <text x="301.192" y="85.533" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">On</text>
     <g transform="matrix(1, 0, 0, 1, 113.589722, 86.11718)" style="">
-      <rect x="-14.856" y="46.198" width="56.462" height="59.889" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+      <rect x="-14.856" y="46.198" width="56.462" height="59.889" class="state" rx="15.659" ry="15.659"/>
       <text x="8.117" y="83.687" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">C</text>
     </g>
     <g transform="matrix(1.088255, 0, 0, 0.979431, 105.147041, 87.333473)" style="">
-      <rect x="102.478" y="59.132" width="280.677" height="275.145" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+      <rect x="102.478" y="59.132" width="280.677" height="275.145" class="state" rx="15.659" ry="15.659"/>
       <text x="190.183" y="84.983" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">D</text>
       <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 103.909 98.587 L 382.579 98.587"/>
       <text x="338.951" y="282.095" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(1.121833, 0, 0, 1.186524, -258.007111, -211.823074)">entry / turn light on</text>
       <text x="339.122" y="304.213" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(1.121833, 0, 0, 1.186524, -258.007111, -211.823074)">exit / turn light off</text>
       <g transform="matrix(1.121833, 0, 0, 1.186524, 310.942169, 177.960098)" style="">
-        <rect x="-14.856" y="46.198" width="56.462" height="59.889" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+        <rect x="-14.856" y="46.198" width="56.462" height="59.889" class="state"  rx="15.659" ry="15.659"/>
         <text x="8.117" y="83.687" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; stroke-width: 2.51788px; white-space: pre;">F</text>
       </g>
       <g transform="matrix(0.918902, 0, 0, 1.021, 195.622757, 175.841202)" style="">
@@ -55,10 +61,10 @@
         <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.999584, 0.02884, -0.028843, -0.999584, 192.297647, 65.478925)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
       </g>
       <g transform="matrix(1.121833, 0, 0, 1.186524, 139.043976, 129.335999)" style="">
-        <rect x="-14.856" y="46.198" width="123.796" height="113.514" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+        <rect x="-14.856" y="46.198" width="123.796" height="113.514" class="state" rx="15.659" ry="15.659"/>
         <text x="45.795" y="68.201" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">E</text>
         <g transform="matrix(1, 0, 0, 1, 52.648926, 38.037197)" style="">
-          <rect x="-14.856" y="46.198" width="56.462" height="59.889" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2.51788;" rx="15.659" ry="15.659"/>
+          <rect x="-14.856" y="46.198" width="56.462" height="59.889" class="state" rx="15.659" ry="15.659"/>
           <text x="8.117" y="83.687" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; stroke-width: 2.51788px; white-space: pre;">G</text>
         </g>
         <g transform="matrix(0.819108, 0, 0, 0.860497, 49.612343, 53.377678)">
