@@ -1,5 +1,6 @@
 ---
 title: Event
+oneliner: An signal that something has happened
 ---
 
 # Event
