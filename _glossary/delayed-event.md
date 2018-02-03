@@ -1,5 +1,6 @@
 ---
 Title: Delayed event
+oneliner: An event that is raised some time after a transition takes place.
 ---
 
 # Delayed Event
