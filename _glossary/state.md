@@ -1,5 +1,6 @@
 ---
 title: State
+oneliner: A particular behaviour of a state machine
 ---
 
 # State
@@ -17,9 +18,9 @@ When a state machine is _executed_, it [enters](enter.html){:.glossary} the [ini
 
 There are a couple of special types of states in statecharts:
 
-* [Compound states](compound-state.html){:.glossary}, which allow a state to define variants of its defined behaviour, by way of an internal state machine.
-* [Parallel states](parallel-state.html}{:-glossary}, which is somewhat like a compound state, but where multiple subordinat separate state machines are active simultaneously.
-* [Atomic states](atomic-state.html){:.glossary}, which has no substates.
+* [Compound or composite states](compound-state.html){:.glossary}, which allow a state to define variants of its defined behaviour, by way of an internal state machine.
+* [Parallel or orthogonal states](parallel-state.html}{:-glossary}, which is somewhat like a compound state, but where multiple subordinat separate state machines are active simultaneously.
+* [Atomic or simple states](atomic-state.html){:.glossary}, which has no substates.
 
 
 ## Notation
