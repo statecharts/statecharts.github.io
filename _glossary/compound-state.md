@@ -9,6 +9,8 @@ A compound state is a [state](state.html){:.glossary} that encompasses one or mo
 
 The opposite of a compound state is an [atomic state](atomic-state.html){:.glossary}, which has no substates.
 
+A compound state is allowed to define [transitions](transition.html]{:.glossary} to its child states that avoid exiting and entering the compound state itself, such transitions are called [local transitions](local-transition.html]{:.glossary}.
+
 ## Notation
 
 A compound state is a normal state with its substates depicted _inside_ the borders of the state itself:
@@ -16,6 +18,8 @@ A compound state is a normal state with its substates depicted _inside_ the bord
 ![A state "Off" with substates A and B](compound-state.svg)
 
 Here, the state called **Off** is a compound state.  It has two states **A** and **B** as its substates.  Note how the substates constitute their own state machine, even with an [initial state](initial-state.html){:.glossary}.
+
+In UML, compound states are called _composite states_.
 
 ## xstate
 
