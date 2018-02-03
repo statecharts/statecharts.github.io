@@ -1,12 +1,13 @@
 ---
 title: Delayed transition
+oneliner: A transition that executes automatically when a machine has been in a state for a particular amount of time
 ---
 
 # Delayed transition
 
 A delayed transition is an [transition](transition.html){:.glossary} that happens after a period of time, specifically being in a specific state for a certain amount of time.
 
-Whenever such a delayed transition exists in a state, the state machine will execute the transition if and only if the machine has stayed continously in the state for a given period of time.  If the state has a [self transition](self-transition.html){:.glossary} which is executed, this causes the state to be _exited_ and then _entered_ again, interrupting any continuity.
+Whenever such a delayed transition exists in a state, the state machine will execute the transition if and only if the machine has stayed continously in the state for a given period of time.  If the state has a [self transition](self-transition.html){:.glossary} which is executed, this causes the state to be [exited](exit.html){:.glossary} and then [entered](enter.html){:.glossary} again, interrupting any continuity.
 
 ## Notation
 
@@ -21,4 +22,4 @@ Delayed transitions are not part of Statechart XML.  Instead, you have to specif
 
 ## xstate
 
-It's possible to implement delayed transitions using the same mechanisms as in SCXML, however, there exists a proposal to add them to the format to avoid the verbosity and housekeeping chores associated with delayed events.
+It's possible to implement delayed transitions using the same mechanisms as in SCXML, however, there is a proposal to add them to the format to avoid the verbosity and housekeeping chores associated with delayed events.
