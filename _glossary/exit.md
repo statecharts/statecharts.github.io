@@ -1,5 +1,6 @@
 ---
 title: Exit
+oneliner: A state stops being an "active" state in a running state machine
 ---
 
 # Exit
