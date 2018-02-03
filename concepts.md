@@ -4,7 +4,13 @@
   .state {
     fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;
   }
+  g.highlight>.state {
+    stroke: red;
+  }
 </style>
+
+<script>
+</script>
 
 <svg viewBox="-111.18638610839844 -43.07823944091797 858.5973510742188 549.2330322265625" width="858.5973510742188" height="549.2330322265625" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <g transform="matrix(1, 0, 0, 1, 0, 0)">
@@ -37,7 +43,7 @@
       <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"/>
     </g>
   </g>
-  <g transform="matrix(1, 0, 0, 1, 189.96713256835935, 57.20753860473633)">
+  <g transform="matrix(1, 0, 0, 1, 189.96713256835935, 57.20753860473633)" class="highlight">
     <rect x="70.115" y="63.175" width="470.373" height="368.829" class="state" rx="15.659" ry="15.659"/>
     <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 69.114 92.333 L 538.599 92.333"/>
     <text x="301.192" y="85.533" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">On</text>
