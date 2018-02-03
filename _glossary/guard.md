@@ -1,5 +1,6 @@
 ---
 title: Guard
+oneliner: A boolean check imposed on a transition to inhibit the execution of the transition
 ---
 
 # Guard
