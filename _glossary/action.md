@@ -1,5 +1,6 @@
 ---
 title: Action
+oneliner: Code that is executed as the state machine performs transitions
 ---
 
 # Action
