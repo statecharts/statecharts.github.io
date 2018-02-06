@@ -1,3 +1,7 @@
+---
+title: If statecharts are so great, why aren't they used more widely?
+---
+
 # Why aren't statecharts used more?
 
 Since statecharts are so useful, and supposedly have all of these benefits, then why aren't all developers using these techniques?
