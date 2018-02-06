@@ -8,6 +8,10 @@
 
 [Statecharts and SCXML as a modeling technique in web engineering](http://www.balisage.net/Proceedings/vol15/print/Sayih01/BalisageVol15-Sayih01.html), Proceedings of Balisage: The Markup Conference 2015
 
+[Developing User Interfaces using SCXML Statecharts]
+Gavin Kistner & Chris Nuernberger, 2014 - A paper about how Nvidia developed automotive UI using state charts and SCXML.
+http://phrogz.net/developing-user-interfaces-using-scxml-statecharts
+
 ## Blog posts / Articles
 
 [Pure UI Control](https://medium.com/@asolove/pure-ui-control-ac8d1be97a8d) by Adam Solove, 2017
