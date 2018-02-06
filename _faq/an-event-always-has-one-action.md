@@ -1,8 +1,8 @@
 ---
-title: My UI is simple: an event always has one action?
+title: My UI is simple: Do I really need statecharts if my events always lead to specific actions?
 ---
 
-# A UI event always has one specific action, why do I need statecharts for that?
+# My UI events always lead to specific actions, do I need statecharts for that?
 
 Because if you think harder about it, an event will usually have some deviation from doing that action.  Most buttons are clickable, and when you click it, then you perform the action. However, some users doubleclick most buttons, and in those cases, _rarely_ do you want to repeat that action.  So if you have a click handler that starts a HTTP request, then you _will_ end up firing two HTTP requests at the same time.
 
