@@ -248,7 +248,6 @@ xstate:
 }
 ```
 
-
 I've [extracted this SCXML into its own file](how-to-use-statecharts-initial-actions.scxml.xml), styled for a certain amount of interactivity and ability to explore:
 
 <iframe src="how-to-use-statecharts-initial-actions.scxml.xml" width="100%" height="500px"></iframe>
@@ -260,8 +259,10 @@ If we look at our _API surface_—the set of events, guards and actions that we 
 * Events: `search`, `results`, `zoom`, and `zoom_out`
 * Guards: none (it's still quite a crude solution)
 * Actions: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
+* States: `initial`, `searching`, `showing_results` and `zoomed_in`
 
-As described in [decoupled statecharts](#decoupled-statecharts-ftw), below, some will also view _certain states_ as being part of this API surface.  The entire set of states is rarely the API, because there will almost always be states that dictate behaviour that won't be _visible_ in the component.  To begin with, we will use a _coupled_ approach, and expose the _current state_ to the component, and allow it to do stuff on its own purely based on this.
+> #### Note
+> As described in [decoupled statecharts](#decoupled-statecharts-ftw), below, you could consider the states as being part of this API surface.  The entire set of states is rarely the API, because there will almost always be states that dictate behaviour that won't be _visible_ in the component.  To begin with, we will use a _coupled_ approach, and expose the _current state_ to the component, and allow it to do stuff on its own purely based on this.
 
 ### Absence of data transfer
 
@@ -269,7 +270,7 @@ Note the absence of any data being passed back and forth: The events themselves 
 
 This absence of data transfer also means that the component still needs to keep track of the "business state" — the variables and stuff that the component is busy working on.  The statechart doesn't need or care about those things, it is only concerned with triggering the right actions at the right times.
 
-As an example: the `startHttpRequest` action is called.  It will have to
+As an example: the `startHttpRequest` action is called.  It will have to:
 
 * grab the text from the text field that the user has typed a search term into
 * construct a URL to search using flickr's API
@@ -277,7 +278,7 @@ As an example: the `startHttpRequest` action is called.  It will have to
 
 These three things are hidden from the statechart; it doesn't need to know that all of this is happening.  Only if any of those things need to be treated as _behaviour_ should they be exposed to the statechart.
 
-## Decouple the component from the statechart?
+### Decouple the component from the statechart?
 
 At this point in time I think it's very useful to point out dependency that might come creeping.  The component in question easily becomes dependent on the states in the statechart.  A decision has to be made, or else it will be made for you.
 
@@ -309,10 +310,16 @@ The things that matter in a decoupled statechart are: events, guards and actions
 
 The choice of UI framework should really not be very important, since what we're trying to describe is _what to do_ when certain events happen.  We aim to replace code that that litter the UI code to hide and show components based on the "state" of various variables, and replace them with actions that control the behaviour of the UI component.
 
-First off, let's take a look at the actions; the desired output of the state machine.  We need a component that can listen for these events coming from the state machine:
+### Actions
+
+First off, let's take a look at the actions; the desired output of the state machine.  We need a component that can _react_ to what the state machine tells it to do.
+
+To recap, the actions that the state machine can perform are: `startHttpRequest`, `cancelHttpRequest`, `showResults`, `zoomIn`, and `zoomOut`
+
+A simple `performAction` function can do nicely:
 
 ```js
-function handleEvent(event) {
+function performAction(event) {
   if (event === "startHttpRequest") {
     // get value of text field
     // construct URL
@@ -336,7 +343,11 @@ function handleEvent(event) {
 
 Forgive the naive if handler, as I opted for something readable.  I'll leave it to the readers to figure out ways of improving this code.
 
+### Events
+
 The next part of the API is actually sending events _from_ the world and _to_ the state machine.  This is also somewhat independent of the actual state machine library, as most of them take a string event.
+
+To recap the events were: `search`, `results`, `zoom`, and `zoom_out` — these are all things that "happen" in the real world, that need to _tell the statechart_ about 
 
 We want something that's similar to this:
 
@@ -348,3 +359,15 @@ zoomedphoto.onclick = statemachine.send("zoom_out");
 ```
 
 Essentially the buttons, HTTP requests and other things that _generate events_ don't need to know what's going to happen; they shouldn't.  They should just blindly send the information to the state machine, and let the state machine tell us what to do.
+
+### States
+
+Finally, the component is allowed to see which state is the "current" state.  This of course depends on the statechart library, but most will happily tell you the _name_ of the current state, typically as a string:
+
+```js
+currentState = machine.currentState; // 
+```
+
+## Implemention
+
+We've now explained all of the parts necessary to get our UI and the component talking together.  (to be continued...)
