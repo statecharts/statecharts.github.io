@@ -20,3 +20,7 @@ Statecharts address this problem by way of hierarchy and parallel states.  In a 
 
 /* insert picture of a statechart that models the same as above */
 
+## See also
+
+* [What is a statechart?](what-is-a-statechart.html)
+* [How to use statecharts](how-to-use-statecharts.html) 
