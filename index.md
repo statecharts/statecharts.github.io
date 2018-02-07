@@ -90,5 +90,6 @@ Quite a few people have written books or held presentations that deal with state
 There are some pages that haven't found any place in the web of documents, so they're honourably mentioned here:
 
 * [Use case: Statecharts in User Interfaces](use-case-statecharts-in-user-interfaces.html)
+* [Concepts](concepts.html) — The most important concepts in a statechart and what they look like in a diagram
 
 [Acknowledgements](acknowledgements.html)
