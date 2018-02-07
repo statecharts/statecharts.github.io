@@ -103,7 +103,7 @@ function highlight(what) {
 </script>
 
 
-<svg id="svg" viewBox="-111 -43 858 549" width="858" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+<svg id="svg" viewBox="-111 -43 858 549" width="858" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" class="concept-compound-state">
   <g transform="matrix(1, 0, 0, 1, 0, 0)">
     <g class="concept-state concept-compound-state">
       <rect x="-88.152" y="-10.866" width="262.559" height="148.015" class="state" rx="15.659" ry="15.659"></rect>
@@ -171,7 +171,7 @@ function highlight(what) {
         <text x="8.117" y="83.687" style="font-family: sans-serif; font-size: 16px; stroke-width: 2.51788px; white-space: pre;">F</text>
       </g>
       <g transform="matrix(1, 0, 0, 1, 95.622757, 167.841202)" class="concept-transition concept-delayed-transition">
-        <text x="121.45" y="12.987" style="">after 0.5 s</text>
+        <text x="96.45" y="6" style="">after 0.5 s</text>
         <path style="fill: none; stroke-width: 2;" d="M 71.687 39.154 C 71.687 39.154 92.319 7.004 115.539 14.037 C 138.759 21.07 139.277 42.529 139.277 42.529"></path>
         <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.999584, 0.02884, -0.028843, -0.999584, 192.297647, 65.478925)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
       </g>
@@ -205,7 +205,6 @@ function highlight(what) {
     <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
   </g>
 </svg>
-
 
 <!-- TODO render as horizontal menu -->
 <ul>
