@@ -2,9 +2,6 @@
 
 <style>
 svg {
-  position: absolute;
-  z-index: -1;
-  top: 1em
 }
 body>ul {
   margin-top: 15em;
@@ -106,30 +103,7 @@ function highlight(what) {
 </script>
 
 
-<ul>
-<li><span onclick="highlight('concept-state')">State</span>
-  <ul>
-<li><span onclick="highlight('concept-compound-state')">Compound state</span></li>
-<li><span onclick="highlight('concept-simple-state')">Simple (Atomic) states</span></li>
-  </ul>
-</li>
-<li><span onclick="highlight('concept-transition')"> Transition</span>
-  <ul>
-  <li><span onclick="highlight('concept-event')"> Event</span></li>
-  <li><span onclick="highlight('concept-initial-transition')"> Initial transition</span></li>
-  <li><span onclick="highlight('concept-self-transition')"> Self transition</span></li>
-  <li><span onclick="highlight('concept-delayed-transition')">Delayed Transition</span></li>
-  </ul>
-</li>
-<li><span onclick="highlight('concept-action')">Actions</span>
-  <ul>
-  <li><span onclick="highlight('concept-entry')">Entry actions</span></li>
-  <li><span onclick="highlight('concept-exit')">Exit actions</span></li>
-  </ul>
-</li>
- <ul>
-
-<svg id="svg" viewBox="-111 -43 858 549" width="858" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" class="concept-event">
+<svg id="svg" viewBox="-111 -43 858 549" width="858" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <g transform="matrix(1, 0, 0, 1, 0, 0)">
     <g class="concept-state concept-compound-state">
       <rect x="-88.152" y="-10.866" width="262.559" height="148.015" class="state" rx="15.659" ry="15.659"></rect>
@@ -232,3 +206,27 @@ function highlight(what) {
   </g>
 </svg>
 
+
+<!-- TODO render as horizontal menu -->
+<ul>
+<li><span onclick="highlight('concept-state')">State</span>
+<ul>
+<li><span onclick="highlight('concept-compound-state')">Compound state</span></li>
+<li><span onclick="highlight('concept-simple-state')">Simple (Atomic) states</span></li>
+</ul>
+</li>
+<li><span onclick="highlight('concept-transition')"> Transition</span>
+<ul>
+<li><span onclick="highlight('concept-event')"> Event</span></li>
+<li><span onclick="highlight('concept-initial-transition')"> Initial transition</span></li>
+<li><span onclick="highlight('concept-self-transition')"> Self transition</span></li>
+<li><span onclick="highlight('concept-delayed-transition')">Delayed Transition</span></li>
+</ul>
+</li>
+<li><span onclick="highlight('concept-action')">Actions</span>
+<ul>
+<li><span onclick="highlight('concept-entry')">Entry actions</span></li>
+<li><span onclick="highlight('concept-exit')">Exit actions</span></li>
+</ul>
+</li>
+</ul>
