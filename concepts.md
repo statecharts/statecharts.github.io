@@ -103,7 +103,7 @@ function highlight(what) {
 </script>
 
 
-<svg id="svg" viewBox="-111 -43 858 549" width="858" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com" class="concept-compound-state">
+<svg id="svg" viewBox="-111 -43 858 549" width="858" height="549" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <g transform="matrix(1, 0, 0, 1, 0, 0)">
     <g class="concept-state concept-compound-state">
       <rect x="-88.152" y="-10.866" width="262.559" height="148.015" class="state" rx="15.659" ry="15.659"></rect>
