@@ -40,14 +40,13 @@ There are a few downsides to using statecharts that you should be aware of.
 
 ### What are the main arguments against statecharts?
 
-There are a few common arguments against statecharts. 
+There are a few common arguments against statecharts in addition to the ones listed above:
 
 * It's [simply not needed](faq/an-event-always-has-one-action.html).
 * It [goes against the grain](faq/goes-against-grain.html) of _\[insert name of technology]_.
 * It [increases the number of libraries](faq/increases-number-of-libraries.html), for web applications this means increased load time.
-* It [increases the number of hand coded lines](faq/increases-number-of-lines.html).
 
-The benefits outlines above should make it clear that the introduction of statecharts is generally a _net positive_.
+The benefits outlined above should make it clear that the introduction of statecharts is generally a _net positive_.
 
 ### How do you use statecharts?
 
@@ -72,12 +71,15 @@ This carries along some different pros and cons:
 
 ### Why should you not use executable statecharts?
 
+* The diagrams may become quite complex
 * The format and tools for executable statecharts is limited
 * Type safety between statechart and the component is hard to enforce
 
 ### How do you use executable statecharts?
 
 In essence, if you have any definition of a statechart in your code, all you need to do is to take that representation and automate the generation of the visual statechart.  This is of course simpler when the definition is in a separate file, e.g. in a JSON or XML file.
+
+This is all explained on the page on [how to use statecharts](how-to-use-statecharts.html)!
 
 ## Anything else?
 
