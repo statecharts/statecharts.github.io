@@ -1,0 +1,66 @@
+<svg viewBox="-99.324 -22.912 376.741 356.998" width="376px" height="357px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+    <pattern id="pattern-0-0" patternTransform="matrix(0.736157, -0.004573, 0.004852, 0.78071, 61.126846, 110.498367)" xlink:href="#pattern-0"></pattern>
+  </defs>
+  <g>
+    <g>
+      <rect x="-88.152" y="-10.866" width="207.398" height="74.626" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="-36.045" y="14.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Read-only</text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 2.527347, 117.218552)">
+      <rect x="-88.152" y="-10.866" width="351.269" height="217.785" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M -87.235 21.511 L 261.87 21.511"></path>
+      <text x="44.955" y="14.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Editable</text>
+      <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-0-0); stroke-width: 2;" d="M -19.408 123.049 L 166.597 123.049" transform="matrix(0, 1, -1, 0, 204.834001, 41.263988)"></path>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 14.225756, 160.208633)">
+      <rect x="-88.152" y="-10.866" width="142.585" height="49.698" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="-53.045" y="21.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Valid</text>
+      <g transform="matrix(1, 0, 0, 1, -66.70082757612306, -173.21522933217537)">
+        <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 174.237 50.271 C 174.237 50.271 229.086 60.204 255.198 80.721 C 281.31 101.238 278.268 111.287 278.268 111.287"></path>
+        <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.65779, 0.753202, -0.7532, 0.657792, 259.547486, 56.194117)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+        <text x="225.003" y="58.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">enable</text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -244.212173, -42.358627)">
+        <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 255.28 82.033 C 255.28 82.033 269.532 85.557 274.277 96.815 C 279.022 108.073 275.268 110.287 275.268 110.287"></path>
+        <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.65779, 0.753202, -0.7532, 0.657792, 259.547486, 56.194117)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+        <text x="226.003" y="98.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(0.999999, 0, 0, 1, 49.000118, 0)">error</text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -75.8162, -33.134235)">
+        <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 255.28 82.033 C 255.28 82.033 269.532 85.557 274.277 96.815 C 279.022 108.073 275.268 110.287 275.268 110.287"></path>
+        <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.65779, 0.753202, -0.7532, 0.657792, 259.547486, 56.194117)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+        <text x="226.003" y="98.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(0.999999, 0, 0, 1, 53.000118, 2)">edit</text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -347.46457028016005, -43.11986280550812)">
+        <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 267.346 91.462 C 267.346 91.462 281.598 94.986 286.343 106.244 C 291.088 117.502 287.334 119.716 287.334 119.716" transform="matrix(-0.98704, -0.160474, 0.160474, -0.98704, 535.541719, 254.428625)"></path>
+        <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.528396, -0.848999, 0.848996, -0.528398, 277.978823, 146.06851)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+        <text x="226.003" y="98.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(0.999999, 0, 0, 1, 49.000118, 7)">OK</text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -173.835922, -35.639946)">
+        <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 267.346 91.462 C 267.346 91.462 281.598 94.986 286.343 106.244 C 291.088 117.502 287.334 119.716 287.334 119.716" transform="matrix(-0.98704, -0.160474, 0.160474, -0.98704, 535.541719, 254.428625)"></path>
+        <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.528396, -0.848999, 0.848996, -0.528398, 277.978823, 146.06851)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+        <text x="226.003" y="98.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(0.999999, 0, 0, 1, 49.000149, 7.000037)">edit</text>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -301.009033, -176.525299)">
+        <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;" d="M 267.346 91.462 C 267.346 91.462 281.598 94.986 286.343 106.244 C 291.088 117.502 287.334 119.716 287.334 119.716" transform="matrix(-0.98704, -0.160474, 0.160474, -0.98704, 535.541719, 254.428625)"></path>
+        <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.528396, -0.848999, 0.848996, -0.528398, 277.978823, 146.06851)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+        <text x="226.003" y="98.158" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(0.999999, 0, 0, 1, 49.000118, 7)">disable</text>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 13.869567, 249.485794)">
+      <rect x="-88.152" y="-10.866" width="142.585" height="49.698" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="-56.045" y="21.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Invalid</text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 191.6255644521009, 170.01789357486845)">
+      <rect x="-88.152" y="-10.866" width="142.585" height="49.698" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="-68.045" y="21.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Unedited</text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 191.6255644521009, 256.1980318778911)">
+      <rect x="-88.152" y="-10.866" width="142.585" height="49.698" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="-50.045" y="21.711" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 24px; stroke-width: 3px; white-space: pre;">Edited</text>
+    </g>
+  </g>
+</svg>
