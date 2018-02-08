@@ -52,13 +52,15 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [Yakindu Statechart Tools](https://www.itemis.com/en/yakindu/state-machine/), also [on GitHub](https://github.com/Yakindu/statecharts/). User interface and code generation tool (?)
 
-## Libraries
+## Tools / Libraries
 
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
 [Miros](https://aleph2c.github.io/miros/), statecharts in python
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React
+
+[Rosmaros](https://rosmaro.js.org/) by Łukasz Makuch, Visual automata-based programming
 
 [SCION](https://github.com/jbeard4/SCION), [SCION-CORE](https://github.com/jbeard4/SCION-CORE) et al, by Jacob Beard.  An SCXML parser and runner in JavaScript.
 
