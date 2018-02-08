@@ -68,6 +68,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [SCION](https://github.com/jbeard4/SCION), [SCION-CORE](https://github.com/jbeard4/SCION-CORE) et al, by Jacob Beard.  An SCXML parser and runner in JavaScript.
 
+[Sismic](https://pypi.python.org/pypi/sismic), by Alexandre Decan, Sismic Interactive Statechart Model Interpreter and Checker, Python.
+
 [stent](https://github.com/krasimir/stent), by Krasimir Tsonev, combining the ideas of Redux with the concept of state machines.
 
 [xstate](https://github.com/davidkpiano/xstate/), by David Khourshid, pure functional statecharts, in TypeScript.
