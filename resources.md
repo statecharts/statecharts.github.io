@@ -64,7 +64,7 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React.
 
-[Rosmaros](https://rosmaro.js.org/) by Łukasz Makuch, Visual automata-based programming.
+[Rosmaro](https://rosmaro.js.org/) by Łukasz Makuch, Visual automata-based programming.
 
 [SCION](https://github.com/jbeard4/SCION), [SCION-CORE](https://github.com/jbeard4/SCION-CORE) et al, by Jacob Beard.  An SCXML parser and runner in JavaScript.
 
