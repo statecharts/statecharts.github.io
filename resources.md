@@ -15,6 +15,8 @@
 
 [How to model the behavior of Redux apps using statecharts](https://medium.freecodecamp.org/how-to-model-the-behavior-of-redux-apps-using-statecharts-5e342aad8f66), Luca Matteis, 2018
 
+[React and visual automata-based programming](https://medium.com/dailyjs/react-and-visual-automata-based-programming-c1d13e153cde) by Łukasz Makuch, 2018
+
 [Pure UI Control](https://medium.com/@asolove/pure-ui-control-ac8d1be97a8d) by Adam Solove, 2017
 
 [A Crash Course in UML Statecharts](https://www.embedded.com/design/prototyping-and-development/4008247/A-crash-course-in-UML-state-machines-Part-1) ([PDF](https://classes.soe.ucsc.edu/cmpe013/Spring11/LectureNotes/A_Crash_Course_in_UML_State_Machines.pdf)), Miro Samek, 2009
