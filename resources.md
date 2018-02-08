@@ -37,6 +37,8 @@
 
 [Telling stories using statecharts](https://www.youtube.com/watch?v=GiOtyr2xA8c), Erik Mogensen, 2015
 
+[Using ClojureScript w/ Heavy Industrial Equipment](https://www.youtube.com/watch?v=RkzPBrE3qYk), Kevin Lynagh, 2015
+
 [Statecharts in User Interfaces](https://vimeo.com/109808288) ([Slides](https://drive.google.com/open?id=14Uv3z25Z7DwbYD4SZzU5biQUPnBmED_6Tiv89dBXrTo)), Erik Mogensen, 2014
 
 [UML State Chart Autocoding for the Mars Science Laboratory (MSL) Mission](https://www.youtube.com/watch?v=VvssxOP95s0) Eddie Benowitz, JPL, 2012
