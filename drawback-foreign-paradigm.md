@@ -8,13 +8,10 @@ Another problem with statecharts being so foreign is that in order to use it eff
 
 Coding up a state machine, or statechart can be somewhat intimidating, if you haven't done it before, and just like many other current "good practices" in the development community, at some point they were all "foreign" and were frowned upon; some still are in certain communities.
 
-* Unit Tests
-* Static Typing
-* Pair Programming
-* Pull requests
-* Distributed version control
-* Feature branches
-* Version control at all
+* Unit Tests; Static Typing
+* Pair Programming; Pull requests
+* Distributed version control; Feature branches; Any version control at all
+* Functional programming; Event sourcing; 
 
 These techniques have all moved the software industry forward, but they also encountered a steady stream of questioning their validity, and someone took the job of figuring out how to employ a technique in a particular tech stack.
 
