@@ -21,30 +21,47 @@ Here, the state called **Off** is a compound state.  It has two states **A** and
 
 In UML, compound states are called _composite states_.
 
-## xstate
-
-An xstate compound state is declared using the `states` property of the state, holding an object containing substates.  Each key value pair declares the name and definition of the state, respectively:
-
-```js
-"off": {
-  "initial": "A",
-  "states": {
-    "A": { ... },
-    "B": { ... }
-  }
-}
-```
-
-The definitions of A and B have been omitted.
-
 ## SCXML
 
 In Statechart XML, a compound state is any state with nested state elements as direct children; this includes `<parallel>`, `<initial>` elements too, as these are also state elements. 
 
-```xml
+``` xml
 <state id="off">
   <state id="A"/>
   <state id="B"/>
 </state>
 ```
 
+## xstate
+
+An xstate compound state is declared using the `states` property of the state, holding an object containing substates.  Each key value pair declares the name and definition of the state, respectively:
+
+``` javascript
+"off": {
+  "initial": "A",
+  "states": {
+    "A": {  },
+    "B": {  }
+  }
+}
+```
+
+The definitions of A and B have been omitted.
+
+## SCION-CORE
+
+In SCION-CORE, a compound state is declared by specifying the `states` property of the state in question, containing an array of state objects.  Unless explicitly specified using the `initial` property, the first item in the state becomes the initial state.
+
+``` javascript
+{
+  id: "off",
+  states: [
+    {
+      id: "A",
+    },
+    {
+      id: "B",
+    }
+  ]
+}
+```

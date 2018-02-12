@@ -33,33 +33,104 @@ Entry and Exit actions are typically written in text form inside the state.
 
 ![A rounded rectangle with a horizontal line, on top of which the word "On", and below which the words "entry / turn on"](state.svg)
 
+## SCXML
+
+In SCXML, a state is defined by the `<state>` element, with the name of the state in its `id` attribute.  An empty state:
+
+``` xml
+<state id="my_state"/>
+```
+
+The child elements of the `<state>` include entry and exit actions, transitions, along with substates:
+
+``` xml
+<state id="my_state">
+  <onentry>
+    <script>turn_on()</script>
+  </onentry>
+  <transition event="some_event" target="some_other_state"/>
+  <state id="my_substate">
+    <transition event="some_event" target="my_other_substate"/>
+  </state>
+  <state id="my_other_substate"/>
+</state>
+```
+
+
 ## xstate
 
 In xstate, a state is specified as a named object in the `states` property of a state machine or compound state.  The key becomes the name of the state, and the object defines the state's behaviour.
 
+Here's an empty state called `my_state`:
+
 ```
 {
-  "states": {
-    "On": {
-      "onEntry": "turn on"
-    }
+  states: {
+    my_state: {}
   }
 }
 ```
 
-## SCXML
+Here's the `my_state` with an action, transitions, and substates:
 
-In SCXML, a state is defined by the `<state>` element, with the name of the state in its `id` attribute.  Inside the state are entry and exit actions, transitions, along with substates:
+```
+{
+  states: {
+    my_state: {
+      onEntry: "do_something",
+      on: {
+        some_event: "some_other_state"
+      },
+      states: {
+        my_substate: {
+          on: {
+            some_event: "my_other_substate"
+          }
+        },
+        my_other_substate: {}
+      }
+    },
+  }
+}
+```
 
-    <state id="my_state">
-      <onentry>
-        <script>do_something();</script>
-      </onentry>
-      <transition event="some_event" target="some_other_state"/>
-      <state id="my_substate">
-        transition event="some_event" target="my_other_substate"/>
-      </state>
-      <state id="my_other_substate"/>
-    </state>
+## SCION-CORE
 
+In SCION Core, a state is described by an object with an `id` property, denoting the identifier of the state.
 
+``` javascript
+{
+  id: "my_state"
+}
+```
+
+Here's the same state with an action, transitions, and substates:
+
+``` javascript
+{
+  id: "my_state",
+  onEntry: function(event) {
+    do_something();
+  },
+  transitions: [
+    {
+      event: "some_event",
+      target: "some_other_state"
+    }
+  ],
+  states: [
+    {
+      id: "my_substate",
+      transitions: [
+        {
+          event: "some_event",
+          target: "my_other_substate"
+        }
+      ]
+    },
+    {
+      id: "my_other_substate"
+    }
+  ]
+}
+```
