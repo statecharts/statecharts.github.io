@@ -11,6 +11,8 @@ Activities are mostly tied to the idea of _being_ in a [state](state.html){:.glo
 
 Activities generally start immediately upon entering the state, and continue for as long as the activity can do so.  If the activity stops before the state is exited, the stopping of the activity is often treated as an [event](event.html){:.glossary} that the state machine can react to.  It is however not strictly required that the state exits when an activity stops.
 
+Activities being active or not is also a case for a [guard condition](guard.html){:.glossary}.
+
 ## Examples
 
 An example of an activity might be to show a particular user interface component.  The user interface component would be visible for a long time, and might generate events that cause state transitions.  When the state exits, the user interface component would no longer be shown.
