@@ -15,7 +15,7 @@ Actions should in general try to execute as quickly as possible, returning contr
 
 An example of an action might be to _enable_ a text field; such an action is of course synchronous, but it is also practically instantaneous.
 
-Another example of an action would be to make an HTTP request.  This would of course be an asynchronous action, and might result in guards functions responding differently, and trigger events that the statechart might be interested in.
+Another example of an action would be to start and stop a HTTP request.  The actual HTTP request would of course be an asynchronous process, and might result in guards functions responding differently, and trigger events that the statechart might be interested in.
 
 ## Nested states
 
