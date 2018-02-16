@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="399.658 195.479 207.925 108.985" width="207px" height="108px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, 305.070038, 144.349564)" style="">
+    <rect x="102.478" y="59.132" width="188.139" height="90.462" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"/>
+    <text x="153.423" y="84.983" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">Some state</text>
+    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3;" d="M 103.909 98.587 L 290.041 98.587"/>
+    <text x="119.944" y="122.272" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">do / http_request</text>
+  </g>
+</svg>
