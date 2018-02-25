@@ -1,4 +1,4 @@
-## Learning a new technique
+# Learning a new technique
 
 One of the biggest drawbacks with statecharts is the fact that developers who work on these components are forced to understand this new paradigm, perhaps some new tools, and a certain level of buy-in in order to understand and reap the benefits.
 
