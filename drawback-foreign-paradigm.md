@@ -15,4 +15,4 @@ Coding up a state machine, or statechart can be somewhat intimidating, if you ha
 
 These techniques have all moved the software industry forward, but they also encountered a steady stream of questioning their validity, and someone took the job of figuring out how to employ a technique in a particular tech stack.
 
-The thing is that unless you build an explicit state machine, an implicit one will be in there, no matter what.  If you have an `if (result == null)` in your code, then your code has two states.  It either does this, _or_ it does that.  That's essentially what a state machine is; there's no running away from this fact.  The implicit state machine is simply a lot harder to maintain, a lot harder to "get right".
+The thing is that unless you build an explicit state machine, [an implicit one will be in there](benefit-explicit.html), no matter what.  If you have an `if (result == null)` in your code, then your code has two states.  It either does this, _or_ it does that.  That's essentially what a state machine is; there's no running away from this fact.  The implicit state machine is simply a lot harder to maintain, a lot harder to "get right".
