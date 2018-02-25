@@ -1,5 +1,5 @@
 ---
-title: My UI is simple: Do I really need statecharts if my events always lead to specific actions?
+title: My UI is simple, do I really need statecharts if my events always lead to specific actions?
 ---
 
 # My UI events always lead to specific actions, do I need statecharts for that?
