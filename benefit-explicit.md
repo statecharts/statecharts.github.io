@@ -10,7 +10,7 @@ For example, here is a typical piece of code that disables a button depending on
 <button ngIf="item.editing">
 ```
 
-In angularJS, `ngIf` means that the <button> will only be rendered if `item.editing` is true.  From this we can understand that the component has at least two states: the button is showing, and the button is not showing.  From this code it is not clear how it switches between these two states; you have to hunt down the `editing` boolean, to find out how it changes.
+In angularJS, `ngIf` means that the `<button>` will only be rendered if `item.editing` is true.  From this we can understand that the component has at least two states: the button is showing, and the button is not showing.  From this code it is not clear how it switches between these two states; you have to hunt down the `editing` boolean, to find out how it changes.
 
 Another example, from the React quick start:
 
@@ -22,7 +22,7 @@ Another example, from the React quick start:
 }
 ```
 
-The <h2> is included _if_ `unreadMessages.length > 0`.
+The `<h2>` is included _if_ `unreadMessages.length > 0`.
 
 Similar constructs are common in most other modern UI component frameworks.
 
