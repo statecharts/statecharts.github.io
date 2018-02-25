@@ -30,6 +30,8 @@ Statecharts offer a surprising array of benefits
 * As complexity grows, statecharts [scale well](benefit-scales-with-complexity.html).
 * A statechart is a great communicator: Non-developers can [understand the statecharts](benefit-non-developers-understanding.html), while QA can [use a statecharts as an exploratory tool](benefit-qa-exploration-tool.html).
 
+It's worth noting that you're [already coding state machines](benefit-explicit.html), except that they're hidden in the code.
+
 ### Why should you not use statecharts?
 
 There are a few downsides to using statecharts that you should be aware of.
