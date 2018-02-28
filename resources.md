@@ -60,7 +60,7 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
-[Miros](https://aleph2c.github.io/miros/), statecharts in python.
+[Miros](https://aleph2c.github.io/miros/), statecharts in Python.
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React.
 
@@ -70,7 +70,7 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [Sismic](https://pypi.python.org/pypi/sismic), by Alexandre Decan, Sismic Interactive Statechart Model Interpreter and Checker, Python.
 
-[State Machine Framework](http://doc.qt.io/qt-5/statemachine-api.html), and [Declarative State Machine Framework](http://doc.qt.io/qt-5/qmlstatemachine.html), part of the Qt framework, by Qt.
+[State Machine Framework](http://doc.qt.io/qt-5/statemachine-api.html), and [Declarative State Machine Framework](http://doc.qt.io/qt-5/qmlstatemachine.html), both actually statecharts with SCXML semantics, part of the Qt framework, by Qt.
 
 [stent](https://github.com/krasimir/stent), by Krasimir Tsonev, combining the ideas of Redux with the concept of state machines.
 
