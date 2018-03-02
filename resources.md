@@ -60,6 +60,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 ## Tools / Libraries
 
+[Boost.org statechart module](https://github.com/boostorg/statechart), a C++ library for finite state machines
+
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
 [Miros](https://aleph2c.github.io/miros/), statecharts in Python.
@@ -74,7 +76,11 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [statechart.js](https://github.com/burrows/statechart.js), by Corey Burrows, a JavaScript implementation of a Harel Statechart.
 
+[statechart](https://github.com/DavidDurman/statechart), by David Durman, a Statechart implementation in JavaScript
+
 [State Machine Framework](http://doc.qt.io/qt-5/statemachine-api.html), and [Declarative State Machine Framework](http://doc.qt.io/qt-5/qmlstatemachine.html), both actually statecharts with SCXML semantics, part of the Qt framework, by Qt.
+
+[Stately](https://github.com/nodename/stately), by Alan Shaw, Statecharts in Clojure/Script
 
 [stent](https://github.com/krasimir/stent), by Krasimir Tsonev, combining the ideas of Redux with the concept of state machines.
 
