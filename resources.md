@@ -82,6 +82,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [statechart](https://github.com/DavidDurman/statechart), by David Durman, a Statechart implementation in JavaScript
 
+[statechart](https://github.com/cmars/statechart), by Casey Marshall, a rust implementation of statecharts: hierarchical, reactive state machines
+
 [State Machine Framework](http://doc.qt.io/qt-5/statemachine-api.html), and [Declarative State Machine Framework](http://doc.qt.io/qt-5/qmlstatemachine.html), both actually statecharts with SCXML semantics, part of the Qt framework, by Qt.
 
 [Stately](https://github.com/nodename/stately), by Alan Shaw, Statecharts in Clojure/Script
