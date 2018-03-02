@@ -72,6 +72,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [Sismic](https://pypi.python.org/pypi/sismic), by Alexandre Decan, Sismic Interactive Statechart Model Interpreter and Checker, Python.
 
+[statechart.js](https://github.com/burrows/statechart.js), by Corey Burrows, a JavaScript implementation of a Harel Statechart.
+
 [State Machine Framework](http://doc.qt.io/qt-5/statemachine-api.html), and [Declarative State Machine Framework](http://doc.qt.io/qt-5/qmlstatemachine.html), both actually statecharts with SCXML semantics, part of the Qt framework, by Qt.
 
 [stent](https://github.com/krasimir/stent), by Krasimir Tsonev, combining the ideas of Redux with the concept of state machines.
