@@ -64,6 +64,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
+[harel](https://github.com/jayrbolton/harel), by Jay R Bolton, Harel Statecharts in javascript for declarative UI
+
 [Miros](https://aleph2c.github.io/miros/), statecharts in Python.
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React.
