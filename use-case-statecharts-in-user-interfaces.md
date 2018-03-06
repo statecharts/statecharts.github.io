@@ -40,7 +40,7 @@ However, in order for this code to support _anything_ other than turning it gree
 
 ```js
 function handleChange(e) {
-  if (field.value == "") {
+  if (field.value != "") {
     field.classList.add("green")
   }
 }
