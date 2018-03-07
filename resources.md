@@ -13,6 +13,8 @@
 
 ## Blog posts / Articles
 
+[An introduction to visual automata-based programming in Rosmaro](https://medium.freecodecamp.org/an-introduction-to-visual-automata-based-programming-in-rosmaro-100dae8eb969), Łukasz Makuch, 2018
+
 [Programming without boolean values: To-Do App](https://codeburst.io/programming-without-boolean-values-to-do-app-2455035c87f5), Łukasz Makuch, 2018
 
 [How to model the behavior of Redux apps using statecharts](https://medium.freecodecamp.org/how-to-model-the-behavior-of-redux-apps-using-statecharts-5e342aad8f66), Luca Matteis, 2018
