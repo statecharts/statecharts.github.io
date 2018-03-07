@@ -5,7 +5,7 @@ oneliner: An event that is raised some time after a transition takes place.
 
 # Delayed Event
 
-A delayed event is the ability for the statechart to send an event after a certain period of time.  Delayed events can be used to simulate [delayed transitions](delayed-transitions.html){:.glossary}.
+A delayed event is the ability for the statechart to send an event after a certain period of time.  Delayed events can be used to simulate [delayed transitions](delayed-transition.html){:.glossary}.
 
 ## Notation
 
