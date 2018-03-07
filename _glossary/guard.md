@@ -17,6 +17,13 @@ A guard function is de facto a part of the API surface between the component and
 
 Guard functions are often called _while processing an external event_ so this must obviously be possible.  However, the statechart should be allowed to check any guard at any time, i.e. also while _not_ processing any event.  This is to allow the author of the statechart to be free to use things like [delayed events](delayed-event.html){:.glossary}.
 
+## In and Not In guards
+
+A special type of guard checks which _other_ states that the state machine is in, e.g. in [parallel states](parallel-state.md){:.glossary}.  The notation is generally the word "in" followed by the name of the state:
+
+* "in A" means that the transition should only be taken if the machine is _currently_ in the A state
+* "not in A" means that the transition should only be taken if the machine is _not_ in the A state
+
 ## Critisism
 
 It should be noted that a guard is an _if_ test, exactly the type of if tests that lead to problems and complexity in traditional event processing code.  Heavy use of guards with complicated guard conditions should be avoided.
@@ -41,6 +48,17 @@ on: {
 }
 ```
 
+"In guards are provided in the object form of a guard:
+
+
+```
+on: {
+  "some-event": {
+    "some-other-state": { in: "A" }
+  }
+}
+```
+
 ## SCXML
 
 In Statechart XML, the guard is specified using the `cond` attribute on the `<transition>` element:
@@ -48,3 +66,8 @@ In Statechart XML, the guard is specified using the `cond` attribute on the `<tr
     <transition event="some-event" cond="is_capable_of_flight()" target="some-other-state" />
 
 Again, the set of guard functions available to the statechart is up to you, and again you can expose low level information from your component (such as character count), or higher level, more "business related" guards (such as "is valid" or word count).
+
+"In" guards are provided by a required built-in function called `In`:
+
+    <transition event="some-event" cond="In('A')" target="some-other-state" />
+
