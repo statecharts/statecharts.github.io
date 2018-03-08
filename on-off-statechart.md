@@ -52,7 +52,15 @@ Let's say the business side says that they don't like the behaviour in that if y
 
 Well that's simple to accommodate in a Statechart; just specialize the _D_ state by adding a few new substates.  These new states would be tasked to handle the _flick_ event for the first 0.5 seconds and essentially "do nothing" if it happens.
 
-### On state for 1/2 second
+### Difference between how flick is handled in the On and Off states
+
+The _Off_ state has a similar behaviour, although not quite the same:
+
+In the Off state, when the button is "flick"ed repeatedly (even for many seconds), the light will stay Off.  It is only when the "flick" event _hasn't happened_ for 2 seconds, that the next "flick" will turn it off.
+
+In the On state, when the button is "flicked" repeatedly, after 0.5 seconds of repeated flicking, the light _will_ actually turn off.
+
+### Light on for (at least) 1/2 second
 
 When in the D state, the _flick_ event should be ignored for 0.5 seconds.  This requires a few new state:
 
@@ -87,4 +95,7 @@ The problem being solved is a bit contrived, and albeit the problem domain is re
 
 Additionally no weird bugs such as rogue timers cause events to fire out-of-order.  In a normal, imperative implementation of this, it is common to forget to cancel any timers that have been started, causing the effects of the timer to be executed even though they were not supposed to.  This whole class of bugs no longer exist.
 
+You will never need an on/off switch that functions exactly like this, but if you consider the field of micro-interactions, things can easily get pretty complex.  Consider showing a pop-up notification that the user can dismiss by clicking or tapping on it, what if the user was about to tap on something exactly where the pop-up appeared, and instead taps the notification, thus dismissing it without having read the notification.  The notification should _ignore_ taps for a short while, perhaps half a second, which is exactly the problem we've solved in statecharts.
+
 Finally, the diagram itself is pretty explanatory.  One can focus on the top level _On_ and _Off_ states to get a general understanding of what the machine does, and then look into each state in isolation to understand how each one functions.
+
