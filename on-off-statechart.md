@@ -54,11 +54,11 @@ Well that's simple to accommodate in a Statechart; just specialize the _D_ state
 
 ### Difference between how flick is handled in the On and Off states
 
-The _Off_ state has a similar behaviour, although not quite the same:
+The _Off_ and _On_ states have similar behaviour, although not quite the same.  Both react to the "flick" event, but slightly differently.
 
-In the Off state, when the button is "flick"ed repeatedly (even for many seconds), the light will stay Off.  It is only when the "flick" event _hasn't happened_ for 2 seconds, that the next "flick" will turn it off.
+In the Off state, when the button is "flick"ed repeatedly (even for many seconds), the stream of "flick" events will be ignored, and the light will stay Off.  It is only when the "flick" event _hasn't happened for 2 seconds_, that the next "flick" will turn it on.  In other words, the "flick" event must "cool down" for 2 seconds before it has an effect.
 
-In the On state, when the button is "flicked" repeatedly, after 0.5 seconds of repeated flicking, the light _will_ actually turn off.
+In the On state, when the button is "flicked" repeatedly, the flick events in the first 0.5 seconds of the On state are ignored. Only after 0.5 seconds will the "flick" event cause the light turn off.  The "flick" event is essentially ignored for half a second.
 
 ### Light on for (at least) 1/2 second
 
