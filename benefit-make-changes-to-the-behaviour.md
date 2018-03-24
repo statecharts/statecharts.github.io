@@ -18,6 +18,6 @@ NASA's JPL found that statecharts were "very useful in accommodating late breaki
 
 Ian Horrocks, describes maintainability too:
 
-> It is difficult to measure maintainability, but it is worth making the following points.  Changes to statechart modules were much quicer and easier to make than changes to other modules.  The maintainability of statechart-constructed modules remained constant.  There was no deterioration in the quality of the code, despite several significant changes to the designs.  Three modules that were constructed using a bottom-up approach were rewritten using the statechart approach because the required user interface was too complicated to develop. No statechart module needed to be rewritten.
+> It is difficult to measure maintainability, but it is worth making the following points.  Changes to statechart modules were much quicker and easier to make than changes to other modules.  The maintainability of statechart-constructed modules remained constant.  There was no deterioration in the quality of the code, despite several significant changes to the designs.  Three modules that were constructed using a bottom-up approach were rewritten using the statechart approach because the required user interface was too complicated to develop. No statechart module needed to be rewritten.
 >
 > <cite>Ian Horrocks, Constructing the User Interface with Statecharts, page 200</cite>
