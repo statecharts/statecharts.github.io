@@ -10,6 +10,7 @@
 
 [Developing User Interfaces using SCXML Statecharts](http://phrogz.net/developing-user-interfaces-using-scxml-statecharts) Gavin Kistner & Chris Nuernberger, 2014 - A paper about how Nvidia developed automotive UI using state charts and SCXML.
 
+[UML Statecharts](https://en.wikipedia.org/wiki/UML_state_machine) or "UML state machines" on wikipedia provides a good overview
 
 ## Blog posts / Articles
 
