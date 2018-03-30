@@ -36,13 +36,17 @@ Such a state is called a [parallel state](glossary/parallel.html){:.glossary}, t
 
 When an event happens, and the state machine would normally transition from one state to another, statecharts introduce the concepts of _guarding_ the transition.  A [guard](glossary/guard.html){:.glossary} is a condition placed upon the transition, and the transition is essentially ignored if the guard condition is false.
 
+### States can have multiple transitions for the same event
+
+The addition of guards allows a state to have _more than one_ transition that reacts to the same event:  Two transitions fire on the same event, but only one is picked at run-time depending on which one's guards evaluate to TRUE.
+
 ### Transitions can happen automatically
 
-When entering a state, a transition can be defined which is _automatically_ taken.  This is useful in conjunction with guards, to move out of a state immediately upon entering it.
+When entering a state, a transition can be defined which is _automatically_ taken.  This is useful in conjunction with guards, to move out of a state immediately upon entering it when certain conditions hold.
 
 ### Transitions can be delayed
 
-Simply being in a state for a duration of time can be enough to transition to a different state.  This is accomplished by way of a [delayed transition](glossary/delayed.html){:.glossary}, which defines that the transition should be taken a specific period of time after entering a state.
+Simply being in a state for a duration of time can be enough to transition to a different state.  This is accomplished by way of a [delayed transition](glossary/delayed-transition.html){:.glossary}, which defines that the transition should be taken a specific period of time after entering a state.
 
 ### History 
 
