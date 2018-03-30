@@ -8,19 +8,46 @@ Here's an example of a state in a state machine, with some extra "substates":
 
 When the state machine enters this state _D_ it also starts the state machine within it.  The _initial state_ of this machine inside _D_ is in fact _E_ so it _enters_ _E_ too.  And since _E_ has a single substate _G_, it is also _entered_.
 
-More generally:
+> A state with no substates is called a [atomic state](glossary/atomic-state.html){:.glossary}.  A state with substates is called a [compound state](glossary/compound-state.html){:.glossary}.
+
+### Entering a state enters one of its substates
 
 - When a state is entered, its sub state machine starts and therefore, a substate is entered
 - When a state is exited, its sub state machine is exited too, i.e. any substates also exit
-- This happens in addition to normal state machine behavior, namely entry and exit actions.
 
-In the example above, when the machine is told to enter _D_, it actually ends up entering _D_, _E_, and _G_.
+In the example above, when the machine is told to enter _D_, it actually ends up entering _D_, _E_, and _G_.  Conversely, when the state machine exits _D_ it also exits any substates.
 
 Like state machines, statecharts also react to events; events are _dealt with_ by the states and the main side effects are specified by what happens upon entering and exiting states.
 
-Statecharts aren't restricted to just two levels; a statechart is a hierarchical structure, much like a file system or Object Oriented inheritance or prototype hierarchies.
+### A state can have many "regions"
 
-Note also that a state may define several independent subordinate state machines; in this scenario, when a state is entered, then _all_ of the subordinate state machines "start" and enter their initial state.  In the statechart terminology, this is called a "parallel" state
+A compound state can be split up into completely separate ("orthogonal") regions.  Each region specifies its own state machine.  When a state machine enters such a state, it also enters _all_ of the regions of the state at the same time.
+
+![A state with four regions](glossary/parallel.svg)
+
+If this state is entered, then it enters both the top and bottom regions, and the following statements will hold true so long as A is active:
+
+* Exactly one of B and C is active
+* Exactly one of D and E is active 
+
+Such a state is called a [parallel state](glossary/parallel.html){:.glossary}, the and regions are often called "orthogonal regions".
+
+### Transitions can be guarded
+
+When an event happens, and the state machine would normally transition from one state to another, statecharts introduce the concepts of _guarding_ the transition.  A [guard](glossary/guard.html){:.glossary} is a condition placed upon the transition, and the transition is essentially ignored if the guard condition is false.
+
+### Transitions can happen automatically
+
+When entering a state, a transition can be defined which is _automatically_ taken.  This is useful in conjunction with guards, to move out of a state immediately upon entering it.
+
+### Transitions can be delayed
+
+Simply being in a state for a duration of time can be enough to transition to a different state.  This is accomplished by way of a [delayed transition](glossary/delayed.html){:.glossary}, which defines that the transition should be taken a specific period of time after entering a state.
+
+### History 
+
+When exiting a compound state and its substate, it is sometimes useful to be able to return to exactly the state that you left.  Statecharts introduce the concepts of [history states](glossary/history.html){:.glossary}.  When a transition goes _to_ a history state, it re-enters the state that "was last active".
+
 
 ### See also
 
