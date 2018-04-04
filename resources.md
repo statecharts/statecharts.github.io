@@ -71,6 +71,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [harel](https://github.com/jayrbolton/harel), by Jay R Bolton, Harel Statecharts in javascript for declarative UI
 
+[LXSC](https://github.com/Phrogz/LXSC), by Gavin Kistner, Lua XML StateChart interpreter - parses and executes SCXML state machines with a Lua data model.
+
 [Miros](https://aleph2c.github.io/miros/), statecharts in Python.
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React.
