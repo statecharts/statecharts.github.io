@@ -34,6 +34,10 @@
 
 ## Presentations 
 
+[setState Machine](https://www.youtube.com/watch?v=sZg3DoTfHLQ), by Michele Bertoli, 2018
+
+[Simplifying Complex UIs with Finite Automata & Statecharts](https://www.youtube.com/watch?v=RqTxtOXcv8Y), by David Khourshid, 2018
+
 [Are statecharts the next big UI paradigm?](https://www.slideshare.net/lmatteis/are-statecharts-the-next-big-ui-paradigm), Luca Matteis, 2017
 
 [Infinitely Better UIs with Finite Automata](https://www.youtube.com/watch?v=VU1NKX6Qkxc), David Khourshid, 2017
