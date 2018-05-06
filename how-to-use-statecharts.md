@@ -58,7 +58,7 @@ If I put my statechart hat on, these can be thought of as "top level states":
 
 ![Initial set of states](how-to-use-statecharts-initial-states.svg)
 
-Note that this set of states might change, since we haven't really understood what a "mode" is.  The main thing to look for is a different _behaviour_, i.e. that the component in question _reacts in a differnt way_ to events.  For example, the search app should react differently to a click on a photo when displaying results vs when zoomed in on a photo.
+Note that this set of states might change, since we haven't really understood what a "mode" is.  The main thing to look for is a different _behaviour_, i.e. that the component in question _reacts in a different way_ to events.  For example, the search app should react differently to a click on a photo when displaying results vs when zoomed in on a photo.
 
 From the requirements it's also pretty easy to think up the transitions between those states too.  Here's the "happy path":
 
@@ -282,7 +282,7 @@ These three things are hidden from the statechart; it doesn't need to know that 
 
 At this point in time I think it's very useful to point out dependency that might come creeping.  The component in question easily becomes dependent on the states in the statechart.  A decision has to be made, or else it will be made for you.
 
-The statechart invariably starts out as a reflection of the _modes_ that the component has, e.g. enabled, disabled, loading and so on.  It is therefore common to use the "current state" of the statechart reflect it in the component somewhere.  For a HTML based component, this might translate into a top level CSS element, like `state-enabled` and `state-loading`.  For a React app, it might be that your app renders different things based on the top level state.  This is completely natural, and introduces an implied coupling between the statechart and the component.
+The statechart invariably starts out as a reflection of the _modes_ that the component has, e.g. enabled, disabled, loading and so on.  It is therefore common to use the "current state" of the statechart to reflect it in the component somewhere.  For a HTML based component, this might translate into a top level CSS element, like `state-enabled` and `state-loading`.  For a React app, it might be that your app renders different things based on the top level state.  This is completely natural, and introduces an implied coupling between the statechart and the component.
 
 This coupling may or may not be beneficial, depending on how you end up using the statechart, but you should be aware of the coupling and the problems it introduces.  
 
