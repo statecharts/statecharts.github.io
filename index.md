@@ -60,7 +60,7 @@ With that out of the way, [read on](how-to-use-statecharts.html)!
 
 ## Executable statecharts
 
-In addition to just using statecharts to model the behaviour in documents separte from the actual running code, it's possible to use one of various machine formats, both to design the behaviour, and at run-time to actually _be_ the behaviour.  The idea is to have a single source of truth that describes the behaviour of a component, and that this single source drives both the actual run-time code, but that it can also be used to generate a precise diagram that visualises the statechart.
+In addition to just using statecharts to model the behaviour in documents separate from the actual running code, it's possible to use one of various machine formats, both to design the behaviour, and at run-time to actually _be_ the behaviour.  The idea is to have a single source of truth that describes the behaviour of a component, and that this single source drives both the actual run-time code, but that it can also be used to generate a precise diagram that visualises the statechart.
 
 This carries along some different pros and cons:
 
