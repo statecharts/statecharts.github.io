@@ -5,17 +5,17 @@ oneliner: A boolean check imposed on a transition to inhibit the execution of th
 
 # Guard
 
-A guard is something that may be checked when a statechart wants to handle an [event](event.html){:.glossary}.  A guard is declared on the [transition](transition.html){:.glossary}, and when that transition _would_ trigger, then the guard (if any) is checked.  If the guard is _true_ then the transition does happen. If the guard is false, the transition is ignored.
+A guard is a condition that may be checked when a statechart wants to handle an [event](event.html){:.glossary}.  A guard is declared on the [transition](transition.html){:.glossary}, and when that transition _would_ trigger, then the guard (if any) is checked.  If the guard is _true_ then the transition does happen. If the guard is false, the transition is ignored.
 
-When transitions have guards, then it's possible to define two transitions for the same event from the same state, i.e. that a state has _two_ transitions for a particular event.  When the event happens, then the guarded transitions are checked, one by one, and the first transition whose guard is true will be used, the others will be ignored.  
+When transitions have guards, then it's possible to define two or more transitions for the same event from the same state, i.e. that a state has _two_ (or more) transitions for a particular event.  When the event happens, then the guarded transitions are checked, one by one, and the first transition whose guard is true will be used, the others will be ignored.
 
-A guard is generally a boolean function or boolean variable.  It must be evaluated _synchronously_ — A guard can for example not wait for a future or promise to resolve.
+A guard is generally a boolean function or boolean variable.  It must be evaluated _synchronously_ — A guard can for example not wait for a future or promise to resolve — and should return immediately.
 
-A guard function must not have any side effects.  Those are reserved for [actions](action.html){:.glossary}.  Likewise, a unit test that verifies a statechart's behaviour should _not_ require a guard function to be called; but simply set up guard functions (or variables) so that they might be called and return the values as defined in the test itself.
+A guard function must not have any side effects.  Side effects are reserved for [actions](action.html){:.glossary}.  Likewise, a unit test that verifies a statechart's behaviour should _not_ require a guard function to be called; but simply set up guard functions (or variables) so that they might be called and return the values as defined in the test itself.
 
 A guard function is de facto a part of the API surface between the component and the statechart.  A component will typically expose a set of things that the statechart is allowed to check.
 
-Guard functions are often called _while processing an external event_ so this must obviously be possible.  However, the statechart should be allowed to check any guard at any time, i.e. also while _not_ processing any event.  This is to allow the author of the statechart to be free to use things like [delayed events](delayed-event.html){:.glossary}.
+Guard functions are often called _while processing an external event_ so this must obviously be possible.  However, the statechart should be allowed to check any guard at any time, i.e. also while _not_ processing any event.  This is to allow the author of the statechart to be free to use things like [delayed events](delayed-event.html){:.glossary} or [delayed transitions](delayed-transition.html){:.glossary}.
 
 ## In and Not In guards
 
@@ -23,6 +23,8 @@ A special type of guard checks which _other_ states that the state machine is in
 
 * "in A" means that the transition should only be taken if the machine is _currently_ in the A state
 * "not in A" means that the transition should only be taken if the machine is _not_ in the A state
+
+An _In_ guard can act as a way to introduce a certain amount of coordination between different parts of a statechart.  For example, its possible to cause an event to have different behaviour depending on the state of another part of the machine.
 
 ## Critisism
 
@@ -43,13 +45,16 @@ Xstate 3 supports guard functions in the machine definition:
 ```
 on: {
   "some-event": {
-    "some-other-state": ({ is_capable_of_flight }) => is_capable_of_flight
+    "some-other-state": {
+      cond: ({ is_capable_of_flight }) => is_capable_of_flight
+    }
   }
 }
 ```
 
-"In guards are provided in the object form of a guard:
+The guard function is provided with the "extended state" as its first argument, the event object as the second argument, and the "current state" expressed as a state value as the third argument.
 
+"In guards" are supported declaratively:
 
 ```
 on: {
