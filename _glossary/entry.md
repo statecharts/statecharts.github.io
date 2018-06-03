@@ -1,6 +1,6 @@
 ---
 title: Entry
-oneliner: A state becomes an "active" state in a running state machine
+oneliner: A state becomes an active state in a running state machine
 ---
 
 # Entry
