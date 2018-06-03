@@ -16,7 +16,7 @@
         // add title attributes and highlight missing glossary entries
         document.querySelectorAll('a.glossary').forEach(a => {
           if (a.attributes.href) {
-            var g = document.querySelector('footer a[href="glossary/' + a.attributes.href.value + '"]');
+            var g = document.querySelector('footer a[href="/' + a.attributes.href.value + '"]');
             if (g) {
               a.title = g.title;
             }
