@@ -5,7 +5,7 @@ oneliner: An event generated explicitly by the statechart
 
 # Raised Event
 
-A raised event is a type of [generated event](generated-gevent.html){:.glossary} that is explicitly mentioned in the statechart.  A raised event is usually defined as an [entry](entry.html){:.glossary}, [exit](exit.html){:.glossary}, or [transition](transition.html){:.glossary} action.
+A raised event is a type of [generated event](generated-event.html){:.glossary} that is explicitly mentioned in the statechart.  A raised event is usually defined as an [entry](entry.html){:.glossary}, [exit](exit.html){:.glossary}, or [transition](transition.html){:.glossary} action.
 
 ## Notation
 
