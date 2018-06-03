@@ -10,6 +10,26 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
+    <script>
+      window.onload = () => {
+        
+        // add title attributes and highlight missing glossary entries
+        document.querySelectorAll('a.glossary').forEach(a => {
+          if (a.attributes.href) {
+            var g = document.querySelector('footer a[href="/glossary/' + a.attributes.href.value + '"]');
+            if (g) {
+              a.title = g.title;
+            }
+            else {
+              a.classList.add('missing');
+              a.title = "Missing glossary entry";
+            }
+          }
+        });
+        
+      };
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-24028448-3"></script>
     <script>
