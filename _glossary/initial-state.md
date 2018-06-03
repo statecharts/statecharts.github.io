@@ -3,7 +3,7 @@ title: Initial state
 oneliner: The state which is entered when a state machine starts
 ---
 
-When a state machine starts, it starts by [entering](enter.html){:.glossary} the defined initial state.  Likewise, when a [compound state](compound-state.html){:.glossary} is entered, it also generally causes its initial state to be entered.
+When a state machine starts, it starts by [entering](entry.html){:.glossary} the defined initial state.  Likewise, when a [compound state](compound-state.html){:.glossary} is entered, it also generally causes its initial state to be entered.
 
 # Notation
 
