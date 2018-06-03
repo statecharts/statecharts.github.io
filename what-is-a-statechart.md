@@ -1,6 +1,6 @@
 ## What is a statechart?
 
-A statechart is a [state machine](what-is-a-state-machine.html) where each state in the state machine may define its own _subordinate_ state machines, called _substates_.
+The primary feature of statecharts is that states can be organized in a _hierarchy_:  A statechart is a [state machine](what-is-a-state-machine.html) where each state in the state machine may define its own _subordinate_ state machines, called _substates_.  Those states can again define substates.
 
 Here's an example of a state in a state machine, with some extra "substates":
 
@@ -12,8 +12,8 @@ When the state machine enters this state _D_ it also starts the state machine wi
 
 ### Entering a state enters one of its substates
 
-- When a state is entered, its sub state machine starts and therefore, a substate is entered
-- When a state is exited, its sub state machine is exited too, i.e. any substates also exit
+- When a [state is entered](glossary/entry.html){:.glossary}, its sub state machine starts and therefore, a substate is entered
+- When a [state is exited](glossary/exit.html){:.glossary}, its sub state machine is exited too, i.e. any substates also exit
 
 In the example above, when the machine is told to enter _D_, it actually ends up entering _D_, _E_, and _G_.  Conversely, when the state machine exits _D_ it also exits any substates.
 
@@ -30,7 +30,7 @@ If this state is entered, then it enters both the top and bottom regions, and th
 * Exactly one of B and C is active
 * Exactly one of D and E is active 
 
-Such a state is called a [parallel state](glossary/parallel.html){:.glossary}, the and regions are often called "orthogonal regions".
+Such a state is called a [parallel state](glossary/parallel-state.html){:.glossary}, the and regions are often called "orthogonal regions".
 
 ### Transitions can be guarded
 
@@ -42,7 +42,7 @@ The addition of guards allows a state to have _more than one_ transition that re
 
 ### Transitions can happen automatically
 
-When entering a state, a transition can be defined which is _automatically_ taken.  This is useful in conjunction with guards, to move out of a state immediately upon entering it when certain conditions hold.
+When entering a state, a transition can be defined which is [automatically](glossary/automatic-transition.html){:.glossary} taken.  This is useful in conjunction with guards, to move out of a state immediately upon entering it when certain conditions hold, or as soon as those conditions hold.
 
 ### Transitions can be delayed
 
