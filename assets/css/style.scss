@@ -37,6 +37,12 @@ a.glossary {
   color: inherit;
 }
 
+
+a.glossary.missing {
+  text-decoration-style: wavy;
+  text-decoration-color: rgba(255,0,0,0.3);
+}
+
 /* Insert the word "Glossary:" in front of the first h1 of glossary pages */
 body.glossary_page #main_content>h1:first-child::before {
   content: "Glossary: "; font-weight: normal;
