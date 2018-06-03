@@ -4,6 +4,7 @@ In order to create a new glossary term, create the file in this directory with .
 
     ---
     title: Foo Bar
+    oneliner: Short description of what a Foo Bar is.
     ---
     
     # Foo Bar
