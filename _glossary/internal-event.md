@@ -1,18 +1,44 @@
 ---
 title: Internal event
-oneliner: An event caused by the statechart itself, and handled internally
+oneliner: An event caused by the statechart itself, and handled immediately
 ---
 
 # Internal Event
 
-An internal event is an event that is caused by the statechart itself, especially when the state changes.  When processing an external [event](event.html){:.glossary}, the statechart might go from one state to another; this state change is itself an internal event, which the statechart can "listen" for and process like any other event.
+An internal event is a [generated event](generated-event.html){:.glossary} that is generated when a [transition](transition.html){:.glossary} occurs.  When processing an external [event](event.html){:.glossary}, the statechart might go from state A to state B; this state change can "generate" new events such as
 
-Internal events are typically implemented as [automatic transitions](automatic-transition.html){:.glossary} with a [guard](guard.html){:.glossary} specifying that the transition should not happen unless the statechart is _in_ a specific state.
+* We're no longer 'in' state A
+* State A was exited
+* State B was entered
+* We're now 'in' state B
 
-Immediately after a state transition happens (and importantly before the next external event is processed), the state machine checks if any automatic transitions are now "enabled" by the new set of active states.  If there are any, then they are considered _triggered_ and the transition happens.
+Immediately after a state transition happens (and importantly before the next external event is processed), the state machine checks if any transitions get "enabled" by any such internal events.  If there are any, then they are considered _triggered_ and those transition happen immediately.
 
-Internal events don't have a notation, they are somewhat of an implementation detail.  Various statechart systems have different ways of expressing internal events:
 
-* SCXML and xstate allow `in`-type guards, that are checked immediately after a state transition happens
-* SCXML sends `done.stateID` events whenever a [compound state](compound-state.html){:.glossary} reaches its [final state](final-state.html){:.glossary}
+## Notation
+
+Internal events don't have specific names; the events themselves are generated automatically by the statechart.  However, sensing (reacting to) an event is done by way of transitions that specify events such as `entered(somestate)` or `in(somestate)`.
+
+```
+       in (somestate)
+   ———————————————————————>
+```
+
+
+```
+         entered (B)
+   ———————————————————————>
+```
+
+
+## SCXML
+
+SCXML only supports `In(state)` guards.
+
+As a side note, SCXML automatically generates `done.stateID` events whenever a [compound state](compound-state.html){:.glossary} reaches its [final state](final-state.html){:.glossary}, and various `error.` events as part of the processing of an event.
+
+## xstate
+
+xstate only supports `in: 'state'` guards.
+
 
