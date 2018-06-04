@@ -42,7 +42,7 @@
 
 [Infinitely Better UIs with Finite Automata](https://www.youtube.com/watch?v=VU1NKX6Qkxc), David Khourshid, 2017
 
-[Rambling thoughs on React and FSM](https://www.youtube.com/watch?v=MkdV2-U16tc), Ryan Florence, 2017
+[Rambling thoughs on React and FSM](https://www.youtube.com/watch?v=WbhpQXH7XMw), Ryan Florence, 2017
 
 [Telling stories using statecharts](https://www.youtube.com/watch?v=GiOtyr2xA8c), Erik Mogensen, 2015
 
