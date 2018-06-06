@@ -2,7 +2,7 @@
 
 FizzBuzz is a programming puzzle, easily solvable using a simple for-loop.  The puzzle has been described in terms of an event driven system, in order to allow us to explore some statechart concepts.  See [FizzBuzz](fizzbuzz.html) for an introduction to what we’re trying to achieve here.
 
-Here, we will show how [actions](glossary/actions.html){:.glossary} are used to let the statechart tell us what to do.  We will use [guards](glossary/guard.html){:.glossary} to tell us which state we should go to
+Here, we will show how [actions](glossary/action.html){:.glossary} are used to let the statechart tell us what to do.  We will use [guards](glossary/guard.html){:.glossary} to tell us which state we should go to
 
 Let’s start with a machine that prints out only the digits.
 
@@ -56,7 +56,35 @@ We can now extend this machine to handling the ‘buzz’ case quite easily
 
 TK embed: [On codepen](https://codepen.io/mogsie/embed/jKMrPP)
 
-That was easy.  We could continue doing this for the FizzBuzz case, with the same tradeoffs as in the first non-statechart example shown in the [introduction](fizzbuzz.html).  The `i % 3` and `i % 5` are evaluated many times.  The point is not the execution time of i%5==0.  The point is the maintainability of this long chain of if/else statements.
+That was easy.  We could continue doing this for the FizzBuzz case:
+
+TK embed [codepen](https://codepen.io/mogsie/pen/QxKEKj)
+
+The guard condition in this "solution" looks a lot like the if/else statements as in the first non-statechart example shown in the [introduction](fizzbuzz.html):
+
+
+```
+// After (example 1)
+For i = 1; i < 100; i++ {
+  If i%3 && i%5 == 0, print fizzbuzz
+  Else If i%3 == 0, print fizz
+  Else If i%5 == 0, print buzz
+  Else print digit
+}
+```
+
+Guard condition:
+
+```
+increment: [
+  { cond: (i) => i%3==0 && i%5==0, target: '.fizzbuzz' },
+  { cond: (i) => i%3==0, target: '.fizz' },
+  { cond: (i) => i%5==0, target: '.buzz' },
+  { target: '.digit' }
+]
+```
+
+The order of these if/else statements is just as important as the order of the guarded transitions.  Both of these are relatively unmaintainable, mainly because of the long chain of if/else statements.
 
 ## Refining the _FizzBuzz_ state
 
@@ -73,10 +101,11 @@ There is one slight optimization we can do.  This will show how substates are "m
 
 TK embed this [codepen](https://codepen.io/mogsie/pen/QxKEKj)...
 
-This optimization is a nice one that most imperative solutions miss, because every for-loop usually forgets any calculations in the previous iteration.  With statecharts, insights like this come more naturally.  However, with the this design, it is hard to add more optimizations.  Take a look at [the introduction](fizzbuzz.html) to see other possible solutions.
+This optimization is a nice one that most imperative solutions miss, because every for-loop usually forgets any calculations in the previous iteration.  With statecharts, insights like this come more naturally.  However, with the this design, it is hard to add more optimizations.
 
 
 ## Conclusion
 
 We have shown the use of guards and how a single event can cause many possible transitions to be checked.  That the first guard that passes will be taken.  We have shown how actions can be placed on states, and how entering those states triggers those actions.  Finally, we have shown how we can specialize a state, overriding its behaviour simply by adding a transition in a substate.
 
+Take a look at [the introduction](fizzbuzz.html) to explore different aspects of statecharts.
