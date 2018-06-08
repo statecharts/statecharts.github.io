@@ -77,6 +77,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [LXSC](https://github.com/Phrogz/LXSC), by Gavin Kistner, Lua XML StateChart interpreter - parses and executes SCXML state machines with a Lua data model.
 
+[µFSM](https://github.com/jonpe960/ufsm/), by Jonas Persson, UML Statechart library in C and XMI importer.
+
 [Miros](https://aleph2c.github.io/miros/), statecharts in Python.
 
 [React Automata](https://github.com/MicheleBertoli/react-automata) by Michele Bertoli, a state machine abstraction for React.
