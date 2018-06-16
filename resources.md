@@ -32,7 +32,9 @@
 
 [Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek, Dr. Dobb's magazine, 2003
 
-## Presentations 
+## Presentations
+
+[Reactive State Machines and Statecharts](https://www.youtube.com/watch?v=frB07tHgPH4), by David Khourhid, 2018
 
 [setState Machine](https://www.youtube.com/watch?v=sZg3DoTfHLQ), by Michele Bertoli, 2018
 
