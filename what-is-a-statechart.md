@@ -8,7 +8,7 @@ Here's an example of a state in a state machine, with some extra "substates":
 
 When the state machine enters this state _D_ it also starts the state machine within it.  The _initial state_ of this machine inside _D_ is in fact _E_ so it _enters_ _E_ too.  And since _E_ has a single substate _G_, it is also _entered_.
 
-> A state with no substates is called a [atomic state](glossary/atomic-state.html){:.glossary}.  A state with substates is called a [compound state](glossary/compound-state.html){:.glossary}.
+> A state with no substates is called an [atomic state](glossary/atomic-state.html){:.glossary}.  A state with substates is called a [compound state](glossary/compound-state.html){:.glossary}.
 
 ### Entering a state enters one of its substates
 
