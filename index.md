@@ -1,4 +1,4 @@
-## Welcome to the (unfinished) world of Statecharts
+## Welcome to the world of Statecharts
 
 What is a statechart?
 
