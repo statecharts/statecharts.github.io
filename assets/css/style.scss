@@ -48,7 +48,6 @@ body.glossary_page #main_content>h1:first-child::before {
   content: "Glossary: "; font-weight: normal;
 }
 
-#main_content p,
-#main_content li {
+#main_content p {
   white-space: pre-wrap;
 }
