@@ -47,3 +47,8 @@ a.glossary.missing {
 body.glossary_page #main_content>h1:first-child::before {
   content: "Glossary: "; font-weight: normal;
 }
+
+#main_content p,
+#main_content li {
+  white-space: pre-wrap;
+}
