@@ -24,7 +24,7 @@ The opposite of a compound state is an [atomic state](atomic-state.html){:.gloss
 
 When designing a statechart, the act of changing an atomic state into a compound state, by introducing a substate or two, is called _refining_ the state.  The refinement alludes to the different behaviour encoded in the substates as being a _refinement_ of the generic behavour of the compound state.  The component generally behaves in the way the compound state declares (by looking at the compound state's transitions), but depending on which substate is active, and which transitions they define, the component might behave differently.
 
-A compound state is allowed to define [transitions](transition.html]{:.glossary} to its child states. Normally, when a transition leads from a state, it causes that state to be exited.  For transitions from a compound state to one of its descendantes, it is possible to define a transition that avoids exiting and entering the compound state itself, such transitions are called [local transitions](local-transition.html]{:.glossary}. 
+A compound state is allowed to define [transitions](transition.html){:.glossary} to its child states. Normally, when a transition leads from a state, it causes that state to be exited.  For transitions from a compound state to one of its descendantes, it is possible to define a transition that avoids exiting and entering the compound state itself, such transitions are called [local transitions](local-transition.html){:.glossary}. 
 
 ## Notation
 
