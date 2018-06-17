@@ -5,26 +5,29 @@ oneliner: A state that has one or more substates
 
 # Compound State
 
-A compound state is a [state](state.html){:.glossary} that includes one or more substates.  This is perhaps main differentiating factor between traditional state machines and statecharts.
+A compound state is a [state](state.html){:.glossary} that includes one or more substates.  It is the main differentiating factor between traditional state machines and statecharts.
 
-If there are more than one substates, one of them is usually designated as the [initial](initial.html){:.glossary} state of that compound state.
+If there are more than one substates, one of them is usually designated as the [initial](initial-state.html){:.glossary} state of that compound state.
 
 When a compound state is active, its substates behave as though they were an active state machine:  Exactly one child state must also be active.
 
-* When a compound state is entered, it must also enter one of its substates, usually its initial state.
-* When a compound state exits, its substate is simultaneously exited too.
-* When a substate transitions to another substate, both "inside" the compound state, the compound state does _not_ exit or enter; it remains active.
-* When an event happens, the _substates_ of the compound state get to act on the state before the compound state itself gets to act on it.  If a substate handles an event, the compound state doesn't get to see it.
+* When a compound state is [entered](entry.html){:.glossary}, it must also enter one of its substates, usually its initial state.
+* When an [event](event.html){:.glossary} happens, the _substates_ of the compound state get to act on the state before the compound state itself gets to act on it.  If a substate handles an event, the event is not passed to the parent compound state.
+* When a substate [transitions](transition.html){:.glossary}  to another substate, both "inside" the compound state, the compound state does _not_ exit or enter; it remains active.
+* When a compound state [exits](exit.html){:.glossary}, its substate is simultaneously exited too.
 
 Compound states may be nested, or include [parallel](parallel-state.html){:.glossary} states.
 
-The opposite of a compound state is an [atomic state](atomic-state.html){:.glossary}, which has no substates.
+The opposite of a compound state is an [atomic state](atomic-state.html){:.glossary}, which is a state with no substates.
+
+A compound state is allowed to define transitions to its child states. Normally, when a transition leads from a state, it causes that state to be exited.  For transitions from a compound state to one of its descendantes, it is possible to define a transition that avoids exiting and entering the compound state itself, such transitions are called [local transitions](local-transition.html){:.glossary}. 
+
 
 ## Usage
 
-When designing a statechart, the act of changing an atomic state into a compound state, by introducing a substate or two, is called _refining_ the state.  The refinement alludes to the different behaviour encoded in the substates as being a _refinement_ of the generic behavour of the compound state.  The component generally behaves in the way the compound state declares (by looking at the compound state's transitions), but depending on which substate is active, and which transitions they define, the component might behave differently.
+Substates are generally introduced to cause a state machine to behave slightly different, but under certain circumstances.  The compound state would define the general behaviour, and substates would define deviations from this behaviour, and what events cause this deviation to be active.
 
-A compound state is allowed to define [transitions](transition.html){:.glossary} to its child states. Normally, when a transition leads from a state, it causes that state to be exited.  For transitions from a compound state to one of its descendantes, it is possible to define a transition that avoids exiting and entering the compound state itself, such transitions are called [local transitions](local-transition.html){:.glossary}. 
+When designing a statechart, the act of changing an atomic state into a compound state (by introducing a substate or two) is called _refining_ the state.  The refinement alludes to the different behaviour encoded in the substates as being a _refinement_, or _specialization_ of the generic behavour of the compound state.
 
 ## Notation
 
