@@ -11,6 +11,8 @@ When an event happens, the currently active state(s) are inspected to see if any
 
 A [self transition](self-transition.html){:.glossary} is a transition that goes from and to the same state.
 
+A [local transition](local-transition.html){:.glossary} is a transition that does not exit the source state, but the target state _must_ be a substate of the source state.
+
 ## Notation
 
 A transition is depicted as a curved arrow.  The name of the event that triggers the transition is written close by, perhaps on top of the arrow.
