@@ -8,7 +8,7 @@ A classic example is that of a user interface element that might be modeled as b
 
 If you wanted to add another "boolean" e.g. _enabled_ and _disabled_ to this, you're competing with the valid/invalid states, and you end up with four states: _valid/enabled_, _invalid/enabled_, _valid/disabled_, and _invalid/disabled_.
 
-![Not so simple state machine with four states](valid-invalid-enavled-disabled.svg)
+![Not so simple state machine with four states](valid-invalid-enabled-disabled.svg)
 
 Four states isn't such a big problem, but if you start adding more states, e.g. a dirty bit to indicate that the user has made a change to the field, you end up with _valid/enabled/unchanged_ and a total of 8 states, and a lot of duplication.  Some states might also not make sense to model; perhaps an unchanged field should not be considered invalid; then you have to document why the _invalid/enabled/unchanged_ state doesn't exist, and that it wasn't just "forgotten"
 
