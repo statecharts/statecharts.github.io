@@ -8,7 +8,7 @@ A classic example is that of a user interface element that might be modeled as b
 
 The machine starts in the Valid state, and upon receiving the events _i_ or _v_, transitions to the _invalid_ or _valid_ states, respectively.
 
-Now let's say we wanted to allow the component to be enabled; the state machine would need to know that a component is _enabled_ or _disabled_ .   With traditional state machines you end up with four states: _valid/enabled_, _invalid/enabled_, _valid/disabled_, and _invalid/disabled_.
+Now let's say we wanted to allow the component to be enabled.  The _e_ event enables it, and the _d_ event disables it.  The state machine would need to know that a component is _enabled_ or _disabled_ .   With traditional state machines you end up with four states: _valid/enabled_, _invalid/enabled_, _valid/disabled_, and _invalid/disabled_.
 
 ![Somewhat simple state machine with four states](valid-invalid-enabled-disabled-no-transitions.svg)
 
@@ -34,7 +34,17 @@ If we start out with the simple "valid / invalid" state machine:
 
 ![Simple state machine with two states, valid and invalid](valid-invalid.svg)
 
-In a statechart world, states are organized hierarchically, so when we want to model a new trait, we try to understand how this new trait matches the existing states.
+We can introduce the new traits "enaled / disabled" as a parallel state, living "alongside" the valid/invalid state.
+
+/* TK parallel states
+
+Etc for changed, unchanged.
+
+We have six states, and six transitions.  Clearly the parallel states scale better.
+
+## Alternatives
+
+In a statechart world, states can be organized hierarchically, so when we want to model a new trait, we can attempt to understand how this new trait matches the existing states.  Perhaps they are not so orthogonal?
 
 In the first case (enabled / disabled) we could decide that the valid/invalid trait is only actually useful when we are in the _enabled_ state.
 
