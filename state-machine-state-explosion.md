@@ -4,11 +4,11 @@ The main problem hampering wide usage of state machines is the fact that beyond 
 
 A classic example is that of a user interface element that might be modeled as being _valid_ or _invalid_ and have a state machine associated with those two states.  Actions might be associated with those two states.
 
-/* insert picture of simple valid / invalid state machine */
+![Simple state machine with two states, valid and invalid](valid-invalid.svg)
 
 If you wanted to add another "boolean" e.g. _enabled_ and _disabled_ to this, you're competing with the valid/invalid states, and you end up with four states: _valid/enabled_, _invalid/enabled_, _valid/disabled_, and _invalid/disabled_.
 
-/* insert picture of simple valid / invalid / enabled / disabled state machine */
+![Not so simple state machine with four states](valid-invalid-enavled-disabled.svg)
 
 Four states isn't such a big problem, but if you start adding more states, e.g. a dirty bit to indicate that the user has made a change to the field, you end up with _valid/enabled/unchanged_ and a total of 8 states, and a lot of duplication.  Some states might also not make sense to model; perhaps an unchanged field should not be considered invalid; then you have to document why the _invalid/enabled/unchanged_ state doesn't exist, and that it wasn't just "forgotten"
 
