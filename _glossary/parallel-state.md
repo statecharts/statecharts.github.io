@@ -25,17 +25,42 @@ Each of those regions can hold their own sets of states
 
 In Statechart XML, [the `<parallel>` element](https://www.w3.org/TR/scxml/#parallel) declares a parallel state.  It has more or less exactly the same set of attributes and elements as the `<state>` element, except it has no _initial_ or _final_ states.  The various _regions_ are defined by way of the direct child `<state>` elements.
 
-This is a parallel state with two _regions_. When `p` becomes active, so does `foo-1` and `bar-1`
+This is a parallel state with two _regions_. When `p` becomes active, so does `foo1` and `bar1`
 
-    <parallel id="p">
-      <state id="region-1">
-        <state id="foo-1"/>
-        <state id="foo-2"/>
-      </state>
-      <state id="region-2">
-        <state id="bar-1"/>
-        <state id="bar-2"/>
-      </state>
-    </parallel>
+``` xml
+<parallel id="p">
+  <state id="region1">
+    <state id="foo1"/>
+    <state id="foo2"/>
+  </state>
+  <state id="region2">
+    <state id="bar1"/>
+    <state id="bar2"/>
+  </state>
+</parallel>
+```
 
-Parallel states may contain other parallel states as direct children, but technically this is equivalent as though the direct children's direct children were "pulled up" to the top level.
+## xstate
+
+In xstate, the `parallel` attribute must be set to `true` for a state to be marked as a parallel state with regions.  A parallel state can not define an `initial` property, since all regions are entered simultaneously.
+
+```
+p: {
+  parallel: true,
+  states: {
+    region1 : {
+      initial: 'foo1',
+      states: {
+        foo1: {}
+        foo2: {}
+      }
+    },
+    region2 : {
+      initial: 'bar1',
+      states: {
+        bar1: {}
+        bar2: {}
+      }
+    }
+  }
+```
