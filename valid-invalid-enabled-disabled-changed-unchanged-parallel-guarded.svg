@@ -3,8 +3,8 @@
     <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
       <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
     </pattern>
-    <pattern id="pattern-0-0" patternTransform="matrix(0.70158, 0, 0, 0.65633, 80.164497, 111.643936)" xlink:href="#pattern-0"></pattern>
-    <pattern id="pattern-1" patternTransform="matrix(0.70158, 0, 0, 0.65633, 79.66304, 213.370895)" xlink:href="#pattern-2"></pattern>
+    <pattern id="pattern-0-0" patternTransform="matrix(0.701583, 0, 0, 0.002006, 80.165094, 122.460453)" xlink:href="#pattern-0"></pattern>
+    <pattern id="pattern-1" patternTransform="matrix(0.701683, 0, 0, -0.004665, 79.685466, 224.297994)" xlink:href="#pattern-2"></pattern>
     <pattern id="pattern-2" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
       <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
     </pattern>
@@ -85,6 +85,6 @@
     </g>
   </g>
   <rect x="-72.67" y="18.54" width="330.662" height="319.987" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
-  <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-0-0);" d="M -72.176 125.794 C -72.176 125.794 257.493 122.243 257.505 122.508"></path>
-  <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-1);" d="M -72.677 227.521 C -72.677 227.521 256.992 223.97 257.004 224.235"></path>
+  <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-0-0);" d="M -72.176 122.504 C -72.176 122.504 257.494 122.493 257.506 122.494"></path>
+  <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-1);" d="M -72.677 224.197 C -72.677 224.197 257.041 224.223 257.053 224.221"></path>
 </svg>
