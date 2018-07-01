@@ -1,6 +1,6 @@
 ---
 title: History
-oneliner: A pseudo-state that 
+oneliner: A pseudo-state that remembers the most recent substates the machine was in
 ---
 
 # History state
@@ -41,12 +41,16 @@ Here we have a compound state A with substates B, C and D.
 
 ## xstate
 
-In xstate, there is no need to declare history states per se; it is enough to target the special `$history` substate.
+In xstate, a history state is declared using the `history` attribute.  It can be set to `true` or `"shallow"` for shallow history, and `"deep"` for deep history.  A history state may declare a `target` for the initial history.
 
 ``` js
 "A": {
+  initial: "B"
   states: {
-    initial: "B"
+    A_AGAIN: {
+      history: true,
+      target: 'C'
+    },
     B: {},
     C: {},
     D: {}
@@ -55,8 +59,12 @@ In xstate, there is no need to declare history states per se; it is enough to ta
 
 // elsewhere
 on: {
-  something: 'A.$history'
+  something: 'A_AGAIN'
 }
 ```
 
-There is no way of declaring a "default history" for a state.
+Here we have a compound state A with substates B, C and D.
+
+* Whenever state A exits, it remembers which of the states, B, C or D was last visited.
+* If a transition targets "A_AGAIN", then the last visited state is entered instead.
+* If a transition targets "A_AGAIN" before state A has had the chance to remember anything, then A_AGAIN's transition to C is taken.
