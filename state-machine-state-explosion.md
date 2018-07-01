@@ -58,7 +58,8 @@ In statecharts, states can be organized hierarchically.  When we want to model a
 
 Let's say that we decide that the _valid/invalid_ trait only makes sense if the field has been modified.  In other words, if the field is _unchanged_ we don't care about the _validity_ of the field.  In order to model this, we can move the _valid/invalid_ states as _substates_ of _changed_:
 
-/* statechart with valid/invalid as substate of changed. */
+![Simple state machine with valid/invalid as substate of changed](valid-invalid-enabled-disabled-changed-unchanged-parallel-hierarchy.svg)
+
 
 We still have the same number of fields, and the same number of transitions, but introduced a strict dependency, namely that some states only make sense in the context of another state.  By leveraging hierarchies, the state explosion problem goes away too.
 
