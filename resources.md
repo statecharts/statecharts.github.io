@@ -95,6 +95,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [statechart.js](https://github.com/burrows/statechart.js), by Corey Burrows, a JavaScript implementation of a Harel Statechart.
 
+[statechart.js](https://github.com/statechart/statechart.js), by Cameron Bytheway, a JavaScript SCXML compiler/interpreter.
+
 [statechart](https://github.com/DavidDurman/statechart), by David Durman, a Statechart implementation in JavaScript
 
 [statechart](https://github.com/cmars/statechart), by Casey Marshall, a rust implementation of statecharts: hierarchical, reactive state machines
