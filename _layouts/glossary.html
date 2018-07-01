@@ -55,21 +55,10 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>
-          This glossary entry comes from the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.
-          Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat
-          where you can find more people discussing statecharts. 
-        </p>
-        <p>
-          Published with <a href="https://pages.github.com">GitHub Pages</a> from
-          <a href="https://github.com/statecharts/">github.com/statecharts/</a>
-          (<a href="{{ site.github.repository_url }}/edit/master/{{ page.relative_path }}">edit this page</a>)
-        </p>
-        <p>
-          {% for item in site.glossary %}
-            <a href="{{ item.url }}" title="{{ item.oneliner }}">{{ item.title }}</a>
-          {% endfor %}
-        </p>
+        <p>This glossary entry comes from the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.  Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat where you can find more people discussing statecharts.</p>
+        <p>If you're writing a blog post about statecharts, feel free to link to this or any glossary terms in the footer when you need to introduce new terms.</p>
+        <p>Published using <a href="https://pages.github.com">GitHub Pages</a> from <a href="https://github.com/statecharts/">github.com/statecharts/</a> (<a href="{{ site.github.repository_url }}/edit/master/{{ page.relative_path }}">edit this page</a>)</p>
+        <p>{% for item in site.glossary %}<a href="{{ item.url }}" title="{{ item.oneliner }}">{{ item.title }}</a>   {% endfor %}</p>
       </footer>
     </div>
   </body>
