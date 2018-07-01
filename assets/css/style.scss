@@ -7,6 +7,10 @@ body {
   font-size: 18px;
 }
 
+#main_content {
+  padding-top: 1rem;
+}
+
 /* Unset from theme */
 ul, ol, dl {
   margin-bottom: 4px;
@@ -41,6 +45,11 @@ a.glossary {
 a.glossary.missing {
   text-decoration-style: wavy;
   text-decoration-color: rgba(255,0,0,0.3);
+}
+
+/* don't wrap links in footer (avoid glossary terms being split in two) */
+footer a {
+  white-space: nowrap;
 }
 
 /* Insert the word "Glossary:" in front of the first h1 of glossary pages */
