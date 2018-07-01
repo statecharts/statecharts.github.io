@@ -55,21 +55,9 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>
-          This page is a part of the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.
-          Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat
-          where you can find more people discussing statecharts. 
-        </p>
-        <p>
-          Published with <a href="https://pages.github.com">GitHub Pages</a> from
-          <a href="https://github.com/statecharts/">github.com/statecharts</a>
-          (<a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">edit this page</a>)
-        </p>
-        <p>Glossary:
-          {% for item in site.glossary %}
-            <a href="{{ item.url }}" title="{{ item.oneliner }}">{{ item.title }}</a>
-          {% endfor %}
-        </p>
+        <p>This page is a part of the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.  Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat where you can find more people discussing statecharts.</p>
+        <p>Published using <a href="https://pages.github.com">GitHub Pages</a> from <a href="https://github.com/statecharts/">github.com/statecharts</a> (<a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">edit this page</a>)</p>
+        <p>Glossary:   {% for item in site.glossary %}<a href="{{ item.url }}" title="{{ item.oneliner }}">{{ item.title }}</a>   {% endfor %}</p>
       </footer>
     </div>
   </body>
