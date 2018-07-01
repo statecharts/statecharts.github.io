@@ -3,11 +3,14 @@
     <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
       <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
     </pattern>
-    <pattern id="pattern-0-0" patternTransform="matrix(0.701654, 0, 0, 0.019172, 80.180663, 123.76367)" xlink:href="#pattern-0"></pattern>
-    <pattern id="pattern-1" patternTransform="matrix(0.701624, 0, 0, 0.011379, 79.672555, 225.404683)" xlink:href="#pattern-2"></pattern>
     <pattern id="pattern-2" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
       <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
     </pattern>
+    <pattern id="pattern-3" patternTransform="matrix(1.1843, 0, 0, 0.979431, -7.734146, 115.403633)" xlink:href="#pattern-4"></pattern>
+    <pattern id="pattern-4" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <path d="M 0 0 L 50 0 L 50 100 L 0 100 Z" style="fill: black;"></path>
+    </pattern>
+    <pattern id="pattern-1" patternTransform="matrix(1.1843, 0, 0, 0.979431, -7.734146, 115.403633)" xlink:href="#pattern-4"></pattern>
   </defs>
   <g>
     <g transform="matrix(1, 0, 0, 1, 1, 14)">
@@ -85,6 +88,6 @@
     </g>
   </g>
   <rect x="-72.67" y="18.54" width="330.662" height="307.275" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
-  <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-0-0);" d="M -72.176 124.177 C -72.176 124.177 257.528 124.073 257.54 124.081"></path>
-  <path style="fill: rgb(216, 216, 216); stroke: url(#pattern-1);" d="M -72.677 225.65 C -72.677 225.65 257.012 225.588 257.024 225.593"></path>
+  <line style="stroke-width: 2.90179; stroke: url(#pattern-3);" x1="-72.556" y1="125.199" x2="258.173" y2="125.199"></line>
+  <line style="stroke-width: 2.90179; stroke: url(#pattern-1);" x1="-72.556" y1="125.199" x2="258.173" y2="125.199" transform="matrix(1, 0, 0, 1, 0.2006035572926521, 100.50098061534854)"></line>
 </svg>
