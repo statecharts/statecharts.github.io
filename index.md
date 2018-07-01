@@ -1,3 +1,7 @@
+---
+description: The world of statecharts describes what statecharts are, their benefits and drawbacks, how they differ from state machines, and practical examples on how to use them.
+---
+
 ## Welcome to the world of Statecharts
 
 What is a statechart?
@@ -10,7 +14,7 @@ However, this drawing might not be so useful for software engineers who want to 
 
 ### Introduction to statecharts
 
-Put simply, a statechart is a beefed up [state machine](what-is-a-state-machine.html).  The beefing up solves a lot of the problems that state machines have, especially [state explosion](state-machine-state-explosion.html).  One of the goals of this site is to help explain what statecharts are and how they are useful.
+Put simply, a statechart is a beefed up [state machine](what-is-a-state-machine.html).  The beefing up solves a lot of the problems that state machines have, especially [state explosion](state-machine-state-explosion.html) that happens as state machines grow.  One of the goals of this site is to help explain what statecharts are and how they are useful.
 
 * [What is a state machine?](what-is-a-state-machine.html)
 * [What is a statechart?](what-is-a-statechart.html)
