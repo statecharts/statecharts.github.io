@@ -1,5 +1,6 @@
 ---
 category: benefits
+description: A benefit of using statecharts is that it is easier to identify more states than otherwise.  Especially error states are highlighted, as are shorter in-between states.
 ---
 
 
