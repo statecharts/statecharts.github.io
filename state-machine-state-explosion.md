@@ -1,6 +1,6 @@
 ## State Machine: State Explosion
 
-The main problem hampering wide usage of state machines is the fact that beyond very simple examples, state machines often end up with a large number of states, a lot of them with identical transitions.
+The main problem hampering wide usage of state machines is the fact that beyond very simple examples, state machines often end up with a large number of states, a lot of them with identical transitions.  Statecharts solve the state explosion problem.
 
 A classic example is that of a user interface element that might be modeled as being _valid_ or _invalid_ and have a state machine that describes the behaviour.  Here is an example of such a simple state machine.
 
@@ -20,39 +20,56 @@ Four states isn't such a big problem, see what happens when we add another featu
 
 ![Not so simple state machine with eight states](valid-invalid-enabled-disabled-changed-unchanged-no-transitions.svg)
 
-Some states might also not make sense to model; perhaps an unchanged field should not be considered invalid; then you have to document why the _invalid/enabled/unchanged_ state doesn't exist, and that it wasn't just "forgotten"
+Some states might also not make sense to model; perhaps an unchanged field should not be considered invalid.  This simplifies the diagram somewhat, but not enough.  The real problem becomes apparent when you add the transitions to go with each new set of states:
 
 ![Complex state machine with eight states and twelve transitions](valid-invalid-enabled-disabled-changed-unchanged.svg)
 
 What we are witnessing is referred to as the "state explosion" of state machines, because adding a new aspect to the state machine can sometimes double the number of states that need to be modeled, and creates a disproportionately high number of transitions.
 
-## Statecharts
+The number of states needed to represent all possible combinations of variables is the [cartesian product](//en.wikipedia.org/wiki/Cartesian_product) of the sets of variables.
 
-Statecharts address this problem by way of hierarchy and parallel states.  In a statechart you can model the aspects as individual substates as it sees fit.
+## Statecharts to the rescue
+
+Statecharts address this problem by way of parallel states, hierarchies, and guards to name a few.
+
+* [Parallel states](glossary/parallel-state.html){:.glossary} allow modeling independent variables truly independently of each other.
+* Hierarchies (by way of [compound states](glossary/compound-state.html){:.glossary}) allow modeling variables that only carry meaning in some circumstances.
+* [Guards](glossary/guard.html){:.glossary} allow modeling variables that depend on other variables.
+
+## Parallel states
 
 If we start out with the simple "valid / invalid" state machine:
 
 ![Simple state machine with two states, valid and invalid](valid-invalid.svg)
 
-We can introduce the new traits "enaled / disabled" as a parallel state, living "alongside" the valid/invalid state.
+Let's say that the enabled/disabled trait and changed/unchanged trait are completely independent of one another, in other words, that the machine can be in _any_ of the states.  If that's the case, then the independent variables can be modeled using a parallel state:
 
-/* TK parallel states
+![Simple state machine with six states, and six transitions)(valid-invalid-enabled-disabled-changed-unchanged-parallel.svg)
 
-Etc for changed, unchanged.
+We have six states, and six transitions, and clarity of thought.
 
-We have six states, and six transitions.  Clearly the parallel states scale better.
+## Hierarchies
 
-## Alternatives
+In statecharts, states can be organized hierarchically.  When we want to model a new trait, we can attempt to understand how this new trait depends upon the existing states.  Perhaps the new trait only makes sense _sometimes_ and not _always_.
 
-In a statechart world, states can be organized hierarchically, so when we want to model a new trait, we can attempt to understand how this new trait matches the existing states.  Perhaps they are not so orthogonal?
+Let's say that we decide that the _valid/invalid_ trait only makes sense if the field has been modified.  In other words that if the field is _unchanged_ we don't care about the _validity_ of the field.  In order to model this, we can move the _valid/invalid_ states as _substates_ of _changed_:
 
-In the first case (enabled / disabled) we could decide that the valid/invalid trait is only actually useful when we are in the _enabled_ state.
+/* statechart with valid/invalid as substate of changed. */
 
-/* TK picture of valid/invalid as substate of enabled */
+...
 
-Likewise, when we add the trait "unchanged" we might say that changing something is only applicable when it is _enabled_ so we can introduce the state there:
+## Guards
 
-/* TK enabled ( unchanged / changed ( valid / invalid) ) / disabled */
+A guard is a sort of _pre condition_ to a transition, in a way it stops a transition from happening if some condition is not true.
+
+To illustrate how guards can help, let's go back to the parallel version of our statechart, but add the constraint that we can not go from changed to unchanged if we are in the invalid state.  In other words, we have to be _valid_ in order to go to _unchanged_.
+
+We can do this by _guarding_ the transition from _changed_ to _unchanged_, adding the condition `in valid` (no pun intended) to the transition:
+
+![Simple state machine with six states, and six transitions)(valid-invalid-enabled-disabled-changed-unchanged-parallel-guarded.svg)
+
+
+
 
 ## See also
 
