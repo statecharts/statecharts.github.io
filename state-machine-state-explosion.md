@@ -44,7 +44,7 @@ If we start out with the simple "valid / invalid" state machine:
 
 Let's say that the enabled/disabled trait and changed/unchanged trait are completely independent of one another, in other words, that the machine can be in _any_ of the states.  If that's the case, then the independent variables can be modeled using a parallel state:
 
-![Simple state machine with six states, and six transitions)(valid-invalid-enabled-disabled-changed-unchanged-parallel.svg)
+![Simple state machine with six states, and six transitions](valid-invalid-enabled-disabled-changed-unchanged-parallel.svg)
 
 We have six states, and six transitions, and clarity of thought.
 
@@ -66,7 +66,7 @@ To illustrate how guards can help, let's go back to the parallel version of our 
 
 We can do this by _guarding_ the transition from _changed_ to _unchanged_, adding the condition `in valid` (no pun intended) to the transition:
 
-![Simple state machine with six states, and six transitions)(valid-invalid-enabled-disabled-changed-unchanged-parallel-guarded.svg)
+![Simple state machine with six states, and six transitions](valid-invalid-enabled-disabled-changed-unchanged-parallel-guarded.svg)
 
 
 
