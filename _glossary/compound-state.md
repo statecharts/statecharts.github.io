@@ -29,6 +29,14 @@ Substates are generally introduced to cause a state machine to behave slightly d
 
 When designing a statechart, the act of changing an atomic state into a compound state (by introducing a substate or two) is called _refining_ the state.  The refinement alludes to the different behaviour encoded in the substates as being a _refinement_, or _specialization_ of the generic behavour of the compound state.
 
+Technically a statechart itself is usually (at the top level) a compound state itself.
+
+### Any State
+
+Some statechart systems have a concept of "Any State" — one that is always active.  Unity's Animation State Machines (where it's called "Any State") and SwiftState (where `nil` denotes the _any state_) are a couple of examples.  The transitions defined for the "Any State" will _always_ be in play.  A compound state can play the same role as the Any State, by defining a single top level state to hold those types of transitions.
+
+Note that while Any State often are defined for the entire state machine, a compound state can be used in a scoped fashion.  A compound state can be used to provide "Any State" like functionality for a smaller part of the statechart if needed.
+
 ## Notation
 
 A compound state is a normal state with its substates depicted _inside_ the borders of the state itself:
@@ -49,6 +57,7 @@ In Statechart XML, a compound state is any state with nested state elements as d
 
 ``` xml
 <state id="off">
+  <transition event="flick" target="on" />
   <state id="A"/>
   <state id="B"/>
 </state>
@@ -60,6 +69,9 @@ An xstate compound state is declared using the `states` property of the state, h
 
 ``` javascript
 "off": {
+  "on": {
+    "flick": "on"
+  }
   "initial": "A",
   "states": {
     "A": {  },
