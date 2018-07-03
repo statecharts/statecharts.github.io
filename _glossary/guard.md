@@ -19,7 +19,7 @@ Guard functions are often called _while processing an external event_ so this mu
 
 ## In and Not In guards
 
-A special type of guard checks which _other_ states that the state machine is in, e.g. in [parallel states](parallel-state.md){:.glossary}.  The notation is generally the word "in" followed by the name of the state:
+A special type of guard checks which _other_ states that the state machine is in, e.g. in [parallel states](parallel-state.html){:.glossary}.  The notation is generally the word "in" followed by the name of the state:
 
 * "in A" means that the transition should only be taken if the machine is _currently_ in the A state
 * "not in A" means that the transition should only be taken if the machine is _not_ in the A state
