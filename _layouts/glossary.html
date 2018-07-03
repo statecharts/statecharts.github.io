@@ -6,7 +6,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <meta name="description" content="{{ site.title | default: site.github.repository_name }} : {{ site.description | default: site.github.project_tagline }}">
+    <meta name="description" content="{{ page.description }}">
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.oneliner }}" />
@@ -46,10 +46,12 @@
 
   <body class="glossary_page">
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
+    <div id="main_content_wrap" class="outer" itemprop="mainEntity" itemscope itemtype="http://schema.org/DefinedTerm">
       <section id="main_content" class="inner">
         {{ content }}
       </section>
+      <link itemprop="url" href="{{ item.url }}">
+      <meta itemprop="description" content="{{ item.oneliner }}">
     </div>
 
     <!-- FOOTER  -->
@@ -58,7 +60,14 @@
         <p>This glossary entry comes from the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.  Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat where you can find more people discussing statecharts.</p>
         <p>If you're writing a blog post about statecharts, feel free to link to this or any glossary terms in the footer when you need to introduce new terms.</p>
         <p>Published using <a href="https://pages.github.com">GitHub Pages</a> from <a href="https://github.com/statecharts/">github.com/statecharts/</a> (<a href="{{ site.github.repository_url }}/edit/master/{{ page.relative_path }}">edit this page</a>)</p>
-        <p>{% for item in site.glossary %}<a href="{{ item.url }}" title="{{ item.oneliner }}">{{ item.title }}</a>   {% endfor %}</p>
+        <p itemscope itemtype="http://schema.org/DefinedTermSet"
+           >{% for item in site.glossary 
+             %}<span itemscope itemtype="http://schema.org/DefinedTerm"
+                     ><link
+                 itemprop="url" href="{{ item.url }}"><meta
+                 itemprop="description" content="{{ item.oneliner }}"><a
+                href="{{ item.url }}" title="{{ item.oneliner }}"
+               itemprop="name">{{ item.title }}</a></span>   {% endfor %}</p>
       </footer>
     </div>
   </body>
