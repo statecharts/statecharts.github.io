@@ -42,6 +42,21 @@
 
   gtag('config', 'UA-24028448-3');
     </script>
+    
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "url": "{{ page.url }}",
+  "description": "{{ page.oneliner }}",
+  "mainContentOfPage": {
+    "@type": "WebPageElement",
+    "cssSelector": "#main_content"
+  }
+}
+  </script>
+
   </head>
 
   <body class="glossary_page">
@@ -50,8 +65,8 @@
       <section id="main_content" class="inner">
         {{ content }}
       </section>
-      <link itemprop="url" href="{{ item.url }}">
-      <meta itemprop="description" content="{{ item.oneliner }}">
+      <link itemprop="url" href="{{ page.url }}">
+      <meta itemprop="description" content="{{ page.oneliner }}">
     </div>
 
     <!-- FOOTER  -->
