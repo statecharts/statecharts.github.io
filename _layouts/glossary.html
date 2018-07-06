@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <meta name="description" content="{{ page.description }}">
+    <meta property="og:site_name" content="Statecharts: glossary entry"/>
     <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://statecharts.github.io{{ page.url }}" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.oneliner }}" />
 
@@ -52,6 +54,10 @@
   "url": "https://statecharts.github.io{{ page.url }}",
   "description": "{{ page.oneliner }}",
   "mainContentOfPage": {
+    "@type": "WebPageElement",
+    "cssSelector": "#main_content"
+  }
+  "speakable": {
     "@type": "WebPageElement",
     "cssSelector": "#main_content"
   }
