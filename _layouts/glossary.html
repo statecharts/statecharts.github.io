@@ -11,6 +11,7 @@
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.oneliner }}" />
 
+    <link rel="canonical" href="https://statecharts.github.io{{ page.url }}"
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <script>
@@ -48,7 +49,7 @@
   "@context": "http://schema.org",
   "@type": "WebPage",
   "name": "{{ page.title }}",
-  "url": "{{ page.url }}",
+  "url": "https://statecharts.github.io{{ page.url }}",
   "description": "{{ page.oneliner }}",
   "mainContentOfPage": {
     "@type": "WebPageElement",
