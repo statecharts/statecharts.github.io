@@ -5,13 +5,13 @@ oneliner: a helper state which designates that its parent state has completed
 
 # Final State
 
-A final state is a state in a [compound state](compound-state){:.glossary} that designates that the compound state in question has completed, i.e. will not process any further events.  Reaching a final state can generate an internal event, which in turn can allow other parts of the state machine to react to the fact that the compound state has "completed".
+A final state is a state in a [compound state](compound-state.html){:.glossary} that designates that the compound state in question has completed, i.e. will not process any further events.  Reaching a final state can generate an internal event, which in turn can allow other parts of the state machine to react to the fact that the compound state has "completed".
 
 The "completion" of a state is wholly defined by the statechart itself.  
 
 ## Notation
 
-Final states are depicted using a solid filled circle, like the [initial state](initial-state){:.glossary} with an additional circle enclosing it.  Transitions from the final state must be [automatic], in other words they can not rely on events.
+Final states are depicted using a solid filled circle, like the [initial state](initial-state.html){:.glossary} with an additional circle enclosing it.  Transitions from the final state must be [automatic], in other words they can not rely on events.
 
 
 ## SCXML
