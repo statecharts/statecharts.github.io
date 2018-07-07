@@ -18,8 +18,7 @@ permalink: /glossary/index.html
 
 {% assign allitems = "" | split:"" %}
 {% for item in site.glossary %}
-  {% assign allitems = allitems | push: "foo" %}
-  {% assign something = "somethingelse2" %}
+  {% assign allitems = allitems | push: item %}
 {% endfor %}
 
 
