@@ -1,5 +1,5 @@
 ---
-redirect-from: "/glossary/history.html"
+redirect_from: "/glossary/history.html"
 title: History state
 oneliner: A pseudo-state that remembers the most recent sibling states that were active
 breadcrumbs:
