@@ -4,6 +4,7 @@ oneliner: A pseudo-state that remembers the most recent substates the machine wa
 breadcrumbs:
   - id: state
     name: State
+redirect-from: "/glossary/history.html"
 ---
 
 # History state
