@@ -1,6 +1,6 @@
 ---
 title: Parallel State
-oneliner: a state that has many state machines that all get to be active at the same time
+oneliner: a compound state that divides its substates into separate state machines that all get to be active at the same time
 breadcrumbs:
   - id: state
     name: State
