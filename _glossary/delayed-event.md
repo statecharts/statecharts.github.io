@@ -1,6 +1,9 @@
 ---
 title: Delayed event
-oneliner: An event that is raised some time after a transition takes place.
+oneliner: an event that is raised some time after a transition takes place.
+breadcrumbs:
+  - id: event
+    name: Event
 ---
 
 # Delayed Event
