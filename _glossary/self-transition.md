@@ -1,6 +1,9 @@
 ---
 title: Self transition
 oneliner: A transition from a state back to itself.
+breadcrumbs:
+  - id: transition
+    name: Transition
 ---
 
 # Self transition
