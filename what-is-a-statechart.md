@@ -50,7 +50,7 @@ Simply being in a state for a duration of time can be enough to transition to a 
 
 ### History 
 
-When exiting a compound state and its substate, it is sometimes useful to be able to return to exactly the state that you left.  Statecharts introduce the concepts of [history states](glossary/history.html){:.glossary}.  When a transition goes _to_ a history state, it re-enters the state that "was last active".
+When exiting a compound state and its substate, it is sometimes useful to be able to return to exactly the state that you left.  Statecharts introduce the concepts of [history states](glossary/history-state.html){:.glossary}.  When a transition goes _to_ a history state, it re-enters the state that "was last active".
 
 
 ### See also
