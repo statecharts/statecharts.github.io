@@ -12,6 +12,9 @@
     <meta property="og:url" content="https://statecharts.github.io{{ page.url }}" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.oneliner }}" />
+    
+    <meta name="twitter:label1" value="Word count"/>
+    <meta name="twitter:value1" value="{{ page.content | number_of_words }}"/>
 
     <link rel="canonical" href="https://statecharts.github.io{{ page.url }}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -53,7 +56,6 @@
   "name": "{{ page.title }}",
   "url": "https://statecharts.github.io{{ page.url }}",
   "description": "{{ page.oneliner }}",
-  "wordCount": "{{ page.content | number_of_words }}",
   "mainContentOfPage": {
     "@type": "WebPageElement",
     "cssSelector": "#main_content"
