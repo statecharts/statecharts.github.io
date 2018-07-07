@@ -16,10 +16,10 @@ permalink: /glossary/index.html
 
 {% assign something = "something" %}
 
-{% assign allitems = [] %}
+{% assign allitems = "" | split:"" %}
 {% for item in site.glossary %}
   {% assign allitems = allitems | push: "foo" %}
-  {% assign something = "somethingelse" %}
+  {% assign something = "somethingelse2" %}
 {% endfor %}
 
 
