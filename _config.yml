@@ -1,4 +1,6 @@
 theme: jekyll-theme-slate
+plugins:
+  - jekyll-redirect-from
 collections:
   glossary:
     output: true
