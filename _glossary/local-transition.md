@@ -1,6 +1,9 @@
 ---
 title: Local transition
 oneliner: A transition between a state and its children that skips exiting or entering the state in question
+breadcrumbs:
+  - id: transition
+    name: Transition
 ---
 
 # Local transition
