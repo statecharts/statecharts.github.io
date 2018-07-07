@@ -14,11 +14,12 @@ permalink: /glossary/index.html
 
 <!--
 
-{% assign someting = "something" %}
+{% assign something = "something" %}
 
 {% assign allitems = [] %}
 {% for item in site.glossary %}
   {% assign allitems = allitems | push: "foo" %}
+  {% assign something = "somethingelse" %}
 {% endfor %}
 
 
