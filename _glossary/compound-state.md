@@ -1,6 +1,9 @@
 ---
 title: Compound state
 oneliner: A state that has one or more substates
+breadcrumbs:
+  - id: state
+    name: State
 ---
 
 # Compound State
