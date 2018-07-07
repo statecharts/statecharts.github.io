@@ -3,7 +3,7 @@ title: History state
 oneliner: A pseudo-state that remembers the most recent substates the machine was in
 breadcrumbs:
   - id: state
-    title: State
+    name: State
 ---
 
 # History state
