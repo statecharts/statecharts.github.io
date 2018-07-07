@@ -69,23 +69,20 @@
   <body class="glossary_page">
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <div class="breadcrumbs" role="navigation">
-        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-          <li itemprop="itemListElement" itemscope
+      <div class="breadcrumbs" role="navigation"  itemscope itemtype="http://schema.org/BreadcrumbList">
+        <span itemprop="itemListElement" itemscope
               itemtype="http://schema.org/ListItem"
               ><a itemscope itemtype="http://schema.org/Thing"
          itemprop="item" href="https://statecharts.github.io/glossary/"
               ><span itemprop="name">Glossary</span></a
             ><meta itemprop="position" content="1"
-            /></li>
-          {% for item in page.breadcrumbs %} ›
-            <li itemprop="itemListElement" itemscope
+            /></span>{% for item in page.breadcrumbs %} › <span
+                itemprop="itemListElement" itemscope
                 itemtype="http://schema.org/ListItem"><a itemscope itemtype="http://schema.org/Thing"
                  itemprop="item" href="https://statecharts.github.io/glossary/{{ item.id }}.html"
               ><span itemprop="name">{{ item.name }}</span></a
-              ><meta itemprop="position" content="{{ forloop.index + 2 }}" /></li>
-          {% endfor %}
-        </ol>
+              ><meta itemprop="position" content="{{ forloop.index + 2 }}" /><span>{% endfor %}
+        </div>
       </div>
 
       <section id="main_content" class="inner" role="main">
