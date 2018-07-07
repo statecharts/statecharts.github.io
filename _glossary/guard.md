@@ -1,9 +1,13 @@
 ---
 title: Guard
 oneliner: A boolean check imposed on a transition to inhibit the execution of the transition
+aka:
+  - Conditional transition
 ---
 
 # Guard
+
+_Also known as **Conditional transition**_
 
 A guard is a condition that may be checked when a statechart wants to handle an [event](event.html){:.glossary}.  A guard is declared on the [transition](transition.html){:.glossary}, and when that transition _would_ trigger, then the guard (if any) is checked.  If the guard is _true_ then the transition does happen. If the guard is false, the transition is ignored.
 
