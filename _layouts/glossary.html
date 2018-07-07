@@ -53,6 +53,7 @@
   "name": "{{ page.title }}",
   "url": "https://statecharts.github.io{{ page.url }}",
   "description": "{{ page.oneliner }}",
+  "wordCount": "{{ page.content | number_of_words }}",
   "mainContentOfPage": {
     "@type": "WebPageElement",
     "cssSelector": "#main_content"
@@ -75,7 +76,7 @@
             <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.github.io/glossary/">
               <span itemprop="name">Glossary</span>
             </a>
-            <meta itemprop="position" content="1" />
+            <!--meta itemprop="position" content="1" /-->
           </span>
           {% for item in page.breadcrumbs %} › 
             <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -83,14 +84,14 @@
                  href="https://statecharts.github.io/glossary/{{ item.id }}.html">
                 <span itemprop="name">{{ item.name }}</span>
               </a>
-              <meta itemprop="position" content="{{ forloop.index + 3 }}" />
+              <!-- meta itemprop="position" content="{{ forloop.index | add:2 }}" /-->
             </span>
           {% endfor %} › 
           <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <span itemscope itemtype="http://schema.org/Thing" itemprop="item">
               <span itemprop="name">{{ page.title }}</span>
             </span>
-            <meta itemprop="position" content="{{ page.breadcrumbs | size + 3 }}" />
+            <!--meta itemprop="position" content="{{ page.breadcrumbs | add(2) }}" /-->
           </span>
         </nav>
         <div id="main_content" role="main">
