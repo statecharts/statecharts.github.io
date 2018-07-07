@@ -17,7 +17,7 @@ permalink: /glossary/index.html
 {% assign allitems = [] %}
 
 {% for item in site.glossary %}
-  {% assign allitems = allitems | push: item %}
+  {% assign allitems = allitems | push: "foo" %}
 {% endfor %}
 
 
