@@ -18,9 +18,10 @@ permalink: /glossary/index.html
 
 {% for item in site.glossary %}
   {% assign allitems = allitems | push: "foo" %}
+  {% assign someting = "something" %}
 {% endfor %}
 
 
 -->
 
-There are {{ allitems | size }} foos.
+There are {{ allitems | size }} foos ({{ something }}.
