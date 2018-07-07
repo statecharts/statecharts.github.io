@@ -17,9 +17,10 @@ permalink: /glossary/index.html
 {% assign allitems = [] %}
 
 {% for item in site.glossary %}
-  {% assign allitems = allitems | concat: item %}
+  {% assign allitems = allitems | push: item %}
 {% endfor %}
 
-There are {{ allitems | size }} items.
 
 -->
+
+There are {{ allitems | size }} items.
