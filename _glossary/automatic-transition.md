@@ -1,6 +1,9 @@
 ---
 title: Automatic transition
-oneliner: A transition that happens immediately upon entering a state
+oneliner: a transition that happens immediately upon entering a state or immediately after a condition arises
+breadcrumbs:
+  - id: transition
+    name: Transition
 ---
 
 # Automatic Transition
