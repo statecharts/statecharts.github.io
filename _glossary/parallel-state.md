@@ -1,6 +1,9 @@
 ---
 title: Parallel State
 oneliner: a state that has many state machines that all get to be active at the same time
+breadcrumbs:
+  - state
+  - compound-state
 ---
 
 # Parallel state
