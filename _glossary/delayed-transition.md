@@ -1,6 +1,9 @@
 ---
 title: Delayed transition
 oneliner: A transition that executes automatically when a machine has been in a state for a particular amount of time
+breadcrumbs:
+  - id: transition
+    name: Transition
 ---
 
 # Delayed transition
