@@ -23,4 +23,4 @@ permalink: /glossary/index.html
 
 -->
 
-There are {{ allitems | size }} items.
+There are {{ allitems | size }} foos.
