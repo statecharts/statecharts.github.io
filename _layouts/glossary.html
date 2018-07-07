@@ -70,21 +70,29 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section class="inner">
-        <div class="breadcrumbs" role="navigation"  itemscope itemtype="http://schema.org/BreadcrumbList">
-          <span itemprop="itemListElement" itemscope
-                itemtype="http://schema.org/ListItem"
-                ><a itemscope itemtype="http://schema.org/Thing"
-           itemprop="item" href="https://statecharts.github.io/glossary/"
-                ><span itemprop="name">Glossary</span></a
-              ><meta itemprop="position" content="1"
-              /></span>{% for item in page.breadcrumbs %} › <span
-                  itemprop="itemListElement" itemscope
-                  itemtype="http://schema.org/ListItem"><a itemscope itemtype="http://schema.org/Thing"
-                   itemprop="item" href="https://statecharts.github.io/glossary/{{ item.id }}.html"
-                ><span itemprop="name">{{ item.name }}</span></a
-                ><meta itemprop="position" content="{{ forloop.index + 2 }}" /><span>{% endfor %}
+        <nav class="breadcrumbs" role="navigation"  itemscope itemtype="http://schema.org/BreadcrumbList">
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.github.io/glossary/">
+              <span itemprop="name">Glossary</span>
+            </a>
+            <meta itemprop="position" content="1" />
           </span>
-        </div>
+          {% for item in page.breadcrumbs %} › 
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a itemscope itemtype="http://schema.org/Thing" itemprop="item"
+                 href="https://statecharts.github.io/glossary/{{ item.id }}.html">
+                <span itemprop="name">{{ item.name }}</span>
+              </a>
+              <meta itemprop="position" content="{{ forloop.index + 2 }}" />
+            </span>
+          {% endfor %}
+          <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span itemscope itemtype="http://schema.org/Thing" itemprop="item">
+              <span itemprop="name">{{ page.title }}</span>
+            </a>
+            <meta itemprop="position" content="{{ page.breadcrumbs | length + 2 }}" />
+          </span>
+        </nav>
         <div id="main_content" role="main">
           {{ content }}
         </div>
@@ -92,7 +100,7 @@
     </div>
 
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
+    <div id="footer_wrap" class="outer" role="contentinfo">
       <footer class="inner">
         <p>This glossary entry comes from the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.  Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat where you can find more people discussing statecharts.</p>
         <p>If you're writing a blog post about statecharts, feel free to link to this or any glossary terms in the footer when you need to introduce new terms.</p>
@@ -104,7 +112,7 @@
                  itemprop="url" href="{{ item.url }}"><meta
                  itemprop="description" content="{{ item.oneliner }}"><a
                 href="{{ item.url }}" title="{{ item.oneliner }}"
-               itemprop="name">{{ item.title }}</a></span>   {% endfor %}</p>
+               itemprop="name">{{ item.title }}</a></span>  {% endfor %}</p>
       </footer>
     </div>
     
