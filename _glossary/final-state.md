@@ -1,6 +1,9 @@
 ---
 title: Final state
 oneliner: a helper state which designates that its parent state has completed
+breadcrumbs:
+  - id: state
+    name: State
 ---
 
 # Final State
