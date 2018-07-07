@@ -1,10 +1,10 @@
 ---
+redirect-from: "/glossary/history.html"
 title: History state
-oneliner: A pseudo-state that remembers the most recent substates the machine was in
+oneliner: A pseudo-state that remembers the most recent sibling states that were active
 breadcrumbs:
   - id: state
     name: State
-redirect-from: "/glossary/history.html"
 ---
 
 # History state
