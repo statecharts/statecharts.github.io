@@ -12,6 +12,8 @@ aka:
 
 # Compound State
 
+_Also known as **Composite state**_
+
 A compound state is a [state](state.html){:.glossary} that includes one or more substates.  It is the main differentiating factor between traditional state machines and statecharts.
 
 If there are more than one substates, one of them is usually designated as the [initial](initial-state.html){:.glossary} state of that compound state.
