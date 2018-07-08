@@ -5,6 +5,13 @@ In order to create a new glossary term, create the file in this directory with .
     ---
     title: Foo Bar
     oneliner: Short description of what a Foo Bar is.
+    breadcrumbs:
+      - id: short-name
+        name: Short name
+    aka:
+      - title: Slarty bart
+        url: foo-bar.html
+        oneliner: A synonym for Foo bar
     ---
     
     # Foo Bar
