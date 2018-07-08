@@ -19,7 +19,7 @@ When a state machine is _executed_, it [enters](entry.html){:.glossary} the [ini
 There are a couple of special types of states in statecharts:
 
 * [Compound or composite states](compound-state.html){:.glossary}, which allow a state to define variants of its defined behaviour, by way of an internal state machine.
-* [Parallel or orthogonal states](parallel-state.html}{:.glossary}, which is somewhat like a compound state, but where multiple subordinate separate state machines are active simultaneously.
+* [Parallel or orthogonal states](parallel-state.html){:.glossary}, which is somewhat like a compound state, but where multiple subordinate separate state machines are active simultaneously.
 * [Atomic or simple states](atomic-state.html){:.glossary}, which has no substates.
 
 ## Hierarchy
