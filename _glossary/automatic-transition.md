@@ -4,9 +4,15 @@ oneliner: a transition that happens immediately upon entering a state or immedia
 breadcrumbs:
   - id: transition
     name: Transition
+aka:
+  - title: Eventless transition
+    oneliner: Another name for Automatic transition, a transition that is not tied to a particular event
+    url: automatic-transition.html
 ---
 
 # Automatic Transition
+
+_Also known as **Eventless transition**_
 
 Automatic transitions are [transitions](transition.html){:.glossary} that are triggered as soon as a state is entered, sometimes causing the state that was just entered to exit.
 
