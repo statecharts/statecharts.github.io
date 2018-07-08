@@ -6,8 +6,8 @@ breadcrumbs:
     name: State
 aka:
   - title: Simple state
-    oneliner: A synonym for Compound state
-    url: compound-state.html
+    oneliner: A synonym for Atomic state, a state that has no substates
+    url: atomic-state.html
 ---
 
 # Atomic state
