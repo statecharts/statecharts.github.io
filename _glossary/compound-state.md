@@ -4,6 +4,10 @@ oneliner: A state that has one or more substates
 breadcrumbs:
   - id: state
     name: State
+aka:
+  - title: Composite state
+    url: compound-state.html
+    oneliner: In UML, the term composite state is used for Compound State.
 ---
 
 # Compound State
