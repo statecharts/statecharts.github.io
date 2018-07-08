@@ -4,7 +4,7 @@ oneliner: A boolean check imposed on a transition to inhibit the execution of th
 aka:
   - title: Conditional transition
     url: guard.html
-    Another name for Guard
+    oneliner: Another name for Guard
 ---
 
 # Guard
