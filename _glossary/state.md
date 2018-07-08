@@ -16,11 +16,11 @@ When a state machine is _executed_, it [enters](entry.html){:.glossary} the [ini
 
 ## States in statcharts
 
-There are a couple of special types of states in statecharts:
+There are a few special types of states in statecharts:
 
-* [Compound or composite states](compound-state.html){:.glossary}, which allow a state to define variants of its defined behaviour, by way of an internal state machine.
-* [Parallel or orthogonal states](parallel-state.html){:.glossary}, which is somewhat like a compound state, but where multiple subordinate separate state machines are active simultaneously.
-* [Atomic or simple states](atomic-state.html){:.glossary}, which has no substates.
+* [Atomic](atomic-state.html){:.glossary} (or simple) states, are states that have no substates.
+* [Compound](compound-state.html){:.glossary} (or composite) states, are states that have one or more substates.  The substates can be said to be a _refinement_ of their parent state.  Coversely, the parent state can be said to provide a _default behaviour_ of the substates.
+* [Parallel](parallel-state.html){:.glossary} (or orthogonal) states, are states that (like a compound states) have substates, but where the child states are grouped into orthogonal regions, and those regions are all active simultaneously.
 
 ## Hierarchy
 
