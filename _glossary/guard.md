@@ -2,7 +2,9 @@
 title: Guard
 oneliner: A boolean check imposed on a transition to inhibit the execution of the transition
 aka:
-  - Conditional transition
+  - title: Conditional transition
+    url: guard.html
+    Another name for Guard
 ---
 
 # Guard
