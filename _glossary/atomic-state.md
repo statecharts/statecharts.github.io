@@ -4,13 +4,17 @@ oneliner: a state that has no substates
 breadcrumbs:
   - id: state
     name: State
+aka:
+  - title: Simple state
+    oneliner: A synonym for Compound state
+    url: compound-state.html
 ---
 
 # Atomic state
 
-An atomic state is a [state](state.html){:.glossary} that has no _substates_.  States that have substates are either [compound states](compound-state.html){:.glossary} or [parallel states](parallel-state.html){:.glossary}.
+_Also known as **Simple state**_
 
-Atomic states are also called _simple states_.
+An atomic state is a [state](state.html){:.glossary} that has no _substates_.  States that have substates are either [compound states](compound-state.html){:.glossary} or [parallel states](parallel-state.html){:.glossary}.
 
 Atomic states do not define "initial" states either.
 
