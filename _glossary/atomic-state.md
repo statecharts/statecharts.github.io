@@ -20,7 +20,7 @@ Atomic states do not define "initial" states either.
 
 ## Notation
 
-Atomic states can use the same notation as described in [state](state.html.html).
+Atomic states can use the same notation as described in [state](state.html){:.glossary}.
 
 For atomic states that have no actions, and are otherwise empty, a very small, rounded rectangle can be used with only the name of the state inside.
 
