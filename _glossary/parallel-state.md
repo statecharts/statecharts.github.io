@@ -6,6 +6,10 @@ breadcrumbs:
     name: State
   - id: compound-state
     name: Compound state
+aka:
+  - title: Orthogonal state
+    url: parallel-state.md
+    oneliner: Another name for parallel state
 ---
 
 # Parallel state
