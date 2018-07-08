@@ -14,6 +14,8 @@ aka:
 
 # Parallel state
 
+_Also known as **Orthogonal state**_
+
 A parallel state is a [state](state.html){:.glossary} that is divided into separate regions.  Each region contains more substates.  When a parallel state is entered, _each_ of the regions are also entered; their [initial states](initial-state.html){:.glossary} are entered and so on.
 
 ![An example of a parallel state](parallel.svg)
