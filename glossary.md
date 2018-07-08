@@ -26,6 +26,9 @@ permalink: /glossary/index.html
   {% endif %}
 {% endfor %}
 
+{% for item in allitems %}
+ <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.oneliner }}</li>
+{% endfor %}
 
 -->
 
