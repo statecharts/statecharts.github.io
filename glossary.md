@@ -4,16 +4,6 @@ permalink: /glossary/index.html
 
 # Full list of glossary terms:
 
-## Glossary
-
-<ul>
-{% for item in site.glossary %}
-   <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.oneliner }}</li>
-{% endfor %}
-</ul>
-
-<!--
-
 {% assign something = "something" %}
 
 {% assign allitems = "" | split:"" %}
@@ -25,11 +15,8 @@ permalink: /glossary/index.html
     {% endfor %}
   {% endif %}
 {% endfor %}
-
-{% for item in allitems | sort: "title" %}
- <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.oneliner }}</li>
+<ul>
+{% for item in allitems | sort: 'title' %}
+  <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.oneliner }}</li>
 {% endfor %}
-
--->
-
-There are {{ allitems | size }} foos ({{ something }}).
+</ul>
