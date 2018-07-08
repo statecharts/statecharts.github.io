@@ -16,7 +16,8 @@ permalink: /glossary/index.html
   {% endif %}
 {% endfor %}
 <ul>
-{% for item in allitems | sort: 'title' %}
+{% assign allitems = allitems | sort: 'title' %}
+{% for item in allitems %}
   <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.oneliner }}</li>
 {% endfor %}
 </ul>
