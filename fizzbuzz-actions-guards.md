@@ -1,8 +1,10 @@
 # FizzBuzz with Actions and guards
 
-FizzBuzz is a programming puzzle, easily solvable using a simple for-loop.  The puzzle has been described in terms of an event driven system, in order to allow us to explore some statechart concepts.  See [FizzBuzz](fizzbuzz.html) for an introduction to what we’re trying to achieve here.
+FizzBuzz is a programming puzzle, easily solvable using a simple for-loop.  The puzzle has been described in terms of an event driven system, in order to allow us to explore some statechart concepts.  See [FizzBuzz](fizzbuzz.html) for an explanatory introduction.
 
-Here, we will show how [actions](glossary/action.html){:.glossary} are used to let the statechart tell us what to do.  We will use [guards](glossary/guard.html){:.glossary} to tell us which state we should go to
+Here, we will show how [actions](glossary/action.html){:.glossary} can be used to let the statechart tell us what to do.  We will use [guards](glossary/guard.html){:.glossary} to tell the statechart which state it should be in.
+
+## Start with digits
 
 Let’s start with a machine that prints out only the digits.
 
@@ -11,36 +13,55 @@ TK Diagram:
 Here is the xstate representation, in JSON format:
 
 ``` javascript
-{
-  "initial": "digit",
-  "states": {
-    "digit": {
-      "onEntry" : “print_digit”,
-      "on": {
-        "increment": "digit"
-      }
+const statechart = {
+  initial: 'digit',
+  states: {
+    digit: {
+      on: {
+        increment: 'digit'
+      },
+      onEntry : 'print_digit'
     }
   }
 }
 ```
 
-We can put this through our sample code to see that it indeed only prints out the digits:
+The following code goes through a for loop, increments 'i', and sends the machine an event called _increment_.
+
+``` javascript
+const machine = Machine(statechart);
+
+state = machine.initialState;
+for (i = 1; i < 100; i++) {
+  state = machine.transition(state, 'increment', i)
+}
+```
+
+For now it doesn't do much, it remains in the _digit_ state constantly re-[entering](glossary/entry.html){:.glossary} it.  When it re-enters the state, it invokes the digit state's entry [action](glossary/action.html){:.glossary}.  We need to look for those actions and execute whatever the statechart tells us to do.
+
+We'll set up a little dictionary of actions, corresponding to the actions mentioned in the statechart.  For now all we have is `print_digit`.
 
 ``` javascript
 const actions = {
   print_digit: (i) => console.log(i);
 }
 
-state = machine.initialState;
 for (i = 1; i < 100; i++) {
-  state = machine.transition(state, ‘increment’, i)
+  state = machine.transition(state, 'increment', i)
   state.actions.forEach(item => actions[item](i));
 }
 ```
 
-TK embed this: [On codepen](https://codepen.io/mogsie/embed/aKmZow)
+This code should print out the digits 1 through 100.  In the embedded codepens I've replaced the console.log with `document.write('<li>' + i + '</li>')`
+
+<p data-height="445" data-theme-id="light" data-slug-hash="aKmZow" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and guards 1: Digits only" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/aKmZow/">FizzBuzz with actions and guards 1: Digits only</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+## Checkpoint
 
 We have a simple machine that has a single state.  It re-enters the `digit` state, causing the onEntry action to happen every time.
+
+## Adding Fizz
 
 Now let’s change the behaviour so that it prints out Fizz when the counter is divisible by 3.  We can introduce a new state, `fizz` and use the event to alternate between the two states, and use the onEntry actions on each state to cause the desired side effect.
 
