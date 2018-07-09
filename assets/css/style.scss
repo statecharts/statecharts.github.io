@@ -21,6 +21,18 @@ ul, ol, dl {
   background: #fcfcfc;
 }
 
+.highlight: {
+  background-color: white;
+}
+
+code {
+  padding: 4px 3px 1px;
+}
+
+pre {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
 img {
   box-shadow: none;
 }
