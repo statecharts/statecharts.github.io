@@ -33,7 +33,7 @@ const machine = Machine(statechart);
 
 state = machine.initialState;
 for (i = 1; i < 100; i++) {
-  state = machine.transition(state, 'increment', i)
+  state = machine.transition(state, 'increment', i);
 }
 ```
 
@@ -43,7 +43,7 @@ We'll set up a little dictionary of actions, corresponding to the actions mentio
 
 ``` javascript
 const actions = {
-  print_digit: (i) => console.log(i);
+  print_digit: (i) => console.log(i)
 }
 
 for (i = 1; i < 100; i++) {
@@ -59,18 +59,38 @@ This code should print out the digits 1 through 100.  In the embedded codepens I
 
 ### Checkpoint
 
-We have a simple machine that has a single state.  It re-enters the `digit` state, causing the onEntry action to happen every time.
+We have a simple machine that has a single state.  We've shown how a [self transition](glossary/self-transition.html){:.glossary} can be used to re-enter a state, solely to trigger entry [actions](glossary/action.html){:.glossary} every time an event is fired.
 
 ## Adding Fizz
 
-Now let’s change the behaviour so that it prints out Fizz when the counter is divisible by 3.  We can introduce a new state, `fizz` and use the event to alternate between the two states, and use the onEntry actions on each state to cause the desired side effect.
+Now let’s change the behaviour so that it prints out Fizz when the counter is divisible by 3.  Printing out Fizz is a different _action_ than printing out the digit, so our goal is to ensure that the new `print_fizz` action only happens when it should, and that the `print_digit` action is _not_ fired.
 
-To start off we'll introduce a new state, _fizz_ with a new action _print_fizz_:
+We will introduce a new state, `fizz` with the `print_fizz` action.  When the `increment` event happens, we will alternate between the two states, and use the onEntry actions on each state to cause the desired side effect.
+
+The statechart diagram we're aiming form looks something like this:
+
+![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
+
+Let's introduce the new _fizz_ state, with its entry action _print_fizz_:
 
 ``` javascript
-   fizz: {
-     onEntry : 'print_fizz'
-   }
+states: {
+  digit: {
+    ...
+  },
+  fizz: {
+    onEntry : 'print_fizz'
+  }
+}
+```
+
+The new action `print_fizz` should be added to the action dictionary:
+
+``` javascript
+const actions = {
+  print_digit: (i) => console.log(i),
+  print_fizz: () => console.log('Fizz')
+}
 ```
 
 We want to transition from _digit_ to _fizz_ whenever the number is incremented, and divisible by 3.  So we have to change the event definitions in the _digit_ state:
@@ -84,9 +104,12 @@ on: {
 }
 ```
 
-This essentially is a series of if-tests, which are evaluated when we're in this state:  First, if `i%3 == 0` then we go to the _fizz_ state, otherwise, we go to the _digit_ state.
+This (the `on.increment[]` array) is essentially a series of if-tests, which are evaluated when we're in this state:  It can be read as follows:
 
-In the _fizz_ state, we know that we'll never be in the _fizz_ state immediately after a _fizz_ state, so the _fizz_ state can simply transition to _digit_:
+ * First, if `i%3 == 0` then we go to the _fizz_ state
+ * Otherwise, we go to the _digit_ state.
+
+In the _fizz_ state, we know that we'll never be in the _fizz_ state immediately after a _fizz_ state, so the _fizz_ state can simply transition to _digit_ with no checks:
 
 ``` javascript
 on: {
@@ -94,19 +117,55 @@ on: {
 }
 ```
 
-The statechart diagram now looks like this:
-
-![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
+Here's the final code for the "fizz only" solution:
 
 <p data-height="455" data-theme-id="light" data-slug-hash="XYjKmR" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and guards 2: Fizz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/aKmZow/">FizzBuzz with actions and guards 1: Fizz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-This machine has two states, and every time it gets the ‘increment’ event it evaluates the condition and transitions to fizz or Digit appropriately.  But we’re repeating the guard condition, which is generally a bad idea.  We can place the event handler on the top level, since they are common for all substates.
+This machine has two states, and every time it gets the ‘increment’ event, depending on which state it's in, it might evaluate the condition, and transitions to _fizz_ or _digit_ appropriately.  
 
-TK embed this: [codepen](https://codepen.io/mogsie/embed/MXjeKj)
+### Checkpoint
 
-The machine will exit whatever state it’s in and enter the correct state based on the guard condition of `ìncrement`.
+We've shown how to use a [guard](glossary/guard.html){:.glossary} condition to make a transition only happen under certain circumstances.  Perhaps more subtly, we've shown that the behaviour can be changed by making changes to the statechart definition itself.
 
-We can now extend this machine to handling the ‘buzz’ case quite easily
+## Adding support for Buzz
+
+The steps involved in adding support for printing "Buzz" is somewhat similar to addding "Fizz", but there are some important differences, which will be explained.
+
+First of all, we need a new action, `print_buzz`, which lives in the action dictionary:
+
+``` javascript
+const actions = {
+  print_digit: (i) => console.log(i),
+  print_fizz: () => console.log('Fizz'),
+  print_buzz: () => console.log('Buzz')
+}
+```
+
+We'll also need the _buzz_ state, with its entry action _print_buzz_:
+
+``` javascript
+states: {
+  digit: {
+    ...
+  },
+  fizz: {
+    ...
+  }
+  buzz: {
+    onEntry : 'print_buzz'
+  }
+}
+```
+
+So far, so good!  On to defining the transitions:
+
+* Digit now needs to check if the digit is divisible by 5, and transition to _buzz_.
+* The same check needs to happen in Fizz too.
+* When in buzz we need to check if it's divisible by 3, and transition to _fizz_, like the _digit_ state does.
+
+TK diagram with digit, fizz, buzz and lots of arrows between them.
+
+It works, but it's not ideal, there is quite a lot of repetition here.
 
 TK embed: [On codepen](https://codepen.io/mogsie/embed/jKMrPP)
 
