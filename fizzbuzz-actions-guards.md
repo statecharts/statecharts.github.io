@@ -65,7 +65,40 @@ We have a simple machine that has a single state.  It re-enters the `digit` stat
 
 Now let’s change the behaviour so that it prints out Fizz when the counter is divisible by 3.  We can introduce a new state, `fizz` and use the event to alternate between the two states, and use the onEntry actions on each state to cause the desired side effect.
 
-TK embed this: [codepen](https://codepen.io/mogsie/embed/XYjKmR)
+To start off we'll introduce a new state, _fizz_ with a new action _print_fizz_:
+
+``` javascript
+   fizz: {
+     onEntry : 'print_fizz'
+   }
+```
+
+We want to transition from _digit_ to _fizz_ whenever the number is incremented, and divisible by 3.  So we have to change the event definitions in the _digit_ state:
+
+``` javascript
+on: {
+  increment: [
+    { cond: (i) => i%3==0, target: 'fizz' },
+    { target: 'digit' }
+  ]
+}
+```
+
+This essentially is a series of if-tests, which are evaluated when we're in this state:  First, if `i%3 == 0` then we go to the _fizz_ state, otherwise, we go to the _digit_ state.
+
+In the _fizz_ state, we know that we'll never be in the _fizz_ state immediately after a _fizz_ state, so the _fizz_ state can simply transition to _digit_:
+
+``` javascript
+on: {
+  increment: 'digit'
+}
+```
+
+The statechart diagram now looks like this:
+
+![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
+
+<p data-height="455" data-theme-id="light" data-slug-hash="XYjKmR" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and guards 2: Fizz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/aKmZow/">FizzBuzz with actions and guards 1: Fizz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 This machine has two states, and every time it gets the ‘increment’ event it evaluates the condition and transitions to fizz or Digit appropriately.  But we’re repeating the guard condition, which is generally a bad idea.  We can place the event handler on the top level, since they are common for all substates.
 
