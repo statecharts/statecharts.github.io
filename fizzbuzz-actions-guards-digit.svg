@@ -1,0 +1,19 @@
+<svg width="295px" height="190px" viewBox="-207.437 26.928 295.361 160.303" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs></defs>
+  <g transform="matrix(1, 0, 0, 1, 1, 14)">
+    <rect x="-81.892" y="46.198" width="152.07" height="109.477" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="-23.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">digit</text>
+    <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.557" y1="75.308" x2="70.775" y2="75.308"></line>
+    <text x="-69.407" y="104.902" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_digit</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -80.733116, -18.002293)">
+    <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"></ellipse>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -66.414307, 24.084309)">
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.999043, 0.043751, -0.043751, 0.999043, -75.254522, 30.734625)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <path d="M 460.07 560.306 A 63.697 63.697 0 1 1 383.028 484.088 L 383.263 485.06 A 62.697 62.697 0 1 0 459.095 560.081 Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 4.35656;" transform="matrix(0.382873, 0.253299, -0.253299, 0.382873, -48.968494, -229.270981)" bx:shape="pie 398 546 62.697 63.697 102.979 346.405 1@37869ff6"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="-133.303" y="85.824">increment</text>
+  </g>
+</svg>
