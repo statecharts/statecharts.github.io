@@ -169,25 +169,65 @@ So far, so good!  On to defining the transitions.  We will use another guarded t
 
 We can already see that there is some redundancy, it becomes clearer in the statechart diagram:
 
-![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz-buzz.svg)
+![Statechart with three states, digit, fizz and buzz with a total of six increment events passing between them](fizzbuzz-actions-guards-fizz-buzz.svg)
 
-There are a number of transitions that are essentially the same, and this is by definition a maintenance burden.  We can use the hierarchical nature of statecharts to solve this particular problem, making it both easier to describe, and easier to maintain:
+There are a number of transitions that are identical, and this is by definition a maintenance burden.  Imagine adding support for FizzBuzz; it would require another state, but six or more transitions, many of them duplicates.
 
-* Introduce a compound state _around_ the three states.
+We can use the hierarchical nature of statecharts to solve this particular problem, making it both easier to describe, and easier to maintain:
+
+* Introduce a [compound state](glossary/compound-state.html){:.glossary} _around_ the three states.
 * Move common transitions from the substates to the parent state.
 
-The diagram now looks like this:
+The diagram ends up looking like this:
 
+![Statechart with one state and three substates, digit, fizz and buzz, with one transition each, from the superstate to each state](fizzbuzz-actions-guards-fizz-buzz-compound.svg)
 
+This is clearly a simpler model, where the logic to choose which transition to pick has been moved to the superstate.  In our xstate code, the statechart is defined as follows:
 
+``` javascript
+{
+  initial: 'digit_fizz_buzz',
+  states: {
+    digit_fizz_buzz: {
+      initial: 'digit',
+      on: {
+        increment: [
+          { cond: (i) => i%3==0, target: '.fizz' },
+          { cond: (i) => i%5==0, target: '.buzz' },
+          { target: '.digit' }
+        ]
+      },
+      states: {
+        digit: {
+          onEntry : 'print_digit'
+        },
+        fizz: {
+          onEntry : 'print_fizz'
+        },
+        buzz: {
+          onEntry : 'print_buzz'
+        }
+      }
+    }
+  }
+}
+```
 
+The machine now has a single root state, `digit_fizz_buzz` which has
 
+* three substates
+* three transitions on the 'increment' event, one to each of the substates.
 
-TK diagram with digit, fizz, buzz and lots of arrows between them.
+<p data-height="455" data-theme-id="light" data-slug-hash="jKMrPP" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and guards 2: Fizz Buzz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/aKmZow/">FizzBuzz with actions and guards 2: Fizz Buzz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-It works, but it's not ideal, there is quite a lot of repetition here.
+### Checkpoint
 
-TK embed: [On codepen](https://codepen.io/mogsie/embed/jKMrPP)
+We've identified complexity before it crept into the code, by extracting common behaviour to a superstate, by moving the transitions from the substates to the superstates.
+
+## Handling FizzBuzz
+
+TKTK
+
 
 That was easy.  We could continue doing this for the FizzBuzz case:
 
