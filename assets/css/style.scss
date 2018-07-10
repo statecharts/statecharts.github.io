@@ -33,6 +33,15 @@ pre {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+pre code {
+  padding: 1em 0.5em;
+}
+
+div.highlighter-rouge {
+  padding: 0 0 1em;
+  margin: 0 -1em;
+}
+
 img {
   box-shadow: none;
 }
