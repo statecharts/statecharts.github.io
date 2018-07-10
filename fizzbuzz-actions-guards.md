@@ -157,11 +157,27 @@ states: {
 }
 ```
 
-So far, so good!  On to defining the transitions:
+So far, so good!  On to defining the transitions.  We will use another guarded transition, this time, with the guard `i % 5 == 0`.
 
-* Digit now needs to check if the digit is divisible by 5, and transition to _buzz_.
+* The _digit_ state already checks for 'fizz', now the state also needs a transition to _buzz_ if divisible by 5.
 * The same check needs to happen in Fizz too.
 * When in buzz we need to check if it's divisible by 3, and transition to _fizz_, like the _digit_ state does.
+
+We can already see that there is some redundancy, it becomes clearer in the statechart diagram:
+
+![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz-buzz.svg)
+
+There are a number of transitions that are essentially the same, and this is by definition a maintenance burden.  We can use the hierarchical nature of statecharts to solve this particular problem, making it both easier to describe, and easier to maintain:
+
+* Introduce a compound state _around_ the three states.
+* Move common transitions from the substates to the parent state.
+
+The diagram now looks like this:
+
+
+
+
+
 
 TK diagram with digit, fizz, buzz and lots of arrows between them.
 
