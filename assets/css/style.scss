@@ -40,6 +40,8 @@ pre code {
 div.highlighter-rouge {
   padding: 0 0 1em;
   margin: 0 -1em;
+  position: relative;
+  z-index: 1; /* move it in front of the caption's border-right */
 }
 
 img {
