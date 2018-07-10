@@ -12,10 +12,12 @@ Here, we will show how [actions](glossary/action.html){:.glossary} can be used t
 
 Let’s start with a machine that prints out only the digits.
 
+**This simple statechart re-enters the _digit_ state every _increment_ event.**
 ![Statechart with one state, digit with a self transition on the increment event](fizzbuzz-actions-guards-digit.svg)
 
 Here is the xstate representation, in JSON format:
 
+**.**
 ``` javascript
 const statechart = {
   initial: 'digit',
