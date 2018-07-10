@@ -104,7 +104,7 @@ const actions = {
 
 We want to transition from _digit_ to _fizz_ whenever the number is incremented, and divisible by 3.  So we have to change the event definitions in the _digit_ state:
 
-**The transitions of the from the `digit` state.**{:.caption}
+**The transitions defined in the `digit` state.**{:.caption}
 ``` javascript
 on: {
   increment: [
@@ -121,7 +121,7 @@ This (the `on.increment[]` array) is essentially a series of if-tests, which are
 
 In the _fizz_ state, we know that we'll never be in the _fizz_ state immediately after a _fizz_ state, so the _fizz_ state can simply transition to _digit_ with no checks:
 
-**The transitions of the from the `fizz` state.**{:.caption}
+**The transitions defined in the `fizz` state.**{:.caption}
 ``` javascript
 on: {
   increment: 'digit'
