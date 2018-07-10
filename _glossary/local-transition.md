@@ -5,10 +5,10 @@ breadcrumbs:
   - id: transition
     name: Transition
 aka:
-  - name: Internal transition
+  - title: Internal transition
     oneliner: In SCXML, the term internal transition is used for the concepts of local transitions
     url: local-transition.html
-  - name: External transition
+  - title: External transition
     oneliner: In SCXML, the term external transition is used for the opposite concept of a local transition
     url: local-transition.html
 ---
