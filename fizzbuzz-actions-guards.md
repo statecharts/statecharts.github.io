@@ -228,6 +228,10 @@ The machine now has a single root state, `digit_fizz_buzz` which has
 * three substates
 * three transitions on the 'increment' event, one to each of the substates.
 
+When the state machine is running, it automatically enters the _digit_fizz_buzz_ state, which means it will react to the events defined at that level, except if a substate also defines transitions for the same events.  In our case, none of the substates _digit_, _fizz_, nor _buzz_ have any transitions defined.  When any of the transitions fires, it _leaves_ the currently active state, whatever it is, and _enters_ the one that is the target of that transition.
+
+Here's the current solution, with Fizz and Buzz, but no FizzBuzz just yet:
+
 <p data-height="455" data-theme-id="light" data-slug-hash="jKMrPP" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and guards 2: Fizz Buzz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/aKmZow/">FizzBuzz with actions and guards 2: Fizz Buzz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 ### Checkpoint
