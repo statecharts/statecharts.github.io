@@ -17,7 +17,7 @@ Let’s start with a machine that prints out only the digits.
 
 Here is the xstate representation, in JSON format:
 
-**.**{:.caption}
+**This statechart represents the diagram above, in xstate syntax**{:.caption}
 ``` javascript
 const statechart = {
   initial: 'digit',
@@ -34,6 +34,7 @@ const statechart = {
 
 The following code goes through a for loop, increments 'i', and sends the machine an event called _increment_.
 
+**This loop "generates" an event every iteration.**{:.caption}
 ``` javascript
 const machine = Machine(statechart);
 
@@ -47,6 +48,7 @@ For now it doesn't do much, it remains in the _digit_ state constantly re-[enter
 
 We'll set up a little dictionary of actions, corresponding to the actions mentioned in the statechart.  For now all we have is `print_digit`.
 
+**Side effects are executed after every state `transition()`.**{:.caption}
 ``` javascript
 const actions = {
   print_digit: (i) => console.log(i)
@@ -75,10 +77,12 @@ We will introduce a new state, `fizz` with the `print_fizz` action.  When the `i
 
 The statechart diagram we're aiming form looks something like this:
 
+**Updated diagram with new _fizz_ state.**{:.caption}
 ![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
 
 Let's introduce the new _fizz_ state, with its entry action _print_fizz_:
 
+**The new _fizz_ state, with the `print_fizz` action.**{:.caption}
 ``` javascript
 states: {
   digit: {
@@ -92,6 +96,7 @@ states: {
 
 The new action `print_fizz` should be added to the action dictionary:
 
+**The `print_fizz` action now in the `actions` dictionary.**{:.caption}
 ``` javascript
 const actions = {
   print_digit: (i) => console.log(i),
@@ -101,6 +106,7 @@ const actions = {
 
 We want to transition from _digit_ to _fizz_ whenever the number is incremented, and divisible by 3.  So we have to change the event definitions in the _digit_ state:
 
+**The transitions of the from the `digit` state.**{:.caption}
 ``` javascript
 on: {
   increment: [
@@ -117,6 +123,7 @@ This (the `on.increment[]` array) is essentially a series of if-tests, which are
 
 In the _fizz_ state, we know that we'll never be in the _fizz_ state immediately after a _fizz_ state, so the _fizz_ state can simply transition to _digit_ with no checks:
 
+**The transitions of the from the `fizz` state.**{:.caption}
 ``` javascript
 on: {
   increment: 'digit'
@@ -139,6 +146,7 @@ The steps involved in adding support for printing "Buzz" is somewhat similar to 
 
 First of all, we need a new action, `print_buzz`, which lives in the action dictionary:
 
+**The `print_fizz` action added to the actions dictionary.**{:.caption}
 ``` javascript
 const actions = {
   print_digit: (i) => console.log(i),
@@ -149,6 +157,7 @@ const actions = {
 
 We'll also need the _buzz_ state, with its entry action _print_buzz_:
 
+**The new `buzz` state, invoking the right action.**{:.caption}
 ``` javascript
 states: {
   digit: {
@@ -171,6 +180,7 @@ So far, so good!  On to defining the transitions.  We will use another guarded t
 
 We can already see that there is some redundancy, it becomes clearer in the statechart diagram:
 
+**The statechart with digit, fizz, and buzz states.  The number of transitions increases noticably.**{:.caption}
 ![Statechart with three states, digit, fizz and buzz with a total of six increment events passing between them](fizzbuzz-actions-guards-fizz-buzz.svg)
 
 There are a number of transitions that are identical, and this is by definition a maintenance burden.  Imagine adding support for FizzBuzz; it would require another state, but six or more transitions, many of them duplicates.
@@ -182,10 +192,12 @@ We can use the hierarchical nature of statecharts to solve this particular probl
 
 The diagram ends up looking like this:
 
+**The introduction of a compound state results in a much simpler diagram.**{:.caption}
 ![Statechart with one state and three substates, digit, fizz and buzz, with one transition each, from the superstate to each state](fizzbuzz-actions-guards-fizz-buzz-compound.svg)
 
 This is clearly a simpler model, where the logic to choose which transition to pick has been moved to the superstate.  In our xstate code, the statechart is defined as follows:
 
+**The xstate definition for the statechart diagram above.**{:.caption}
 ``` javascript
 {
   initial: 'digit_fizz_buzz',
