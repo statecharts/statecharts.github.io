@@ -1,0 +1,61 @@
+<svg width="491px" height="190px" viewBox="-209.622 25.946 570.831 352.683" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs></defs>
+  <g transform="matrix(1, 0, 0, 1, 1, 14)">
+    <rect x="-81.892" y="46.198" width="152.07" height="109.477" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="-23.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">digit</text>
+    <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.557" y1="75.308" x2="70.775" y2="75.308"></line>
+    <text x="-69.407" y="104.902" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_digit</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -80.733116, -18.002293)">
+    <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"></ellipse>
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 200.473022, 43.372322)">
+    <rect x="-61.019" y="46.198" width="131.197" height="114.07" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="-7.504" y="69.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">fizz</text>
+    <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-61.15" y1="77.824" x2="69.775" y2="77.824"></line>
+    <text x="-7.504" y="69.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(1, 0, 0, 1, -44.62139364273554, 34.33760206441341)">entry / print_fizz</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -97.706322, 40.665421)">
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 159.293 20.735 C 159.293 20.735 171.533 12.791 202.061 12.945 C 232.589 13.099 243.992 38.377 243.992 38.377"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.881187, 0.472768, -0.472769, 0.881186, 208.238556, -4.196029)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="159.909" y="9.792">increment [ i % 3 == 0 ]</text>
+  </g>
+  <g transform="matrix(-0.999766, 0.021682, -0.021682, -0.999766, 299.529144, 186.611023)">
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 159.293 20.735 C 159.293 20.735 174.219 14.167 190.568 13.434 C 206.917 12.701 220.867 21.171 220.867 21.171"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.99839, -0.056723, 0.056722, 0.99839, 168.365112, 4.093716)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="97.304" y="106.789" transform="matrix(-0.999765, -0.021682, 0.021682, -0.999765, 324.266876, 109.515144)">increment</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -66.414307, 24.084309)">
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.999043, 0.043751, -0.043751, 0.999043, -75.254522, 30.734625)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <path d="M 460.07 560.306 A 63.697 63.697 0 1 1 383.028 484.088 L 383.263 485.06 A 62.697 62.697 0 1 0 459.095 560.081 Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 4.35656;" transform="matrix(0.382873, 0.253299, -0.253299, 0.382873, -48.968494, -229.270981)" bx:shape="pie 398 546 62.697 63.697 102.979 346.405 1@37869ff6"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="-133.303" y="85.824">increment</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 10.370914539730961, 205.72990796163026)">
+    <rect x="-61.019" y="46.198" width="140.911" height="114.07" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+    <text x="-14.504" y="69.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">buzz</text>
+    <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-61.15" y1="77.824" x2="79.51" y2="77.824"></line>
+    <text x="-7.504" y="69.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;" transform="matrix(1, 0, 0, 1, -44.62139364273554, 34.33760206441341)">entry / print_buzz</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -322.73999212428834, 198.42584211464356)">
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 281.157 -28.585 C 281.157 -28.585 282.726 -21.472 287.502 8.869 C 292.278 39.21 288.436 42.295 288.436 42.295"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.414044, 0.910257, -0.910257, 0.414043, 286.928894, -13.973043)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="123.909" y="13.792">increment [ i % 5 == 0 ]</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -51.72159657001393, 297.19268923410505)">
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 236.634 -92.362 C 236.634 -92.362 240.467 -73.066 215.875 -45.772 C 191.283 -18.478 152.407 -8.059 152.407 -8.059"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(-0.739527, 0.673127, -0.673126, -0.739528, 204.905197, -27.309713)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="210.909" y="-29.208">increment [ i % 5 == 0 ]</text>
+  </g>
+  <g transform="matrix(-0.9997661113739011, 0.02168200723826885, -0.02168200723826885, -0.9997661113739011, 268.3627823462102, 242.0671310489604)">
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 192.652 -4.173 C 192.652 -4.173 192.042 11.236 196.866 29.947 C 201.69 48.658 213.409 65.831 213.409 65.831"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.855763, 0.517369, -0.517369, 0.855763, 180.091171, 22.304958)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="97.304" y="106.789" transform="matrix(-0.999765, -0.021682, 0.021682, -0.999765, 356.194061, 113.208282)">increment</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -55.61694667487015, 315.55814358523855)">
+    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 146.067 32.774 C 146.067 32.774 351.318 69.008 388.751 -3.354 C 426.184 -75.716 335.714 -142.53 335.714 -142.53"></path>
+    <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.276932, 0.96089, -0.96089, 0.276931, 340.121307, -200.700073)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="186.01" y="28.719">increment [ i % 3 == 0 ]</text>
+  </g>
+</svg>
