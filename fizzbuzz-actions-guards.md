@@ -12,8 +12,7 @@ Here, we will show how [actions](glossary/action.html){:.glossary} can be used t
 
 Let’s start with a machine that prints out only the digits.
 
-**This simple statechart re-enters the _digit_ state every _increment_ event.**{:.caption}
-![Statechart with one state, digit with a self transition on the increment event](fizzbuzz-actions-guards-digit.svg)
+**This simple statechart re-enters the _digit_ state every _increment_ event.**{:.caption}![Statechart with one state, digit with a self transition on the increment event](fizzbuzz-actions-guards-digit.svg)
 
 Here is the xstate representation, in JSON format:
 
@@ -77,8 +76,7 @@ We will introduce a new state, `fizz` with the `print_fizz` action.  When the `i
 
 The statechart diagram we're aiming form looks something like this:
 
-**Updated diagram with new _fizz_ state.**{:.caption}
-![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
+**Updated diagram with new _fizz_ state.**{:.caption}![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
 
 Let's introduce the new _fizz_ state, with its entry action _print_fizz_:
 
@@ -180,8 +178,7 @@ So far, so good!  On to defining the transitions.  We will use another guarded t
 
 We can already see that there is some redundancy, it becomes clearer in the statechart diagram:
 
-**The statechart with digit, fizz, and buzz states.  The number of transitions increases noticably.**{:.caption}
-![Statechart with three states, digit, fizz and buzz with a total of six increment events passing between them](fizzbuzz-actions-guards-fizz-buzz.svg)
+**The statechart with digit, fizz, and buzz states.  The number of transitions increases noticably.**{:.caption}![Statechart with three states, digit, fizz and buzz with a total of six increment events passing between them](fizzbuzz-actions-guards-fizz-buzz.svg)
 
 There are a number of transitions that are identical, and this is by definition a maintenance burden.  Imagine adding support for FizzBuzz; it would require another state, but six or more transitions, many of them duplicates.
 
@@ -192,8 +189,7 @@ We can use the hierarchical nature of statecharts to solve this particular probl
 
 The diagram ends up looking like this:
 
-**The introduction of a compound state results in a much simpler diagram.**{:.caption}
-![Statechart with one state and three substates, digit, fizz and buzz, with one transition each, from the superstate to each state](fizzbuzz-actions-guards-fizz-buzz-compound.svg)
+**The introduction of a compound state results in a much simpler diagram.**{:.caption}![Statechart with one state and three substates, digit, fizz and buzz, with one transition each, from the superstate to each state](fizzbuzz-actions-guards-fizz-buzz-compound.svg)
 
 This is clearly a simpler model, where the logic to choose which transition to pick has been moved to the superstate.  In our xstate code, the statechart is defined as follows:
 
