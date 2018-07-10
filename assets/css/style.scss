@@ -48,15 +48,14 @@ img {
   box-shadow: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   strong.caption {
     position: absolute;
     left: -10em;
     width: 8em;
     text-align: right;
-    margin-top: 2em;
     border-right: 2px solid #ccc;
-    padding: 1em;
+    padding: 0.5em 0.8em 0;
   }
 }
 
