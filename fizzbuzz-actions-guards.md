@@ -1,8 +1,12 @@
+---
+description: Actions and guards are explained by way of solving the Fizz Buzz problem using statecharts.
+---
+
 # FizzBuzz with Actions and guards
 
 FizzBuzz is a programming puzzle, easily solvable using a simple for-loop.  The puzzle has been described in terms of an event driven system, in order to allow us to explore some statechart concepts.  See [FizzBuzz](fizzbuzz.html) for an explanatory introduction.
 
-Here, we will show how [actions](glossary/action.html){:.glossary} can be used to let the statechart tell us what to do.  We will use [guards](glossary/guard.html){:.glossary} to tell the statechart which state it should be in.
+Here, we will show how [actions](glossary/action.html){:.glossary} can be used to let the statechart tell us what to do.  We will use [guards](glossary/guard.html){:.glossary} to tell the statechart which state it should be in.  Note that this is not an endorsement to use statecharts to solve FizzBuzz!
 
 ## Start with digits
 
