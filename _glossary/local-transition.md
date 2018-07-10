@@ -4,9 +4,18 @@ oneliner: A transition between a state and its children that skips exiting or en
 breadcrumbs:
   - id: transition
     name: Transition
+aka:
+  - name: Internal transition
+    oneliner: In SCXML, the term internal transition is used for the concepts of local transitions
+    url: local-transition.html
+  - name: External transition
+    oneliner: In SCXML, the term external transition is used for the opposite concept of a local transition
+    url: local-transition.html
 ---
 
 # Local transition
+
+**Also known as _Internal transition_**, **Opposite of _External transition_**
 
 A transition from a [compound state](compound-state.html){:.glossary} to its direct children normally causes the _compound_ state to exit, then enter again.  In a local transition, the compound state does not enter and exit again.
 
