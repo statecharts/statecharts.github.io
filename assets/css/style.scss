@@ -46,6 +46,18 @@ img {
   box-shadow: none;
 }
 
+@media screen and (min-width: 600px) {
+  strong.caption {
+    position: absolute;
+    left: -10em;
+    width: 8em;
+    text-align: right;
+    margin-top: 2em;
+    border-right: 2px solid #ccc;
+    padding: 1em;
+  }
+}
+
 /* Keep links underlined for accessiblity */
 a {
   text-decoration: underline;
