@@ -11,6 +11,11 @@
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.description }}" />
 
+    <meta name="twitter:label1" value="Word count"/>
+    <meta name="twitter:data1" value="{{ page.content | number_of_words }}"/>
+
+
+    <link rel="canonical" href="https://statecharts.github.io{{ page.url }}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <script>
@@ -41,6 +46,23 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-24028448-3');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "url": "https://statecharts.github.io{{ page.url }}",
+  "description": "{{ page.description }}",
+  "mainContentOfPage": {
+    "@type": "WebPageElement",
+    "cssSelector": "#main_content"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": "#main_content"
+  }
+}
   </script>
   </head>
 
