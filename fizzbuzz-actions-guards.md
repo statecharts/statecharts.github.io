@@ -14,7 +14,9 @@ Let’s start with a machine that prints out only the digits.
 
 **This simple statechart re-enters the _digit_ state every _increment_ event.**{:.caption}![Statechart with one state, digit with a self transition on the increment event](fizzbuzz-actions-guards-digit.svg)
 
-Here is the xstate representation, in JSON format:
+This machine remains in the _digit_ state, constantly re-[entering](glossary/entry.html){:.glossary} itself when it's passed the `increment` event.  A transition that goes from one state and back to itself is called a [self transition](glossary/self-transition.html){:.glossary}.  When it re-enters itself, it invokes the digit state's entry [action](glossary/action.html){:.glossary}.  Those actions are how we're going to ask the statechart what needs to be done.
+
+Here is the xstate equivalent:
 
 **This statechart represents the diagram above, in xstate syntax**{:.caption}
 ``` javascript
@@ -31,7 +33,7 @@ const statechart = {
 }
 ```
 
-The following code goes through a for loop, increments 'i', and sends the machine an event called _increment_.
+The statechart definition needs to be passed to the `xstate.Machine` function.  This `machine` provides us with the _initial_ state, and a way to jog the state machine (`transition()`).  The following code goes through a for loop, which increments 'i', and sends the machine an event called _increment_.
 
 **This loop "generates" an event every iteration.**{:.caption}
 ``` javascript
@@ -43,11 +45,9 @@ for (i = 1; i < 100; i++) {
 }
 ```
 
-For now it doesn't do much, it remains in the _digit_ state constantly re-[entering](glossary/entry.html){:.glossary} it.  When it re-enters the state, it invokes the digit state's entry [action](glossary/action.html){:.glossary}.  We need to look for those actions and execute whatever the statechart tells us to do.
+We'll set up a little dictionary of actions, corresponding to the actions mentioned in the statechart.  At the moment, all we need is `print_digit`.
 
-We'll set up a little dictionary of actions, corresponding to the actions mentioned in the statechart.  For now all we have is `print_digit`.
-
-**Side effects are executed after every state `transition()`.**{:.caption}
+**Any side effects should be executed after every `transition()`.**{:.caption}
 ``` javascript
 const actions = {
   print_digit: (i) => console.log(i)
@@ -240,15 +240,34 @@ We've identified complexity before it crept into the code, by extracting common 
 
 ## Handling FizzBuzz
 
-TKTK
+The design we've chosen makes it trivial to add support for FizzBuzz when something is a multiple of both 3 and 5, since it's "just another guarded transition".
 
+**The statechart complete with support for printing FizzBuzz**{:.caption}![Statechart with one state and four substates, digit, fizz, buzz, and fizzbuzz with one transition each, from the superstate to each state](fizzbuzz-actions-guards-fizz-buzz-fizzbuzz.svg)
 
-That was easy.  We could continue doing this for the FizzBuzz case:
+The xstate representation is also very similar.  We'll need a new _fizzbuzz_ state to call the new _print_fizzbuzz_ action:
 
-TK embed [codepen](https://codepen.io/mogsie/pen/QxKEKj)
+**The new _fizzbuzz_ state**{:.caption}
+``` javascript
+fizzbuzz: {
+  onEntry : 'print_fizzbuzz'
+}
+```
 
-The guard condition in this "solution" looks a lot like the if/else statements as in the first non-statechart example shown in the [introduction](fizzbuzz.html):
+And the already guarded increment transition gets another entry:
 
+**The new guarded transition to the _fizzbuzz_ state**{:.caption}
+``` javascript
+on: {
+  increment: [
+    { cond: (i) => i%3==0 && i%5==0, target: '.fizzbuzz' },
+    { cond: (i) => i%3==0, target: '.fizz' },
+    { cond: (i) => i%5==0, target: '.buzz' },
+    { target: '.digit' }
+  ]
+}
+```
+
+Note how the guard condition in this "solution" looks a lot like the if/else statements as in the first non-statechart example shown in the [introduction](fizzbuzz.html):
 
 ```
 // After (example 1)
@@ -260,20 +279,21 @@ For i = 1; i < 100; i++ {
 }
 ```
 
-Guard condition:
-
-```
-increment: [
-  { cond: (i) => i%3==0 && i%5==0, target: '.fizzbuzz' },
-  { cond: (i) => i%3==0, target: '.fizz' },
-  { cond: (i) => i%5==0, target: '.buzz' },
-  { target: '.digit' }
-]
-```
-
 The order of these if/else statements is just as important as the order of the guarded transitions.  Both of these are relatively unmaintainable, mainly because of the long chain of if/else statements.
 
-## Refining the _FizzBuzz_ state
+Here's the complete solution:
+
+<p data-height="455" data-theme-id="light" data-slug-hash="BxXPRg" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and guards 3: FizzBuzz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/aKmZow/">FizzBuzz with actions and guards 3: FizzBuzz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+### Checkpoint
+
+We've seen how relying on guard conditions can lead to somewhat difficult-to-maintain code.  One of the goals of using statecharts is to avoid a lot of if-tests.  However, the guarded `increment` transition is starting to suffer from the same problems.  For example, the guard condition `i % 3 == 0` is repeated twice in the statechart, which in itself is the start of a maintenance problem.  The more subtle problem is that the order of the guard conditions is highly relevant.
+
+Another problem with relying on guarded transitions is that the guard conditions are evaluated a lot of times.  For example, if `i = 1` then the statechart ends up evaluating, `i % 3 == 0`, then `i % 5 == 0`, then `i % 3 == 0` again, then `i % 5 == 0` again, before taking the 'digit' transition.  For our fizzbuzz problem this really isn't a problem, but it's worth noting.
+
+If you've understood the statechart diagram above, then we'll conclude with a tiny improvement to the statechart.
+
+## Addendum: Refining the _FizzBuzz_ state
 
 There is one slight optimization we can do.  This will show how substates are "more important" when it comes to reacting to events.  Based on the fact that we’re incrementing, we know a thing or two about `i - 1` — i.e. the previous integer.  IF the previous integer was a FizzBuzz, it is impossible that this integer is a Fizz _or_ a buzz.  It must _always_ be a a digit.  Knowing this we can tell the statechart to ignore the guarded transition, and simply _always_ go to 'digit' when we get an _increment_ event in the 'fizzbuzz' state.
 
