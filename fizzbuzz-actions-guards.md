@@ -291,28 +291,8 @@ We've seen how relying on guard conditions can lead to somewhat difficult-to-mai
 
 Another problem with relying on guarded transitions is that the guard conditions are evaluated a lot of times.  For example, if `i = 1` then the statechart ends up evaluating, `i % 3 == 0`, then `i % 5 == 0`, then `i % 3 == 0` again, then `i % 5 == 0` again, before taking the 'digit' transition.  For our fizzbuzz problem this really isn't a problem, but it's worth noting.
 
-If you've understood the statechart diagram above, then we'll conclude with a tiny improvement to the statechart.
-
-## Addendum: Refining the _FizzBuzz_ state
-
-There is one slight optimization we can do.  This will show how substates are "more important" when it comes to reacting to events.  Based on the fact that we’re incrementing, we know a thing or two about `i - 1` — i.e. the previous integer.  IF the previous integer was a FizzBuzz, it is impossible that this integer is a Fizz _or_ a buzz.  It must _always_ be a a digit.  Knowing this we can tell the statechart to ignore the guarded transition, and simply _always_ go to 'digit' when we get an _increment_ event in the 'fizzbuzz' state.
-
-```
-    fizzbuzz: {
-      onEntry : 'print_fizzbuzz',
-      on: {
-        increment: 'digit'
-      }
-    }
-```
-
-TK embed this [codepen](https://codepen.io/mogsie/pen/QxKEKj)...
-
-This optimization is a nice one that most imperative solutions miss, because every for-loop usually forgets any calculations in the previous iteration.  With statecharts, insights like this come more naturally.  However, with the this design, it is hard to add more optimizations.
-
-
 ## Conclusion
 
-We have shown the use of guards and how a single event can cause many possible transitions to be checked.  That the first guard that passes will be taken.  We have shown how actions can be placed on states, and how entering those states triggers those actions.  Finally, we have shown how we can specialize a state, overriding its behaviour simply by adding a transition in a substate.
+We have shown the use of guards and how a single event can cause many possible transitions to be checked, and that the first guard that passes will be taken.  We have shown how actions can be placed inside states, and how entering those states triggers those actions.  We showed how to perform a simple refactoring of a statechart, namel extracting common behaviour to a compound state.  On a higher level, we've shown how actions can (should?) be used to avoid the trap of depending on the structure of the states themselves, allowing us to perform the refactoring without changing anything except the statechart.
 
-Take a look at [the introduction](fizzbuzz.html) to explore different aspects of statecharts.
+Take a look at [the introduction](fizzbuzz.html) to see different ways of solving the FizzBuzz problem.
