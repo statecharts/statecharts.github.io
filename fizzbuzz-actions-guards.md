@@ -269,6 +269,7 @@ on: {
 
 Note how the guard condition in this "solution" looks a lot like the if/else statements as in the first non-statechart example shown in the [introduction](fizzbuzz.html):
 
+**The imperative solution to FizzBuzz from the [introduction](fizzbuzz.html).**{:.caption}
 ```
 // After (example 1)
 For i = 1; i < 100; i++ {
