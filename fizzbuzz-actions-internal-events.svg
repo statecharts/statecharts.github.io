@@ -33,10 +33,10 @@
       <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="211.909" y="31.792" transform="matrix(1, 0, 0, 1, -5, -16)">in fizz.off<tspan x="211.90899658203125" dy="1em">​</tspan>and in buzz.off</text>
     </g>
     <g transform="matrix(1, 0, 0, 1, 207.143494, 21.344221)">
-      <rect x="-81.892" y="46.198" width="129.551" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <rect x="-81.892" y="46.198" width="142.386" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
       <text x="-49.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">on</text>
-      <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.755" y1="75.308" x2="48.167" y2="75.308"></line>
-      <text x="-66.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">do / print_digit</text>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.642" y1="75.308" x2="61.053" y2="75.308"></line>
+      <text x="-68.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_digit</text>
     </g>
   </g>
   <g>
@@ -84,7 +84,7 @@
           <rect x="-81.892" y="46.198" width="129.551" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
           <text x="-49.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">really_on</text>
           <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.755" y1="75.308" x2="48.167" y2="75.308"></line>
-          <text x="-66.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">do / print_fizz</text>
+          <text x="-73.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_fizz</text>
         </g>
       </g>
     </g>
@@ -117,10 +117,10 @@
       <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="211.909" y="31.792" transform="matrix(1, 0, 0, 1, -5, -16)">in fizz.on<tspan x="211.90899658203125" dy="1em">​</tspan>and in buzz.on</text>
     </g>
     <g transform="matrix(1, 0, 0, 1, 207.143494, 21.344221)">
-      <rect x="-81.892" y="46.198" width="156.256" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <rect x="-81.892" y="46.198" width="172.893" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
       <text x="-49.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">on</text>
-      <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.521" y1="75.308" x2="74.977" y2="75.308"></line>
-      <text x="-66.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">do / print_fizzbuzz</text>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.375" y1="75.308" x2="91.679" y2="75.308"></line>
+      <text x="-66.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_fizzbuzz</text>
     </g>
   </g>
   <g transform="matrix(1, 0, 0, 1, 534.549438, -6.79528)">
@@ -163,7 +163,7 @@
           <rect x="-81.892" y="46.198" width="129.551" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
           <text x="-49.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">really_on</text>
           <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.755" y1="75.308" x2="48.167" y2="75.308"></line>
-          <text x="-66.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">do / print_buzz</text>
+          <text x="-78.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_buzz</text>
         </g>
       </g>
     </g>
