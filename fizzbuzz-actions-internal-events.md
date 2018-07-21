@@ -1,4 +1,4 @@
-# FizzBuzz with Actions and guards
+# FizzBuzz with actions and internal events
 
 FizzBuzz is a programming puzzle, easily solvable using a simple for-loop.  For the purpose of this article, the puzzle has been described in terms of an event driven system, so that we can explore some statechart concepts.  See [FizzBuzz](fizzbuzz.html) for an explanatory introduction.
 
