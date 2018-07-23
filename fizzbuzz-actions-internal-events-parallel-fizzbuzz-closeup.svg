@@ -1,0 +1,33 @@
+<svg width="420px" height="644px" viewBox="-23.637 110.972 420.444 141.531" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+    <pattern id="pattern-2" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 82.85711376343988, 81.05612628052307)">
+    <g transform="matrix(1, 0, 0, 1, -62, 21)">
+      <rect x="-22.315" y="46.198" width="92.725" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="13.496" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">off</text>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-21.5" y1="75.308" x2="70.775" y2="75.308"></line>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -143.733124, -11.002293)">
+      <ellipse style="" transform="matrix(0.6, 0.8, -0.8, 0.6, 66.684728, -8.839179)" cx="51.177" cy="44.699" rx="7.288" ry="7.288"></ellipse>
+      <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 67.134 54.917 C 67.134 54.917 72.585 50.566 82.249 54.161 C 91.913 57.756 92.4 65.968 92.4 65.968"></path>
+      <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.646251, 0.763125, -0.763125, 0.64625, 75.1945, 14.086562)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -187.706329, 40.665421)">
+      <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 195.252 42.259 C 195.252 42.259 222.759 33.346 253.959 38.227 C 285.159 43.108 303.251 54.429 303.251 54.429"></path>
+      <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.988555, -0.150861, 0.15086, 0.988555, 248.4216, 41.762432)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
+      <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="211.909" y="31.792" transform="matrix(1, 0, 0, 1, -5, -16)">in fizz.on<tspan x="211.90899658203125" dy="1em">​</tspan>and in buzz.on</text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 207.143494, 21.344221)">
+      <rect x="-81.892" y="46.198" width="172.893" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
+      <text x="-49.504" y="67.69" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">on</text>
+      <line style="stroke: rgb(0, 0, 0); stroke-width: 2px;" x1="-80.375" y1="75.308" x2="91.679" y2="75.308"></line>
+      <text x="-66.469" y="109.14" style="fill: rgb(51, 51, 51); font-family: sans-serif; font-size: 16px; white-space: pre;">entry / print_fizzbuzz</text>
+    </g>
+  </g>
+</svg>
