@@ -62,6 +62,14 @@ img {
   }
 }
 
+
+p.note {
+    padding-left: 1em;
+    border-left: 2px solid #aaa;
+    margin-left: 1em;
+    border-radius: 1em 2em/5em;
+}
+
 /* Keep links underlined for accessiblity */
 a {
   text-decoration: underline;
