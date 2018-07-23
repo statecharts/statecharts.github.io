@@ -45,7 +45,7 @@
       <g transform="matrix(1, 0, 0, 1, -187.706329, 40.665421)">
         <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 2;" d="M 195.252 42.259 C 195.252 42.259 222.759 33.346 253.959 38.227 C 285.159 43.108 303.251 54.429 303.251 54.429"></path>
         <path d="M 52.991 13.003 L 60.431 25.89 L 45.55 25.89 L 52.991 13.003 Z" style="" transform="matrix(0.988555, -0.150861, 0.15086, 0.988555, 248.4216, 41.762432)" bx:shape="triangle 45.55 13.003 14.881 12.887 0.5 0 1@5e4c3892"></path>
-        <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="211.909" y="30.792">i % 3 == 0</text>
+        <text style="fill: rgb(51, 51, 51); font-family: serif; font-size: 16px; font-style: italic; white-space: pre;" x="211.909" y="30.792">[i % 3 == 0]</text>
       </g>
       <g transform="matrix(1, 0, 0, 1, 207.143494, 21.344221)">
         <rect x="-81.892" y="46.198" width="142.386" height="88.013" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3;" rx="15.659" ry="15.659"></rect>
