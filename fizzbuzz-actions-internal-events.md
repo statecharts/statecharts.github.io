@@ -142,7 +142,7 @@ This will cause the machine to have the following behaviour:
 
 We will introduce an explicit dependency between the digit and fizz regions by adding a transition in one that is guarded by the state of the other.  We will ensure that the digit regions goes from the _off_ state to the _on_ state, only when the fizz.off state is reached.
 
-> We could instead have repeated the guard, namely go to the 'digit.on' state when it's _not_ divisible by three, but what would introduce a hidden coupling in the statechart.  These couplings are sometimes difficult to (re)discover, especially when they are hidden inside boolean guard conditions where only one must hold true.  It is often better to make such dependencies explicit.{:.note}
+{:.note}> We could instead have repeated the guard, namely go to the 'digit.on' state when it's _not_ divisible by three, but what would introduce a hidden coupling in the statechart.  These couplings are sometimes difficult to (re)discover, especially when they are hidden inside boolean guard conditions where only one must hold true.  It is often better to make such dependencies explicit.
 
 **The digit region now automatically transitions to 'on' if we're _in_ fizz.off**{:.caption}![The parallel state, with an automatic transition from fizz.off to fizz.on, with the guard i % 3 == 0](fizzbuzz-actions-internal-events-parallel-digit-transitions.svg)
 
@@ -247,6 +247,7 @@ This new fizzbuzz state knows to print fizzbuzz at just the right time.  However
 
 **The full statechart with all edge cases handled.**{:.caption}![A statechart with four regions, describing the behaviour for enabling four separate actions.](fizzbuzz-actions-internal-events.svg)
 
+{:.note}
 > It's hard to get the 'in' syntax right for disjoint IDs.  Maybe a bug?
 
 ``` javascript
