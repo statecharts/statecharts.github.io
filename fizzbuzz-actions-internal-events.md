@@ -4,8 +4,8 @@ FizzBuzz is a programming puzzle, easily solvable using a simple for-loop.  For 
 
 Here, we will split the problem into discrete problems: Digit, Fizz, Buzz and so on.  We will use a [parallel state](glossary/parallel-state.html){:.glossary} to tie them together.  In order to coordinate between the regions, we will use some transitions that are [automatic](glossary/automatic-transition.html){:.glossary} (meaning that they happen as soon as possible), and [guarded](glossary/guard.html){:.glossary} (meaning that they aren't taken unless some condition holds true).  Also note that this is not an endorsement to use statecharts to solve FizzBuzz!
 
-
-> If you've read [FizzBuzz with Actions and guards](fizzbuzz-actions-guards.html) then this first section is more or less identical as the section with the same name, up until the first checkpoint.{:.note}
+{:.note}
+If you've read [FizzBuzz with Actions and guards](fizzbuzz-actions-guards.html) then this first section is more or less identical as the section with the same name, up until the first checkpoint.
 
 ## Start with digits
 
@@ -140,9 +140,12 @@ This will cause the machine to have the following behaviour:
 
 ### Adding behaviour to the Digit region
 
-We will introduce an explicit dependency between the digit and fizz regions by adding a transition in one that is guarded by the state of the other.  We will ensure that the digit regions goes from the _off_ state to the _on_ state, only when the fizz.off state is reached.
+We will introduce an explicit dependency between the digit and fizz regions by adding a transition in one that is guarded by the state of the other.  We will ensure that the digit regions goes from the _off_ state to the _on_ state, only when the fizz doesn't go to _its_ on state.
 
-{:.note}> We could instead have repeated the guard, namely go to the 'digit.on' state when it's _not_ divisible by three, but what would introduce a hidden coupling in the statechart.  These couplings are sometimes difficult to (re)discover, especially when they are hidden inside boolean guard conditions where only one must hold true.  It is often better to make such dependencies explicit.
+{:.note}
+We could instead have copied the guard, namely gone to the 'digit.on' state when it's _not_ divisible by three, but what would introduce a hidden coupling in the statechart.  These couplings are sometimes difficult to (re)discover, especially when they are hidden inside boolean guard conditions where only one must hold true.  It is often better to make such dependencies explicit.
+
+The most succinct way of expressing this dependency is using an _in_ guard, allowing the _digit_ to transition to on, if _fizz_ remains in _off_, something like this: 
 
 **The digit region now automatically transitions to 'on' if we're _in_ fizz.off**{:.caption}![The parallel state, with an automatic transition from fizz.off to fizz.on, with the guard i % 3 == 0](fizzbuzz-actions-internal-events-parallel-digit-transitions.svg)
 
@@ -243,7 +246,15 @@ The statechart prints both 'fizz' and 'buzz' when the digit is divisible by both
 
 **A closeup of the fizzbuzz region.  When fizz.on and buzz.on is active, it's fizzbuzz time!**{:.caption}![An off state, with an automatic transition to the 'on' state, guarded with 'in fizz.on and buzz.on'](fizzbuzz-actions-internal-events-parallel-fizzbuzz-closeup.svg)
 
-This new fizzbuzz state knows to print fizzbuzz at just the right time.  However, if we only did this, then the behaviour would actually be to print 'fizz', 'buzz' _and_ 'fizzbuzz'.  We need a way to inhibit the printing of 'fizz' and 'buzz' when we're in the 'fizzbuzz' state.  Again, there are hints in the phrasing of the requirement: _when we're in the 'fizzbuzz' state_.  Perhaps we need some sort of transition guarded with _in fizzbuzz_.
+This new fizzbuzz region knows to print fizzbuzz at just the right time.  However, if we only did this, then the behaviour would actually be to print 'fizz', 'buzz' _and_ 'fizzbuzz'.  We need a way to inhibit the printing of 'fizz' when 'buzz.on' is active, and vice versa.  We want to print 'fizz' only when we're in 'buzz.off'.  Again, there are hints in the phrasing of the requirement itself: _when we're in the 'buzz.off' state_.  Perhaps we need some sort of transition guarded with _in buzz.off_.
+
+One way to do this is to refine the fizz.on and buzz.on states.  We can use the fact that the fizz and buzz regions treat the 'on' and 'off' states as final, i.e. they have no transitions to other states.  We can safely assume that if the machine is _in buzz.off_ it cannot reach _buzz.on_.  This means that we can refine the fizz (and buzz) regions so that they don't invoke their print actions until the other state reaches the 'off' state.
+
+**A closeup of the fizz region.  When fizz.on, it waits for buzz to reach off before invoking the print action.**{:.caption}![An off state, with an automatic transition to the 'on' state, guarded with 'in fizz.on and buzz.on'](fizzbuzz-actions-internal-events-parallel-fizzbuzz-closeup.svg)
+
+
+{:.note}
+Instead of 
 
 **The full statechart with all edge cases handled.**{:.caption}![A statechart with four regions, describing the behaviour for enabling four separate actions.](fizzbuzz-actions-internal-events.svg)
 
