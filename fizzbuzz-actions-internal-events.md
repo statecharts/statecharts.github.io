@@ -250,13 +250,17 @@ This new fizzbuzz region knows to print fizzbuzz at just the right time.  Howeve
 
 One way to do this is to refine the fizz.on and buzz.on states.  We can use the fact that the fizz and buzz regions treat the 'on' and 'off' states as final, i.e. they have no transitions to other states.  We can safely assume that if the machine is _in buzz.off_ it cannot reach _buzz.on_.  This means that we can refine the fizz (and buzz) regions so that they don't invoke their print actions until the other state reaches the 'off' state.
 
-**A closeup of the fizz region.  When fizz.on, it waits for buzz to reach off before invoking the print action.**{:.caption}![An off state, with an automatic transition to the 'on' state, guarded with 'in fizz.on and buzz.on'](fizzbuzz-actions-internal-events-parallel-fizzbuzz-closeup.svg)
+**A closeup of the fizz region.  When fizz.on, it waits for buzz to reach off before invoking the print action.**{:.caption}![An on state, initial substate called maybe, with an automatic transition to the really_on state, guarded with 'in buzz.off'](fizzbuzz-actions-internal-events-parallel-fizz-maybe-closeup.svg)
 
 
 {:.note}
-Instead of 
+Instead of fizz.on checking if buzz.was reached, it might be smarter (perhaps more maintainable) to check if _fizzbuzz.on_ is reached.  After all, fizzbuzz.on is already a function of being in both fizz.on and buzz.on, and re-using that knowledge might be more _correct_ than repeating that knowledge in these new guarded transitions.
+
+When all of this is added to the statechart, this is the final result:
 
 **The full statechart with all edge cases handled.**{:.caption}![A statechart with four regions, describing the behaviour for enabling four separate actions.](fizzbuzz-actions-internal-events.svg)
+
+
 
 {:.note}
 > It's hard to get the 'in' syntax right for disjoint IDs.  Maybe a bug?
