@@ -48,6 +48,10 @@ img {
   box-shadow: none;
 }
 
+strong.caption {
+  display: block;
+}
+
 @media screen and (min-width: 1000px) {
   strong.caption {
     position: absolute;
@@ -64,10 +68,11 @@ img {
 
 
 p.note {
-    padding-left: 1em;
-    border-left: 2px solid #aaa;
+    padding: 0.5em 1em;
+    border-left: 2px solid #f4f4f8;
     margin-left: 1em;
     border-radius: 1em 2em/5em;
+    background: #e8e8ef;
 }
 
 /* Keep links underlined for accessiblity */
