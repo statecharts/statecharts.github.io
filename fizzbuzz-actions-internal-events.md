@@ -58,7 +58,10 @@ for (i = 1; i < 100; i++) {
 }
 ```
 
-This code should print out the digits 1 through 100.  In the embedded codepens I’ve replaced the `console.log` with `document.write` statements
+This code should print out the digits 1 through 100.  In the embedded codepens I’ve replaced the `console.log` with `document.write` statements:
+
+<p data-height="455" data-theme-id="light" data-slug-hash="pZwKQG" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and internal events 1: Digits only" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/pZwKQG/">FizzBuzz with actions and internal events 1: Digits only</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Checkpoint
 
@@ -131,12 +134,15 @@ off: {
     }]
   }
 }
-
 ```
 
 This will cause the machine to have the following behaviour:
 
 * Whenever the increment event happens, and i % 3 == 0 then execute the print_fizz action.
+
+<p data-height="455" data-theme-id="light" data-slug-hash="bjRKXx" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and internal events 2: Parallel fizz region" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/bjRKXx/">FizzBuzz with actions and internal events 2: Parallel fizz region</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+Notably, it doesn't print out any digits, because the digit region has no transitions to the _on_ state.
 
 ### Adding behaviour to the Digit region
 
@@ -162,63 +168,11 @@ The behaviour can now be described as follows:
 * otherwise it will enter the fizz.off state
 * if it enters fizz.off, it will enter digit.on
 
-Here's the statechart above, [implemented in xstate](https://codepen.io/mogsie/full/YapZjZ/?sc=%7B%0A%20%20initial:%20%27digit_fizz%27,%0A%20%20states:%20%7B%0A%20%20%20%20digit_fizz:%20%7B%0A%20%20%20%20%20%20parallel:%20true,%0A%20%20%20%20%20%20on:%20%7B%0A%20%20%20%20%20%20%20%20increment:%20%27digit_fizz%27%0A%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20states:%20%7B%0A%20%20%20%20%20%20%20%20digit:%20%7B%0A%20%20%20%20%20%20%20%20%20%20initial:%20%27off%27,%0A%20%20%20%20%20%20%20%20%20%20states:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20off:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20on:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%27%27:%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20target:%20%27on%27,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20in:%20%27fizz.off%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20on:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20onEntry%20:%20%27print_digit%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%20%20fizz:%20%7B%0A%20%20%20%20%20%20%20%20%20%20initial:%20%27pending%27,%0A%20%20%20%20%20%20%20%20%20%20states:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20pending:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20on:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%27%27:%20%5B%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20target:%20%27on%27,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20cond:%20i%20=%3E%20i%20%25%203%20==%200%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D,%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20target:%20%27off%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20off:%20%7B%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20on:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20onEntry%20:%20%27print_digit%27%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%20%20%0A%7D&rd=)
-
-```{
-  initial: 'digit_fizz',
-  states: {
-    digit_fizz: {
-      parallel: true,
-      on: {
-        increment: 'digit_fizz'
-      },
-      states: {
-        digit: {
-          initial: 'off',
-          states: {
-            off: {
-              on: {
-                '': [{
-                  target: 'on',
-                  in: 'fizz.off'
-                }]
-              }
-            },
-            on: {
-              onEntry : 'print_digit'
-            }
-          }
-        },
-        fizz: {
-          initial: 'pending',
-          states: {
-            pending: {
-              on: {
-                '': [{
-                  target: 'on',
-                  cond: i => i % 3 == 0
-                },{
-                  target: 'off'
-                }]
-              }
-            },
-            off: {},
-            on: {
-              onEntry : 'print_digit'
-            }
-          }
-        }
-      }
-    }
-  }  
-}
-```
-
-TK embed
+<p data-height="455" data-theme-id="light" data-slug-hash="yqXqyd" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and internal events 3: Parallel digit region" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/yqXqyd/">FizzBuzz with actions and internal events 3: Parallel digit region</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 ### Checkpoint
 
-We've seen how to divide a state up into regions, and model each region independently of each other.  We've seen how to use automatic guarded transitions.  We've seen how to avoid implicit dependencies between different parts of a statechart.  We've also seen how to introduce explicit dependencies when needed.  Finally, we've seen how race conditions can occur, and a way to mitigate them.
+We've seen how to divide a state up into regions, and model each region independently of each other.  We've seen how to use automatic transitions with guards.  We've seen how to avoid implicit dependencies between different parts of a statechart.  We've also seen how to introduce explicit dependencies when needed.  Finally, we've seen how race conditions can occur, and a way to mitigate them.
 
 ## Adding Buzz
 
@@ -230,9 +184,21 @@ The 'fizz' state doesn't need to behave any differently than before.  The 'digit
 
 **The digit region now checks that both 'fizz' and 'buzz' are in their off states**{:.caption}![A parallel state with digit.off transition to on, now including the 'in fizz.off and buzz.off' guard.](fizzbuzz-actions-internal-events-parallel-fizz-buzz.svg)
 
+The xstate equivalent of `in fizz.off and buzz.off` is one that uses a `cond:` expression, since a regular `in:` only supports a single state identifier.  `cond:` expressions receive the "current state configuration" as their third parameter, which we can use to guard against which state we're in, _while processing the event itself_.
+
+**A guard that checks being _in_ two other states.**{:.caption}
+``` javascript
+{
+  target: 'on',
+  cond: (xs, e, cs) => 
+        cs.digit_fizz_buzz.buzz == 'off' &&
+        cs.digit_fizz_buzz.fizz == 'off'
+}
+```
+
 This new state machine correcly handles the 'fizz' and 'buzz' cases.
 
-TK embed codepen
+<p data-height="455" data-theme-id="light" data-slug-hash="zLzLNB" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and internal events 4: Fizz and buzz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/zLzLNB/">FizzBuzz with actions and internal events 4: Fizz and buzz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
 ### Checkpoint
 
@@ -249,7 +215,6 @@ This new fizzbuzz region knows to print fizzbuzz at just the right time.  Howeve
 One way to do this is to refine the fizz.on and buzz.on states.  We can use the fact that the fizz and buzz regions treat the 'on' and 'off' states as final, i.e. they have no transitions to other states.  We can safely assume that if the machine is _in buzz.off_ it cannot reach _buzz.on_.  This means that we can refine the fizz (and buzz) regions so that they don't invoke their print actions until the other state reaches the 'off' state.
 
 **A closeup of the fizz region.  When fizz.on, it waits for buzz to reach off before invoking the print action.**{:.caption}![An on state, initial substate called maybe, with an automatic transition to the really_on state, guarded with 'in buzz.off'](fizzbuzz-actions-internal-events-parallel-fizz-maybe-closeup.svg)
-
 
 {:.note}
 Instead of fizz.on checking if buzz.was reached, it might be smarter (perhaps more maintainable) to check if _fizzbuzz.on_ is reached.  After all, fizzbuzz.on is already a function of being in both fizz.on and buzz.on, and re-using that knowledge might be more _correct_ than repeating that knowledge in these new guarded transitions.
