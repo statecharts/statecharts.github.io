@@ -223,127 +223,17 @@ When all of this is added to the statechart, this is the final result:
 
 **The full statechart with all edge cases handled.**{:.caption}![A statechart with four regions, describing the behaviour for enabling four separate actions.](fizzbuzz-actions-internal-events.svg)
 
+<p data-height="455" data-theme-id="light" data-slug-hash="ZjyMBJ" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and internal events 5: FizzBuzz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/ZjyMBJ/">FizzBuzz with actions and internal events 5: FizzBuzz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
+### Checkpoint
 
-{:.note}
-> It's hard to get the 'in' syntax right for disjoint IDs.  Maybe a bug?
+TKTK
 
-``` javascript
-{
-  initial: 'digit_fizz',
-  states: {
-    digit_fizz: {
-      parallel: true,
-      on: {
-        increment: 'digit_fizz'
-      },
-      states: {
-        digit: {
-          initial: 'off',
-          states: {
-            off: {
-              on: {
-                '': [{
-                  target: 'maybe',
-                  in: 'fizz.off'
-                }]
-              }
-            },
-            maybe: {
-              on: {
-                '': [{
-                  target: 'on',
-                  in: '#buzzoff'
-                }]
-              }
-            },
-            on: {
-              onEntry : 'print_digit'
-            }
-          }
-        },
-        fizz: {
-          initial: 'pending',
-          states: {
-            pending: {
-              on: {
-                '': [{
-                  target: 'on',
-                  cond: i => i % 3 == 0
-                },{
-                  target: 'off'
-                }]
-              }
-            },
-            off: {},
-            on: {
-              initial: 'maybe',
-              states: {
-                maybe: {
-                  on: {
-                    '': [{
-                      target: 'really_on',
-                      in: '(machine).digit_fizz.buzz.off'
-                    }]
-                  }
-                },
-                really_on: {
-                  onEntry : 'print_fizz'
-                }
-              }
-            }
-          }
-        },
-        buzz: {
-          initial: 'pending',
-          states: {
-            pending: {
-              on: {
-                '': [{
-                  target: 'on',
-                  cond: i => i % 5 == 0
-                },{
-                  target: 'off'
-                }]
-              }
-            },
-            off: {
-              id: 'buzzoff',
-            },
-            on: {
-              onEntry : 'print_buzz'
-            }
-          }
-        },
-        fizzbuzz: {
-          initial: 'off',
-          states: {
-            off: {
-              on: {
-                '': [{
-                  target: 'maybe',
-                  in: 'fizz.on'
-                }]
-              }
-            },
-            maybe: {
-              on: {
-                '': [{
-                  target: 'on',
-                  in: 'buzz.on'
-                }]
-              }
-            },
-            on: {
-              onEntry : 'print_fizzbuzz'
-            }
-          }
-        }
-      }
-    }
-  }  
-}
-```
+## Conclusion
 
+TKTK :)  
 
+* guards are only present once
+* easier to add more regions to support other types
+* zoomable
 
