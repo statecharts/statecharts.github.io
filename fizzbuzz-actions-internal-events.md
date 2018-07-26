@@ -227,13 +227,12 @@ When all of this is added to the statechart, this is the final result:
 
 ### Checkpoint
 
-TKTK
+We've seen how we can introduce more regions to an existing parallel state in order to extend the domain being modeled.  Again, we've seen how we can use `in` guards to coordinate state transitions in different regions of a parallel state.  We've seen how to refine a state (e.g. fizz.on) so that its action (print_fizz) only happens when another region has reached some other conclusion.
 
 ## Conclusion
 
-TKTK :)  
+Parallel states can be used to model independent parts of a system.  Even though they are independent by default, it is possible to add explicit dependencies between the regions in the form of 'in' guards.  Such guards allow different parts of the statechart to piggyback one another's guards.  For example, the _fizzbuzz_ region depends on the _fizz_ region's guards, allowing it to avoid repeating the guard logic.  Repeating guard logic could be argued as increasing the maintenance burden, and using explicit dependencies like this could make it easier to modify the behaviour.
 
-* guards are only present once
-* easier to add more regions to support other types
-* zoomable
+By "zooming out" to see only the regions and perhaps the top level states gives a high level understanding of the statechart, without having to understand the statechart in full detail.  Likewise, the ability to "zoom in" on one region, makes it easy to understand that part of the statechart without having to understand all other regions.
 
+Adding more regions to support different behaviour is possible, but orthogonal regions are best suited for concerns which are less coupled than fizz and buzz.  The number of 'in' guards between them is a clear signal that splitting the fizzbuzz problem up into four separate problems is not an ideal solution.  Parallel states are a powerful mechanism that can open up a lot of possibilities, especially when the different concerns are relatively independent of one another.
