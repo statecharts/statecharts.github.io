@@ -103,5 +103,5 @@ For i = 1; i < 100; i++ {
 Every time something happens in our loop (i++) we send the 'increment' event to the state machine, and do whatever the state machine tells us to do.  Now that the problem has been framed in an event driven manner, we can start to discuss how to design a statechart that has these properties.
 
 * [FizzBuzz with Actions and Guards](fizzbuzz-actions-guards.html) — replicates the naïve if-test from example 1, with essentially the same problems.
-* [FizzBuzz with Actions and Raised Events](fizzbuzz-actions-raised-events.html) (coming soon)
-* [FizzBuzz with Activities and Internal Events](fizzbuzz-activities-internal-events.html) (coming soon)
+* [FizzBuzz with Actions and Internal Events](fizzbuzz-actions-internal-events.html) — divides the problem into digit, fizz, buzz and fizzbuzz, solving each as a region of a parallel state, and using internal events (automatic 'in' guarded transitions) to coordinate between regions.
+* [FizzBuzz with Activities and something](#) (coming soon)
