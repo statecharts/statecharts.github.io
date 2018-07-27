@@ -8,11 +8,14 @@ aka:
   - title: Composite state
     url: compound-state.html
     oneliner: In UML, the term composite state is used for Compound State.
+  - title: Or state
+    url: parallel-state.md
+    oneliner: A state where only one substate is active at a time, i.e. a OR b OR c, known as a compound state
 ---
 
 # Compound State
 
-_Also known as **Composite state**_
+_Also known as **Composite state** and **Or state**_
 
 A compound state is a [state](state.html){:.glossary} that includes one or more substates.  It is the main differentiating factor between traditional state machines and statecharts.
 
