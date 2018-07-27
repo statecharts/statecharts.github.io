@@ -10,11 +10,14 @@ aka:
   - title: Orthogonal state
     url: parallel-state.md
     oneliner: Another name for parallel state
+  - title: And state
+    url: parallel-state.md
+    oneliner: A state whose substates are all active, i.e. a AND b AND c, known as a parallel state
 ---
 
 # Parallel state
 
-_Also known as **Orthogonal state**_
+_Also known as **Orthogonal state** and **And state**_ 
 
 A parallel state is a [state](state.html){:.glossary} that is divided into separate regions.  Each region contains more substates.  When a parallel state is entered, _each_ of the regions are also entered; their [initial states](initial-state.html){:.glossary} are entered and so on.
 
