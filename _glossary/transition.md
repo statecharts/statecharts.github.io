@@ -7,7 +7,7 @@ oneliner: The instantaneous transfer from one state to another.
 
 In an executing state machine, a transition is the instantaneous transfer from one [state](state.html){:.glossary} to another.  When defining a state machine, a transition defines what happens when certain conditions arise, most often triggered by an [event](event.html){:.glossary}.
 
-When an event happens, the currently active state(s) are inspected to see if any of the outbound transitions should be triggered by the event.  When a transition is found, it is _executed_ by [exiting](exit.html){:.glossary} the state in question, and [entering](entry.html){:.glossary} the state that the transition points to.
+When an event happens, the currently active state(s) are inspected to see if any of the outbound transitions should be triggered by the event.  When a transition is found, it is _executed_ by [exiting](exit.html){:.glossary} the state in question, and [entering](enter.html){:.glossary} the state that the transition points to.
 
 A [self transition](self-transition.html){:.glossary} is a transition that goes from and to the same state.
 
