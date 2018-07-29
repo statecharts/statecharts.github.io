@@ -23,7 +23,7 @@ If there are more than one substates, one of them is usually designated as the [
 
 When a compound state is active, its substates behave as though they were an active state machine:  Exactly one child state must also be active.
 
-* When a compound state is [entered](entry.html){:.glossary}, it must also enter one of its substates, usually its initial state.
+* When a compound state is [entered](enter.html){:.glossary}, it must also enter one of its substates, usually its initial state.
 * When an [event](event.html){:.glossary} happens, the _substates_ of the compound state get to act on the state before the compound state itself gets to act on it.  If a substate handles an event, the event is not passed to the parent compound state.
 * When a substate [transitions](transition.html){:.glossary}  to another substate, both "inside" the compound state, the compound state does _not_ exit or enter; it remains active.
 * When a compound state [exits](exit.html){:.glossary}, its substate is simultaneously exited too.
