@@ -14,7 +14,7 @@ Let’s start with a machine that prints out only the digits.
 
 **This simple statechart re-enters the _digit_ state every _increment_ event.**{:.caption}![Statechart with one state, digit with a self transition on the increment event](fizzbuzz-actions-guards-digit.svg)
 
-This machine remains in the _digit_ state, constantly re-[entering](glossary/entry.html){:.glossary} itself when it's passed the `increment` event.  A transition that goes from one state and back to itself is called a [self transition](glossary/self-transition.html){:.glossary}.  When it re-enters itself, it invokes the digit state's entry [action](glossary/action.html){:.glossary}.  Those actions are how we're going to ask the statechart what needs to be done.
+This machine remains in the _digit_ state, constantly re-[entering](glossary/enter.html){:.glossary} itself when it's passed the `increment` event.  A transition that goes from one state and back to itself is called a [self transition](glossary/self-transition.html){:.glossary}.  When it re-enters itself, it invokes the digit state's entry [action](glossary/action.html){:.glossary}.  Those actions are how we're going to ask the statechart what needs to be done.
 
 Here is the xstate equivalent:
 
