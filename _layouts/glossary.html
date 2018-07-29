@@ -105,6 +105,20 @@
         <div id="main_content" role="main">
           {{ content }}
         </div>
+        <!--
+        <div role="navigation">
+          {% for item in site.glossary %}
+            {% if page.url == '/glossary/' | append: item.breadcrumbs[0].id | append: '.html' %}
+              <span>
+                <a title="{{ item.oneliner }}"
+                 href="https://statecharts.github.io/glossary/{{ item.id }}.html">
+                <span>{{ item.name }}</span>
+                </a>
+              </span>
+            {% endif %}
+          {% endfor %} 
+        </div>
+        -->
       </section>
     </div>
 
