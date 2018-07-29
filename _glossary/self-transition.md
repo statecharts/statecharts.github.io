@@ -8,7 +8,7 @@ breadcrumbs:
 
 # Self transition
 
-A self transition is a [transition](transition.html){:.glossary} that starts and ends in the same state.  When a self state is executed, the state in question is [exited](exit.html){:.glossary} and [entered](entry.html){:.glossary} again.
+A self transition is a [transition](transition.html){:.glossary} that starts and ends in the same state.  When a self state is executed, the state in question is [exited](exit.html){:.glossary} and [entered](enter.html){:.glossary} again.
 
 ## Notation
 
