@@ -10,7 +10,7 @@ breadcrumbs:
 
 A delayed transition is an [transition](transition.html){:.glossary} that happens after a period of time, specifically being in a specific state for a certain amount of time.
 
-Whenever such a delayed transition exists in a state, the state machine will execute the transition if and only if the machine has stayed continously in the state for a given period of time.  If the state has a [self transition](self-transition.html){:.glossary} which is executed, this causes the state to be [exited](exit.html){:.glossary} and then [entered](entry.html){:.glossary} again, interrupting any continuity.
+Whenever such a delayed transition exists in a state, the state machine will execute the transition if and only if the machine has stayed continously in the state for a given period of time.  If the state has a [self transition](self-transition.html){:.glossary} which is executed, this causes the state to be [exited](exit.html){:.glossary} and then [entered](enter.html){:.glossary} again, interrupting any continuity.
 
 ## Notation
 
