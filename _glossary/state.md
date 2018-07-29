@@ -11,7 +11,7 @@ The behaviour of a state is defined as how the state reacts to [events](event.ht
 
 A state usually has a name, but some systems allow for anonymous states.
 
-When a state machine is _executed_, it [enters](entry.html){:.glossary} the [initial state](initial-state.html){:.glossary}, and adopts the behaviour associated with that state.  As the machine handles events, it transitions to other states, thus changing the behaviour of the machine over time.
+When a state machine is _executed_, it [enters](enter.html){:.glossary} the [initial state](initial-state.html){:.glossary}, and adopts the behaviour associated with that state.  As the machine handles events, it transitions to other states, thus changing the behaviour of the machine over time.
 
 
 ## States in statcharts
