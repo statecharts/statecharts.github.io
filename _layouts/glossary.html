@@ -105,10 +105,14 @@
         <div id="main_content" role="main">
           {{ content }}
         </div>
-        <!--
         {% assign childitems = "" | split:"" %}
         {% for item in site.glossary %}
           {% assign i = '/glossary/' | append: item.breadcrumbs[0].id %}
+          {% assign i = i | append: '.html' %}
+          {% if page.url == i %}
+            {% assign childitems = childitems | push: item %}
+          {% endif %}
+          {% assign i = '/glossary/' | append: item.breadcrumbs[1].id %}
           {% assign i = i | append: '.html' %}
           {% if page.url == i %}
             {% assign childitems = childitems | push: item %}
@@ -119,14 +123,12 @@
           <ul role="navigation">
             {% for item in childitems %}
               <li>
-                <a title="{{  }}"
-                 href="https://statecharts.github.io{{ item.url }}">
+                <a href="https://statecharts.github.io{{ item.url }}">
                   <span>{{ item.title }}</span></a> — <span>{{ item.oneliner }}</span>
               </li>
             {% endfor %} 
           </ul>
         {% endif %}
-        -->
       </section>
     </div>
 
