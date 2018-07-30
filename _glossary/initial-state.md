@@ -1,6 +1,8 @@
 ---
 title: Initial state
 oneliner: The state which is entered when a state machine starts
+primaryImage: initial-state.svg
+keywords: initial, starting state, start state
 breadcrumbs:
   - id: state
     name: State
