@@ -81,6 +81,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
+[ember-statecharts](https://github.com/LevelbossMike/ember-statecharts), by Michael Klein, Statecharts for Ember.js applications
+
 [harel](https://github.com/jayrbolton/harel), by Jay R Bolton, Harel Statecharts in javascript for declarative UI
 
 [LXSC](https://github.com/Phrogz/LXSC), by Gavin Kistner, Lua XML StateChart interpreter - parses and executes SCXML state machines with a Lua data model.
