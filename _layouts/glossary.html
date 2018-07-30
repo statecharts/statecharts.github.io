@@ -106,21 +106,26 @@
           {{ content }}
         </div>
         <!--
-        <div role="navigation">
-          {% for item in site.glossary %}
-            {% assign i = '/glossary/' | append: item.breadcrumbs[0].id %}
-            {% assign i = i | append: '.html' %}
-            :{{ i }}=={{ page.url }}:
-            {% if page.url == i %}
+        {% assign childitems = "" | split:"" %}
+        {% for item in site.glossary %}
+          {% assign i = '/glossary/' | append: item.breadcrumbs[0].id %}
+          {% assign i = i | append: '.html' %}
+          {% if page.url == i %}
+            {% assign childitems = childitems | push: item %}
+          {% endif %}
+        {% endfor %} 
+        {% if childitems | size > 0 %}
+          <div role="navigation">
+            {% for item in childitems %}
               <span>
                 <a title="{{ item.oneliner }}"
                  href="https://statecharts.github.io/glossary/{{ item.id }}.html">
                 <span>{{ item.name }}</span>
                 </a>
               </span>
-            {% endif %}
-          {% endfor %} 
-        </div>
+            {% endfor %} 
+          </div>
+        {% endif %}
         -->
       </section>
     </div>
