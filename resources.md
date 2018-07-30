@@ -63,7 +63,11 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 ## Software
 
-[SCA](https://github.com/JPLOpenSource/SCA) the Statechart Autocoder used by Curiosity, by JPL.  Generates C code from Magicdraw drawings of statecharts
+[MiceOnABeam](http://www.miceonabeam.com/), a modeling tool for the Second Life® and OpenSim based virtual worlds.  Uses a subset of statecharts
+
+[SCA](https://github.com/JPLOpenSource/SCA) the Statechart Autocoder used by Curiosity, by JPL.  Generates C code from Magicdraw drawings of statecharts.
+
+[sketch.systems](https://sketch.systems/), a web-app to draw statecharts and bind them to user interface elements.  "Helps software designers think about complex product behavior. Sketch out states, add prototypes, and clarify questions quickly."
 
 [ThingML](http://thingml.org/pmwiki.php?n=Main.StateMachines), includes a DSL for statecharts, compilers to various languages.
 
