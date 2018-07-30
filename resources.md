@@ -28,6 +28,8 @@
 
 [A Crash Course in UML Statecharts](https://www.embedded.com/design/prototyping-and-development/4008247/A-crash-course-in-UML-state-machines-Part-1) ([PDF](https://classes.soe.ucsc.edu/cmpe013/Spring11/LectureNotes/A_Crash_Course_in_UML_State_Machines.pdf)), Miro Samek, 2009
 
+[State charts can provide you with software quality insurance](https://www.embedded.com/design/prototyping-and-development/4008341/State-charts-can-provide-you-with-software-quality-insurance) by Peter Mueller, embedded.com, 2009
+
 [UML Statecharts at $10.99](http://www.drdobbs.com/architecture-and-design/uml-statecharts-at-1099/188101799), Miro Samek, Dr. Dobb's magazine, 2006
 
 [Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek, Dr. Dobb's magazine, 2003
