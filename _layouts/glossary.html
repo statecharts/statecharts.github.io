@@ -64,6 +64,11 @@
   "description": "{{ page.oneliner }}",
   "isAccessibleForFree": true,
   "keywords": "statechart, statecharts, glossary, {{ page.keywords }}",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Statechart Glossary",
+    "url": "https://statecharts.github.io/glossary/"
+  },
   "mainContentOfPage": {
     "@type": "WebPageElement",
     "cssSelector": "#main_content"
@@ -72,6 +77,12 @@
     "@type": "SpeakableSpecification",
     "cssSelector": "#main_content"
   }
+  {% if page.primaryImage %}
+  ,"primaryImageOfPage": {
+    "@type": "ImageObject",
+    "contentUrl": "https://statecharts.github.io/glossary/{{ page.primaryImage }}"
+  }
+  {% endif %}
   {% if page.aka %}
   , "alternateName": [
     {% for aka in page.aka %}
