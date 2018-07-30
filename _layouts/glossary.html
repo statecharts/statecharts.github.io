@@ -74,7 +74,7 @@
   , "alternateName": [
     {% for aka in page.aka %}
       "{{ aka.title }}"
-      {% if not forloop.last %},{% endif %}
+      {% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
   {% endif %}
