@@ -70,6 +70,14 @@
     "@type": "SpeakableSpecification",
     "cssSelector": "#main_content"
   }
+  {% if page.aka %}
+  , "alternateName": [
+    {% for aka in page.aka %}
+      "{{ aka.title }}"
+      {% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ]
+  {% endif %}
 }
   </script>
 
