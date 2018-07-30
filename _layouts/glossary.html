@@ -108,8 +108,10 @@
         <!--
         <div role="navigation">
           {% for item in site.glossary %}
-            :{{ (('/glossary/' | append: item.breadcrumbs[0].id) | append: '.html') }}=={{ page.url }}:
-            {% if page.url == (('/glossary/' | append: item.breadcrumbs[0].id) | append: '.html') %}
+            {% assign i = '/glossary/' | append: item.breadcrumbs[0].id %}
+            {% assign i = i | append: '.html' %}
+            :{{ i }}=={{ page.url }}:
+            {% if page.url == i %}
               <span>
                 <a title="{{ item.oneliner }}"
                  href="https://statecharts.github.io/glossary/{{ item.id }}.html">
