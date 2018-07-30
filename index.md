@@ -10,7 +10,7 @@ A statechart can be explained in many ways, and we'll get to those explanations,
 
 ![A simple statechart](on-off.svg)
 
-However, this drawing might not be so useful for software engineers who want to reap the benefits outlined elsewhere on this site, so let's dive into some other ways of describing what a statechart is.  The original paper that defines statecharts bills them as "A visual formalism for complex systems" (Harel, 1987).  With that out of the way, let's try to explain statecharts.
+However, this drawing isn't very useful for software engineers who want to reap the benefits outlined elsewhere on this site, so let's dive into some other ways of describing what a statechart is.  The original paper that defines statecharts bills them as "A visual formalism for complex systems" (Harel, 1987).  With that out of the way, let's try to explain statecharts.
 
 ### Introduction to statecharts
 
@@ -96,6 +96,8 @@ Quite a few people have written books or held presentations that deal with state
 There are some pages that haven't found any place in the web of documents, so they're honourably mentioned here:
 
 * [Use case: Statecharts in User Interfaces](use-case-statecharts-in-user-interfaces.html)
-* [Concepts](concepts.html) — The most important concepts in a statechart and what they look like in a diagram
+* [Concepts](concepts.html) — The most important concepts in a statechart and what they look like in a diagram.
+* [Glossary](glossary/) — A list of terms that get thrown around when talking about statecharts, with their definitions.
+* [FizzBuzz](fizzbuzz.html) — FizzBuzz is a well known problem, and it's been used as a backdrop to explain various statechart concepts.
 
 [Acknowledgements](acknowledgements.html)
