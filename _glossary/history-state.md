@@ -6,11 +6,13 @@ oneliner: A pseudo-state that remembers the most recent sibling states that were
 breadcrumbs:
   - id: state
     name: State
+  - id: pseudostate
+    name: Pseudostate
 ---
 
 # History state
 
-A history state is a special type of state in a statechart.  when a transition that leads to a history state happens, the history state itself doesn't become active, rather the "most recently visited state" becomes active.  It is a way for a [compound state](compound-state.html){:.glossary} to remember (when it exits) which state was active, so that if the compound state ever becomes active again, it can go back to the same active substate, instead of blindly following the initial transition.
+A history state is a pseudostate, meaning that a state machine can't rest in a history state.  When a transition that leads to a history state happens, the history state itself doesn't become active, rather the "most recently visited state" becomes active.  It is a way for a [compound state](compound-state.html){:.glossary} to remember (when it exits) which state was active, so that if the compound state ever becomes active again, it can go back to the same active substate, instead of blindly following the initial transition.
 
 There are two types of history states, _deep_ history states and _shallow_ history states.  A _deep_ history remembers the deepest active state(s) while a _shallow_ history only remembers the immediate child's state.
 
