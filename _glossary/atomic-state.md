@@ -1,6 +1,7 @@
 ---
 title: Atomic state
 oneliner: a state that has no substates
+keywords: atomic, simple, empty state
 breadcrumbs:
   - id: state
     name: State
