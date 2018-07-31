@@ -202,7 +202,7 @@ The xstate equivalent of `in fizz.off and buzz.off` is one that uses a `cond:` e
 }
 ```
 
-This new state machine correcly handles the 'fizz' and 'buzz' cases.
+This new state machine correctly handles the 'fizz' and 'buzz' cases.
 
 <p data-height="455" data-theme-id="light" data-slug-hash="zLzLNB" data-default-tab="js" data-user="mogsie" data-embed-version="2" data-pen-title="FizzBuzz with actions and internal events 4: Fizz and buzz" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/zLzLNB/">FizzBuzz with actions and internal events 4: Fizz and buzz</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
@@ -223,7 +223,7 @@ One way to do this is to refine the fizz.on and buzz.on states.  We can use the 
 **A closeup of the fizz region.  When fizz.on, it waits for buzz to reach off before invoking the print action.**{:.caption}![An on state, initial substate called maybe, with an automatic transition to the really_on state, guarded with 'in buzz.off'](fizzbuzz-actions-internal-events-parallel-fizz-maybe-closeup.svg)
 
 {:.note}
-Instead of fizz.on checking if buzz.was reached, it might be smarter (perhaps more maintainable) to check if _fizzbuzz.on_ is reached.  After all, fizzbuzz.on is already a function of being in both fizz.on and buzz.on, and re-using that knowledge might be more _correct_ than repeating that knowledge in these new guarded transitions.
+Instead of fizz.on checking if buzz.off was reached, it might be smarter (perhaps more maintainable) to check if _fizzbuzz.on_ is reached.  After all, fizzbuzz.on is already a function of being in both fizz.on and buzz.on, and re-using that knowledge might be more _correct_ than repeating that knowledge in these new guarded transitions.
 
 When all of this is added to the statechart, this is the final result:
 
