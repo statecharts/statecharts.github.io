@@ -146,7 +146,7 @@ var stateMachine = new xstate.Machine({
 
 One thing to note is that in state machines, and statecharts, events are given explicit names.  For our simple example I called the event `change`.
 
-Now, this `stateMachine` variable provides a _pure functional_ interface to the state machine.  This means that this state machine cannot and wiil not have side effects.  Every time you use it, you tell it what the "current" state is, the event (what "happens"), and _it_ tells you what happened.
+Now, this `stateMachine` variable provides a _pure functional_ interface to the state machine.  This means that this state machine cannot and will not have side effects.  Every time you use it, you tell it what the "current" state is, the event (what "happens"), and _it_ tells you what happened.
 
 We start off our state machine by asking the state machine what the "initial" state is:
 
