@@ -357,7 +357,7 @@ We now have a lot of the building blocks in order to make efficient use of state
 * Tells us what activities to start and stop
 * Tells us "what state" it's in
 
-But harnessing these building blocks is for another page, but to start you off with som exercises, you can try a few things:
+But harnessing these building blocks is for another page, but to start you off with some exercises, you can try a few things:
 
 * Introduce a new state ("red") and when you get results back from the "server", transition to it instead.  Add some CSS for it too.
 * Add a guard condition that checks the data coming back from the server, and go to the red or not_green states accordingly
