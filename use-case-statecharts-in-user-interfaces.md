@@ -146,7 +146,7 @@ var stateMachine = new xstate.Machine({
 
 One thing to note is that in state machines, and statecharts, events are given explicit names.  For our simple example I called the event `change`.
 
-Now, this `stateMachine` variable provides a _pure functional_ interface to the state machine.  This means that this state machine cannot and wiil not have side effects.  Every time you use it, you tell it what the "current" state is, the event (what "happens"), and _it_ tells you what happened.
+Now, this `stateMachine` variable provides a _pure functional_ interface to the state machine.  This means that this state machine cannot and will not have side effects.  Every time you use it, you tell it what the "current" state is, the event (what "happens"), and _it_ tells you what happened.
 
 We start off our state machine by asking the state machine what the "initial" state is:
 
@@ -357,7 +357,7 @@ We now have a lot of the building blocks in order to make efficient use of state
 * Tells us what activities to start and stop
 * Tells us "what state" it's in
 
-But harnessing these building blocks is for another page, but to start you off with som exercises, you can try a few things:
+But harnessing these building blocks is for another page, but to start you off with some exercises, you can try a few things:
 
 * Introduce a new state ("red") and when you get results back from the "server", transition to it instead.  Add some CSS for it too.
 * Add a guard condition that checks the data coming back from the server, and go to the red or not_green states accordingly
