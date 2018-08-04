@@ -20,6 +20,8 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 [How to visually design state in JavaScript](https://medium.freecodecamp.org/how-to-visually-design-state-in-javascript-3a6a1aadab2b), Shawn McKay, 2018
 
+[https://css-tricks.com/finite-state-machines-with-react/](Finite State Machines with React), By Jon Bellah, 2018
+
 [An introduction to visual automata-based programming in Rosmaro](https://medium.freecodecamp.org/an-introduction-to-visual-automata-based-programming-in-rosmaro-100dae8eb969), Łukasz Makuch, 2018
 
 [Statecharts: Updating UI state](https://medium.com/@lmatteis/statecharts-updating-ui-state-767052b6b129), Luca Matteis, 2018
@@ -92,6 +94,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 [ember-statecharts](https://github.com/LevelbossMike/ember-statecharts), by Michael Klein, Statecharts for Ember.js applications
 
 [harel](https://github.com/jayrbolton/harel), by Jay R Bolton, Harel Statecharts in javascript for declarative UI
+
+[Ki](https://github.com/FrozenCanuck/Ki), by Michael Cohen, A Statechart Framework for SproutCore.
 
 [LXSC](https://github.com/Phrogz/LXSC), by Gavin Kistner, Lua XML StateChart interpreter - parses and executes SCXML state machines with a Lua data model.
 
