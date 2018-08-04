@@ -20,7 +20,7 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 [How to visually design state in JavaScript](https://medium.freecodecamp.org/how-to-visually-design-state-in-javascript-3a6a1aadab2b), Shawn McKay, 2018
 
-[https://css-tricks.com/finite-state-machines-with-react/](Finite State Machines with React), By Jon Bellah, 2018
+[Finite State Machines with React](https://css-tricks.com/finite-state-machines-with-react/), By Jon Bellah, 2018
 
 [An introduction to visual automata-based programming in Rosmaro](https://medium.freecodecamp.org/an-introduction-to-visual-automata-based-programming-in-rosmaro-100dae8eb969), Łukasz Makuch, 2018
 
