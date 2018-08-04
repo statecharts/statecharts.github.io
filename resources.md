@@ -2,6 +2,8 @@
 
 ## Books / Research Papers
 
+The original description of statecharts, _Statecharts: A visual formalism for complex systems_ [PDF](http://www.inf.ed.ac.uk/teaching/courses/seoc/2005_2006/resources/statecharts.pdf), by David Harel
+
 [Constructing the User Interface with Statecharts](https://books.google.no/books/about/Constructing_the_User_Interface_with_Sta.html?id=-9VQAAAAMAAJ&redir_esc=y&hl=en), Ian Horrocks, 1999
 
 [Practical Statecharts in C/C++](https://www.state-machine.com/psicc/) — discusses some of the same things that Ian Horrocks’ book discusses. The book is freely available as a PDF download.
@@ -14,7 +16,13 @@
 
 ## Blog posts / Articles
 
+[Patterns for using React with Statechart-based state machines](https://medium.freecodecamp.org/patterns-for-using-react-with-statechart-based-state-machines-33e6ab754605), Shawn McKay, 2018
+
+[How to visually design state in JavaScript](https://medium.freecodecamp.org/how-to-visually-design-state-in-javascript-3a6a1aadab2b), Shawn McKay, 2018
+
 [An introduction to visual automata-based programming in Rosmaro](https://medium.freecodecamp.org/an-introduction-to-visual-automata-based-programming-in-rosmaro-100dae8eb969), Łukasz Makuch, 2018
+
+[Statecharts: Updating UI state](https://medium.com/@lmatteis/statecharts-updating-ui-state-767052b6b129), Luca Matteis, 2018
 
 [Programming without boolean values: To-Do App](https://codeburst.io/programming-without-boolean-values-to-do-app-2455035c87f5), Łukasz Makuch, 2018
 
