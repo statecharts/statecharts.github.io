@@ -214,7 +214,7 @@ Finally, the component is allowed to see which state is the "current" state.  Th
 statemachine.currentState.value; // "searching"
 ```
 
-## Implemention
+## Implementation
 
 We've now explained all of the parts necessary to get our UI and the component talking together.
 
