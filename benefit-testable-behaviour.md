@@ -6,7 +6,7 @@ When behaviour is properly separated into a statechart, the statechart itself en
 - [guards](glossary/guard.html){:.glossary} (synchronous calls to the outside world on if a condition holds true or false)
 - [actions](glossary/action.html){:.glossary} and/or [activities](glossary/activity.html){:.glossary} (asynchronous calls to tell the outside world to _do_ something)
 
-In some cases "the world" also knows about the "current state" or perhaps [activities](glossary/activitiy.html){:.glossary} instead of actions.
+In some cases "the world" also knows about the "current state" or perhaps [activities](glossary/activity.html){:.glossary} instead of actions.
 
 In addition, statecharts also often have a concept of timing, or [delayed transitions](glossary/delayed-transition.html){:.glossary}, in other words, a state can specify that it should only be in a particular state for a certain amount of time.
 
