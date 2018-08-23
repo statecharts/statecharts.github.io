@@ -36,23 +36,25 @@ Local transitions are only possible to define _from_ a composite state and _to_ 
 
 ## xstate
 
-Xstate does not yet support local transitions.  It can be worked around by creating a single state that wraps all of the child states, and place the local transitions on the substate.
+In xstate, an internal transition is described by prefixing the target state with a dot.
 
 ```
-"ALPHABET": {
-  onentry: ...
-  onexit: ...
+{
+  initial: 'A',
+  onEntry: 'something',
+  onExit: 'something',
+  on: {
+    RESET: '.A'
+  },
   states: {
-    fake_state: {
-      initial: A
-      on: {
-        RESET: A
-      }
-      states: {
-        A: ...
-        B: ...
-        C: ...
-      }
+    A: {
+      on: { SIGNAL: 'B' }
+    },
+    B: {
+      on: { SIGNAL: 'C' }
+    },
+    C: {
+      on: { SIGNAL: 'A' }
     }
   }
 }
