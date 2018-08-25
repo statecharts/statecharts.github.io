@@ -77,6 +77,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [MiceOnABeam](http://www.miceonabeam.com/), a modeling tool for the Second Life® and OpenSim based virtual worlds.  Uses a subset of statecharts
 
+[QT Creator](https://doc.qt.io/qtcreator/) includes an [SCXML editor](https://doc.qt.io/qtcreator/creator-scxml.html), which provides a GUI to edit Statechart XML documents.
+
 [SCA](https://github.com/JPLOpenSource/SCA) the Statechart Autocoder used by Curiosity, by JPL.  Generates C code from Magicdraw drawings of statecharts.
 
 [sketch.systems](https://sketch.systems/), a web-app to draw statecharts and bind them to user interface elements.  "Helps software designers think about complex product behavior. Sketch out states, add prototypes, and clarify questions quickly."
