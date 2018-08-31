@@ -22,7 +22,7 @@ If you're not starting from scratch, it means you have code that reacts to event
 
 To start using a statechart, the tangled mess that might be your component and its different behaviours need to be disentangled: The _what_ / _how_ needs to be separated from the _why_.  You should end up with event handlers that send the event to the statechart, and then does what the statechart says to do, typically by invoking "actionable" items on behalf of the statechart.
 
-Before the introdution of a statechart, you will have code with the following structure:
+Before the introduction of a statechart, you will have code with the following structure:
 
 - Something happens in the world
 - The event handler checks some booleans
