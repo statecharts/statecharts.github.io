@@ -97,8 +97,6 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [harel](https://github.com/jayrbolton/harel), by Jay R Bolton, Harel Statecharts in javascript for declarative UI
 
-[Ki](https://github.com/FrozenCanuck/Ki), by Michael Cohen, A Statechart Framework for SproutCore.
-
 [LXSC](https://github.com/Phrogz/LXSC), by Gavin Kistner, Lua XML StateChart interpreter - parses and executes SCXML state machines with a Lua data model.
 
 [µFSM](https://github.com/jonpe960/ufsm/), by Jonas Persson, UML Statechart library in C and XMI importer.
@@ -128,6 +126,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 [Stately](https://github.com/nodename/stately), by Alan Shaw, Statecharts in Clojure/Script
 
 [stent](https://github.com/krasimir/stent), by Krasimir Tsonev, combining the ideas of Redux with the concept of state machines.
+
+[SproutCore](https://sproutcore.com/) has statecharts built in to the heart of the platform, and is introduced in [part 2](http://guides.sproutcore.com/getting_started_2.html) of their Getting Started guide.
 
 [xstate](https://github.com/davidkpiano/xstate/), by David Khourshid, pure functional statecharts, in TypeScript.
 
