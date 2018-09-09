@@ -60,7 +60,13 @@ In xstate, an internal transition is described by prefixing the target state wit
 }
 ```
 
-When the machine receives the "RESET" signal, the "ALPHABET" state doesn't exit / enter, only the `fake_state` exits / enters with no side effects.
+You can also specify an internal transition more explicitly:
+
+```javascript
+RESET: [{ target: 'A', internal: true }]
+```
+
+Important to note that `internal: false` is the default (follows SCXML).
 
 ## SCXML
 
