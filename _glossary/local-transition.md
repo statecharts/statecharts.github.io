@@ -34,6 +34,7 @@ Local transitions are only possible to define _from_ a composite state and _to_ 
 ![A state S with entry and exit actions, three substates A, B, C and a local transition from the state to a substate](local-transition.svg)
 
 
+
 ## xstate
 
 In xstate, an internal transition is described by prefixing the target state with a dot.
@@ -60,13 +61,20 @@ In xstate, an internal transition is described by prefixing the target state wit
 }
 ```
 
+
 You can also specify an internal transition more explicitly:
 
 ```javascript
-RESET: [{ target: 'A', internal: true }]
+on {
+  RESET: [
+    { target: 'A', internal: true }
+  ]
+}
 ```
 
-Important to note that `internal: false` is the default (follows SCXML).
+Important to note that `internal: false` is the default, taking the lead from SCXML.
+
+
 
 ## SCXML
 
