@@ -74,7 +74,7 @@ Now let’s change the behaviour so that it prints out Fizz when the counter is 
 
 We will introduce a new state, `fizz` with the `print_fizz` action.  When the `increment` event happens, we will alternate between the two states, and use the onEntry actions on each state to cause the desired side effect.
 
-The statechart diagram we're aiming form looks something like this:
+The statechart diagram we're aiming for looks something like this:
 
 **Updated diagram with new _fizz_ state.**{:.caption}![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
 
