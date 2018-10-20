@@ -294,6 +294,6 @@ Another problem with relying on guarded transitions is that the guard conditions
 
 ## Conclusion
 
-We have shown the use of guards and how a single event can cause many possible transitions to be checked, and that the first guard that passes will be taken.  We have shown how actions can be placed inside states, and how entering those states triggers those actions.  We showed how to perform a simple refactoring of a statechart, namel extracting common behaviour to a compound state.  On a higher level, we've shown how actions can (should?) be used to avoid the trap of depending on the structure of the states themselves, allowing us to perform the refactoring without changing anything except the statechart.
+We have shown the use of guards and how a single event can cause many possible transitions to be checked, and that the first guard that passes will be taken.  We have shown how actions can be placed inside states, and how entering those states triggers those actions.  We showed how to perform a simple refactoring of a statechart, namely extracting common behaviour to a compound state.  On a higher level, we've shown how actions can (should?) be used to avoid the trap of depending on the structure of the states themselves, allowing us to perform the refactoring without changing anything except the statechart.
 
 Take a look at [the introduction](fizzbuzz.html) to see different ways of solving the FizzBuzz problem.
