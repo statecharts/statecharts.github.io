@@ -62,7 +62,7 @@ In the On state, when the button is "flicked" repeatedly, the flick events in th
 
 ### Light on for (at least) 1/2 second
 
-When in the D state, the _flick_ event should be ignored for 0.5 seconds.  This requires a few new state:
+When in the D state, the _flick_ event should be ignored for 0.5 seconds.  This requires a few new states:
 
 - One for when the Off state should be *ignoring* the event (let's call this E)
 - One for when the Off state should be *handling* the event (let's call this F)
