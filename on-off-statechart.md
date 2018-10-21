@@ -93,7 +93,7 @@ The problem being solved is a bit contrived, and albeit the problem domain is re
 - When a flick of the switch would cause the light to turn on, it doesn't actually cause the light to turn on until after 0.5 seconds.  If the switch is flicked again, the light won't actually be turned on.
 - When a flick of the swith turns the light on after 0.5 seconds, any additional flicks of the switch are simply ignored for a further 0.5 seconds
 
-Additionally no weird bugs such as rogue timers cause events to fire out-of-order.  In a normal, imperative implementation of this, it is common to forget to cancel any timers that have been started, causing the effects of the timer to be executed even though they were not supposed to.  This whole class of bugs no longer exist.
+Additionally, no weird bugs such as rogue timers cause events to fire out-of-order.  In a normal, imperative implementation of this, it is common to forget to cancel any timers that have been started, causing the effects of the timer to be executed even though they were not supposed to.  This whole class of bugs no longer exist.
 
 You will never need an on/off switch that functions exactly like this, but if you consider the field of micro-interactions, things can easily get pretty complex.  Consider showing a pop-up notification that the user can dismiss by clicking or tapping on it, what if the user was about to tap on something exactly where the pop-up appeared, and instead taps the notification, thus dismissing it without having read the notification.  The notification should _ignore_ taps for a short while, perhaps half a second, which is exactly the problem we've solved in statecharts.
 
