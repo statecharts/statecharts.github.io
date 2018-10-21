@@ -74,7 +74,7 @@ Now let’s change the behaviour so that it prints out Fizz when the counter is 
 
 We will introduce a new state, `fizz` with the `print_fizz` action.  When the `increment` event happens, we will alternate between the two states, and use the onEntry actions on each state to cause the desired side effect.
 
-The statechart diagram we're aiming form looks something like this:
+The statechart diagram we're aiming for looks something like this:
 
 **Updated diagram with new _fizz_ state.**{:.caption}![Statechart with two states, digit and fizz with increment events passing between them](fizzbuzz-actions-guards-fizz.svg)
 
@@ -294,6 +294,6 @@ Another problem with relying on guarded transitions is that the guard conditions
 
 ## Conclusion
 
-We have shown the use of guards and how a single event can cause many possible transitions to be checked, and that the first guard that passes will be taken.  We have shown how actions can be placed inside states, and how entering those states triggers those actions.  We showed how to perform a simple refactoring of a statechart, namel extracting common behaviour to a compound state.  On a higher level, we've shown how actions can (should?) be used to avoid the trap of depending on the structure of the states themselves, allowing us to perform the refactoring without changing anything except the statechart.
+We have shown the use of guards and how a single event can cause many possible transitions to be checked, and that the first guard that passes will be taken.  We have shown how actions can be placed inside states, and how entering those states triggers those actions.  We showed how to perform a simple refactoring of a statechart, namely extracting common behaviour to a compound state.  On a higher level, we've shown how actions can (should?) be used to avoid the trap of depending on the structure of the states themselves, allowing us to perform the refactoring without changing anything except the statechart.
 
 Take a look at [the introduction](fizzbuzz.html) to see different ways of solving the FizzBuzz problem.
