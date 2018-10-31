@@ -23,6 +23,17 @@ A delayed event uses the phrase "after <timespec>" as the name of the event
 
 Delayed transitions are not part of Statechart XML.  Instead, you have to specify to send a [delayed event](delayed-event.html){:.glossary}, and a normal transition that handles that event.  The delayed event must be given a name, and also a unique identifier (in order to cancel the delayed event).
 
-## xstate
+## XState
 
-It's possible to implement delayed transitions using the same mechanisms as in SCXML, however, there is a proposal to add them to the format to avoid the verbosity and housekeeping chores associated with delayed events.
+In XState (as of version 4.0), a delayed transition is defined on the `after: ...` property of the state node.
+
+```js
+green: {
+  after: {
+    // transition to "yellow" after 1 second
+    1000: "yellow"
+  }
+}
+```
+
+See [xstate.js.org/docs/guides/delays](https://xstate.js.org/docs/guides/delays/) for more information.

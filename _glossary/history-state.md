@@ -46,17 +46,18 @@ Here we have a compound state A with substates B, C and D.
 * If a transition targets "A_AGAIN", then the last visited state is entered instead.
 * If a transition targets "A_AGAIN" before state A has had the chance to remember anything, then A_AGAIN's transition to C is taken.
 
-## xstate
+## XState
 
-In xstate, a history state is declared using the `history` attribute.  It can be set to `true` or `"shallow"` for shallow history, and `"deep"` for deep history.  A history state may declare a `target` for the initial history.
+In XState, a history state is declared using both `type: "history"` and the `history` attribute (optional).  It can be set to `"shallow"` for shallow history, and `"deep"` for deep history.  A history state may declare a `target` for the initial history.
 
 ``` js
 "A": {
   initial: "B"
   states: {
     A_AGAIN: {
-      history: true,
-      target: 'C'
+      type: "history",
+      history: "deep", // "shallow" by default
+      target: "C"
     },
     B: {},
     C: {},
@@ -66,7 +67,7 @@ In xstate, a history state is declared using the `history` attribute.  It can be
 
 // elsewhere
 on: {
-  something: 'A_AGAIN'
+  something: "A_AGAIN"
 }
 ```
 

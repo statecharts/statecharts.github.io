@@ -44,9 +44,9 @@ A guard is added after the event name, in square brackets, like so:
 
 The notation does not prescribe the formatting of the square brackets; it does not have to be executable code.  For hand drawn statecharts, a simple sentence is enough.
 
-## xstate
+## XState
 
-Xstate 3 supports guard functions in the machine definition:
+XState supports guard functions in the machine definition:
 
 ```
 on: {
@@ -58,7 +58,7 @@ on: {
 }
 ```
 
-The guard function is provided with the "extended state" as its first argument, the event object as the second argument, and the "current state" expressed as a state value as the third argument.
+The guard function is provided with the "context" (or "extended state") as its first argument, the event object as the second argument, and the "current state" expressed as a state value as the third argument.
 
 "In guards" are supported declaratively:
 
@@ -69,6 +69,8 @@ on: {
   }
 }
 ```
+
+See [xstate.js.org/docs/guides/guards](https://xstate.js.org/docs/guides/guards/) for more information.
 
 ## SCXML
 

@@ -21,6 +21,14 @@ Final states are depicted using a solid filled circle, like the [initial state](
 
 In SCXML, the `<final>` element is used to define a final state.  When a final state is reached, the parent state generates a `done.state.<ID>` (where `<ID>` is the state of the parent state).  This allows the statechart to react to those events, effectively mimicing transitions upon the "completion" of states.
 
-## xstate
+## XState
 
-xstate does not support final states.
+In XState, final states are defined with `type: "final"`:
+
+```js
+resolved: {
+  type: 'final';
+}
+```
+
+See [xstate.js.org/docs/guides/final](https://xstate.js.org/docs/guides/final/) for more information.

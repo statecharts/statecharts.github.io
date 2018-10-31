@@ -20,9 +20,9 @@ It is important to note that self transitions (or transitions to own child state
 
 For [compound states](compound-state.html){:.glossary} this means that all substates are exited, and any [initial states](initial-state.html){:.glossary} are entered. 
 
-## xstate
+## XState
 
-In xstate, a self transition is defined as any other transition, listing the name of the state as usual:
+In XState, a self transition is defined as any other transition, listing the name of the state as usual:
 
 ```json
 "important_state": {

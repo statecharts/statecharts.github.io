@@ -30,19 +30,20 @@ Activities in a state are prefixed with `do /` as follows:
 
 SCXML has no depiction on activities.  Instead, use start and stop actions to control long running processes.
 
-## xstate
+## XState
 
-Xstate has native support for activities.  By declaring that an activity should be happening in a particular state, xstate will translate this into actions to start and stop activities, and provide a set of booleans indicating which activities should be running.  To specify activities, use the `activities` property:
+XState has native support for activities.  By declaring that an activity should be happening in a particular state, XState will translate this into actions to start and stop activities, and provide a set of booleans indicating which activities should be running.  To specify activities, use the `activities` property:
 
-``` javascript
+```javascript
 {
   activities: "http_request"
 }
 
 state = machine.transition(...);
-state.activities // { "http_request": true }
+state.activities; // { "http_request": true }
 ```
 
+See [xstate.js.org/docs/guides/activities](https://xstate.js.org/docs/guides/activities/) for more information.
 
 ## SCION-CORE
 

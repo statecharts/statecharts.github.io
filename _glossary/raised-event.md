@@ -25,9 +25,9 @@ In SCXML, an event can be raised using the `<raise>` element, wherever you can p
 </onentry>
 ```
 
-## xstate
+## XState
 
-In xstate, an event can be raised by specifying the reserved action type `xstate.raise`
+In XState, an event can be raised by specifying the reserved action type `xstate.raise`
 
 ```
 onEntry: {

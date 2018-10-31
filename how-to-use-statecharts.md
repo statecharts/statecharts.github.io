@@ -98,7 +98,7 @@ Again, these can be drawn into the statechart's "top level":
 
 At this point we have enough stuff to work on to be able to get an initial implementation running too, just to get the happy path running.  We can then check them off the list of "problems" that typically plague a quick implementation.
 
-I will show the statecharts in both SCXML and xstate flavours.  Both will give us nice diagrams and they're both _executable_ statecharts, meaning I don't have to do any manual translation from this representation to code.
+I will show the statecharts in both SCXML and XState flavours.  Both will give us nice diagrams and they're both _executable_ statecharts, meaning I don't have to do any manual translation from this representation to code.
 
 First off, the top level states:
 
@@ -116,10 +116,12 @@ SCXML:
 </scxml>
 ```
 
-xstate:
+XState:
+
 ```json
-{ "initial": "initial",
-  "states" : {
+{
+  "initial": "initial",
+  "states": {
     "initial": {},
     "searching": {},
     "displaying_results": {},
@@ -131,6 +133,7 @@ xstate:
 Let's add the transitions
 
 SCXML:
+
 ```xml
 <scxml>
   <state id="initial">
@@ -148,10 +151,12 @@ SCXML:
 </scxml>
 ```
 
-xstate:
+XState:
+
 ```json
-{ "initial": "initial",
-  "states" : {
+{
+  "initial": "initial",
+  "states": {
     "initial": {
       "on": {
         "search": "searching"

@@ -33,11 +33,9 @@ Local transitions are only possible to define _from_ a composite state and _to_ 
 
 ![A state S with entry and exit actions, three substates A, B, C and a local transition from the state to a substate](local-transition.svg)
 
+## XState
 
-
-## xstate
-
-In xstate, an internal transition is described by prefixing the target state with a dot.
+In XState, an internal transition is described by prefixing the target state with a dot.
 
 ```
 {
@@ -74,7 +72,7 @@ on {
 
 Important to note that `internal: false` is the default, taking the lead from SCXML.
 
-
+See [xstate.js.org/docs/guides/internal](https://xstate.js.org/docs/guides/internal/) for more information.
 
 ## SCXML
 
