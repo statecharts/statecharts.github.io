@@ -270,7 +270,7 @@ The things that matter in a decoupled statechart are: events, guards and actions
 
 ## Coding up the API
 
-The choice of UI framework should really not be very important, since what we're trying to describe is _what to do_ when certain events happen.  We aim to replace code that that litter the UI code to hide and show components based on the "state" of various variables, and replace them with actions that control the behaviour of the UI component.
+The choice of UI framework should really not be very important, since what we're trying to describe is _what to do_ when certain events happen.  We aim to replace code that litter the UI code to hide and show components based on the "state" of various variables, and replace them with actions that control the behaviour of the UI component.
 
 ### Actions
 
