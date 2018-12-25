@@ -4,7 +4,7 @@ category: benefits
 
 # Easy to understand
 
-Once a developer gets past the initial hurdle of understanding statecharts, understanding a component whose behaviour is encoded in a statechart is a lot easier.
+Once a developer gets past the initial hurdle of understanding statecharts, understanding a component whose behaviour is encoded in a statechart is a lot easier than understanding a component that is not based on statecharts.
 
 ## Traditional code
 
