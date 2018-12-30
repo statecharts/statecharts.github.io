@@ -59,10 +59,9 @@ The child elements of the `<state>` include entry and exit actions, transitions,
 </state>
 ```
 
+## XState
 
-## xstate
-
-In xstate, a state is specified as a named object in the `states` property of a state machine or compound state.  The key becomes the name of the state, and the object defines the state's behaviour.
+In XState, a state node is specified as a named object in the `states` property of a state machine or compound state node.  The key becomes the name of the state node (and is used to construct the state node's ID), and the object defines the state's behaviour.
 
 Here's an empty state called `my_state`:
 
@@ -103,13 +102,13 @@ In SCION Core, a state is described by an object with an `id` property, denoting
 
 ``` javascript
 {
-  id: "my_state"
+  id: 'my_state';
 }
 ```
 
 Here's the same state with an action, transitions, and substates:
 
-``` javascript
+```javascript
 {
   id: "my_state",
   onEntry: function(event) {

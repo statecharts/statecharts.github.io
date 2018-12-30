@@ -25,9 +25,9 @@ The transition always sits between two distinct states
 
 The state that the arrow points _from_ is the state in which the event in question is handled.  The state that the arro points _to_  is the state that the state machine ends up in, if the transition is executed.
 
-## xstate
+## XState
 
-In xstate, a transition is defined using the `on` property of a state. The key is the event in question, and the value is the name of the target state.
+In XState, a transition is defined using the `on` property of a state.  The key is the event in question, and the value is the name of the target state.
 
 ```json
 "somestate": {

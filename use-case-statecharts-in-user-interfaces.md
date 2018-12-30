@@ -118,16 +118,18 @@ The code shown above was introduced solely to describe how a state machine fits 
 
 In order to help, we'll be introducing a statechart library
 
-## Introducing xstate
+## Introducing XState
 
-Xstate is a javascript library that essentially allows us to hide the inner workings of the state machine.  You provide it with an object that _describes_ the state machine you're interested in, and xstate returns a state machine that provides _pure functions_ that you can use to answer the question: "If I'm in _this_ state, and _this_ happens, _what_ should I do?"
+XState is a javascript library that essentially allows us to hide the inner workings of the state machine.  You provide it with an object that _describes_ the state machine you're interested in, and XState returns a state machine that provides _pure functions_ that you can use to answer the question: "If I'm in _this_ state, and _this_ happens, _what_ should I do?"
 
-To give you a quick primer, we'll rewrite the green / not green state machine above using xstate.
+To give you a quick primer, we'll rewrite the green / not green state machine above using XState.
 
-First of all, we'll need a state machine, constructed by xstate.
+First of all, we'll need a state machine, constructed by XState.
 
 ```js
-var stateMachine = new xstate.Machine({
+import { Machine } from 'xstate';
+const stateMachine = Machine({
+  id: "example",
   initial: "not_green",
   states: {
     "not_green": {
@@ -154,7 +156,7 @@ We start off our state machine by asking the state machine what the "initial" st
 var currentState = stateMachine.initialState;
 ```
 
-`currentState` is an xstate _State_ instance, which has a _value_ which initially should be `not_green`.  It represents _our_ state.
+`currentState` is an XState _State_ instance, which has a _value_ which initially should be `"not_green"`.  It represents _our_ state.
 
 You can then simulate what happens if you pass it the `change` event:
 
@@ -175,51 +177,50 @@ if (currentState.value == "not_green") {
 }
 ```
 
-<p data-height="265" data-theme-id="0" data-slug-hash="Rxvowv" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 1)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/Rxvowv/">Green input box (xstate version 1)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="Rxvowv" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 1)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/Rxvowv/">Green input box (XState version 1)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Guards
 
-This initial implementation switches between the `green` and `not_green` states **every time** a change happens.  We wanted to switch the state depending on the value of the text field.  Let's do that.
+This initial implementation switches between the `green` and `not_green` states **every time** a change happens. We wanted to switch the state depending on the value of the text field. Let's do that.
 
-If you're not used to thinking in state machines, it is usual to try to solve this _outside_ the state machine, by perhaps checking the value _before_ telling the state machine about the event.  However state machines have support for something called _guards_ which allow the state machine to make the decision.  Allowing this to be dealt with _inside_ the state machine ends up being more flexible.
+If you're not used to thinking in state machines, it is usual to try to solve this _outside_ the state machine, by perhaps checking the value _before_ telling the state machine about the event. However state machines have support for something called _guards_ which allow the state machine to make the decision. Allowing this to be dealt with _inside_ the state machine ends up being more flexible.
 
-First of all, we need to gather information about the world that we want the state machine to be able to inspect, a form of "extended state".  For our example we want the state machine's behaviour to depend on the input value, or more specifically, the length of the value (or something else that constitutes validity).  This _extra data_ is passed as the third parameter to `transition`:
+First of all, we need to gather information about the world that we want the state machine to be able to inspect, a form of "extended state". For our example we want the state machine's behaviour to depend on the input value, or more specifically, the length of the value (or something else that constitutes validity). This _extra data_ is passed as the third parameter to `transition`:
 
 ```js
-currentState = stateMachine.transition(currentState, "change", field.value);
+currentState = stateMachine.transition(currentState, 'change', field.value);
 ```
 
 For simplicity, we're just passing the value of the field as the extended state, we could pass in the length or, even better, an object literal with room for more variables.
 
-In the state machine definition, we now change the `on: { change: ... }` handlers so that they _check the guard_ before continuing.  When we're in the `not_green` state we will only go to `green` if the `length` is greater than 0:
+In the state machine definition, we now change the `on: { change: ... }` handlers so that they _check the guard_ before continuing. When we're in the `not_green` state we will only go to `green` if the `length` is greater than 0:
 
 ```js
 on: {
-  change:  {
-    green: {
-      cond: (text) => text.length > 0
-    }
+  change: {
+    target: "green",
+    cond: text => text.length > 0;
   }
 }
 ```
 
-Here `cond` is short for _condition_.  The condition must hold (evaluate to `true`) for the transition to happen.  Conversely, we'll check that when we're in the `green` state we'll only transition to the other state if length is equal to 0.
+Here `cond` is short for _condition_. The condition must hold (evaluate to `true`) for the transition to happen. Conversely, we'll check that when we're in the `green` state we'll only transition to the other state if length is equal to 0.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="JMxEKg" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 2, with guards)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/JMxEKg/">Green input box (xstate version 2, with guards)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="JMxEKg" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 2, with guards)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/JMxEKg/">Green input box (XState version 2, with guards)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 > TKTK update the code samples from the pen:
 
 ## Actions based on the "current state"
 
-The state machine as it stands is useful in its own right: the behaviour is isolated in the statechart definition, and we can make _some_ changes.  However, code outside the state machine is completely dependent on the names of the states, so introducing a new state would require us to change the code that talks with the state machine.
+The state machine as it stands is useful in its own right: the behaviour is isolated in the statechart definition, and we can make _some_ changes. However, code outside the state machine is completely dependent on the names of the states, so introducing a new state would require us to change the code that talks with the state machine.
 
 There's one last thing that we ought to do, and that's implement actual side effects of a state machine.
 
 When you have a state machine or statechart that "drives" your UI, it is quite common for the states in the statechart to (at least at the highest level) correspond to "modes" of the user interface.  In our sample we have "green" and "not_green" as states, and we have an ugly _if_ test which checks _which_ state we're in, and performs some actions based on it (adds/removes a class).
 
-An easy simplification of this is to set the `class` of the element to the value of the state and be done with it.  This is a common way of using the "current state" to effect changes to the user interface.  That ugly set of if-tests can be reduced to a simple assignment:
+An easy simplification of this is to set the `class` of the element to the value of the state and be done with it. This is a common way of using the "current state" to effect changes to the user interface. That ugly set of if-tests can be reduced to a simple assignment:
 
 ```js
 field.classList.value = currentState.value;
@@ -279,12 +280,12 @@ green: {
 
 This declares that the `startHttpReqest` side effect should happen when the _green_ state is entered, and that `cancelHttpRequest` should happen when it is exited.
 
-xstate then provides these actions as a string array in our `currentState`.  If we happen to enter the green state, `currentState.actions` will be `[ "startHttpRequest" ]`.  We can harness this by calling the corresponding function:
+XState then provides these actions as a string array in our `currentState`.  If we happen to enter the green state, `currentState.actions` will be `[ "startHttpRequest" ]`.  We can harness this by calling the corresponding function:
 
 ```js
 // TKTK should be handleEvent or something.
 function transition(event, data) {
-  currentState = stateMachine.transition(currentState, event, data)
+  currentState = stateMachine.transition(currentState, event, data);
   field.classList.value = currentState.value;
   currentState.actions.forEach(item => window[item]());
 }
@@ -312,12 +313,12 @@ function resultsArrived(data) {
 }
 ```
 
-We now already have some code duplication in that we have two places where the field.classList is updated, so it's probably about time to extract this into its own function, a "stateful" wrapper around the xstate state machine:
+We now already have some code duplication in that we have two places where the field.classList is updated, so it's probably about time to extract this into its own function, a "stateful" wrapper around the XState state machine:
 
 ```js
 var currentState;
 function transition(event, data) {
-  currentState = stateMachine.transition(currentState, event, data)
+  currentState = stateMachine.transition(currentState, event, data);
   field.classList.value = currentState.value;
   currentState.actions.forEach(item => window[item]());
 }
@@ -346,12 +347,12 @@ on: {
 
 This tiny change _handles_ the `results` event by telling the machine to go to the `not_green` state.  With our fake HTTP request, you can see that the machine leaves the "green" state after 2 seconds.
 
-<p data-height="265" data-theme-id="0" data-slug-hash="EorWVP" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (xstate version 4, actual side effects)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/EorWVP/">Green input box (xstate version 4, actual side effects)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="EorWVP" data-default-tab="js,result" data-user="mogsie" data-embed-version="2" data-pen-title="Green input box (XState version 4, actual side effects)" class="codepen">See the Pen <a href="https://codepen.io/mogsie/pen/EorWVP/">Green input box (xstate version 4, actual side effects)</a> by Erik Mogensen (<a href="https://codepen.io/mogsie">@mogsie</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Building blocks
 
-We now have a lot of the building blocks in order to make efficient use of statecharts.  We have a machine which:
+We now have a lot of the building blocks in order to make efficient use of statecharts. We have a machine which:
 
 * Accepts events, and "guard" data
 * Tells us what activities to start and stop

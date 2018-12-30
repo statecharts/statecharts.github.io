@@ -18,13 +18,14 @@ A state machine, or compound state's _initial_ state is specified by way of an a
 
 ![Black circle pointing to a state labeled A.  A is the initial state.](initial-state.svg)
 
-## xstate
+## XState
 
-In xstate, a state must have the `initial` property declaring the name of the initial state.
+In XState, a compound state must have the `initial` property declaring the key of the initial child state node.
 
 ```js
 {
-  "initial" : "A"
+  "type": "compound", // optional
+  "initial" : "A",
   "states" : {
     "B": {},
     "A": {}

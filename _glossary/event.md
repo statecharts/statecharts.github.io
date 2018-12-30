@@ -29,9 +29,9 @@ The transition itself (the arrow) usually sits between two separate states, poin
 
 Here we understand that _when_ the statechart is in the _somestate_ state, and the event _my_event_ happens, then it _transitions_ to the _otherstate_ state.
 
-## xstate
+## XState
 
-In xstate, an event is specified as a key of the `on` property in any state.  The event name is the key, and the target of the transition that the event would trigger is the value of the event.
+In XState, an event is specified as a key of the `on` property in any state.  The event name is the key, and the target of the transition that the event would trigger is the value of the event.
 
 ```json
 "somestate": { 
@@ -41,11 +41,21 @@ In xstate, an event is specified as a key of the `on` property in any state.  Th
 }
 ```
 
-Actually passing an event in xstate is done by way of the `transition` function, which returns the state of the machine _after_ the transition:
+Actually passing an event in XState is done by way of the `transition` function, which returns the state of the machine _after_ the transition:
 
 ```
 nextState = machine.transition(oldState, "my_event")
 ```
+
+In a running (interpreted) machine, events are _sent_:
+
+```
+const myMachineService = interpret(myMachine);
+
+myMachineService.send("my_event");
+```
+
+See [xstate.js.org/docs/guides/interpretation](https://xstate.js.org/docs/guides/interpretation/) for more information.
 
 ## SCXML
 

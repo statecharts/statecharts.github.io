@@ -37,13 +37,13 @@ In SCXML, an atomic state is any state that has no _state_ children:
 </state>
 ```
 
-## xstate
+## XState
 
-In xstate, an atomic state has no `states` property.
+In XState, an atomic state has no `states` property and (optionally) a `type: "atomic"` property.
 
-``` js
+```js
 my_atomic_state: {
+  type: "atomic",
   onEntry: "do_the_thing"
 }
 ```
-

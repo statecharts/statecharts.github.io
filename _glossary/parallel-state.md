@@ -54,13 +54,13 @@ This is a parallel state with two _regions_. When `p` becomes active, so does `f
 </parallel>
 ```
 
-## xstate
+## XState
 
-In xstate, the `parallel` attribute must be set to `true` for a state to be marked as a parallel state with regions.  A parallel state can not define an `initial` property, since all regions are entered simultaneously.
+In XState, the state node must have `type: 'parallel'` (as of version 4.0) specified for a state to be marked as a parallel state with regions.  A parallel state can not define an `initial` property, since all regions are entered simultaneously.
 
 ```
 p: {
-  parallel: true,
+  type: 'parallel',
   states: {
     region1 : {
       initial: 'foo1',

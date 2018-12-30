@@ -37,8 +37,6 @@ SCXML only supports `In(state)` guards.
 
 As a side note, SCXML automatically generates `done.stateID` events whenever a [compound state](compound-state.html){:.glossary} reaches its [final state](final-state.html){:.glossary}, and various `error.` events as part of the processing of an event.
 
-## xstate
+## XState
 
-xstate only supports `in: 'state'` guards.
-
-
+XState only supports `in: 'state'` guards defined on the transition.

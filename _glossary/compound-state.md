@@ -77,11 +77,11 @@ In Statechart XML, a compound state is any state with nested state elements as d
 </state>
 ```
 
-## xstate
+## XState
 
-An xstate compound state is declared using the `states` property of the state, holding an object containing substates.  Each key value pair declares the name and definition of the state, respectively:
+An XState compound state is declared using the `states` property of the state, holding an object containing substates.  Each key value pair declares the name and definition of the state, respectively:
 
-``` javascript
+```javascript
 "off": {
   "on": {
     "flick": "on"
@@ -95,6 +95,8 @@ An xstate compound state is declared using the `states` property of the state, h
 ```
 
 The definitions of A and B have been omitted.
+
+See [xstate.js.org/docs/guides/hierarchical](https://xstate.js.org/docs/guides/hierarchical/) for more information.
 
 ## SCION-CORE
 

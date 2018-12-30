@@ -81,7 +81,7 @@ Here's the full statechart:
 
 \[[Concepts explained](concepts.html)]
 \[[SCXML version](on-off-delayed-exit-1.scxml.xml)]
-\[[xstate version](on-off-delayed-exit-1.xstate.json)]
+\[[XState version](on-off-delayed-exit-1.xstate.json)]
 
 ### Conclusion
 

@@ -48,9 +48,9 @@ In SCXML, automatic transitions are `<transition>` elements that don't have an `
 <transition target="otherstate" cond="mycondition"/>
 ```
 
-## xstate
+## XState
 
-In xstate, an automatic transition is a normal transition that handles the empty string:
+In XState, an automatic transition is a normal transition that handles the empty string:
 
 ```
 on: {
