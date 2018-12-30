@@ -2,9 +2,14 @@
 
 The primary feature of statecharts is that states can be organized in a _hierarchy_:  A statechart is a [state machine](what-is-a-state-machine.html) where each state in the state machine may define its own _subordinate_ state machines, called _substates_.  Those states can again define substates.
 
-Here's an example of a state in a state machine, with some extra "substates":
+Here's an example of a state in a state machine, with some extra features:
 
 ![A state with some substates](on-off-delayed-exit-1-zoomed.svg)
+
+* The state is called "D"
+* E and F are substates
+* E even has a substate G
+* "entry" and "exit" actions are mentioned
 
 When the state machine enters this state _D_ it also starts the state machine within it.  The _initial state_ of this machine inside _D_ is in fact _E_ so it _enters_ _E_ too.  And since _E_ has a single substate _G_, it is also _entered_.
 
@@ -12,7 +17,7 @@ When the state machine enters this state _D_ it also starts the state machine wi
 
 ### Entering a state enters one of its substates
 
-- When a [state is entered](glossary/entry.html){:.glossary}, its sub state machine starts and therefore, a substate is entered
+- When a [state is entered](glossary/enter.html){:.glossary}, its sub state machine starts and therefore, a substate is entered
 - When a [state is exited](glossary/exit.html){:.glossary}, its sub state machine is exited too, i.e. any substates also exit
 
 In the example above, when the machine is told to enter _D_, it actually ends up entering _D_, _E_, and _G_.  Conversely, when the state machine exits _D_ it also exits any substates.
