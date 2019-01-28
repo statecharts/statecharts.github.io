@@ -85,13 +85,13 @@ SCXML's `<transition>` has a `type` attribute which can be set to `internal` to 
   <transition event="RESET" target="A" type="internal" />
   <state id="A">
     <transition event="SIGNAL" target="B"/>
-  <state>
+  </state>
   <state id="B">
     <transition event="SIGNAL" target="C"/>
-  <state>
+  </state>
   <state id="C">
     <transition event="SIGNAL" target="A"/>
-  <state>
+  </state>
 </state>
 ```
 
