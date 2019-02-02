@@ -12,6 +12,8 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 [Developing User Interfaces using SCXML Statecharts](http://phrogz.net/developing-user-interfaces-using-scxml-statecharts) Gavin Kistner & Chris Nuernberger, 2014 - A paper about how Nvidia developed automotive UI using state charts and SCXML.
 
+[Client-Side State-based Control for Multimodal User Interfaces](https://jsscxml.org/thesis.html), David Junger's master's thesis _explores the appeal and (ease of) use of an executable State Chart language on the client-side to design and control multimodal Web applications_.
+
 [UML Statecharts](https://en.wikipedia.org/wiki/UML_state_machine) or "UML state machines" on wikipedia provides a good overview
 
 ## Blog posts / Articles
@@ -94,6 +96,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 [Commons SCXML](http://commons.apache.org/proper/commons-scxml/) by Apache, a Java implementation of an SCXML parser and runner.
 
 [ember-statecharts](https://github.com/LevelbossMike/ember-statecharts), by Michael Klein, Statecharts for Ember.js applications
+
+[jsscxml](https://github.com/Touffy/JSSCxml/), by David Junger, A JavaScript State Chart interpreter that fully implements SCXML
 
 [harel](https://github.com/jayrbolton/harel), by Jay R Bolton, Harel Statecharts in javascript for declarative UI
 
