@@ -165,7 +165,7 @@ There's one hitch though:  When the _increment_ event happens, both regions will
 
 **The fizz region now only enters off if it doesn't enter on.**{:.caption}![The parallel state, with an automatic transition from fizz.pending to fizz.off, and to fizz.on with the guard i % 3 == 0](fizzbuzz-actions-internal-events-parallel-fizz-pending.svg)
 
-The _pending_ state is a form of [junction state](glossary/junction-state.html){:.glossary}, whose only function is to transition the machine on to the next state.
+The _pending_ state is a form of [condition state](glossary/condition-state.html){:.glossary}, whose only function is to transition the machine on to the next state.
 
 The behaviour can now be described as follows:
 
