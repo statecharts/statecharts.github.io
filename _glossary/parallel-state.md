@@ -8,10 +8,10 @@ breadcrumbs:
     name: Compound state
 aka:
   - title: Orthogonal state
-    url: parallel-state.md
+    url: parallel-state.html
     oneliner: Another name for parallel state
   - title: And state
-    url: parallel-state.md
+    url: parallel-state.html
     oneliner: A state whose substates are all active, i.e. a AND b AND c, known as a parallel state
 ---
 
