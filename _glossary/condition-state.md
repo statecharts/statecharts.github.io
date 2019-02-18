@@ -27,6 +27,10 @@ Condition states can help reduce clutter when introducing states and a whole set
 
 A condition state is denoted by way of a capital letter C enclosed by a circle.
 
+![A compound state B with choice state](condition-state.svg)
+
+Note that in UML, _junction states_ and _choice states_ are similar to condition states, and use slightly different notation:  Junction states are denoted by an opaque, black circle, while choice states are denoted by a diamond.
+
 ## SCXML
 
 Condition states are not native to SCXML, but can easily be implemented by making a `<state>` element that consists only of guarded transitions, ensuring that being in the state has no other effects than transitioning to another state:
