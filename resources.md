@@ -4,6 +4,8 @@
 
 The original description of statecharts, _Statecharts: A visual formalism for complex systems_ [PDF](http://www.inf.ed.ac.uk/teaching/courses/seoc/2005_2006/resources/statecharts.pdf), by David Harel
 
+[State Chart XML](https://www.w3.org/TR/scxml/) (SCXML), State Machine Notation for Control Abstraction, W3C Recommendation, 2015 
+
 [Constructing the User Interface with Statecharts](https://books.google.no/books/about/Constructing_the_User_Interface_with_Sta.html?id=-9VQAAAAMAAJ&redir_esc=y&hl=en), Ian Horrocks, 1999
 
 [Practical Statecharts in C/C++](https://www.state-machine.com/psicc/) — discusses some of the same things that Ian Horrocks’ book discusses. The book is freely available as a PDF download.
