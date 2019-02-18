@@ -19,7 +19,7 @@ aka:
 
 A condition state is a state that essentially consists _solely_ of [automatic](automatic-transition.html){:.glossary}, [guarded](guard.html){:.glossary} [transitions](transition.html){:.glossary}, so that upon entry, the state will always immediately exit to another state.  A condition state is used to group similar sets of incoming transitions, so that the guards of those transitions don't need to be repeated.  It can also be used to simplify entry to a state, by allowing the source of a transition to target a single condition state, where the choice of target state happens.
 
-To be called a choice state, there should be no actions or activities defined in the state.  Choice states do not have child states.  All transitions must be automatic, and care must be taken to ensure that at least one transition will always be taken. This is usually done by including one unguarded automatic transition.
+To be called a condition state, there should be no actions or activities defined in the state.  Condition states do not have child states.  All transitions must be automatic, and care must be taken to ensure that at least one transition will always be taken. This is usually done by including one unguarded automatic transition.
 
 Condition states can help reduce clutter when introducing states and a whole set of transitions need to be copied over to a new state, or when several different events need similar sets of guards.  In such situations, consider introducing a condition state to encapsulate the logic.  Condition states can also help move conditional logic (which is essentially what guards are) closer to the target states.
 
@@ -27,7 +27,7 @@ Condition states can help reduce clutter when introducing states and a whole set
 
 A condition state is denoted by way of a capital letter C enclosed by a circle.
 
-![A compound state B with choice state](condition-state.svg)
+![A compound state B with condition state](condition-state.svg)
 
 Note that in UML, _junction states_ and _choice states_ are similar to condition states, and use slightly different notation:  Junction states are denoted by an opaque, black circle, while choice states are denoted by a diamond.
 
@@ -37,14 +37,14 @@ Condition states are not native to SCXML, but can easily be implemented by makin
 
 ``` xml
 <state id="A">
-  <transition target="B_CHOICE" event="e"/>
+  <transition target="B_COND" event="e"/>
 </state>
 
 <state id="B">
   <state id="B1"/>
   <state id="B2"/>
   <state id="B3"/>
-  <state id="B_CHOICE">
+  <state id="B_COND">
     <transition target="B1" cond="a == 1"/>
     <transition target="B2" cond="a == 0"/>
     <transition target="B3"/>
@@ -52,17 +52,17 @@ Condition states are not native to SCXML, but can easily be implemented by makin
 </state>
 ```
 
-Here we have a state A which, on event "e" will transition to B_CHOICE, which is a choice state, because it consists only of automatic, guarded transitions.  When in state A, and the event "e" happens:
+Here we have a state A which, on event "e" will transition to B_COND, which is a condition state, because it consists only of automatic, guarded transitions.  When in state A, and the event "e" happens:
 
-* A will exit and enter B_CHOICE.
-* Being in B_CHOICE will immediately evaluate the guard `a == 1` and go directly to B1 if this is true.
-* Otherwise, B_CHOICE will evaluate the guard `a == 0` and go to B2 if this is true.
-* Otherwiser, B_CHOICE will go to B3.
+* A will exit and enter B_COND.
+* Being in B_COND will immediately evaluate the guard `a == 1` and go directly to B1 if this is true.
+* Otherwise, B_COND will evaluate the guard `a == 0` and go to B2 if this is true.
+* Otherwiser, B_COND will go to B3.
 
 This offers many benefits:
 
-* If this were to be implemented without the choice states, the transitions with `cond` logic would be in state `A`, whereas it is probably wiser to keep this logic closer to the states B1, B2 and B3.
-* If more events (e.g. `<transition target="B_CHOICE" event="e2"/>`), or more sources of events (e.g. other than from `A`) lead to the same choices being made, a choice state reduces the amount of transitions that need to be defined.
+* If this were to be implemented without the condition states, the transitions with `cond` logic would be in state `A`, whereas it is probably wiser to keep this logic closer to the states B1, B2 and B3.
+* If more events (e.g. `<transition target="B_COND" event="e2"/>`), or more sources of events (e.g. other than from `A`) lead to the same guarded transitions, a condition state reduces the amount of transitions that need to be defined.
 
 ## XState
 
@@ -73,7 +73,7 @@ Condition states are not native to XState, but can easily be implemented by maki
   states: {
     A: {
       on: {
-        e: "B.CHOICE"
+        e: "B.COND"
       }
     },
     B: {
@@ -82,7 +82,7 @@ Condition states are not native to XState, but can easily be implemented by maki
         1: {},
         2: {},
         3: {}
-        CHOICE: {
+        COND: {
           on: {
             '': [
               { target: "1", cond: (e, xs) => xs.a == 1 },
@@ -97,17 +97,17 @@ Condition states are not native to XState, but can easily be implemented by maki
 }
 ```
 
-Here we have a state "A" which, on event "e" will transition to "B_CHOICE", which is a choice state, because it consists only of automatic, guarded transitions.  When in state A, and the event "e" happens:
+Here we have a state "A" which, on event "e" will transition to "B.COND", which is a condition state, because it consists only of automatic, guarded transitions.  When in state A, and the event "e" happens:
 
-* A will exit and enter B.CHOICE.
-* Being in CHOICE will immediately evaluate the guard `a == 1` and go directly to "1" if this is true.
-* Otherwise, CHOICE will evaluate the guard `a == 0` and go to "2" if this is true.
-* Otherwiser, CHOICE will go to "3".
+* A will exit and enter B.COND.
+* Being in COND will immediately evaluate the guard `a == 1` and go directly to "1" if this is true.
+* Otherwise, COND will evaluate the guard `a == 0` and go to "2" if this is true.
+* Otherwiser, COND will go to "3".
 
 This offers many benefits:
 
-* If this were to be implemented without the choice states, the transitions with `cond` logic would be in state `A`, whereas it is probably wiser to keep this logic closer to the states B.1, B.2 and B.3.
-* If more events (e.g. `on: {e2: "B_CHOICE"}`), or more sources of events elsewhere in the statechart (e.g. other than from `A`) lead to the same choices being made, a choice state reduces the amount of transitions that need to be defined.
+* If this were to be implemented without the condition states, the transitions with `cond` logic would be in state `A`, whereas it is probably wiser to keep this logic closer to the states B.1, B.2 and B.3.
+* If more events (e.g. `on: {e2: "B.COND"}`), or more sources of events elsewhere in the statechart (e.g. other than from `A`) lead to the same choices being made, a choice state reduces the amount of transitions that need to be defined.
 
 ## Relation to UML choice and junction states
 
