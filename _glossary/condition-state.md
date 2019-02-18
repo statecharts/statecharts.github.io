@@ -39,8 +39,6 @@ Condition states are not native to SCXML, but can easily be implemented by makin
     <transition target="B3"/>
   </state>
 </state>
-
-<!-- elsewhere -->
 ```
 
 Here we have a state A which, on event "e" will transition to B_CHOICE, which is a choice state, because it consists only of automatic, guarded transitions.  When in state A, and the event "e" happens:
