@@ -6,6 +6,13 @@ breadcrumbs:
     name: State
   - id: pseudostate
     name: Pseudostate
+aka:
+  - title: Junction state
+    url: condition-state.html
+    oneliner: A form of condition state, which in UML, has specific semantics with regards to condition execution
+  - title: Choice state
+    url: condition-state.html
+    oneliner: A form of condition state, which in UML, has specific semantics with regards to condition execution
 ---
 
 # Condition state
@@ -97,3 +104,7 @@ This offers many benefits:
 
 * If this were to be implemented without the choice states, the transitions with `cond` logic would be in state `A`, whereas it is probably wiser to keep this logic closer to the states B.1, B.2 and B.3.
 * If more events (e.g. `on: {e2: "B_CHOICE"}`), or more sources of events elsewhere in the statechart (e.g. other than from `A`) lead to the same choices being made, a choice state reduces the amount of transitions that need to be defined.
+
+## Relation to UML choice and junction states
+
+UML defines junction states and choice states similarly, but with slightly different semantics.
