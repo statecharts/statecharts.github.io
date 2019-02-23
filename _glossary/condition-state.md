@@ -19,17 +19,34 @@ aka:
 
 A condition state is a state that essentially consists _solely_ of [automatic](automatic-transition.html){:.glossary}, [guarded](guard.html){:.glossary} [transitions](transition.html){:.glossary}, so that upon entry, the state will always immediately exit to another state.  A condition state is used to group similar sets of incoming transitions, so that the guards of those transitions don't need to be repeated.  It can also be used to simplify entry to a state, by allowing the source of a transition to target a single condition state, where the choice of target state happens.
 
-To be called a condition state, there should be no actions or activities defined in the state.  Condition states do not have child states.  All transitions must be automatic, and care must be taken to ensure that at least one transition will always be taken. This is usually done by including one unguarded automatic transition.
-
-Condition states can help reduce clutter when introducing states and a whole set of transitions need to be copied over to a new state, or when several different events need similar sets of guards.  In such situations, consider introducing a condition state to encapsulate the logic.  Condition states can also help move conditional logic (which is essentially what guards are) closer to the target states.
+To be called a condition state, there should be no actions or activities defined in the state.  Condition states do not have child states.  All transitions must be automatic, and care must be taken when defining the guards, to ensure that at least one transition will always be taken. This is usually done by including one unguarded automatic transition.
 
 ## Notation
 
-A condition state is denoted by way of a capital letter C enclosed by a circle.
+Harel's original paper defined a condition state to be denoted using a capital letter C enclosed by a circle.
 
 ![A compound state B with condition state](condition-state.svg)
 
 Note that in UML, _junction states_ and _choice states_ are similar to condition states, and use slightly different notation:  Junction states are denoted by an opaque, black circle, while choice states are denoted by a diamond.
+
+## Usage
+
+Statecharts can easily get cluttered when the number of states increases.  Not necessarily due to the number of states, but rather the number of possible transitions between the states.  Condition states allow you to combine similar transitions thereby reducing the number of lines connecting the various states.  The usefulness is increased if many of the transitions have the same guard conditions.
+
+Condition states can generally be used in two ways:
+
+* Combine several transitions going out of a compound state (that end up in the same target)
+* Combine several guarded transitions going in to a compound state (that come from the same source)
+
+Condition states can be used in both ways simultaneously.
+
+If an event activates many guarded transitions to many substates of a compound state, the guards determine which substate to enter.  By defining a condition state inside the compound state itself, the guard definitions are closer to the target states, making the statechart easier to reason about.
+
+![State A and compound state B, the latter with substates B1, B2, B3. An event e enters B1, B2 or B3 depending on guards](condition-state-before.svg)
+
+Condition states can help reduce clutter when introducing states and a whole set of transitions need to be copied over to a new state, or when several different events need similar sets of guards.  In such situations, consider introducing a condition state to encapsulate the logic.  Condition states can also help move conditional logic (which is essentially what guards are) closer to the target states.
+
+
 
 ## SCXML
 
