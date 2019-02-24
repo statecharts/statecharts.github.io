@@ -31,34 +31,32 @@ Note that in UML, _junction states_ and _choice states_ are similar to condition
 
 ## Usage
 
-Statecharts can easily get cluttered when the number of states increases.  Not necessarily due to the number of states, but rather the number of possible transitions between the states.  Condition states allow you to combine similar transitions thereby reducing the number of lines connecting the various states.  The usefulness is increased if many of the transitions have the same guard conditions.
+Statecharts can easily get cluttered when the number of states increases.  Not necessarily due to the number of states, but rather the number of transitions between the states.  Condition states allow you to combine similar transitions thereby reducing the number of lines connecting the various states.  The usefulness is increased if many of the transitions have the same guard conditions.
 
-Condition states can generally be used in two ways:
+Condition states are often used in two ways:
 
-* Combine several transitions going out of a compound state (that end up in the same target)
-* Combine several guarded transitions going in to a compound state (that come from the same source)
+* Reduce the number of transitions from a compound state that end up in the same target, by combining the transitions in the source state.
+* Combine several guarded transitions going in to a compound state (that come from the same source).  This is known as a conditional entry to a state.
 
-Condition states can be used in both ways simultaneously.
-
-If an event activates many guarded transitions to many substates of a compound state, the guards determine which substate to enter.  
+When making changes to a statechart, it is often the case that you need similar sets of guards to control different states.  In the following example, we have two main states A and B, where state A has three separte transitions for event _e_, each leading to a specific substate of B.  The choice of which substate we end up in is determined by the individual guards.
 
 **The guards that determine the final source, are outside the compound state B.**{:.caption}
 ![Atomic state A and compound state B, the latter with substates 1, 2, and 3. An event e enters 1, 2 or 3 depending on guards](condition-state-before.svg)
 
-The problem is apparent if you have another state, say C, which also needs to enter the same substate, based on the guards:
+The problem is apparent if you try to introduce another state, say C, which also needs to enter the same substates of B, based on similar, or identical guards:
 
 **By adding a single state C, which has transitions similar to A, we had to duplicate many guards.**{:.caption}
 ![Atomic states A and C, and compound state B, the latter with substates 1, 2, and 3. An event e in A (or event f in C) enters states 1, 2 or 3 depending on guards](condition-state-before-two.svg)
 
-By defining a condition state inside the compound state itself, the guard definitions are closer to the target states, making the statechart easier to reason about.  Let's remove state C again, and instead first introduce the conditional state:
+By defining a condition state inside the compound state itself, the guard definitions are closer to the target states, making the statechart easier to reason about.  Let's remove state C again, and instead first introduce the _condition state_:
 
 **The guards that determine the correct substate of B are now inside B, and state A is already easier to understand.  It also becomes easier to make changes to the statechart.**{:.caption}
-![Atomic state A, and compound state B, the latter with substates 1, 2, and 3.  An event e in A always leads to a conditional state, which determines the final state using guards](condition-state-after.svg)
+![Atomic state A, and compound state B, the latter with substates 1, 2, and 3.  An event e in A always leads to a condition state, which determines the final state using guards](condition-state-after.svg)
 
-Now, it becomes a lot easier to introduce the C state, without doubling the amount of transitions.  Now, since we have a state that represents the _conditional entry_, we can re-use that conditional state by transitioning to it:
+Now, it becomes a lot easier to introduce the C state, without doubling the amount of transitions.  Now, since we have a state that represents the _conditional entry_, we can re-use that condition state by transitioning to it:
 
 **The guards that determine the state of B are inside B, and states A and C are easier to understand.**{:.caption}
-![Atomic states A and C, and compound state B, the latter with substates 1, 2, and 3.  An event e in A (or event f in C) enters a conditional state, which determines the final state using guards](condition-state-after-two.svg)
+![Atomic states A and C, and compound state B, the latter with substates 1, 2, and 3.  An event e in A (or event f in C) enters a condition state, which determines the final state using guards](condition-state-after-two.svg)
 
 Condition states can help reduce clutter when introducing states and a whole set of transitions need to be copied over to a new state, or when several different events need similar sets of guards.  In such situations, consider introducing a condition state to encapsulate the logic.  Condition states can also help move guards closer to the target states, where this is desirable.
 
@@ -144,4 +142,4 @@ This offers many benefits:
 
 ## Relation to UML choice and junction states
 
-UML defines junction states and choice states similarly, but with slightly different semantics.
+UML defines the terms _junction state_ and _choice state_ which are similar to Harel's definition of condition states, but with slightly different semantics.
