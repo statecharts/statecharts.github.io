@@ -52,7 +52,7 @@ The problem is apparent if you have another state, say C, which also needs to en
 
 By defining a condition state inside the compound state itself, the guard definitions are closer to the target states, making the statechart easier to reason about.
 
-**The guards that determine the state of B are inside B, and states A and C are easier to understand**{:.caption}
+**The guards that determine the state of B are inside B, and states A and C are easier to understand.**{:.caption}
 ![Atomic states A and C, and compound state B, the latter with substates 1, 2, and 3.  An event e in A or C enters a conditional state, which determines the final state using guards](condition-state-after-two.svg)
 
 Condition states can help reduce clutter when introducing states and a whole set of transitions need to be copied over to a new state, or when several different events need similar sets of guards.  In such situations, consider introducing a condition state to encapsulate the logic.  Condition states can also help move guards closer to the target states, where this is desirable.
@@ -61,6 +61,7 @@ Condition states can help reduce clutter when introducing states and a whole set
 
 Condition states are not native to SCXML, but can easily be implemented by making a `<state>` element that consists only of guarded transitions, ensuring that being in the state has no other effects than transitioning to another state:
 
+**`B_COND` is a condition state, used to provide a conditional entry to state B.**{:.caption}
 ``` xml
 <state id="A">
   <transition target="B_COND" event="e"/>
@@ -92,9 +93,10 @@ This offers many benefits:
 
 ## XState
 
-Condition states are not native to XState, but can easily be implemented by making a state that consists only of guarded transition, ensuring that being in the state has no other effects than transitioning to another state:
+Condition states are not native to XState, but can easily be implemented by making a state that consists only of guarded transition, ensuring that being in the state has no other effects than transitioning to another state.
 
-``` xml
+**`COND` is a condition state, used to provide a conditional entry to state B.**{:.caption}
+``` javascript
 {
   states: {
     A: {
@@ -111,8 +113,8 @@ Condition states are not native to XState, but can easily be implemented by maki
         COND: {
           on: {
             '': [
-              { target: "1", cond: (e, xs) => xs.a == 1 },
-              { target: "2", cond: (e, xs) => xs.a == 0 },
+              { target: "1", cond: (context, event) => context.a == 1 },
+              { target: "2", cond: (context, event) => context.a == 0 },
               { target: "3" }
             ]
           }
