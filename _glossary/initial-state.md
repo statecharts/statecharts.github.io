@@ -1,14 +1,24 @@
 ---
 title: Initial state
-oneliner: The state which is entered when a state machine starts, or when a compound state is entered
+oneliner: The state which is entered when a state machine starts, or when a compound state is entered.
 primaryImage: initial-state.svg
-keywords: default, initial, starting state, start state, default state
+keywords:
+  - default
+  - initial
+  - starting state
+  - start state
+  - default state
 breadcrumbs:
   - id: state
     name: State
+    index: 1
 aka:
   - title: Default state
-    oneliner: A synonym for Initial state, the state that a compound state enters by default
+    oneliner: A synonym for Initial state, the substate that a compound state enters by default
+    url: initial-state.html
+aka:
+  - title: Start state
+    oneliner: A synonym for Initial state, the state that a machine state enters when it starts
     url: initial-state.html
 ---
 
@@ -18,7 +28,7 @@ A [transition](transition.html){:.glossary} from a different state can target a 
 
 ## Notation
 
-A state machine, or compound state's _initial_ state is specified by way of an arrow (a transition arrow) from a filled black circle ( to the state that technically is called the state, but without annotations like event names or guards.  Technically, it is an [unguarded](guard.html
+A state machine, or compound state's _initial_ state is specified by way a black circle with exactly one transition arrow to a sibling state that should be entered.  The black circle and arrow have no name, it is the target state that is called the 'initial' state.
 
 ![Black circle pointing to a state labeled A.  A is the initial state.](initial-state.svg)
 
