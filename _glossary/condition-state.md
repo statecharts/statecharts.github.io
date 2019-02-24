@@ -116,8 +116,8 @@ Condition states are not native to XState, but can easily be implemented by maki
         COND: {
           on: {
             '': [
-              { target: "1", cond: (context, event) => context.a == 1 },
-              { target: "2", cond: (context, event) => context.a == 0 },
+              { target: "1", cond: (ctx, event) => ctx.a == 1 },
+              { target: "2", cond: (ctx, event) => ctx.a == 0 },
               { target: "3" }
             ]
           }
