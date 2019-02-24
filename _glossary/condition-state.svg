@@ -1,0 +1,14 @@
+<svg width="56px" height="54px" viewBox="28.124 132.567 55.922 53.907" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-0" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+    <pattern id="pattern-2" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="50" height="100" style="fill: black;"></rect>
+    </pattern>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, -329.993984, -42.385704)">
+    <circle style="stroke-width: 2px; stroke: rgb(0, 0, 0); fill: none;" cx="386.242" cy="200.618" r="17.521"></circle>
+    <text x="376.69" y="208.669" style="white-space: pre; fill: rgb(51, 51, 51); font-size: 24px;">C</text>
+  </g>
+</svg>
