@@ -80,8 +80,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% endfor %}
 {% endif %}
      "statechart",
-     "statecharts",
-  ]
+     "statecharts"
+  ],
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Statechart Glossary",
@@ -129,15 +129,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.github.io/glossary/">
               <span itemprop="name">Glossary</span>
             </a>
-            <!--meta itemprop="position" content="1" /-->
+            <meta itemprop="position" content="1" />
           </span>
           {% for item in page.breadcrumbs %} › 
             <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a itemscope itemtype="http://schema.org/Thing" itemprop="item"
                  href="https://statecharts.github.io/glossary/{{ item.id }}.html">
                 <span itemprop="name">{{ item.name }}</span>
-                <meta itemprop="position" content="{{ forloop.index | plus:1 }}" />
               </a>
+                <meta itemprop="position" content="{{ forloop.index | plus:1 }}" />
             </span>
           {% endfor %} › 
           <span>{{ page.title }}</span>
