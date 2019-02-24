@@ -73,7 +73,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "url": "https://statecharts.github.io{{ page.url }}",
   "description": "{{ page.oneliner }}",
   "isAccessibleForFree": true,
-  "keywords": "statechart, statecharts, glossary, {{ page.keywords }}",
+  "keywords": [
+{% if page.keywords %}
+{% for keyword in page.keywords %}
+     "{{ keyword }}",
+{% endfor %}
+{% endif %}
+     "statechart",
+     "statecharts",
+  ]
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Statechart Glossary",
@@ -129,7 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  href="https://statecharts.github.io/glossary/{{ item.id }}.html">
                 <span itemprop="name">{{ item.name }}</span>
               </a>
-              <!-- meta itemprop="position" content="{{ forloop.index | add:2 }}" /-->
+              <!-- meta itemprop="position" content="{{ forloop.index | plus:2 }}" /-->
             </span>
           {% endfor %} › 
           <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
