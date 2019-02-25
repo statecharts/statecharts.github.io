@@ -16,7 +16,6 @@ aka:
   - title: Default state
     oneliner: A synonym for Initial state, the substate that a compound state enters by default
     url: initial-state.html
-aka:
   - title: Start state
     oneliner: A synonym for Initial state, the state that a machine state enters when it starts
     url: initial-state.html
