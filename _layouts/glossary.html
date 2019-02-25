@@ -126,14 +126,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section class="inner">
         <nav class="breadcrumbs" role="navigation"  itemscope itemtype="http://schema.org/BreadcrumbList">
           <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.github.io/glossary/">
+            <a itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.github.io/glossary/">
               <span itemprop="name">Glossary</span>
             </a>
             <meta itemprop="position" content="1" />
           </span>
           {% for item in page.breadcrumbs %} › 
             <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a itemscope itemtype="http://schema.org/Thing" itemprop="item"
+              <a itemtype="http://schema.org/Thing" itemprop="item"
                  href="https://statecharts.github.io/glossary/{{ item.id }}.html">
                 <span itemprop="name">{{ item.name }}</span>
               </a>
