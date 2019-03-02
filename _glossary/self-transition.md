@@ -4,6 +4,8 @@ oneliner: A transition from a state back to itself.
 breadcrumbs:
   - id: transition
     name: Transition
+keywords:
+  - self
 ---
 
 # Self transition
@@ -19,6 +21,10 @@ A transition from the state to itself is depicted as a segment of a circle:
 It is important to note that self transitions (or transitions to own child states) will in fact _exit_ the state in which the transition starts.  This is important to keep in mind and can be a source of confusion, since it leads to the _exit_ and _entry_ actions of the state to be re-executed.
 
 For [compound states](compound-state.html){:.glossary} this means that all substates are exited, and any [initial states](initial-state.html){:.glossary} are entered. 
+
+## Usage
+
+Self transitions are commonly used to "restart" the current state, causing the exit actions to happen, followed by the entry actions.  This also resets the timer for how long the machine has been in the state, meaning that [delayed transitions](delayed-transition.html){:.glossary} start counting from 0 again.
 
 ## XState
 
