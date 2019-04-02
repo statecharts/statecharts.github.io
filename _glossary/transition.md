@@ -37,6 +37,28 @@ Alongside _states_, transitions are the main ingredient of state machines and st
 
 Transitions are primarily used to move the machine between states, possibly executing _transition actions_ if they are defined.
 
+## SCXML
+
+In Statechart XML, a transition is a `<transition>` element nested inside the `<state>` element to which it applies.  The `target` attribute identifies the state to which it points, while `cond` is used for the guard.
+
+```xml
+<state id="somestate">
+  <transition event="my_event" target="otherstate" />
+</state>
+<state id="otherstate" />
+```
+
+Multiple transitions for the same event are defined by defining several transitions for the same event.  The transitions are inspected in _document order_:
+
+```xml
+<state id="somestate">
+  <transition event="my_event" cond="a_guard" target="otherstate" />
+  <transition event="my_event" target="thirdstate" />
+</state>
+<state id="otherstate" />
+<state id="thirdstate" />
+```
+
 ## XState
 
 In XState, a transition is defined using [the *on* property](https://xstate.js.org/docs/guides/transitions.html) of a state.  The key is the event in question, and the value is the name of the target state:
@@ -63,28 +85,5 @@ It is also possible to define an array of transitions for any given event.  Each
 },
 "otherstate": {},
 "thirdstate": {}
-```
-
-
-## SCXML
-
-In Statechart XML, a transition is a `<transition>` element nested inside the `<state>` element to which it applies.  The `target` attribute identifies the state to which it points, while `cond` is used for the guard.
-
-```xml
-<state id="somestate">
-  <transition event="my_event" target="otherstate" />
-</state>
-<state id="otherstate" />
-```
-
-Multiple transitions for the same event are defined by defining several transitions for the same event.  The transitions are inspected in _document order_:
-
-```xml
-<state id="somestate">
-  <transition event="my_event" cond="a_guard" target="otherstate" />
-  <transition event="my_event" target="thirdstate" />
-</state>
-<state id="otherstate" />
-<state id="thirdstate" />
 ```
 
