@@ -13,7 +13,7 @@ A [self transition](self-transition.html){:.glossary} is a transition that goes 
 
 A [local transition](local-transition.html){:.glossary} is a transition that does not exit the source state, but the target state _must_ be a substate of the source state.
 
-An [automatic transition](automatic-transition){:.glossary} is a transition that is not tied to any particular event, but rather tries to fire at all times.  Automatic transitions are usually guarded.
+An [automatic transition](automatic-transition.html){:.glossary} is a transition that is not tied to any particular event, but rather tries to fire at all times.  Automatic transitions are usually guarded.
 
 A transition can define [actions](action.html){:.glossary} that will be executed whenever at transition is executed.
 
@@ -39,7 +39,7 @@ Transitions are primarily used to move the machine between states, possibly exec
 
 ## XState
 
-In XState, a transition is defined using [the `on` property](https://xstate.js.org/docs/guides/transitions.html) of a state.  The key is the event in question, and the value is the name of the target state:
+In XState, a transition is defined using [the *on* property](https://xstate.js.org/docs/guides/transitions.html) of a state.  The key is the event in question, and the value is the name of the target state:
 
 ```json
 "somestate": {
@@ -47,9 +47,7 @@ In XState, a transition is defined using [the `on` property](https://xstate.js.o
     "my_event" : "otherstate"
   }
 },
-"otherstate": {
-  ...
-}
+"otherstate": {}
 ```
 
 It is also possible to define an array of transitions for any given event.  Each element in the array defines a transition to be handled by that event, and they are inspected in array order:
@@ -58,15 +56,13 @@ It is also possible to define an array of transitions for any given event.  Each
 "somestate": {
   "on": {
     "my_event" : [
-      { "target": "otherstate", cond: "a_guard" },
+      { "target": "otherstate", "cond": "a_guard" },
       { "target": "thirdstate" }
     ]
   }
 },
-"otherstate": {
-},
-"thirdstate": {
-}
+"otherstate": {},
+"thirdstate": {}
 ```
 
 
@@ -76,19 +72,17 @@ In Statechart XML, a transition is a `<transition>` element nested inside the `<
 
 ```xml
 <state id="somestate">
-  <transition event="my_event" target="otherstate"/>
+  <transition event="my_event" target="otherstate" />
 </state>
-<state id="otherstate">
-  ...
-</state>
+<state id="otherstate" />
 ```
 
 Multiple transitions for the same event are defined by defining several transitions for the same event.  The transitions are inspected in _document order_:
 
 ```xml
 <state id="somestate">
-  <transition event="my_event" cond="a_guard" target="otherstate"/>
-  <transition event="my_event" target="thirdstate"/>
+  <transition event="my_event" cond="a_guard" target="otherstate" />
+  <transition event="my_event" target="thirdstate" />
 </state>
 <state id="otherstate" />
 <state id="thirdstate" />
