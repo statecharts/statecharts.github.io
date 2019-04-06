@@ -1,10 +1,12 @@
 ---
 title: Guard
 oneliner: A boolean check imposed on a transition to inhibit the execution of the transition
+keywords:
+  - condition
 aka:
-  - title: Conditional transition
+  - title: Condition
     url: guard.html
-    oneliner: Another name for Guard
+    oneliner: A boolean expression enabling or disabling a transition, known as a Guard.
 ---
 
 # Guard
@@ -46,7 +48,7 @@ The notation does not prescribe the formatting of the square brackets; it does n
 
 ## XState
 
-XState supports guard functions in the machine definition:
+XState supports [guard functions](https://xstate.js.org/docs/guides/guards.html) in the machine definition:
 
 ```
 on: {
@@ -70,11 +72,9 @@ on: {
 }
 ```
 
-See [xstate.js.org/docs/guides/guards](https://xstate.js.org/docs/guides/guards/) for more information.
-
 ## SCXML
 
-In Statechart XML, the guard is specified using the `cond` attribute on the `<transition>` element:
+In Statechart XML, the guard is specified using ]the `cond` attribute on the `<transition>` element](https://www.w3.org/TR/scxml/#transition):
 
     <transition event="some-event" cond="is_capable_of_flight()" target="some-other-state" />
 
