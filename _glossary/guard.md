@@ -15,7 +15,17 @@ _Also known as **Conditional transition**_
 
 A guard is a condition that may be checked when a statechart wants to handle an [event](event.html){:.glossary}.  A guard is declared on the [transition](transition.html){:.glossary}, and when that transition _would_ trigger, then the guard (if any) is checked.  If the guard is _true_ then the transition does happen. If the guard is false, the transition is ignored.
 
-When transitions have guards, then it's possible to define two or more transitions for the same event from the same state, i.e. that a state has _two_ (or more) transitions for a particular event.  When the event happens, then the guarded transitions are checked, one by one, and the first transition whose guard is true will be used, the others will be ignored.
+## Notation
+
+A guard is added after the event name, in square brackets:
+
+![An arrow with the word "some-event" followed by "is capable of flight" in square brackets](guard.svg)
+
+The notation does not prescribe any particular syntax of the text inside brackets—the guard itself.  It does not have to be executable code:  For hand drawn statecharts, a simple sentence is enough.
+
+## Usage
+
+When transitions have guards, then it's possible to define two or more transitions for the same event from the same state, i.e. that a state has _two_ (or more) transitions for the same event.  When the event happens, then the guarded transitions are checked, one by one, and the first transition whose guard is true will be used, the others will be ignored.
 
 A guard is generally a boolean function or boolean variable.  It must be evaluated _synchronously_ — A guard can for example not wait for a future or promise to resolve — and should return immediately.
 
@@ -38,13 +48,21 @@ An _In_ guard can act as a way to introduce a certain amount of coordination bet
 
 It should be noted that a guard is an _if_ test, exactly the type of if tests that lead to problems and complexity in traditional event processing code.  Heavy use of guards with complicated guard conditions should be avoided.
 
-## Notation
+## SCXML
 
-A guard is added after the event name, in square brackets, like so:
+In Statechart XML, the guard is specified using ]the `cond` attribute on the `<transition>` element](https://www.w3.org/TR/scxml/#transition):
 
-![An arrow with the word "some-event" followed by "is capable of flight" in square brackets](guard.svg)
+```xml
+<transition event="some-event" cond="is_capable_of_flight()" target="some-other-state" />
+```
 
-The notation does not prescribe the formatting of the square brackets; it does not have to be executable code.  For hand drawn statecharts, a simple sentence is enough.
+Again, the set of guard functions available to the statechart is up to you, and again you can expose low level information from your component (such as character count), or higher level, more "business related" guards (such as "is valid" or word count).
+
+"In" guards are provided by a required built-in function called `In`:
+
+```xml
+<transition event="some-event" cond="In('A')" target="some-other-state" />
+```
 
 ## XState
 
@@ -52,35 +70,24 @@ XState supports [guard functions](https://xstate.js.org/docs/guides/guards.html)
 
 ```
 on: {
-  "some-event": {
-    "some-other-state": {
-      cond: ({ is_capable_of_flight }) => is_capable_of_flight
-    }
-  }
+  "some-event": [{
+    target: "some-other-state",
+    cond: "is_capable_of_flight"
+  }]
 }
 ```
 
-The guard function is provided with the "context" (or "extended state") as its first argument, the event object as the second argument, and the "current state" expressed as a state value as the third argument.
+The guard function can be provided in-line, but if not, should be provided to the XState interpreter.
+
 
 "In guards" are supported declaratively:
 
 ```
 on: {
-  "some-event": {
-    "some-other-state": { in: "A" }
+  "some-event": [{
+    target: "some-other-state",
+    in: "A"
   }
 }
 ```
-
-## SCXML
-
-In Statechart XML, the guard is specified using ]the `cond` attribute on the `<transition>` element](https://www.w3.org/TR/scxml/#transition):
-
-    <transition event="some-event" cond="is_capable_of_flight()" target="some-other-state" />
-
-Again, the set of guard functions available to the statechart is up to you, and again you can expose low level information from your component (such as character count), or higher level, more "business related" guards (such as "is valid" or word count).
-
-"In" guards are provided by a required built-in function called `In`:
-
-    <transition event="some-event" cond="In('A')" target="some-other-state" />
 
