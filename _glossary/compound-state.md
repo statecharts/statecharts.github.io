@@ -2,7 +2,16 @@
 title: Compound state
 oneliner: A state that has one or more substates
 primaryImage: compound-state.svg
-keywords: compound, compound state, substate, composite, composite state, child state, parent state, hierarchy, or state
+keywords:
+  - compound
+  - compound state
+  - substate 
+  - composite
+  - composite state
+  - child state
+  - parent state
+  - hierarchy
+  - or state
 breadcrumbs:
   - id: state
     name: State
