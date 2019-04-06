@@ -45,6 +45,8 @@ state.activities; // { "http_request": true }
 
 When entering a state with an activity, xstate also includes an action of type 'xstate.start' to indicate that an activity has just started.
 
+XState also supports [the _invoke_ technique](https://xstate.js.org/docs/guides/communication.html) with the ability to "invoke" a function providing a callback mechanism, a Promise, or a different machine. 
+
 ## SCION-CORE
 
-SCION core, which is heavily inspired by SCXML also has no depiction of activites.  Instead, use start and stop actions to control long running processes.
+SCION core, which is heavily inspired by SCXML also has no depiction of activites.  Instead, use start and stop _actions_, or _invoke_ to control long running processes.
