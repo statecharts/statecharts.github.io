@@ -1,4 +1,10 @@
-## A simple on-off statechart
+# A simple on-off statechart
+
+## Abstract
+
+This page uses a simple on-off switch, and defines its behaviour using a statechart.  The switch is a simple device that has two states: "on" and "off".  When you "flick" the switch, it goes from on to off, or off to on.  This is the base behaviour that will be described in a statechart.  We will change this behaviour by modifing the statechart.  It is a contrived example, but shows some ways to model behaviour using techniques specific to statecharts.
+
+## Introduction
 
 Here's the simple on-off switch, the "simple state machine" that we'll extend in various ways.  In a way it will function as the "zoomed out" view of our statechart too:
 
@@ -9,7 +15,9 @@ We're going to specialize these two states by adding "substates" to alter the be
 - Whenever the "flick" event happens, the machine will alternate between the _on_ and _off_ states.
 - Whenever it enters/leaves the on state, it invokes an _action_ to turn on or off a light accordingly.
 
-In our refinmenent, this will _generally_ hold true, but with a few exceptions.  We'll start off by introducing a couple of new states _within_ the off state.  These _substates_ specialize the behaviour of the off state: It causes it to change behaviour.
+In our refinmenent, this will _generally_ hold true, but with a few exceptions.  The _exceptions_ will be described by introducing substates.  We'll start off by introducing a couple of new states _within_ the off state.  These _substates_ specialize the behaviour of the off state: It causes it to change behaviour.
+
+The new behaviour we're going for is to require a two second period where the "flick event" should _not_ go to the "on" state, and if the flick event happens a bit too early, that the switch now has to wait another two seconds for it to want to go to the "on" state.
 
 Here's the statechart:
 
@@ -89,7 +97,7 @@ In all of these examples above, the business logic (the _turn light on_ and _tur
 
 The problem being solved is a bit contrived, and albeit the problem domain is relatively simple (turn a light on or off at the flick of a switch) it does a lot more than a simple boolean:
 
-- When the light is off, any attempts to turn it on again less than 2 seconds after it was turned off will fail. Only when the switch hasn't been flicked for 2 seconds does the switch start "working" again
+- When the light is turned off, any attempts to turn it on again less than 2 seconds after it was turned off will fail. Only when the switch hasn't been flicked for 2 seconds does the switch start "working" again
 - When a flick of the switch would cause the light to turn on, it doesn't actually cause the light to turn on until after 0.5 seconds.  If the switch is flicked again, the light won't actually be turned on.
 - When a flick of the swith turns the light on after 0.5 seconds, any additional flicks of the switch are simply ignored for a further 0.5 seconds
 
