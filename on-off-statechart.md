@@ -17,6 +17,8 @@ We're going to specialize these two states by adding "substates" to alter the be
 
 In our refinmenent, this will _generally_ hold true, but with a few exceptions.  The _exceptions_ will be described by introducing substates.  We'll start off by introducing a couple of new states _within_ the off state.  These _substates_ specialize the behaviour of the off state: It causes it to change behaviour.
 
+The behaviour changes that will be introduced all have to deal with the "misuse" of the light switch, in that spamming the button with the flick event will cause the light to go on and off very, very, quickly, possibly causing the light to break because the light is switched on and off too quickly.
+
 The new behaviour we're going for is to require a two second period where the "flick event" should _not_ go to the "on" state, and if the flick event happens a bit too early, that the switch now has to wait another two seconds for it to want to go to the "on" state.
 
 Here's the statechart:
