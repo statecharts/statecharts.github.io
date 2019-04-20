@@ -113,7 +113,7 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [rFSM Statecharts](https://github.com/kmarkus/rFSM), by Markus Klotzbuecher, a lightweight Statechart implementation in Lua 
 
-[Rosmaro](https://rosmaro.js.org/) by Łukasz Makuch, Visual automata-based programming.
+[Rosmaro](https://rosmaro.js.org/) by Łukasz Makuch, a visual automata-based programming framework for writing JavaScript functions like `({state, action}) => ({state, result})`.
 
 [SCION](https://github.com/jbeard4/SCION), [SCION-CORE](https://github.com/jbeard4/SCION-CORE) et al, by Jacob Beard.  An SCXML parser and runner in JavaScript.
 
