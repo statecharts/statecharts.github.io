@@ -20,6 +20,8 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 ## Blog posts / Articles
 
+[Dynamic orthogonal regions in state machines](https://lukaszmakuch.pl/post/dynamic-orthogonal-regions/), Łukasz Makuch, 2019
+
 [Patterns for using React with Statechart-based state machines](https://medium.freecodecamp.org/patterns-for-using-react-with-statechart-based-state-machines-33e6ab754605), Shawn McKay, 2018
 
 [How to visually design state in JavaScript](https://medium.freecodecamp.org/how-to-visually-design-state-in-javascript-3a6a1aadab2b), Shawn McKay, 2018
