@@ -137,6 +137,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [SproutCore](https://sproutcore.com/) has statecharts built in to the heart of the platform, and is introduced in [part 2](http://guides.sproutcore.com/getting_started_2.html) of their Getting Started guide.
 
+[uscxml](https://github.com/tklab-tud/uscxml), from the Department of Computer Science, Telecooperation Lab (TK) at Darmstadt Technical University, is an SCXML interpreter and transformer/compiler written in C/C++ with bindings to Java, C#, Python and Lua.
+
 [XState](https://github.com/davidkpiano/xstate/), by David Khourshid, pure functional statecharts, in TypeScript.
 
 ## Reference Material
