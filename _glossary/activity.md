@@ -1,9 +1,8 @@
 ---
 title: Activity
 oneliner: A long running process that is usually tied to the state machine being in a state
-sitemap:
-  lastmod: 2019-04-26
-------
+date: 2019-04-26
+---
 
 # Activity
 
