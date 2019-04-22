@@ -1,3 +1,8 @@
+---
+sitemap:
+  lastmod: 2018-02-25
+---
+
 # You're already coding statecharts, they're just implied.
 
 The code you're writing today is already saturated with state machines and/or statecharts.  It's just that those state machines are usually just a _function of the code_.  There's no place in the code that you can point to and say "these are the different states" and "this is how the behaviour changes when this happens".  The statecharts.github.io project advocates making _explicit_ statecharts, that allow you to inspect the state machine as a separate entity.
