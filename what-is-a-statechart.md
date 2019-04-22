@@ -1,3 +1,8 @@
+---
+sitemap:
+  lastmod: 2018-12-30
+  priority: 0.8
+---
 ## What is a statechart?
 
 The primary feature of statecharts is that states can be organized in a _hierarchy_:  A statechart is a [state machine](what-is-a-state-machine.html) where each state in the state machine may define its own _subordinate_ state machines, called _substates_.  Those states can again define substates.
