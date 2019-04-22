@@ -1,5 +1,7 @@
 ---
 permalink: /glossary/index.html
+sitemap:
+  changefreq: monthly
 ---
 
 # Full list of glossary terms:
