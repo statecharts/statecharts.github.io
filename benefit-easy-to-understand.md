@@ -1,4 +1,8 @@
 ---
+sitemap:
+  lastmod: 2018-12-25
+  priority: 0.3
+  changefreq: yearly
 category: benefits
 ---
 
