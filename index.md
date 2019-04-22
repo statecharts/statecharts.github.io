@@ -1,5 +1,8 @@
 ---
 description: The world of statecharts describes what statecharts are, their benefits and drawbacks, how they differ from state machines, and practical examples on how to use them.
+date: 2018-07-30
+sitemap:
+  priority: 0.5
 ---
 
 ## Welcome to the world of Statecharts
