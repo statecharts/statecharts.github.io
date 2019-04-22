@@ -27,7 +27,7 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
-  {% for page in site.pages %}
+  {% for page in site.pages | concat: site.glossary | concat: site.faq %}
     {% unless page.sitemap.exclude %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
