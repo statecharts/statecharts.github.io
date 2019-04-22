@@ -1,3 +1,8 @@
+---
+sitemap:
+  lastmod: 2017-12-25
+  priority: 0.4
+---
 ## What is a state machine?
 
 Wikipedia defines _finite state machines_ (FSM) as:
