@@ -1,1 +1,1 @@
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://statecharts.github.io/sitemap.xml
