@@ -1,3 +1,8 @@
+---
+sitemap:
+  exclude: yes
+---
+
 # statecharts.github.io
 
 This web site has a few goals:
