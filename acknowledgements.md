@@ -2,7 +2,7 @@
 sitemap:
   lastmod: 2018-01-17
   priority: 0.1
-  changefreq: 'yearly'
+  changefreq: yearly
 ---
 
 # Acknowledgements
