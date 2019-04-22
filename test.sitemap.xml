@@ -27,7 +27,7 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
-  {% for page in site.pages %}
+  {% for page in site.pages | sort: "sitemap.lastmod" %}
     {% unless page.sitemap.exclude %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
