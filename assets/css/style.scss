@@ -1,4 +1,6 @@
 ---
+sitemap:
+  exclude: yes
 ---
 
 @import "{{ site.theme }}";
