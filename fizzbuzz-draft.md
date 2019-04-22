@@ -1,4 +1,7 @@
 ---
+sitemap:
+  lastmod: 2018-02-25
+  exclude: true
 description: Using the FizzBuzz programming puzzle as a backdrop, this post shows how hierarchy can be leveraged to control behaviour.
 ---
 
