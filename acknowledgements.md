@@ -1,3 +1,10 @@
+---
+sitemap:
+  lastmod: 2018-01-17
+  priority: 0.1
+  changefreq: 'yearly'
+---
+
 # Acknowledgements
 
 This site is the brainchild of Erik Mogensen, and he writes:
