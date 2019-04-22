@@ -1,3 +1,8 @@
+---
+sitemap:
+  lastmod: 2018-07-27
+  priority: 0.5
+---
 # Fizzbuzz in Statecharts
 
 [Fizzbuzz](http://wiki.c2.com/?FizzBuzz) in programming is a program that writes out the numbers 1 through 100 swapping out multiples of 3 and 5 with the words Fizz and Buzz respectively, like so:
