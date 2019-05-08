@@ -6,6 +6,7 @@ breadcrumbs:
     name: Event
   - id: generated-event
     name: Generated Event
+date: 2019-05-08
 ---
 
 # Raised Event
