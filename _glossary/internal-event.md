@@ -1,6 +1,11 @@
 ---
 title: Internal event
 oneliner: An event caused by the statechart itself, and handled immediately
+breadcrumbs:
+  - id: event
+    name: Event
+  - id: generated-event
+    name: Generated Event
 ---
 
 # Internal Event
