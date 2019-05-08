@@ -1,15 +1,20 @@
 ---
 title: Raised event
 oneliner: An event generated explicitly by the statechart
+breadcrumbs:
+  - id: event
+    name: Event
+  - id: generated-event
+    name: Generated Event
 ---
 
 # Raised Event
 
-A raised event is a type of [generated event](generated-event.html){:.glossary} that is explicitly mentioned in the statechart.  A raised event is usually defined as an [entry](enter.html){:.glossary}, [exit](exit.html){:.glossary}, or [transition](transition.html){:.glossary} action.
+A raised event is a type of [generated event](generated-event.html){:.glossary} that is explicitly mentioned in the statechart.  A raised event is usually declared as an [action](action.html){:.glossary} assigned to the [entry](enter.html){:.glossary} or [exit](exit.html){:.glossary} of a state, or on a [transition](transition.html){:.glossary} between states.
 
 ## Notation
 
-A raised event is usually shown in the same manner as actions, e.g. `entry / B`, which would mean that if this state was entered, the system would _generate_ the event `B` and process it as part of the current event, before processing any external events.
+A raised event is usually shown in the same manner as actions, in other words, after a slash.  For example `entry / B`, which would mean that if this state was entered, the system would _generate_ the event `B` and process it as part of the current event, before processing any external events.
 
 ## Usage
 
