@@ -4,7 +4,7 @@ oneliner: The conversion of an atomic state to a compound state by the addition 
 aka:
   - title: Specialise
     url: refine.html
-    oneliner: An other term for refine, the introduction substates to modify the behaviour of a state
+    oneliner: Another term for refine, the introduction substates to modify the behaviour of a state
 ---
 
 # Refinement
