@@ -18,9 +18,9 @@ For our purposes (explaining Statecharts), a state machine is a software compone
 - The machine is defined by a finite list of states.
 - One state is defined as the *initial* state.  When a machine is "started" it automatically enters this state.
 - States can define "events" that trigger a *transition*.
-- A transition causes the machine to exit the state and enter another (or the same) state.
-- A transition may be conditional, in other words might ask "the world" about things.  These are called _guards_ and must be side-effect free.
-- A state can define *actions* upon entering or exiting a state.  These are called actions and will typically have side effects.
+- A transition causes the machine to exit a state and enter another (or the same) state.
+- A transition may be conditional, in other words it might ask "the world" about things.  These are called _guards_ and must be side-effect free.
+- A state can define *actions* that occur when a machine enters or exits the state.  Actions will typically have side effects.
 
 When "running" a state machine, the state machine definition is "executed":
 
