@@ -89,6 +89,8 @@ Mathworks has a short four-part series on state machines from 2014: [What are th
 
 [sketch.systems](https://sketch.systems/), a web-app to draw statecharts and bind them to user interface elements.  "Helps software designers think about complex product behavior. Sketch out states, add prototypes, and clarify questions quickly."
 
+[sm-cat](https://github.com/sverweij/state-machine-cat), a tool that makes statecharts that look good, with the least effort possible without having to interact with drag and drop tools.
+
 [ThingML](http://thingml.org/pmwiki.php?n=Main.StateMachines), includes a DSL for statecharts, compilers to various languages.
 
 [Yakindu Statechart Tools](https://www.itemis.com/en/yakindu/state-machine/), also [on GitHub](https://github.com/Yakindu/statecharts/). User interface and code generation tool (?)
