@@ -30,7 +30,7 @@ When trying to understand a statechart based component, you have the choice of l
 
 ![Valid, editable and modified states](benefit-easy-to-understand.svg)
 
-With a little knowledge of statecharts, it's clear that the two "booleans" edited/unedited ad independent from valid/invalid, but that they are both dependent on being _editable_ for them to have any meaning.
+With a little knowledge of statecharts, it's clear that the two "booleans" unedited/edited and valid/invalid are independent , but both depend on being _editable_ to have any meaning.
 
 The remaining code (the [actions](glossary/action.html){:.glossary}, [guards](glossary/guard.html){:.glossary} and [activities](glossary/activity.html){:.glossary}) is easy to grasp too.  Each is extracted to its own method:
 
