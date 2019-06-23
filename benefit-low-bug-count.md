@@ -4,7 +4,7 @@ category: benefits
 
 # Low bug count
 
-The use of statecharts can potentiall dramatically lower the bug count of software.  Ian Horrocks found a 80 to 90 percent reduction in bugs when employing statecharts, and that the remaining bugs were seldom in the statechart itself
+Using statecharts has the potential to dramatically lower the bug count of software.  Ian Horrocks found a reduction in bugs of between 80 and 90 percent when employing statecharts, and that the remaining bugs were seldom in the statechart itself.
 
 ...
 
