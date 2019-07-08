@@ -63,6 +63,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "{{ page.title }}",
   "url": "https://statecharts.github.io{{ page.url }}",
   "description": "{{ page.description }}",
+{% if page.keywords %}
+  "keywords": [
+{% for keyword in page.keywords %}
+     "{{ keyword }}",
+{% endfor %}
+     "statecharts"
+  ],
+{% endif %}
   "mainContentOfPage": {
     "@type": "WebPageElement",
     "cssSelector": "#main_content"
