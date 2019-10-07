@@ -59,7 +59,7 @@ An **abstract state machine** is a software component that defines a finite set 
 - A transition defines how a machine would react to the event, by exiting one state and entering another state.
 - A transition can define *actions* that occur when the transition happens.  Actions will typically have side effects.
 
-When "running" a state machine, this abstract state machine is **executed**.  The first thing that happens it that the state machine enters the "initial state".  Then, events are passed to the machine as soon as they happen.  When an event happens:
+When "running" a state machine, this abstract state machine is **executed**.  The first thing that happens is that the state machine enters the "initial state".  Then, events are passed to the machine as soon as they happen.  When an event happens:
 
 - The event is checked against the _current state_'s transitions.
 - If a transition matches the event, that transition "happens".
