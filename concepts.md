@@ -1,5 +1,5 @@
 # Concepts
-
+```html
 <style>
 svg {
 }
@@ -128,3 +128,4 @@ function highlight(what) {
 </ul>
 </li>
 </ul>
+```
