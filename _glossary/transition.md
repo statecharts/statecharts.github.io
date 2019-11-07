@@ -15,7 +15,7 @@ A [local transition](local-transition.html){:.glossary} is a transition that doe
 
 An [automatic transition](automatic-transition.html){:.glossary} is a transition that is not tied to any particular event, but rather tries to fire at all times.  Automatic transitions are usually guarded.
 
-A transition can define [actions](action.html){:.glossary} that will be executed whenever at transition is executed.
+A transition can define [actions](action.html){:.glossary} that will be executed whenever that transition is executed.
 
 ## Notation
 
