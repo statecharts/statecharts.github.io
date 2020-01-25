@@ -34,7 +34,7 @@ Here is a visual depiction of a simple state machine.  It is a model of a simple
 
 Some observations over this machine.
 
-* It consists of two states, "on" and "off". This machine can therfore be in exactly one of the two states at any point in time.  In other words, the transitions between states are instantaneous.
+* It consists of two states, "on" and "off". This machine can therefore be in exactly one of the two states at any point in time.  In other words, the transitions between states are instantaneous.
 * The "flick" event causes it to transition between states.
 * When the machine _enters_ the "on" state, a side effect occurs.  A light is turned on.
 * When the machine _exits_ the "on" state, another side effect occurs.  A light is turned off.
