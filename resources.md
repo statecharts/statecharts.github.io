@@ -22,6 +22,10 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 [Using State Machines in Vue.js with XState](https://frontstuff.io/using-state-machines-in-vuejs-with-xstate), Sarah Dayan, 2020
 
+[State machine advent: 24 bite-sized blog posts about state machines and statecharts](https://dev.to/codingdive/introducing-state-machine-advent-24-bite-sized-blog-posts-about-state-machines-and-statecharts-2ce0), Mikey Stengel, 2019
+
+[My love letter to XState and statecharts ♥](https://timdeschryver.dev/blog/my-love-letter-to-xstate-and-statecharts), Tim Deschryver, 2019
+
 [Dynamic orthogonal regions in state machines](https://lukaszmakuch.pl/post/dynamic-orthogonal-regions/), Łukasz Makuch, 2019
 
 [Patterns for using React with Statechart-based state machines](https://medium.freecodecamp.org/patterns-for-using-react-with-statechart-based-state-machines-33e6ab754605), Shawn McKay, 2018
