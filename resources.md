@@ -22,6 +22,8 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 [Using State Machines in Vue.js with XState](https://frontstuff.io/using-state-machines-in-vuejs-with-xstate), Sarah Dayan, 2020
 
+[Coding for complexity](https://danreynolds.ca/tech/2019/12/02/Coding-For-Complexity/), Dan Reynolds, 2019
+
 [State machine advent: 24 bite-sized blog posts about state machines and statecharts](https://dev.to/codingdive/introducing-state-machine-advent-24-bite-sized-blog-posts-about-state-machines-and-statecharts-2ce0), Mikey Stengel, 2019
 
 [My love letter to XState and statecharts ♥](https://timdeschryver.dev/blog/my-love-letter-to-xstate-and-statecharts), Tim Deschryver, 2019
