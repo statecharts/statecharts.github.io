@@ -40,7 +40,7 @@ If this state is entered, then it enters both the top and bottom regions, and th
 * Exactly one of B and C is active
 * Exactly one of D and E is active 
 
-Such a state is called a [parallel state](glossary/parallel-state.html){:.glossary}, the and regions are often called "orthogonal regions".
+Such a state is called a [parallel state](glossary/parallel-state.html){:.glossary}, and the regions are often called "orthogonal regions".
 
 ### Transitions can be guarded
 
