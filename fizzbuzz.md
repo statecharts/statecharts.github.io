@@ -95,7 +95,7 @@ For i = 1; i < 100; i++ {
 
 Actions are things that happen instantaneously.   The statechart will tell us what to do, and we will blindly do what it tells us to do.
 
-We can also model the printing of some text to be a long running process, perhaps setting the text of a <div> (and subsequently removing the text when the activity is supposed to stop) the text.
+We can also model the printing of some text to be a long running process, perhaps setting the text of a <div> (and subsequently removing the text when the activity is supposed to stop).
 
 ```
 // alternative, using activities
