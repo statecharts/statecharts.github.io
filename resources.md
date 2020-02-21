@@ -20,6 +20,8 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 ## Blog posts / Articles
 
+[The most elegant debounce code you'll ever write featuring XState](https://dev.to/codingdive/the-most-elegant-debounce-code-you-ll-ever-write-featuring-xstate-3hn0), by Mikey Stengel, 2020
+
 [Using State Machines in Vue.js with XState](https://frontstuff.io/using-state-machines-in-vuejs-with-xstate), Sarah Dayan, 2020
 
 [Coding for complexity](https://danreynolds.ca/tech/2019/12/02/Coding-For-Complexity/), Dan Reynolds, 2019
