@@ -101,7 +101,7 @@ The problem being solved is a bit contrived, and albeit the problem domain is re
 
 - When the light is turned off, any attempts to turn it on again less than 2 seconds after it was turned off will fail. Only when the switch hasn't been flicked for 2 seconds does the switch start "working" again
 - When a flick of the switch would cause the light to turn on, it doesn't actually cause the light to turn on until after 0.5 seconds.  If the switch is flicked again, the light won't actually be turned on.
-- When a flick of the swith turns the light on after 0.5 seconds, any additional flicks of the switch are simply ignored for a further 0.5 seconds
+- When a flick of the switch turns the light on after 0.5 seconds, any additional flicks of the switch are simply ignored for a further 0.5 seconds
 
 Additionally, no weird bugs such as rogue timers cause events to fire out-of-order.  In a normal, imperative implementation of this, it is common to forget to cancel any timers that have been started, causing the effects of the timer to be executed even though they were not supposed to.  This whole class of bugs no longer exist.
 
