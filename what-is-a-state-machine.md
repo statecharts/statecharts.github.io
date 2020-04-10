@@ -1,8 +1,8 @@
 ---
 sitemap:
-  lastmod: 2019-07-08
-  priority: 0.4
-description: A state machine is a machine that can be in exactly one state at a time, reacting to events by transitioning between states.
+  lastmod: 2020-04-10
+  priority: 0.7
+description: A state machine is a way of modeling program state so that a program will always be in exactly one state at any one time.
 keywords:
   - state
   - state machine
@@ -23,8 +23,6 @@ And further:
 
 A state machine is _also_ a visual depiction of such an abstract machine.
 
-Understanding state machines is almost the same as understanding **statecharts**.  In many ways, statecharts are the "bigger brother" of state machines, designed to overcome some of the limitations of state machines.
-
 ## Example
 
 Here is a visual depiction of a simple state machine.  It is a model of a simple on/off switch.
@@ -39,7 +37,17 @@ Some observations over this machine.
 * When the machine _enters_ the "on" state, a side effect occurs.  A light is turned on.
 * When the machine _exits_ the "on" state, another side effect occurs.  A light is turned off.
 
+This simple state machine is comparable to a boolean variable—which can either be true or false—that controls the _on_-ness of something.
+
+## What is state anyway?
+
+Program state is the _set of all variables in a program and their values at any point in time_ (see [Wikipedia](https://en.wikipedia.org/wiki/State_(computer_science)#Program_state)).  A program or software component that has five independent variables, that each could be true or false, then it could in theory _be_ in any of 32 states (2 to the power of 5 = 32).  However, a program will often have _invalid_ states, and in traditional software, the variables are carefully checked and manipulated in such a way that these invalid states don't happen.
+
+A state machine is an alternative way of modeling program state:  Instead of defining independent variables, a machine is crafted specifically to handle what states are possible, and when a machine is a given state, what _next_ state is allowed.  Those five independent boolean variables are replaced with a single _state machine_ which intrinsically can only be in valid states.
+
 ## Relationship with statecharts
+
+Understanding state machines is almost the same as understanding **statecharts**.  In many ways, statecharts are the "bigger brother" of state machines, designed to overcome some of the limitations of state machines.
 
 State machines are closely related to their bigger brother, _statecharts_.  A statechart is essentially a state machine that allows any state to include _more_ machines, in a hierarchical fashion.  This is to overcome some of the limitations that are inherent to state machines.
 
