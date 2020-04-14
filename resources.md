@@ -20,6 +20,10 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 
 ## Blog posts / Articles
 
+[UML Statechart tip: Handling errors when entering a state](https://www.embeddedrelated.com/showarticle/1334.php), by Matthew Eshleman, 2020
+
+[UML Statechart tip: Be wary of exit-state behavior](https://covemountainsoftware.com/2020/02/19/uml-statechart-tip-be-wary-of-exit-state-behavior/), by Matthew Eshleman, 2020
+
 [The most elegant debounce code you'll ever write featuring XState](https://dev.to/codingdive/the-most-elegant-debounce-code-you-ll-ever-write-featuring-xstate-3hn0), by Mikey Stengel, 2020
 
 [Using State Machines in Vue.js with XState](https://frontstuff.io/using-state-machines-in-vuejs-with-xstate), Sarah Dayan, 2020
@@ -57,6 +61,8 @@ The original description of statecharts, _Statecharts: A visual formalism for co
 [State charts can provide you with software quality insurance](https://www.embedded.com/design/prototyping-and-development/4008341/State-charts-can-provide-you-with-software-quality-insurance) by Peter Mueller, embedded.com, 2009
 
 [UML Statecharts at $10.99](http://www.drdobbs.com/architecture-and-design/uml-statecharts-at-1099/188101799), Miro Samek, Dr. Dobb's magazine, 2006
+
+[Statecharts: Some Critical Observations](https://mbreen.com/breenStatecharts.pdf) (PDF), by Michael Breen, 2004
 
 [Who moved my state?](http://www.drdobbs.com/who-moved-my-state/184401643) by Miro Samek, Dr. Dobb's magazine, 2003
 
