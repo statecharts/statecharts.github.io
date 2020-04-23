@@ -55,7 +55,7 @@ The primary goal of statecharts.github.io is to help you to understand statechar
 
 ## Abstract machine vs run-time
 
-An important distinction must be made between the _abstract machine itself_ (e.g. the drawing of a state machine, or the code) and the more concrete _run-time_ execution of a particular abtract machine.  This distinction is similar to the difference between a _class_ (abstract definition) and an _object_ (concrete instantiation).  Similarly, for a single abstract machine, there may be many _executions_, just as there are often many instances of any particular class.
+An important distinction must be made between the _abstract machine itself_ (e.g. the drawing of a state machine, or the code) and the more concrete _run-time_ execution of a particular abstract machine.  This distinction is similar to the difference between a _class_ (abstract definition) and an _object_ (concrete instantiation).  Similarly, for a single abstract machine, there may be many _executions_, just as there are often many instances of any particular class.
 
 The terms "statechart", "state machine" and "FSM" are often used to mean both the abstract and run-time form, although the run-time form sometimes has the qualifier "run" or "execution", as in "state machine execution" or "statetchart run".
 
