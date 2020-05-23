@@ -15,7 +15,7 @@ We're going to specialize these two states by adding "substates" to alter the be
 - Whenever the "flick" event happens, the machine will alternate between the _on_ and _off_ states.
 - Whenever it enters/leaves the on state, it invokes an _action_ to turn on or off a light accordingly.
 
-In our refinmenent, this will _generally_ hold true, but with a few exceptions.  The _exceptions_ will be described by introducing substates.  We'll start off by introducing a couple of new states _within_ the off state.  These _substates_ specialize the behaviour of the off state: It causes it to change behaviour.
+In our refinement, this will _generally_ hold true, but with a few exceptions.  The _exceptions_ will be described by introducing substates.  We'll start off by introducing a couple of new states _within_ the off state.  These _substates_ specialize the behaviour of the off state: It causes it to change behaviour.
 
 The behaviour changes that will be introduced all have to deal with the "misuse" of the light switch, in that spamming the button with the flick event will cause the light to go on and off very, very, quickly, possibly causing the light to break because the light is switched on and off too quickly.
 
@@ -66,7 +66,7 @@ Well that's simple to accommodate in a Statechart; just specialize the _D_ state
 
 The _Off_ and _On_ states have similar behaviour, although not quite the same.  Both react to the "flick" event, but slightly differently.
 
-In the Off state, when the button is "flick"ed repeatedly (even for many seconds), the stream of "flick" events will be ignored, and the light will stay Off.  It is only when the "flick" event _hasn't happened for 2 seconds_, that the next "flick" will turn it on.  In other words, the "flick" event must "cool down" for 2 seconds before it has an effect.
+In the Off state, when the button is "flick"ed repeatedly (even for many seconds), the stream of "flick" events will be ignored, and the light will stay off.  It is only when the "flick" event _hasn't happened for 2 seconds_, that the next "flick" will turn it on.  In other words, the "flick" event must "cool down" for 2 seconds before it has an effect.
 
 In the On state, when the button is "flicked" repeatedly, the flick events in the first 0.5 seconds of the On state are ignored. Only after 0.5 seconds will the "flick" event cause the light turn off.  The "flick" event is essentially ignored for half a second.
 
