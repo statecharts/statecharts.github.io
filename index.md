@@ -47,6 +47,10 @@ There are a few downsides to using statecharts that you should be aware of.
 * [It's usually a very foreign way of coding](drawback-foreign-paradigm.html), so teams might experience pushback based on how very different it is.
 * There is an overhead to extracting the behaviour in that the [number of lines of code might increase](drawback-lines-of-code.html) with smaller statecharts.
 
+### Why are they not used?
+
+* [People don't know about them, and YAGNI](faq/why-statecharts-are-not-used.html).
+
 ### What are the main arguments against statecharts?
 
 There are a few common arguments against statecharts in addition to the ones listed above:
