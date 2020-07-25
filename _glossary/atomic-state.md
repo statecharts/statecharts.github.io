@@ -1,6 +1,6 @@
 ---
 title: Atomic state
-oneliner: a state that has no substates
+oneliner: A state that has no substates
 keywords: atomic, simple, empty state
 breadcrumbs:
   - id: state
@@ -15,7 +15,7 @@ aka:
 
 _Also known as **Simple state**_
 
-An atomic state is a [state](state.html){:.glossary} that has no _substates_.  States that have substates are either [compound states](compound-state.html){:.glossary} or [parallel states](parallel-state.html){:.glossary}.
+An atomic state is a [state](state.html){:.glossary} that has no _substates_. States that have substates are either [compound states](compound-state.html){:.glossary} or [parallel states](parallel-state.html){:.glossary}.
 
 Atomic states do not define "initial" states either.
 
@@ -29,7 +29,7 @@ For atomic states that have no actions, and are otherwise empty, a very small, r
 
 In SCXML, an atomic state is any state that has no _state_ children:
 
-``` xml
+```xml
 <state id="my_atomic_state">
   <onentry>
     <script>do_the_thing()</script>
