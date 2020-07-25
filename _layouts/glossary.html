@@ -16,7 +16,7 @@
     <meta name="twitter:label1" value="Word count"/>
     <meta name="twitter:data1" value="{{ page.content | number_of_words }}"/>
     
-    {% if page.breadcrumbs | size > 0 %}
+    {% if page.breadcrumbs.size > 0 %}
     <meta name="twitter:label2" value="Specialization of"/>
     <meta name="twitter:data2" value="{{ page.breadcrumbs[0].name }}"/>
     {% endif %}
