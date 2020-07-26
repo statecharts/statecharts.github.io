@@ -72,7 +72,7 @@ on {
 
 Important to note that `internal: false` is the default, taking the lead from SCXML.
 
-See [xstate.js.org/docs/guides/internal](https://xstate.js.org/docs/guides/internal/) for more information.
+See [xstate.js.org/docs/guides/transitions.html#internal-transitions](https://xstate.js.org/docs/guides/transitions.html#internal-transitions) for more information.
 
 ## SCXML
 

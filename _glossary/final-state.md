@@ -14,8 +14,7 @@ The "completion" of a state is wholly defined by the statechart itself.
 
 ## Notation
 
-Final states are depicted using a solid filled circle, like the [initial state](initial-state.html){:.glossary} with an additional circle enclosing it.  Transitions from the final state must be [automatic], in other words they can not rely on events.
-
+Final states are depicted using a solid filled circle, like the [initial state](initial-state.html){:.glossary} with an additional circle enclosing it. Transitions from the final state must be [automatic](automatic-transition.html){:.glossary}, in other words they can not rely on events.
 
 ## SCXML
 
@@ -31,4 +30,4 @@ resolved: {
 }
 ```
 
-See [xstate.js.org/docs/guides/final](https://xstate.js.org/docs/guides/final/) for more information.
+See [xstate.js.org/docs/guides/final.html](https://xstate.js.org/docs/guides/final.html) for more information.
