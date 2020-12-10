@@ -18,7 +18,7 @@ Automatic transitions are [transitions](transition.html){:.glossary} that are tr
 
 Automatic transitions don't have an associated [event](event.html){:.glossary}, as the mere being in the state implies that the transition should be taken.
 
-Automatic transitions are usually [guarded](guard.html){:.glossary}.  Such a guarded automatic transition is checked immediately after the state is entered.  If the condition doesn't hold then the machine remains in the state, with this automatic transition in play _for as long as the state is active_.  Every time the statechart handles an event, the guard condition for these automatic transitions are checked.  If ever the guard condition ever succeeds, then the transition happens. 
+Automatic transitions are usually [guarded](guard.html){:.glossary}.  Such a guarded automatic transition is checked immediately after the state is entered.  If the condition doesn't hold then the machine remains in the state, with this automatic transition in play _for as long as the state is active_.  Every time the statechart handles an event, the guard condition for these automatic transitions are checked.  If the guard condition ever succeeds, then the transition happens. 
 
 If there are many automatic transitions in play, they are all checked.  In some statechart systems, only one guard is allowed to be true at any point in time; in others, the transitions are ordered, and the guards are checked until a one of them succeeds.
 
