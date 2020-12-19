@@ -47,9 +47,7 @@ A state machine is an alternative way of modeling program state:  Instead of def
 
 ## Relationship with statecharts
 
-Understanding state machines is almost the same as understanding **statecharts**.  In many ways, statecharts are the "bigger brother" of state machines, designed to overcome some of the limitations of state machines.
-
-State machines are closely related to their bigger brother, _statecharts_.  A statechart is essentially a state machine that allows any state to include _more_ machines, in a hierarchical fashion.  This is to overcome some of the limitations that are inherent to state machines.
+Understanding state machines is almost the same as understanding **statecharts**.  In many ways, statecharts are the "bigger brother" of state machines, designed to overcome some of the limitations of state machines. A statechart is essentially a state machine that allows any state to include _more_ machines, in a hierarchical fashion.  This is to overcome some of the limitations that are inherent to state machines.
 
 The primary goal of statecharts.github.io is to help you to understand statecharts.  An understanding of state machines is a nice side effect.  [What is a statechart?](what-is-a-statechart.html)
 
