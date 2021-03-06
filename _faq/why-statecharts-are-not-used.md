@@ -33,7 +33,7 @@ The **easiest** thing that could possibly work will _always_ be a set of implici
 
 ## YAGNI
 
-Anecdotal evidence suggests that the main reason for statecharts not being used is the YAGNI mindset, short for _You Ain't Gonna Need It_.  Complexity creeps in one boolean at a time, and along with that complexity comes bugs, but like the frog in the frying pan that doesn't notice a slow increase in temperature, developers don't notice the complexity creep.
+Anecdotal evidence suggests that the main reason for statecharts not being used is the YAGNI mindset, short for _You Ain't Gonna Need It_.  Complexity creeps in one boolean at a time, and along with that complexity comes bugs, but like the frog in the pot of water that doesn't notice a slow increase in temperature, developers don't notice the complexity creep.
 
 When developing a component you start out with a simple model of its behaviour, and the different modes it has, so very early on, the component starts to gain a few booleans.  The booleans might be explicit, like `boolean requestIsActive`, or it could be more implicit, such as the null-ness or "truthiness" of a variable: `var request = makeHttpRequest(...)`
 
