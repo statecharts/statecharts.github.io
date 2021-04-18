@@ -1,1 +1,1 @@
-Sitemap: https://statecharts.github.io/sitemap.xml
+Sitemap: https://statecharts.dev/sitemap.xml

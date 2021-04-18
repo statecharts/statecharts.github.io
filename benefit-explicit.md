@@ -5,7 +5,7 @@ sitemap:
 
 # You're already coding statecharts, they're just implied.
 
-The code you're writing today is already saturated with state machines and/or statecharts.  It's just that those state machines are usually just a _function of the code_.  There's no place in the code that you can point to and say "these are the different states" and "this is how the behaviour changes when this happens".  The statecharts.github.io project advocates making _explicit_ statecharts, that allow you to inspect the state machine as a separate entity.
+The code you're writing today is already saturated with state machines and/or statecharts.  It's just that those state machines are usually just a _function of the code_.  There's no place in the code that you can point to and say "these are the different states" and "this is how the behaviour changes when this happens".  The statecharts.dev project advocates making _explicit_ statecharts, that allow you to inspect the state machine as a separate entity.
 
 In traditional coding styles, behaviour is often determined by way of boolean variables, or even simply by enabling and disabling, or showing and hiding UI components.  When a UI component changes like this, it can be said to be in different _states_.  This is known as an _implied_ state machine, where one has to read and understand the code in order to find out which states the code can be in, and how its behaviour is different in each of those states.
 

@@ -9,7 +9,7 @@
     <meta name="description" content="{{ page.description }}">
     <meta property="og:site_name" content="Statecharts: glossary entry"/>
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://statecharts.github.io{{ page.url }}" />
+    <meta property="og:url" content="https://statecharts.dev{{ page.url }}" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.oneliner }}" />
     
@@ -23,7 +23,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-    <link rel="canonical" href="https://statecharts.github.io{{ page.url }}">
+    <link rel="canonical" href="https://statecharts.dev{{ page.url }}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <script>
@@ -70,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "http://schema.org",
   "@type": "WebPage",
   "name": "{{ page.title }}",
-  "url": "https://statecharts.github.io{{ page.url }}",
+  "url": "https://statecharts.dev{{ page.url }}",
   "description": "{{ page.oneliner }}",
   "isAccessibleForFree": true,
   "keywords": [
@@ -85,7 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "isPartOf": {
     "@type": "CreativeWork",
     "name": "Statechart Glossary",
-    "url": "https://statecharts.github.io/glossary/"
+    "url": "https://statecharts.dev/glossary/"
   },
   "mainContentOfPage": {
     "@type": "WebPageElement",
@@ -98,7 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {% if page.primaryImage %}
   ,"primaryImageOfPage": {
     "@type": "ImageObject",
-    "contentUrl": "https://statecharts.github.io/glossary/{{ page.primaryImage }}"
+    "contentUrl": "https://statecharts.dev/glossary/{{ page.primaryImage }}"
   }
   {% endif %}
   {% if page.aka %}
@@ -126,7 +126,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <section class="inner">
         <nav class="breadcrumbs" role="navigation"  itemscope itemtype="http://schema.org/BreadcrumbList">
           <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.github.io/glossary/">
+            <a itemtype="http://schema.org/Thing" itemprop="item" href="https://statecharts.dev/glossary/">
               <span itemprop="name">Glossary</span>
             </a>
             <meta itemprop="position" content="1" />
@@ -134,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           {% for item in page.breadcrumbs %} › 
             <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
               <a itemtype="http://schema.org/Thing" itemprop="item"
-                 href="https://statecharts.github.io/glossary/{{ item.id }}.html">
+                 href="https://statecharts.dev/glossary/{{ item.id }}.html">
                 <span itemprop="name">{{ item.name }}</span>
               </a>
                 <meta itemprop="position" content="{{ forloop.index | plus:1 }}" />
@@ -163,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul role="navigation">
             {% for item in childitems %}
               <li>
-                <a href="https://statecharts.github.io{{ item.url }}">
+                <a href="https://statecharts.dev{{ item.url }}">
                   <span>{{ item.title }}</span></a> — <span>{{ item.oneliner }}</span>
               </li>
             {% endfor %} 
@@ -175,7 +175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer" role="contentinfo">
       <footer class="inner">
-        <p>This glossary entry comes from the <a href="https://statecharts.github.io/">statecharts.github.io</a> project.  Check out the <a href="https://spectrum.chat/statecharts/general">chat rooms</a> over on spectrum.chat where you can find more people discussing statecharts.</p>
+        <p>This glossary entry comes from the <a href="https://statecharts.dev/">statecharts.dev</a> project.  Check out the <a href="https://github.com/statecharts/statecharts/discussions">discussions</a> over on GitHub where you can find more people discussing statecharts.</p>
         <p>If you're writing a blog post about statecharts, feel free to link to this or any glossary terms in the footer when you need to introduce new terms.</p>
         <p>Published using <a href="https://pages.github.com">GitHub Pages</a> from <a href="https://github.com/statecharts/">github.com/statecharts/</a> (<a href="{{ site.github.repository_url }}/edit/master/{{ page.relative_path }}">edit this page</a>)</p>
         <p itemscope itemtype="http://schema.org/DefinedTermSet"

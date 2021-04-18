@@ -23,7 +23,7 @@ Ian Horrocks has a section devoted to this, saying that
 >
 > <cite>Ian Horrocks, Constructing the User Interface with Statecharts, page 202</cite>
 
-Horrocks also mentions that most books on the subject have examples based on electrical devices such as traffic lights, digital watches, the gears on a car and so on.  Such examples don't help developers who might want to use statecharts for User Interfaces, or to tackle complexity in general.  The hope is that the statecharts.github.io project will provide guidance beyond what programming books of 1999 had available.
+Horrocks also mentions that most books on the subject have examples based on electrical devices such as traffic lights, digital watches, the gears on a car and so on.  Such examples don't help developers who might want to use statecharts for User Interfaces, or to tackle complexity in general.  The hope is that the statecharts.dev project will provide guidance beyond what programming books of 1999 had available.
 
 ## "Do the simplest thing that could possibly work"
 

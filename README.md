@@ -3,7 +3,7 @@ sitemap:
   exclude: yes
 ---
 
-# statecharts.github.io
+# statecharts.dev
 
 This web site has a few goals:
 
