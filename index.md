@@ -96,7 +96,7 @@ This is all explained on the page on [how to use statecharts](how-to-use-statech
 
 ## Anything else?
 
-If you feel like chatting to someone about statecharts, you should go to <a href="https://spectrum.chat/statecharts">spectrum.chat/statecharts</a>, where you'll find a community of like minded developers that can help you understand and reap the benefits of using Statecharts.
+If you have questions about statecharts, you should go to the statecharts <a href="https://github.com/statecharts/statecharts/discussions">GitHub discussions</a>, where you'll find a community of like minded developers that can help you understand and reap the benefits of using Statecharts.
 
 Quite a few people have written books or held presentations that deal with statecharts in various ways, and they're included in our [resources](resources.html) page.
 
