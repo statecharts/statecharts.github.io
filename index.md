@@ -94,11 +94,11 @@ In essence, if you have any definition of a statechart in your code, all you nee
 
 This is all explained on the page on [how to use statecharts](how-to-use-statecharts.html)!
 
-## Anything else?
+## Reach out to the community
 
-If you have questions about statecharts, you should go to the statecharts <a href="https://github.com/statecharts/statecharts/discussions">GitHub discussions</a>, where you'll find a community of like minded developers that can help you understand and reap the benefits of using Statecharts.
+If you feel like chatting to someone about statecharts, you can go to <a href="https://gitter.im/statecharts/statecharts">gitter.im</a> (no login required to see the chat), where you'll find a community of like minded developers that can help you understand and reap the benefits of using Statecharts.  For a more Q&A-type site, head on over to the <a href="https://github.com/statecharts/statecharts/discussions">statecharts GitHub discussions</a>, where we'll do your best to answer your question.
 
-Quite a few people have written books or held presentations that deal with statecharts in various ways, and they're included in our [resources](resources.html) page.
+Quite a few people have written books or held presentations that deal with statecharts in various ways, and they're included in our [resources](resources.html) page.  If you've written something, please share it by posting it to <a href="https://github.com/statecharts/statecharts/discussions">GitHub Discussions</a>.
 
 There are some pages that haven't found any place in the web of documents, so they're honourably mentioned here:
 
