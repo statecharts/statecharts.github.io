@@ -11,7 +11,7 @@ sitemap:
 {% assign allitems = "" | split:"" %}
 {% for item in site.glossary %}
   {% assign allitems = allitems | push: item %}
-  {% if item.aka | size > 0 %}
+  {% if item.aka.size > 0 %}
     {% for aka in item.aka %}
       {% assign allitems = allitems | push: aka %}
     {% endfor %}

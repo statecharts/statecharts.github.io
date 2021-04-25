@@ -19,3 +19,7 @@ defaults:
       type: faq
     values:
       layout: default
+  - scope:
+      path: ""
+    values:
+      layout: default
