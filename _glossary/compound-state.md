@@ -47,7 +47,7 @@ When a compound state is active, its substates behave as though they were an act
 * When a compound state is [entered](enter.html){:.glossary}, it must also enter exactly one of its substates, usually its initial state.
 * When an [event](event.html){:.glossary} happens, the _substates_ have priority when it comes to selecting which transition to follow.  If a substate happens to handles an event, the event is consumed, it isn't passed to the parent compound state.
 * When a substate [transitions](transition.html){:.glossary} to another substate, both "inside" the compound state, the compound state does _not_ exit or enter; it remains active.
-* When a compound state [exits](exit.html){:.glossary}, its substate is simultaneously exited too. (Ttechnically, the substate exits first, _then_ its parent.)
+* When a compound state [exits](exit.html){:.glossary}, its substate is simultaneously exited too. (Technically, the substate exits first, _then_ its parent.)
 
 Compound states may be nested, or include [parallel](parallel-state.html){:.glossary} states.
 
