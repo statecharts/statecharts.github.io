@@ -54,9 +54,9 @@ To start off with the todo entry modeled as a statechart would probably have dif
 
 ### AngularJS
 
-Let's look at the code that handles saving athe AngularJS todomvc example:
+Let's look at the code that handles saving at the AngularJS todomvc example:
 
-```
+```js
 $scope.saveEdits = function (todo, event) {
 	// Blur events are automatically triggered after the form submit event.
 	// This does some unfortunate logic handling to prevent saving twice.
