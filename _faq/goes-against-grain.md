@@ -16,7 +16,7 @@ Here are some of the places in the source code of todomvc in various languages.
 
 ### Backbone.js
 
-In the view of the backbone todomvc app, there are lots of event handlers that on their own is relatively simple, but they are chained together in odd ways.  Let's look, for example, at [the `close` function](https://github.com/tastejs/todomvc/blob/gh-pages/examples/backbone/js/views/todo-view.js#L79-L99):
+In the view of the backbone todomvc app, there are lots of event handlers that on their own is relatively simple, but they are chained together in odd ways.  Let's look, for example, at [the `close` function](https://github.com/tastejs/todomvc/blob/gh-pages/examples/backbone/js/views/todo-view.js#L81-L101):
 
 ```js
 // Close the `"editing"` mode, saving changes to the todo.
