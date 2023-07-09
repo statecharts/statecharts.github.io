@@ -54,7 +54,7 @@ To start off with the todo entry modeled as a statechart would probably have dif
 
 ### AngularJS
 
-Let's look at the code that handles saving athe AngularJS todomvc example:
+Let's look at the code that handles saving the AngularJS todomvc example:
 
 ```
 $scope.saveEdits = function (todo, event) {
