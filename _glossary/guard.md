@@ -50,7 +50,7 @@ It should be noted that a guard is an _if_ test, exactly the type of if tests th
 
 ## SCXML
 
-In Statechart XML, the guard is specified using ]the `cond` attribute on the `<transition>` element](https://www.w3.org/TR/scxml/#transition):
+In Statechart XML, the guard is specified using [the `cond` attribute on the `<transition>` element](https://www.w3.org/TR/scxml/#transition):
 
 ```xml
 <transition event="some-event" cond="is_capable_of_flight()" target="some-other-state" />
