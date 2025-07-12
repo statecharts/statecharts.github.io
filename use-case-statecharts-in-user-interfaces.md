@@ -36,7 +36,7 @@ field.onchange = handleChange
 
 Don't cringe, it's a simple component that turns green (an action) whenever a particular event happens (the field is modified).  This is the component's **behaviour**.
 
-However, in order for this code to support _anything_ other than turning it green when it's modified, it will need conditional logic.  If the field should only turn green if the has any text, then the event handler needs an _if_ test, _and_ it needs to check the "current state" of the component.  This is the beginning of the complexity creep.
+However, in order for this code to support _anything_ other than turning it green when it's modified, it will need conditional logic.  If the field should only turn green if it has any text, then the event handler needs an _if_ test, _and_ it needs to check the "current state" of the component.  This is the beginning of the complexity creep.
 
 ```js
 function handleChange(e) {
